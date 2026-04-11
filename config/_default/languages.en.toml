@@ -1,0 +1,15 @@
+[params]
+  description = 'Technical blog documenting my journey through Kubernetes, AWS, and MLOps.'
+  showAuthorBio = true
+
+[params.author]
+  name = "Hemanth Kumar Motukuri"
+  image = "img/profile_pic.jpg"
+  imageQuality = 96
+  headline = "DevOps & MLOps Engineer | Kubernetes & Cloud Enthusiast"
+  bio = "DevOps & MLOps | Kubernetes | AWS"
+  links = [
+    { github = "https://github.com/hemanth7040" },
+    { linkedin = "https://linkedin.com/in/hemanth-kumar-motukuri" },
+    { gmail = "mailto:hemanthkumarmotukuri@gmail.com" }
+  ]

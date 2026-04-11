@@ -1,0 +1,5 @@
+baseURL = 'https://hemanth7040.github.io/'
+languageCode = 'en'
+title = 'Hemanth Kumar Motukuri'
+theme = 'blowfish'
+defaultContentLanguage = "en"

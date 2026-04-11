@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Hemanth Kumar Motukuri</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Hemanth Kumar Motukuri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
+    <lastBuildDate>Tue, 07 Apr 2026 11:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SDLC: The Foundation That Made DevOps Necessary</title>
+      <link>http://localhost:1313/posts/sdlc-phases-explained/</link>
+      <pubDate>Tue, 07 Apr 2026 11:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/posts/sdlc-phases-explained/</guid>
+      <description>Before DevOps, there was SDLC. Understanding the Software Development Life Cycle is the first step to understanding why DevOps was born — and why it matters today.</description>
+      
+    </item>
+    
+    <item>
+      <title>The Evolution of DevOps: From Silos to Site Reliability</title>
+      <link>http://localhost:1313/posts/evolution-of-devops/</link>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/evolution-of-devops/</guid>
+      <description>A deep dive into the origins of DevOps, the shift from Waterfall to Agile, and why it is the backbone of modern cloud engineering.</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/cka-study-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/cka-study-notes/</guid>
+      <description>&lt;!DOCTYPE html&gt;&#xA;&lt;html lang=&#34;en-us&#34;&gt;&#xA;  &lt;head&gt;&lt;script src=&#34;http://localhost:1313/livereload.js?mindelay=10&amp;amp;v=2&amp;amp;port=1313&amp;amp;path=livereload&#34; data-no-instant defer&gt;&lt;/script&gt;&#xA;    &lt;meta charset=&#34;utf-8&#34;&gt;&#xA;    &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;IE=edge,chrome=1&#34;&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;title&amp;gt;Cka Study Notes | Hemanth Kumar | DevOps &amp;amp;amp; Cloud Engineer&amp;lt;/title&amp;gt;&#xA;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,minimum-scale=1&amp;quot;&amp;gt;&#xA;&amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;&amp;quot;&amp;gt;&#xA;&amp;lt;meta name=&amp;quot;generator&amp;quot; content=&amp;quot;Hugo 0.160.0&amp;quot;&amp;gt;&#xA;&#xA;&#xA;&#xA;  &amp;lt;meta name=&amp;quot;robots&amp;quot; content=&amp;quot;noindex, nofollow&amp;quot;&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/ananke/css/main.min.css&#34; &gt;&#xA;&lt;pre&gt;&lt;code&gt;  &amp;lt;link rel=&amp;quot;canonical&amp;quot; href=&amp;quot;http://localhost:1313/posts/cka-study-notes/&amp;quot;&amp;gt;&#xA;&#xA;&#xA;&#xA;&#xA;&amp;lt;meta property=&amp;quot;og:url&amp;quot; content=&amp;quot;http://localhost:1313/posts/cka-study-notes/&amp;quot;&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;  &lt;meta property=&#34;og:site_name&#34; content=&#34;Hemanth Kumar | DevOps &amp; Cloud Engineer&#34;&gt;&#xA;  &lt;meta property=&#34;og:title&#34; content=&#34;Cka Study Notes&#34;&gt;&#xA;  &lt;meta property=&#34;og:description&#34; content=&#34;Technical blog documenting my journey through Kubernetes, AWS, and MLOps.&#34;&gt;&#xA;  &lt;meta property=&#34;og:locale&#34; content=&#34;en_us&#34;&gt;&#xA;  &lt;meta property=&#34;og:type&#34; content=&#34;article&#34;&gt;&#xA;    &lt;meta property=&#34;article:section&#34; content=&#34;posts&#34;&gt;&#xA;    &lt;meta property=&#34;article:published_time&#34; content=&#34;2026-04-07T12:49:27+05:30&#34;&gt;&#xA;    &lt;meta property=&#34;article:modified_time&#34; content=&#34;2026-04-07T12:49:27+05:30&#34;&gt;&#xA;  &lt;meta itemprop=&#34;name&#34; content=&#34;Cka Study Notes&#34;&gt;&#xA;  &lt;meta itemprop=&#34;description&#34; content=&#34;Technical blog documenting my journey through Kubernetes, AWS, and MLOps.&#34;&gt;&#xA;  &lt;meta itemprop=&#34;datePublished&#34; content=&#34;2026-04-07T12:49:27+05:30&#34;&gt;&#xA;  &lt;meta itemprop=&#34;dateModified&#34; content=&#34;2026-04-07T12:49:27+05:30&#34;&gt;&#xA;  &lt;meta name=&#34;twitter:card&#34; content=&#34;summary&#34;&gt;&#xA;  &lt;meta name=&#34;twitter:title&#34; content=&#34;Cka Study Notes&#34;&gt;&#xA;  &lt;meta name=&#34;twitter:description&#34; content=&#34;Technical blog documenting my journey through Kubernetes, AWS, and MLOps.&#34;&gt;&#xA;  &lt;/head&gt;&lt;body class=&#34;ma0 avenir bg-near-white development is-page is-page page-cka-study-notes&#34;&gt;&#xA;  &lt;header&gt;&#xA;    &lt;div class=&#34;bg-black&#34;&gt;&#xA;      &lt;nav class=&#34;pv3 ph3 ph4-ns&#34; role=&#34;navigation&#34;&gt;&#xA;  &lt;div class=&#34;flex-l center items-center justify-between&#34;&gt;&#xA;    &lt;a href=&#34;http://localhost:1313/&#34; class=&#34;f3 fw2 hover-white white-90 dib no-underline&#34;&gt;&#xA;&lt;pre&gt;&lt;code&gt;    Hemanth Kumar | DevOps &amp;amp;amp; Cloud Engineer&#xA;  &#xA;&amp;lt;/a&amp;gt;&#xA;&amp;lt;div class=&amp;quot;flex-l items-center&amp;quot;&amp;gt;&#xA;  &#xA;&#xA;  &#xA;  &amp;lt;div class=&amp;quot;ananke-socials&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&#xA;&#xA;&amp;lt;/div&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/nav&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;/div&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;  &lt;/header&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;main class=&amp;quot;pb7&amp;quot; role=&amp;quot;main&amp;quot;&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;  &lt;article class=&#34;page-cka-study-notes flex-l mw7 center ph3 flex-wrap justify-between&#34;&gt;&#xA;    &lt;header class=&#34;mt4 w-100&#34;&gt;&#xA;      &lt;aside class=&#34;instapaper_ignoref b helvetica tracked ttu&#34;&gt;&#xA;&lt;pre&gt;&lt;code&gt;    Posts&#xA;  &amp;lt;/aside&amp;gt;&amp;lt;div id=&amp;quot;sharing&amp;quot; class=&amp;quot;mt3 ananke-socials&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h1 class=&#34;f1 athelas mt3 mb1&#34;&gt;Cka Study Notes&lt;/h1&gt;&#xA;&lt;pre&gt;&lt;code&gt;  &amp;lt;time class=&amp;quot;f6 mv4 dib tracked&amp;quot; datetime=&amp;quot;2026-04-07T12:49:27+05:30&amp;quot;&amp;gt;April 7, 2026&amp;lt;/time&amp;gt;&#xA;  &#xA;&#xA;  &#xA;  &#xA;&amp;lt;/header&amp;gt;&#xA;&amp;lt;div class=&amp;quot;nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l&amp;quot;&amp;gt;&amp;lt;ul class=&amp;quot;pa0&amp;quot;&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;/div&amp;gt;&amp;lt;/article&amp;gt;&#xA;&#xA;&amp;lt;/main&amp;gt;&#xA;&amp;lt;footer class=&amp;quot;bg-black bottom-0 w-100 pa3&amp;quot; role=&amp;quot;contentinfo&amp;quot;&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;  &lt;div class=&#34;flex justify-between&#34;&gt;&#xA;  &lt;a class=&#34;f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline&#34; href=&#34;http://localhost:1313/&#34; &gt;&#xA;    &amp;copy;  Hemanth Kumar | DevOps &amp; Cloud Engineer 2026 &#xA;  &lt;/a&gt;&#xA;    &lt;div&gt;&lt;div class=&#34;ananke-socials&#34;&gt;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/footer&gt;&#xA;  &lt;/body&gt;&#xA;&lt;/html&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

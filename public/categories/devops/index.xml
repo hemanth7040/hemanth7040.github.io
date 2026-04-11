@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps on Hemanth Kumar Motukuri</title>
+    <link>http://localhost:1313/categories/devops/</link>
+    <description>Recent content in DevOps on Hemanth Kumar Motukuri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
+    <lastBuildDate>Tue, 07 Apr 2026 11:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SDLC: The Foundation That Made DevOps Necessary</title>
+      <link>http://localhost:1313/posts/sdlc-phases-explained/</link>
+      <pubDate>Tue, 07 Apr 2026 11:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/posts/sdlc-phases-explained/</guid>
+      <description>Before DevOps, there was SDLC. Understanding the Software Development Life Cycle is the first step to understanding why DevOps was born — and why it matters today.</description>
+      
+    </item>
+    
+    <item>
+      <title>The Evolution of DevOps: From Silos to Site Reliability</title>
+      <link>http://localhost:1313/posts/evolution-of-devops/</link>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/evolution-of-devops/</guid>
+      <description>A deep dive into the origins of DevOps, the shift from Waterfall to Agile, and why it is the backbone of modern cloud engineering.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

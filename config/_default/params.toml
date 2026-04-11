@@ -1,0 +1,7 @@
+[homepage]
+  layout = "profile"
+  showAuthorBio = true  # The switch must be ON here
+  showRecent = false
+
+[params]
+  customCSS = ["css/custom.css"]

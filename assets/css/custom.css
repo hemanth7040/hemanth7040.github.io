@@ -1,0 +1,8 @@
+/* Blowfish Tailwind width fix */
+.max-w-prose {
+    max-width: 100% !important;
+}
+
+.prose {
+    max-width: 100% !important;
+}
