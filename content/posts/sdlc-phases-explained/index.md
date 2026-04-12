@@ -1,7 +1,7 @@
 ---
 title: "SDLC: The Foundation That Made DevOps Necessary"
 date: 2026-04-07T11:00:00+05:30
-categories: ["DevOps", "SDLC"]
+categories: ["SDLC"]
 summary: "Before DevOps, there was SDLC. Understanding the Software Development Life Cycle is the first step to understanding why DevOps was born — and why it matters today."
 draft: false
 ---

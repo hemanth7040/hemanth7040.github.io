@@ -1,0 +1,1554 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Linux Commands Every DevOps Engineer Must Know &middot; Hemanth Kumar Motukuri</title>
+    <meta name="title" content="Linux Commands Every DevOps Engineer Must Know &middot; Hemanth Kumar Motukuri">
+  
+
+  
+  
+    <meta name="description" content="A practical reference of must-know Linux commands for DevOps and MLOps engineers — covering files, processes, networking, Docker, Kubernetes, and log analysis.">
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/linux/linux-commands_old/">
+  
+
+  
+  
+    <meta name="author" content="Hemanth Kumar Motukuri">
+  
+  
+    
+      
+        
+          <link href="https://github.com/hemanth7040" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://linkedin.com/in/hemanth-kumar-motukuri" rel="me">
+        
+      
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/linux/linux-commands_old/">
+  <meta property="og:site_name" content="Hemanth Kumar Motukuri">
+  <meta property="og:title" content="Linux Commands Every DevOps Engineer Must Know">
+  <meta property="og:description" content="A practical reference of must-know Linux commands for DevOps and MLOps engineers — covering files, processes, networking, Docker, Kubernetes, and log analysis.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-12T00:00:00+00:00">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Linux Commands Every DevOps Engineer Must Know">
+  <meta name="twitter:description" content="A practical reference of must-know Linux commands for DevOps and MLOps engineers — covering files, processes, networking, Docker, Kubernetes, and log analysis.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.6e52716fc2bf79b9a028416df9a459bb6de68c54e9d942261668120f5d1ba7a55fa7ef8d43df2222f7bec007d184d9fb44c56fbe257f88dfb079bdbb11570d60.css"
+    integrity="sha512-blJxb8K/ebmgKEFt&#43;aRZu23mjFTp2UImFmgSD10bp6Vfp&#43;&#43;NQ98iIve&#43;wAfRhNn7RMVvviV/iN&#43;web27EVcNYA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.c41769a6d0a0f3c9fae21f229a8ff36dbf91ab46022c5e71ec6600b9be681f5f41e6148129be6881788a258ce35a23cb28fb4b739843d8ffc1efec4081c51313.js"
+      integrity="sha512-xBdpptCg88n64h8imo/zbb&#43;Rq0YCLF5x7GYAub5oH19B5hSBKb5ogXiKJYzjWiPLKPtLc5hD2P/B7&#43;xAgcUTEw=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "My Technical Blog",
+    "name": "Linux Commands Every DevOps Engineer Must Know",
+    "headline": "Linux Commands Every DevOps Engineer Must Know",
+    "description": "A practical reference of must-know Linux commands for DevOps and MLOps engineers — covering files, processes, networking, Docker, Kubernetes, and log analysis.",
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/linux/linux-commands_old/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hemanth Kumar Motukuri"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-04-12T00:00:00\u002b00:00",
+    "datePublished": "2026-04-12T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-04-12T00:00:00\u002b00:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1957"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Hemanth Kumar Motukuri
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Technical Topics">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href=""
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Projects"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Projects
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/resume/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Resume"
+      title="Resume">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Resume
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="mailto:hemanthkumarmotukuri@gmail.com"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Contact"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Contact
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Technical Topics" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href=""
+        aria-label="Projects"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Projects
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/resume/"
+        aria-label="Resume"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Resume" class="text-2xl font-bold tracking-tight">
+          Resume
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="mailto:hemanthkumarmotukuri@gmail.com"
+        aria-label="Contact"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Contact
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Linux Commands Every DevOps Engineer Must Know
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-04-12T00:00:00&#43;00:00">12 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1957 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/linux/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Linux
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Hemanth Kumar Motukuri"
+        src="/img/profile_pic_hu_73b016f6fa6bb344.jpg"
+        data-zoom-src="/img/profile_pic_hu_da66a14a1ead8228.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Hemanth Kumar Motukuri
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">DevOps &amp; MLOps | Kubernetes | AWS</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/hemanth7040"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 496 496" xml:space="preserve">
+<path id="SVGCleanerId_0" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+	c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+	c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+	c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+	c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+	c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+	c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+	c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+	c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+<g>
+	<path id="SVGCleanerId_0_1_" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+		c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+		c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+		c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+		c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+		c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+		c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+</g>
+<g>
+	<path style="fill:#114C82;" d="M378.496,109.131c13.128,33.904,4.752,58.928,2.2,65.176c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163c0-29.56-5.152-57.896-14.568-84.2
+		C447.24,133.963,409.184,109.987,378.496,109.131z"/>
+	<path style="fill:#114C82;" d="M192.976,377.323c2.784-5.616,6.184-9.984,9.76-13.144c-30.176-3.456-61.168-11.512-83.048-33.744
+		C136.52,358.451,163.928,371.195,192.976,377.323z"/>
+</g>
+<path style="fill:#6CA9EA;" d="M12.912,270.947c0-137.536,111.048-249,247.992-249c76.04,0,144.056,34.392,189.536,88.488
+	C405.52,46.755,331.616,5.163,247.992,5.163C111.048,5.163,0,116.627,0,254.163c0,61.32,22.12,117.424,58.752,160.792
+	C29.944,374.291,12.912,324.643,12.912,270.947z"/>
+<path style="fill:#083E66;" d="M322.712,426.899c0-23.232-7.928-38.44-16.832-46.128c55.248-6.16,113.24-27.216,113.24-122.848
+	c0-27.184-9.6-49.4-25.52-66.824c2.576-6.296,11.096-31.608-2.456-65.872c0,0-2.576-0.792-7.896-0.488
+	c5.808,25.84-0.416,44.32-2.552,49.568c15.904,17.424,25.504,39.648,25.504,66.832c0,95.64-57.984,116.68-113.232,122.856
+	c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296c0,5.872,3.496,12.568,12.92,12.408
+	C322.488,479.555,322.712,455.659,322.712,426.899z"/>
+<path style="fill:#114C82;" d="M117.464,423.995c5.208,10.72,22.712,36.4,68.888,30.992c-0.064-5.648-0.112-11.976-0.144-18.928
+	C150.584,443.835,129.552,434.667,117.464,423.995z"/>
+<path style="fill:#6CA9EA;" d="M126.368,391.387c-1.592-2.4-4.576-6.472-8.904-10.544
+	C120.272,385.011,123.256,388.507,126.368,391.387z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/hemanth-kumar-motukuri"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 382 382" xml:space="preserve">
+<path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:hemanthkumarmotukuri@gmail.com"
+          
+          target="_blank"
+          aria-label="Gmail"
+          title="Gmail"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?>
+<!-- License: MIT. Made by Garuda Technology: https://github.com/garudatechnologydevelopers/sketch-icons -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z" fill="white"/>
+<path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" fill="#EA4335"/>
+<path d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z" fill="#FBBC05"/>
+<path d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z" fill="#34A853"/>
+<path d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z" fill="#C5221F"/>
+<path d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z" fill="#C5221F"/>
+<path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" fill="#C5221F"/>
+<path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" fill="#4285F4"/>
+</svg></span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <blockquote><p>This is a living reference page. Commands are grouped by category so you can jump to what you need. Bookmark it.</p>
+</blockquote><hr>
+
+<h2 class="relative group">File &amp; Directory Management
+    <div id="file--directory-management" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#file--directory-management" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Working with files is the foundation of everything in Linux.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># List files with full details (permissions, owner, size in human-readable)</span>
+</span></span><span class="line"><span class="cl">ls -lah /var/log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Recursively find files by name or pattern</span>
+</span></span><span class="line"><span class="cl">find /etc -name <span class="s2">&#34;*.conf&#34;</span> -type f
+</span></span><span class="line"><span class="cl">find /var -name <span class="s2">&#34;*.log&#34;</span> -mtime -1   <span class="c1"># modified in last 24 hours</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check disk usage of a directory</span>
+</span></span><span class="line"><span class="cl">du -sh /var/lib/docker
+</span></span><span class="line"><span class="cl">du -sh /* 2&gt;/dev/null <span class="p">|</span> sort -rh <span class="p">|</span> head -10   <span class="c1"># find largest dirs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create, copy, move, delete</span>
+</span></span><span class="line"><span class="cl">mkdir -p /app/config/envs
+</span></span><span class="line"><span class="cl">cp -r ./source ./destination
+</span></span><span class="line"><span class="cl">mv oldname newname
+</span></span><span class="line"><span class="cl">rm -rf /tmp/build-artifacts
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Compress and extract</span>
+</span></span><span class="line"><span class="cl">tar -czf backup.tar.gz ./myapp          <span class="c1"># compress</span>
+</span></span><span class="line"><span class="cl">tar -xzf backup.tar.gz -C /opt/myapp   <span class="c1"># extract to path</span>
+</span></span><span class="line"><span class="cl">zip -r archive.zip ./folder
+</span></span><span class="line"><span class="cl">unzip archive.zip -d /target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># File permissions and ownership</span>
+</span></span><span class="line"><span class="cl">chmod <span class="m">755</span> deploy.sh          <span class="c1"># rwxr-xr-x</span>
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> ~/.ssh/id_rsa      <span class="c1"># rw------- (SSH private key)</span>
+</span></span><span class="line"><span class="cl">chown -R appuser:appgroup /var/app</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Process &amp; System Monitoring
+    <div id="process--system-monitoring" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#process--system-monitoring" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Knowing what&rsquo;s running (and consuming resources) is critical for debugging and operations.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Real-time process monitor</span>
+</span></span><span class="line"><span class="cl">top
+</span></span><span class="line"><span class="cl">htop                    <span class="c1"># better UI — install with: apt install htop</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># List all processes with details</span>
+</span></span><span class="line"><span class="cl">ps aux
+</span></span><span class="line"><span class="cl">ps aux <span class="p">|</span> grep nginx     <span class="c1"># filter by process name</span>
+</span></span><span class="line"><span class="cl">ps -ef --forest         <span class="c1"># show process tree</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Kill processes</span>
+</span></span><span class="line"><span class="cl"><span class="nb">kill</span> -9 <span class="m">1234</span>            <span class="c1"># force kill by PID</span>
+</span></span><span class="line"><span class="cl">pkill -f <span class="s2">&#34;python app.py&#34;</span>   <span class="c1"># kill by matching command name</span>
+</span></span><span class="line"><span class="cl">killall nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Manage systemd services</span>
+</span></span><span class="line"><span class="cl">systemctl status nginx
+</span></span><span class="line"><span class="cl">systemctl start<span class="p">|</span>stop<span class="p">|</span>restart<span class="p">|</span>reload nginx
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> nginx     <span class="c1"># auto-start on boot</span>
+</span></span><span class="line"><span class="cl">systemctl disable nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># View service logs (systemd journal)</span>
+</span></span><span class="line"><span class="cl">journalctl -u nginx                         <span class="c1"># all logs for nginx</span>
+</span></span><span class="line"><span class="cl">journalctl -u nginx -f                      <span class="c1"># follow live logs</span>
+</span></span><span class="line"><span class="cl">journalctl -u nginx --since <span class="s2">&#34;2 hours ago&#34;</span>
+</span></span><span class="line"><span class="cl">journalctl -p err -b                        <span class="c1"># errors since last boot</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># System resource overview</span>
+</span></span><span class="line"><span class="cl">free -h                 <span class="c1"># RAM usage</span>
+</span></span><span class="line"><span class="cl">df -h                   <span class="c1"># disk space per mount</span>
+</span></span><span class="line"><span class="cl">vmstat <span class="m">1</span> <span class="m">5</span>              <span class="c1"># CPU, memory, I/O stats every 1s (5 times)</span>
+</span></span><span class="line"><span class="cl">iostat -x <span class="m">1</span>             <span class="c1"># per-disk I/O stats</span>
+</span></span><span class="line"><span class="cl">uptime                  <span class="c1"># load averages</span>
+</span></span><span class="line"><span class="cl">uname -r                <span class="c1"># kernel version</span>
+</span></span><span class="line"><span class="cl">lscpu                   <span class="c1"># CPU info</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">User &amp; Permission Management
+    <div id="user--permission-management" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#user--permission-management" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># User management</span>
+</span></span><span class="line"><span class="cl">adduser devops
+</span></span><span class="line"><span class="cl">usermod -aG sudo devops      <span class="c1"># add to sudo group</span>
+</span></span><span class="line"><span class="cl">passwd devops
+</span></span><span class="line"><span class="cl">userdel -r olduser           <span class="c1"># remove user and home dir</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Switch users</span>
+</span></span><span class="line"><span class="cl">su - devops
+</span></span><span class="line"><span class="cl">sudo -i                      <span class="c1"># root shell</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># View current user info</span>
+</span></span><span class="line"><span class="cl">whoami
+</span></span><span class="line"><span class="cl">id
+</span></span><span class="line"><span class="cl">groups
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Sudoers (edit with visudo — never edit directly)</span>
+</span></span><span class="line"><span class="cl">sudo visudo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># File permission reference</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># r=4, w=2, x=1</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># chmod 755 = rwxr-xr-x (owner: rwx, group: r-x, others: r-x)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># chmod 644 = rw-r--r-- (common for config files)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># chmod 600 = rw------- (private keys, secrets)</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Networking
+    <div id="networking" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#networking" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Essential for debugging connectivity, inspecting ports, and managing DNS in cloud environments.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Test connectivity</span>
+</span></span><span class="line"><span class="cl">ping -c <span class="m">4</span> 8.8.8.8
+</span></span><span class="line"><span class="cl">traceroute google.com
+</span></span><span class="line"><span class="cl">mtr google.com              <span class="c1"># ping + traceroute combined</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># DNS lookup and debugging</span>
+</span></span><span class="line"><span class="cl">nslookup example.com
+</span></span><span class="line"><span class="cl">dig example.com
+</span></span><span class="line"><span class="cl">dig @8.8.8.8 example.com   <span class="c1"># use specific DNS server</span>
+</span></span><span class="line"><span class="cl">host example.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># HTTP requests</span>
+</span></span><span class="line"><span class="cl">curl -I https://api.example.com/health     <span class="c1"># headers only</span>
+</span></span><span class="line"><span class="cl">curl -s -o /dev/null -w <span class="s2">&#34;%{http_code}&#34;</span> URL <span class="c1"># just the status code</span>
+</span></span><span class="line"><span class="cl">curl -X POST -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{&#34;key&#34;:&#34;value&#34;}&#39;</span> https://api.example.com/endpoint
+</span></span><span class="line"><span class="cl">wget -q -O - https://example.com/script.sh <span class="p">|</span> bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check open ports and listening services</span>
+</span></span><span class="line"><span class="cl">ss -tulnp                  <span class="c1"># all listening TCP/UDP with PID</span>
+</span></span><span class="line"><span class="cl">ss -tulnp <span class="p">|</span> grep <span class="m">8080</span>      <span class="c1"># specific port</span>
+</span></span><span class="line"><span class="cl">netstat -an <span class="p">|</span> grep ESTABLISHED
+</span></span><span class="line"><span class="cl">lsof -i :80                <span class="c1"># what&#39;s using port 80</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Firewall (iptables / ufw)</span>
+</span></span><span class="line"><span class="cl">ufw status
+</span></span><span class="line"><span class="cl">ufw allow 443/tcp
+</span></span><span class="line"><span class="cl">ufw deny <span class="m">23</span>
+</span></span><span class="line"><span class="cl">iptables -L -n -v --line-numbers
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># SSH</span>
+</span></span><span class="line"><span class="cl">ssh -i ~/.ssh/mykey.pem user@10.0.0.5
+</span></span><span class="line"><span class="cl">ssh -L 8080:localhost:8080 user@remote   <span class="c1"># port forwarding</span>
+</span></span><span class="line"><span class="cl">scp ./file.conf user@remote:/etc/app/
+</span></span><span class="line"><span class="cl">rsync -avz ./local/ user@remote:/remote/ <span class="c1"># sync directories</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Network interfaces</span>
+</span></span><span class="line"><span class="cl">ip addr show
+</span></span><span class="line"><span class="cl">ip route show
+</span></span><span class="line"><span class="cl">ifconfig eth0</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Text Processing &amp; Log Analysis
+    <div id="text-processing--log-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#text-processing--log-analysis" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The real power of Linux is chaining small tools to process text. This is critical for log analysis in DevOps.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Search within files</span>
+</span></span><span class="line"><span class="cl">grep <span class="s2">&#34;ERROR&#34;</span> app.log
+</span></span><span class="line"><span class="cl">grep -rn <span class="s2">&#34;ERROR&#34;</span> /var/log/ --include<span class="o">=</span><span class="s2">&#34;*.log&#34;</span>   <span class="c1"># recursive with line numbers</span>
+</span></span><span class="line"><span class="cl">grep -v <span class="s2">&#34;DEBUG&#34;</span> app.log                        <span class="c1"># exclude lines with DEBUG</span>
+</span></span><span class="line"><span class="cl">grep -E <span class="s2">&#34;ERROR|WARN&#34;</span> app.log                   <span class="c1"># multiple patterns (regex)</span>
+</span></span><span class="line"><span class="cl">grep -c <span class="s2">&#34;500&#34;</span> access.log                       <span class="c1"># count matches</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Stream and tail logs</span>
+</span></span><span class="line"><span class="cl">tail -f /var/log/syslog               <span class="c1"># follow live</span>
+</span></span><span class="line"><span class="cl">tail -f /var/log/nginx/access.log <span class="p">|</span> grep -i <span class="s2">&#34;5[0-9][0-9]&#34;</span>   <span class="c1"># 5xx errors live</span>
+</span></span><span class="line"><span class="cl">head -n <span class="m">50</span> app.log
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># awk — column processing</span>
+</span></span><span class="line"><span class="cl">awk <span class="s1">&#39;{print $1}&#39;</span> access.log <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -rn <span class="p">|</span> head -20
+</span></span><span class="line"><span class="cl"><span class="c1"># (count unique IPs in nginx access log)</span>
+</span></span><span class="line"><span class="cl">awk -F<span class="s1">&#39;,&#39;</span> <span class="s1">&#39;NR&gt;1 {sum += $3} END {print sum}&#39;</span> data.csv   <span class="c1"># sum column 3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># sed — stream editor</span>
+</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/localhost/prod-db.internal/g&#39;</span> config.yml    <span class="c1"># in-place replace</span>
+</span></span><span class="line"><span class="cl">sed -n <span class="s1">&#39;10,20p&#39;</span> bigfile.log                           <span class="c1"># print lines 10-20</span>
+</span></span><span class="line"><span class="cl">sed <span class="s1">&#39;/^#/d&#39;</span> config.conf                               <span class="c1"># delete comment lines</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># sort, uniq, wc</span>
+</span></span><span class="line"><span class="cl">sort -u file.txt              <span class="c1"># sort and deduplicate</span>
+</span></span><span class="line"><span class="cl">sort -k2 -n data.txt          <span class="c1"># sort by column 2 numerically</span>
+</span></span><span class="line"><span class="cl">uniq -c sorted.txt            <span class="c1"># count consecutive duplicates</span>
+</span></span><span class="line"><span class="cl">wc -l file.txt                <span class="c1"># line count</span>
+</span></span><span class="line"><span class="cl">wc -c file.txt                <span class="c1"># byte count</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cut and paste</span>
+</span></span><span class="line"><span class="cl">cut -d<span class="s1">&#39;,&#39;</span> -f1,3 data.csv      <span class="c1"># extract columns 1 and 3</span>
+</span></span><span class="line"><span class="cl">cut -d<span class="s1">&#39;:&#39;</span> -f1 /etc/passwd     <span class="c1"># extract usernames</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># jq — JSON processing (essential for kubectl and API responses)</span>
+</span></span><span class="line"><span class="cl">kubectl get pods -o json <span class="p">|</span> jq <span class="s1">&#39;.items[].metadata.name&#39;</span>
+</span></span><span class="line"><span class="cl">kubectl get nodes -o json <span class="p">|</span> jq <span class="s1">&#39;.items[] | {name: .metadata.name, cpu: .status.capacity.cpu}&#39;</span>
+</span></span><span class="line"><span class="cl">curl -s https://api.github.com/repos/torvalds/linux <span class="p">|</span> jq <span class="s1">&#39;.stargazers_count&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># xargs — pass output as arguments</span>
+</span></span><span class="line"><span class="cl">cat pod-list.txt <span class="p">|</span> xargs kubectl delete pod
+</span></span><span class="line"><span class="cl">find . -name <span class="s2">&#34;*.pyc&#34;</span> <span class="p">|</span> xargs rm -f</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Docker Commands
+    <div id="docker-commands" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#docker-commands" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Container lifecycle</span>
+</span></span><span class="line"><span class="cl">docker ps                          <span class="c1"># running containers</span>
+</span></span><span class="line"><span class="cl">docker ps -a                       <span class="c1"># all containers (including stopped)</span>
+</span></span><span class="line"><span class="cl">docker run -d -p 8080:80 --name web nginx
+</span></span><span class="line"><span class="cl">docker start<span class="p">|</span>stop<span class="p">|</span>restart web
+</span></span><span class="line"><span class="cl">docker rm web
+</span></span><span class="line"><span class="cl">docker rm -f <span class="k">$(</span>docker ps -aq<span class="k">)</span>      <span class="c1"># remove all containers</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Images</span>
+</span></span><span class="line"><span class="cl">docker images
+</span></span><span class="line"><span class="cl">docker pull ubuntu:22.04
+</span></span><span class="line"><span class="cl">docker build -t myapp:v1.0 .
+</span></span><span class="line"><span class="cl">docker tag myapp:v1.0 registry.io/myapp:v1.0
+</span></span><span class="line"><span class="cl">docker push registry.io/myapp:v1.0
+</span></span><span class="line"><span class="cl">docker rmi myapp:v1.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Inspecting and debugging</span>
+</span></span><span class="line"><span class="cl">docker logs -f --tail<span class="o">=</span><span class="m">100</span> web
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it web bash           <span class="c1"># shell into running container</span>
+</span></span><span class="line"><span class="cl">docker <span class="nb">exec</span> -it web sh             <span class="c1"># if bash not available</span>
+</span></span><span class="line"><span class="cl">docker inspect web
+</span></span><span class="line"><span class="cl">docker stats                       <span class="c1"># live resource usage for all containers</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Cleanup</span>
+</span></span><span class="line"><span class="cl">docker system prune -af            <span class="c1"># remove everything unused</span>
+</span></span><span class="line"><span class="cl">docker image prune -f              <span class="c1"># only unused images</span>
+</span></span><span class="line"><span class="cl">docker volume prune -f
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Docker Compose</span>
+</span></span><span class="line"><span class="cl">docker-compose up -d               <span class="c1"># start in background</span>
+</span></span><span class="line"><span class="cl">docker-compose up -d --build       <span class="c1"># rebuild before starting</span>
+</span></span><span class="line"><span class="cl">docker-compose down                <span class="c1"># stop and remove containers</span>
+</span></span><span class="line"><span class="cl">docker-compose down -v             <span class="c1"># also remove volumes</span>
+</span></span><span class="line"><span class="cl">docker-compose logs -f app         <span class="c1"># logs for specific service</span>
+</span></span><span class="line"><span class="cl">docker-compose ps
+</span></span><span class="line"><span class="cl">docker-compose <span class="nb">exec</span> app bash       <span class="c1"># shell into compose service</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Registry login</span>
+</span></span><span class="line"><span class="cl">docker login registry.example.com
+</span></span><span class="line"><span class="cl">cat ~/.docker/config.json          <span class="c1"># check stored credentials</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Kubernetes (kubectl) Commands
+    <div id="kubernetes-kubectl-commands" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#kubernetes-kubectl-commands" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>As someone working toward MLOps, these are the commands you&rsquo;ll use every day.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Context and namespace management</span>
+</span></span><span class="line"><span class="cl">kubectl config get-contexts
+</span></span><span class="line"><span class="cl">kubectl config use-context prod-cluster
+</span></span><span class="line"><span class="cl">kubectl config set-context --current --namespace<span class="o">=</span>ml-team
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Pod operations</span>
+</span></span><span class="line"><span class="cl">kubectl get pods                            <span class="c1"># default namespace</span>
+</span></span><span class="line"><span class="cl">kubectl get pods -n kube-system
+</span></span><span class="line"><span class="cl">kubectl get pods -A                         <span class="c1"># all namespaces</span>
+</span></span><span class="line"><span class="cl">kubectl get pods -o wide                    <span class="c1"># with node and IP info</span>
+</span></span><span class="line"><span class="cl">kubectl get pods -l <span class="nv">app</span><span class="o">=</span>myapp              <span class="c1"># filter by label</span>
+</span></span><span class="line"><span class="cl">kubectl describe pod my-pod-xyz            <span class="c1"># full details + events</span>
+</span></span><span class="line"><span class="cl">kubectl delete pod my-pod-xyz
+</span></span><span class="line"><span class="cl">kubectl delete pods --all -n staging
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Logs</span>
+</span></span><span class="line"><span class="cl">kubectl logs my-pod
+</span></span><span class="line"><span class="cl">kubectl logs -f my-pod                     <span class="c1"># follow</span>
+</span></span><span class="line"><span class="cl">kubectl logs -f my-pod -c sidecar         <span class="c1"># specific container</span>
+</span></span><span class="line"><span class="cl">kubectl logs my-pod --previous             <span class="c1"># from crashed container</span>
+</span></span><span class="line"><span class="cl">kubectl logs -f deploy/my-app --tail<span class="o">=</span><span class="m">50</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Exec into pods</span>
+</span></span><span class="line"><span class="cl">kubectl <span class="nb">exec</span> -it my-pod -- bash
+</span></span><span class="line"><span class="cl">kubectl <span class="nb">exec</span> -it my-pod -c init-container -- sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Deployments</span>
+</span></span><span class="line"><span class="cl">kubectl get deployments -A
+</span></span><span class="line"><span class="cl">kubectl describe deployment my-app
+</span></span><span class="line"><span class="cl">kubectl rollout status deploy/my-app
+</span></span><span class="line"><span class="cl">kubectl rollout <span class="nb">history</span> deploy/my-app
+</span></span><span class="line"><span class="cl">kubectl rollout undo deploy/my-app         <span class="c1"># rollback to previous</span>
+</span></span><span class="line"><span class="cl">kubectl rollout restart deploy/my-app      <span class="c1"># rolling restart</span>
+</span></span><span class="line"><span class="cl">kubectl scale deploy/my-app --replicas<span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl">kubectl <span class="nb">set</span> image deploy/my-app <span class="nv">app</span><span class="o">=</span>myimage:v2.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Services and networking</span>
+</span></span><span class="line"><span class="cl">kubectl get svc -A
+</span></span><span class="line"><span class="cl">kubectl get endpoints my-service
+</span></span><span class="line"><span class="cl">kubectl port-forward svc/my-service 8080:80   <span class="c1"># local port-forward</span>
+</span></span><span class="line"><span class="cl">kubectl port-forward pod/my-pod 5000:5000
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ConfigMaps and Secrets</span>
+</span></span><span class="line"><span class="cl">kubectl get configmaps
+</span></span><span class="line"><span class="cl">kubectl get secrets
+</span></span><span class="line"><span class="cl">kubectl describe secret my-secret
+</span></span><span class="line"><span class="cl">kubectl get secret my-secret -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.password}&#39;</span> <span class="p">|</span> base64 -d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Apply and manage manifests</span>
+</span></span><span class="line"><span class="cl">kubectl apply -f manifest.yaml
+</span></span><span class="line"><span class="cl">kubectl apply -f manifest.yaml --dry-run<span class="o">=</span>client    <span class="c1"># validate only</span>
+</span></span><span class="line"><span class="cl">kubectl apply -f ./k8s/                            <span class="c1"># apply whole directory</span>
+</span></span><span class="line"><span class="cl">kubectl delete -f manifest.yaml
+</span></span><span class="line"><span class="cl">kubectl diff -f manifest.yaml                      <span class="c1"># show what will change</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Resource usage (requires metrics-server)</span>
+</span></span><span class="line"><span class="cl">kubectl top nodes
+</span></span><span class="line"><span class="cl">kubectl top pods -A
+</span></span><span class="line"><span class="cl">kubectl top pods --sort-by<span class="o">=</span>cpu
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Nodes</span>
+</span></span><span class="line"><span class="cl">kubectl get nodes -o wide
+</span></span><span class="line"><span class="cl">kubectl describe node worker-node-1
+</span></span><span class="line"><span class="cl">kubectl cordon worker-node-1       <span class="c1"># prevent new pods scheduling</span>
+</span></span><span class="line"><span class="cl">kubectl uncordon worker-node-1
+</span></span><span class="line"><span class="cl">kubectl drain worker-node-1 --ignore-daemonsets --delete-emptydir-data
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Namespace management</span>
+</span></span><span class="line"><span class="cl">kubectl get namespaces
+</span></span><span class="line"><span class="cl">kubectl create namespace staging
+</span></span><span class="line"><span class="cl">kubectl delete namespace staging
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Quick troubleshooting workflow</span>
+</span></span><span class="line"><span class="cl">kubectl get events -n mynamespace --sort-by<span class="o">=</span><span class="s1">&#39;.lastTimestamp&#39;</span>
+</span></span><span class="line"><span class="cl">kubectl get pods -n mynamespace <span class="p">|</span> grep -v Running
+</span></span><span class="line"><span class="cl">kubectl describe pod failing-pod <span class="p">|</span> grep -A <span class="m">10</span> Events</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Environment Variables &amp; Shell Tricks
+    <div id="environment-variables--shell-tricks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#environment-variables--shell-tricks" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Environment variables</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">DB_HOST</span><span class="o">=</span>prod-db.internal
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">DB_PORT</span><span class="o">=</span><span class="m">5432</span>
+</span></span><span class="line"><span class="cl">printenv                           <span class="c1"># list all</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl"><span class="nb">unset</span> MY_VAR
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># .env file loading</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="k">$(</span>cat .env <span class="p">|</span> xargs<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># or with dotenv: source .env</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Aliases (add to ~/.bashrc or ~/.zshrc)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">k</span><span class="o">=</span><span class="s1">&#39;kubectl&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">kgp</span><span class="o">=</span><span class="s1">&#39;kubectl get pods&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">kns</span><span class="o">=</span><span class="s1">&#39;kubectl config set-context --current --namespace&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -lah&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">dps</span><span class="o">=</span><span class="s1">&#39;docker ps --format &#34;table {{.Names}}\t{{.Status}}\t{{.Ports}}&#34;&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Shell history tricks</span>
+</span></span><span class="line"><span class="cl"><span class="nb">history</span> <span class="p">|</span> grep kubectl
+</span></span><span class="line"><span class="cl">Ctrl+R            <span class="c1"># reverse search history</span>
+</span></span><span class="line"><span class="cl">!!                <span class="c1"># repeat last command</span>
+</span></span><span class="line"><span class="cl">!kubectl          <span class="c1"># repeat last kubectl command</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Background jobs</span>
+</span></span><span class="line"><span class="cl">long-running-command <span class="p">&amp;</span>         <span class="c1"># run in background</span>
+</span></span><span class="line"><span class="cl"><span class="nb">jobs</span>                           <span class="c1"># list background jobs</span>
+</span></span><span class="line"><span class="cl"><span class="nb">fg</span> %1                          <span class="c1"># bring job 1 to foreground</span>
+</span></span><span class="line"><span class="cl">nohup <span class="nb">command</span> &gt; out.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span> <span class="c1"># run immune to hangup</span>
+</span></span><span class="line"><span class="cl">screen / tmux                  <span class="c1"># persistent terminal sessions</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Cron Jobs &amp; Scheduling
+    <div id="cron-jobs--scheduling" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cron-jobs--scheduling" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Edit crontab for current user</span>
+</span></span><span class="line"><span class="cl">crontab -e
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Cron syntax: minute hour day month weekday command</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Run at 2:30 AM every day</span>
+</span></span><span class="line"><span class="cl"><span class="m">30</span> <span class="m">2</span> * * * /opt/scripts/backup.sh &gt;&gt; /var/log/backup.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Run every 5 minutes</span>
+</span></span><span class="line"><span class="cl">*/5 * * * * /opt/scripts/healthcheck.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Run every Monday at 9 AM</span>
+</span></span><span class="line"><span class="cl"><span class="m">0</span> <span class="m">9</span> * * <span class="m">1</span> /opt/scripts/weekly-report.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># List all cron jobs</span>
+</span></span><span class="line"><span class="cl">crontab -l
+</span></span><span class="line"><span class="cl">cat /etc/cron.d/*
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Systemd timers (modern alternative to cron)</span>
+</span></span><span class="line"><span class="cl">systemctl list-timers</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Performance &amp; Debugging Cheatsheet
+    <div id="performance--debugging-cheatsheet" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#performance--debugging-cheatsheet" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Symptom</th>
+          <th>Command to Run</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>High CPU</td>
+          <td><code>top</code> → press <code>P</code> to sort by CPU; `ps aux &ndash;sort=-%cpu</td>
+      </tr>
+      <tr>
+          <td>High Memory</td>
+          <td><code>free -h</code>; `ps aux &ndash;sort=-%mem</td>
+      </tr>
+      <tr>
+          <td>Disk Full</td>
+          <td><code>df -h</code>; `du -sh /*</td>
+      </tr>
+      <tr>
+          <td>Port in use</td>
+          <td>`ss -tulnp</td>
+      </tr>
+      <tr>
+          <td>DNS not resolving</td>
+          <td><code>dig example.com</code>; <code>cat /etc/resolv.conf</code></td>
+      </tr>
+      <tr>
+          <td>Service won&rsquo;t start</td>
+          <td><code>systemctl status svc</code>; <code>journalctl -u svc -n 50</code></td>
+      </tr>
+      <tr>
+          <td>Container crash loop</td>
+          <td><code>kubectl describe pod</code>; <code>kubectl logs pod --previous</code></td>
+      </tr>
+      <tr>
+          <td>Pod pending</td>
+          <td><code>kubectl describe pod</code> → check Events for scheduling errors</td>
+      </tr>
+      <tr>
+          <td>Node not ready</td>
+          <td><code>kubectl describe node</code>; check kubelet: <code>journalctl -u kubelet</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h2 class="relative group">Quick Reference: Essential One-Liners
+    <div id="quick-reference-essential-one-liners" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quick-reference-essential-one-liners" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Watch a command every 2 seconds</span>
+</span></span><span class="line"><span class="cl">watch -n <span class="m">2</span> kubectl get pods
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Run command on multiple servers</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> host in web1 web2 web3<span class="p">;</span> <span class="k">do</span> ssh <span class="nv">$host</span> <span class="s2">&#34;systemctl status nginx&#34;</span><span class="p">;</span> <span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Find and kill a process using a port</span>
+</span></span><span class="line"><span class="cl"><span class="nb">kill</span> -9 <span class="k">$(</span>lsof -t -i:8080<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Monitor log in real time, highlight errors</span>
+</span></span><span class="line"><span class="cl">tail -f app.log <span class="p">|</span> grep --color<span class="o">=</span>always -E <span class="s2">&#34;ERROR|WARN|</span>$<span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Count lines in all log files</span>
+</span></span><span class="line"><span class="cl">find /var/log -name <span class="s2">&#34;*.log&#34;</span> <span class="p">|</span> xargs wc -l <span class="p">|</span> sort -rn <span class="p">|</span> head
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Decode a base64 Kubernetes secret</span>
+</span></span><span class="line"><span class="cl">kubectl get secret mysecret -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.key}&#39;</span> <span class="p">|</span> base64 --decode
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get all image names running in a cluster</span>
+</span></span><span class="line"><span class="cl">kubectl get pods -A -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .items[*]}{.spec.containers[*].image}{&#34;\n&#34;}{end}&#39;</span> <span class="p">|</span> sort -u
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check SSL certificate expiry</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="p">|</span> openssl s_client -connect example.com:443 2&gt;/dev/null <span class="p">|</span> openssl x509 -noout -dates</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">What Next?
+    <div id="what-next" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-next" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>Practice these commands on a local VM or <a href="https://labs.play-with-docker.com"  target="_blank" rel="noreferrer">Play with Docker</a> / <a href="https://killercoda.com"  target="_blank" rel="noreferrer">Killercoda</a></li>
+<li>Work through the <strong>CKA (Certified Kubernetes Administrator)</strong> curriculum</li>
+<li>Explore <strong>AWS CLI</strong> commands to pair Linux skills with cloud operations</li>
+<li>Check out the <strong><a href="/blog/linux-theory" >Linux Theory page →</a></strong> if you haven&rsquo;t already</li>
+</ul>
+<blockquote><p>The best way to learn Linux commands is to break things — in a lab environment. Build, destroy, rebuild.</p>
+</blockquote>
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/linux/linux-fundamentals/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;What is Linux? History, Philosophy & Why It Dominates the World
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-04-12T00:00:00&#43;00:00">12 April 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hemanth Kumar Motukuri
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

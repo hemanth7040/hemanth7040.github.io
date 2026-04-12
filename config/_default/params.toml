@@ -5,3 +5,11 @@
 
 [params]
   customCSS = ["css/custom.css"]
+
+[article]
+  showTaxonomies = true
+
+[taxonomy]
+  layout = "term-grid"
+  showTermCount = false
+  cardView = true

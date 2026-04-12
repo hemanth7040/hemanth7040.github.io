@@ -1,24 +1,27 @@
 [[main]]
-  name = 'DevOps'
-  pageRef = 'categories/devops'
-  weight = 5 
-
-[[main]]
-  name = 'Kubernetes (CKA)'
-  pageRef = 'categories/kubernetes'
+  name = "Blog"
+  pageRef = "categories"
   weight = 10
 
+
+#[[main]]
+#  parent = "Blog"
+#  name = "DevOps"
+#  url = "/categories/DevOps/"
+#  weight = 2
+
+
 [[main]]
-  name = 'Terraform'
-  pageRef = 'categories/terraform'
+  name = "Projects"
+  pageRef = "projects"
   weight = 20
 
 [[main]]
-  name = 'Docker'
-  pageRef = 'categories/docker'
+  name = "Resume"
+  pageRef = "resume"
   weight = 30
 
 [[main]]
-  name = "Resume"
-  pageRef = "/resume" # Points to the webpage
-  weight = 30
+  name = "Contact"
+  url = "mailto:hemanthkumarmotukuri@gmail.com"
+  weight = 40

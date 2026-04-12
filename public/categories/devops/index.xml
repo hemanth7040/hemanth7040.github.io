@@ -7,17 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
-    <lastBuildDate>Tue, 07 Apr 2026 11:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/categories/devops/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>SDLC: The Foundation That Made DevOps Necessary</title>
-      <link>http://localhost:1313/posts/sdlc-phases-explained/</link>
-      <pubDate>Tue, 07 Apr 2026 11:00:00 +0530</pubDate>
-      
-      <guid>http://localhost:1313/posts/sdlc-phases-explained/</guid>
-      <description>Before DevOps, there was SDLC. Understanding the Software Development Life Cycle is the first step to understanding why DevOps was born — and why it matters today.</description>
-      
-    </item>
+    <lastBuildDate>Tue, 07 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/devops/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The Evolution of DevOps: From Silos to Site Reliability</title>
