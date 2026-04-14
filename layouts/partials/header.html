@@ -1,0 +1,16 @@
+<div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  <div>
+    <a href="/" class="flex">
+      <img src="{{ "images/hkm-logo.svg" | relURL }}" 
+           class="logo max-h-12 max-w-12 object-scale-down object-left nozoom" 
+           alt="HKM Logo">
+    </a>
+  </div>
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      {{ partial "navbar.html" . }}
+    </div>
+    {{ partial "search/button.html" . }}
+    {{ partial "appearance-switcher.html" . }}
+  </div>
+</div>

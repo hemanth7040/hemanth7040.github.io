@@ -2,11 +2,21 @@
   description = 'Technical blog documenting my journey through Kubernetes, AWS, and MLOps.'
   showAuthorBio = true
 
+[header]
+  layout = "fixed"
+  logo = "images/hkm-logo.svg" # Ensure this is in assets/images/hkm-logo.svg
+  showName = false
+  disableTextInHeader = true
+
+[homepage]
+  layout = "profile"
+  showAuthorBio = true
+  showRecent = false
+
 [params.author]
   name = "Hemanth Kumar Motukuri"
   image = "img/profile_pic.jpg"
-  imageQuality = 96
-  headline = "DevOps & MLOps Engineer | Kubernetes & Cloud Enthusiast"
+  headline = "DevOps & MLOps Engineer"
   bio = "DevOps & MLOps | Kubernetes | AWS"
   links = [
     { github = "https://github.com/hemanth7040" },

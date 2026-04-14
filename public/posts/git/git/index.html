@@ -1,0 +1,1900 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Git for DevOps Engineers – The Complete Guide &middot; Hemanth Kumar Motukuri</title>
+    <meta name="title" content="Git for DevOps Engineers – The Complete Guide &middot; Hemanth Kumar Motukuri">
+  
+
+  
+  
+    <meta name="description" content="A comprehensive guide covering what Git is, why it matters, when to use it, real-world DevOps use cases, and every mandatory Git command every DevOps Engineer must know — with clear explanations and practical examples.">
+  
+  
+    <meta name="keywords" content="git,devops,version-control,ci-cd,devsecops,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/git/git/">
+  
+
+  
+  
+    <meta name="author" content="Hemanth Kumar Motukuri">
+  
+  
+    
+      
+        
+          <link href="https://github.com/hemanth7040" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://linkedin.com/in/hemanth-kumar-motukuri" rel="me">
+        
+      
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/git/git/">
+  <meta property="og:site_name" content="Hemanth Kumar Motukuri">
+  <meta property="og:title" content="Git for DevOps Engineers – The Complete Guide">
+  <meta property="og:description" content="A comprehensive guide covering what Git is, why it matters, when to use it, real-world DevOps use cases, and every mandatory Git command every DevOps Engineer must know — with clear explanations and practical examples.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-14T00:00:00+00:00">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="Devops">
+    <meta property="article:tag" content="Version-Control">
+    <meta property="article:tag" content="Ci-Cd">
+    <meta property="article:tag" content="Devsecops">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Git for DevOps Engineers – The Complete Guide">
+  <meta name="twitter:description" content="A comprehensive guide covering what Git is, why it matters, when to use it, real-world DevOps use cases, and every mandatory Git command every DevOps Engineer must know — with clear explanations and practical examples.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.6e52716fc2bf79b9a028416df9a459bb6de68c54e9d942261668120f5d1ba7a55fa7ef8d43df2222f7bec007d184d9fb44c56fbe257f88dfb079bdbb11570d60.css"
+    integrity="sha512-blJxb8K/ebmgKEFt&#43;aRZu23mjFTp2UImFmgSD10bp6Vfp&#43;&#43;NQ98iIve&#43;wAfRhNn7RMVvviV/iN&#43;web27EVcNYA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.c41769a6d0a0f3c9fae21f229a8ff36dbf91ab46022c5e71ec6600b9be681f5f41e6148129be6881788a258ce35a23cb28fb4b739843d8ffc1efec4081c51313.js"
+      integrity="sha512-xBdpptCg88n64h8imo/zbb&#43;Rq0YCLF5x7GYAub5oH19B5hSBKb5ogXiKJYzjWiPLKPtLc5hD2P/B7&#43;xAgcUTEw=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "My Technical Blog",
+    "name": "Git for DevOps Engineers – The Complete Guide",
+    "headline": "Git for DevOps Engineers – The Complete Guide",
+    "description": "A comprehensive guide covering what Git is, why it matters, when to use it, real-world DevOps use cases, and every mandatory Git command every DevOps Engineer must know — with clear explanations and practical examples.",
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/git/git/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hemanth Kumar Motukuri"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-04-14T00:00:00\u002b00:00",
+    "datePublished": "2026-04-14T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-04-14T00:00:00\u002b00:00",
+    
+    "keywords": ["git","devops","version-control","ci-cd","devsecops"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2955"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Hemanth Kumar Motukuri
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Technical Topics">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href=""
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Projects"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Projects
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/resume/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Resume"
+      title="Resume">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Resume
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="mailto:hemanthkumarmotukuri@gmail.com"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Contact"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Contact
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Technical Topics" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href=""
+        aria-label="Projects"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Projects
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/resume/"
+        aria-label="Resume"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Resume" class="text-2xl font-bold tracking-tight">
+          Resume
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="mailto:hemanthkumarmotukuri@gmail.com"
+        aria-label="Contact"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Contact
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Git for DevOps Engineers – The Complete Guide
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-04-14T00:00:00&#43;00:00">14 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2955 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">14 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/git/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Git
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/git/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Git
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/devops/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Devops
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/version-control/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Version-Control
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/ci-cd/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Ci-Cd
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/devsecops/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Devsecops
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Hemanth Kumar Motukuri"
+        src="/img/profile_pic_hu_73b016f6fa6bb344.jpg"
+        data-zoom-src="/img/profile_pic_hu_da66a14a1ead8228.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Hemanth Kumar Motukuri
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">DevOps &amp; MLOps | Kubernetes | AWS</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/hemanth7040"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 496 496" xml:space="preserve">
+<path id="SVGCleanerId_0" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+	c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+	c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+	c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+	c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+	c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+	c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+	c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+	c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+<g>
+	<path id="SVGCleanerId_0_1_" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+		c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+		c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+		c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+		c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+		c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+		c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+</g>
+<g>
+	<path style="fill:#114C82;" d="M378.496,109.131c13.128,33.904,4.752,58.928,2.2,65.176c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163c0-29.56-5.152-57.896-14.568-84.2
+		C447.24,133.963,409.184,109.987,378.496,109.131z"/>
+	<path style="fill:#114C82;" d="M192.976,377.323c2.784-5.616,6.184-9.984,9.76-13.144c-30.176-3.456-61.168-11.512-83.048-33.744
+		C136.52,358.451,163.928,371.195,192.976,377.323z"/>
+</g>
+<path style="fill:#6CA9EA;" d="M12.912,270.947c0-137.536,111.048-249,247.992-249c76.04,0,144.056,34.392,189.536,88.488
+	C405.52,46.755,331.616,5.163,247.992,5.163C111.048,5.163,0,116.627,0,254.163c0,61.32,22.12,117.424,58.752,160.792
+	C29.944,374.291,12.912,324.643,12.912,270.947z"/>
+<path style="fill:#083E66;" d="M322.712,426.899c0-23.232-7.928-38.44-16.832-46.128c55.248-6.16,113.24-27.216,113.24-122.848
+	c0-27.184-9.6-49.4-25.52-66.824c2.576-6.296,11.096-31.608-2.456-65.872c0,0-2.576-0.792-7.896-0.488
+	c5.808,25.84-0.416,44.32-2.552,49.568c15.904,17.424,25.504,39.648,25.504,66.832c0,95.64-57.984,116.68-113.232,122.856
+	c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296c0,5.872,3.496,12.568,12.92,12.408
+	C322.488,479.555,322.712,455.659,322.712,426.899z"/>
+<path style="fill:#114C82;" d="M117.464,423.995c5.208,10.72,22.712,36.4,68.888,30.992c-0.064-5.648-0.112-11.976-0.144-18.928
+	C150.584,443.835,129.552,434.667,117.464,423.995z"/>
+<path style="fill:#6CA9EA;" d="M126.368,391.387c-1.592-2.4-4.576-6.472-8.904-10.544
+	C120.272,385.011,123.256,388.507,126.368,391.387z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/hemanth-kumar-motukuri"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 382 382" xml:space="preserve">
+<path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:hemanthkumarmotukuri@gmail.com"
+          
+          target="_blank"
+          aria-label="Gmail"
+          title="Gmail"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?>
+<!-- License: MIT. Made by Garuda Technology: https://github.com/garudatechnologydevelopers/sketch-icons -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z" fill="white"/>
+<path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" fill="#EA4335"/>
+<path d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z" fill="#FBBC05"/>
+<path d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z" fill="#34A853"/>
+<path d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z" fill="#C5221F"/>
+<path d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z" fill="#C5221F"/>
+<path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" fill="#C5221F"/>
+<path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" fill="#4285F4"/>
+</svg></span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">What is Git?
+    <div id="what-is-git" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-is-git" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><strong>Git</strong> is a free and open-source <strong>distributed version control system</strong> (DVCS). It tracks changes in files over time, allowing you and your team to collaborate on code, roll back mistakes, and maintain a complete history of every change ever made.</p>
+<blockquote><p>Think of Git as a time machine for your code. Every save point (commit) is a snapshot you can always return to.</p>
+</blockquote><p>Git was created by <strong>Linus Torvalds</strong> in 2005 (yes, the same person who created Linux). Today it is the industry standard used by virtually every software team on the planet.</p>
+<hr>
+
+<h2 class="relative group">Why Git?
+    <div id="why-git" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-git" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>As a DevOps engineer, you sit at the intersection of development and operations. Git is your single source of truth for everything — application code, infrastructure-as-code (IaC), CI/CD pipelines, configuration files, Helm charts, Kubernetes manifests, and more.</p>
+<p>Here is why Git is non-negotiable:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Reason</th>
+          <th>Explanation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Collaboration</strong></td>
+          <td>Multiple engineers can work on the same codebase simultaneously without overwriting each other&rsquo;s work.</td>
+      </tr>
+      <tr>
+          <td><strong>History &amp; Audit Trail</strong></td>
+          <td>Every change is recorded — who made it, when, and why. Critical for compliance and debugging.</td>
+      </tr>
+      <tr>
+          <td><strong>Rollback</strong></td>
+          <td>Made a bad deployment? Git lets you revert to any previous state within seconds.</td>
+      </tr>
+      <tr>
+          <td><strong>Branching</strong></td>
+          <td>Isolate features, hotfixes, and experiments in separate branches without touching production.</td>
+      </tr>
+      <tr>
+          <td><strong>GitOps</strong></td>
+          <td>The entire infrastructure (Terraform, Ansible, K8s manifests) can be managed and deployed through Git workflows.</td>
+      </tr>
+      <tr>
+          <td><strong>CI/CD Integration</strong></td>
+          <td>Every major pipeline tool (Jenkins, GitHub Actions, GitLab CI, ArgoCD) is triggered by Git events.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h2 class="relative group">When to Use Git?
+    <div id="when-to-use-git" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#when-to-use-git" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Git should be used <strong>always and for everything</strong> in a DevOps context. Specifically:</p>
+<ul>
+<li>Writing or modifying <strong>application code</strong></li>
+<li>Creating or updating <strong>Terraform / CloudFormation</strong> infrastructure templates</li>
+<li>Managing <strong>Kubernetes manifests</strong> and Helm charts</li>
+<li>Writing <strong>Ansible playbooks</strong> or Chef/Puppet recipes</li>
+<li>Configuring <strong>CI/CD pipeline</strong> files (<code>.github/workflows</code>, <code>Jenkinsfile</code>, <code>.gitlab-ci.yml</code>)</li>
+<li>Tracking <strong>Dockerfile</strong> and <strong>docker-compose</strong> changes</li>
+<li>Managing <strong>configuration files</strong> for servers and services</li>
+<li>Documenting infrastructure with <strong>README</strong> and runbooks</li>
+</ul>
+<blockquote><p><strong>Rule of thumb:</strong> If it&rsquo;s a text file that can change over time, it belongs in Git.</p>
+</blockquote><hr>
+
+<h2 class="relative group">Core Concepts Before Commands
+    <div id="core-concepts-before-commands" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#core-concepts-before-commands" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Before jumping into commands, understand these key building blocks:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Term</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Repository (Repo)</strong></td>
+          <td>The project folder tracked by Git. Contains all files and their entire history.</td>
+      </tr>
+      <tr>
+          <td><strong>Commit</strong></td>
+          <td>A saved snapshot of your changes at a point in time.</td>
+      </tr>
+      <tr>
+          <td><strong>Branch</strong></td>
+          <td>An independent line of development. <code>main</code> is the default production branch.</td>
+      </tr>
+      <tr>
+          <td><strong>Remote</strong></td>
+          <td>A version of your repo hosted on a server (GitHub, GitLab, Bitbucket, Azure Repos).</td>
+      </tr>
+      <tr>
+          <td><strong>Staging Area (Index)</strong></td>
+          <td>A preparation area where you decide what goes into your next commit.</td>
+      </tr>
+      <tr>
+          <td><strong>HEAD</strong></td>
+          <td>A pointer to the current commit you are working from.</td>
+      </tr>
+      <tr>
+          <td><strong>Merge</strong></td>
+          <td>Combining changes from one branch into another.</td>
+      </tr>
+      <tr>
+          <td><strong>Rebase</strong></td>
+          <td>Replaying commits from one branch on top of another — creates a cleaner history.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h2 class="relative group">Mandatory Git Commands for DevOps Engineers
+    <div id="mandatory-git-commands-for-devops-engineers" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mandatory-git-commands-for-devops-engineers" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<hr>
+
+<h3 class="relative group">1. <code>git init</code> — Initialize a Repository
+    <div id="1-git-init--initialize-a-repository" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-git-init--initialize-a-repository" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Creates a brand new empty Git repository in the current directory.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init</span></span></code></pre></div></div>
+<p><strong>Example — Start tracking an Ansible project:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir ansible-playbooks
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ansible-playbooks
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: Initialized empty Git repository in /ansible-playbooks/.git/</span></span></span></code></pre></div></div>
+<blockquote><p>Use this when starting a new project from scratch locally.</p>
+</blockquote><hr>
+
+<h3 class="relative group">2. <code>git clone</code> — Copy a Remote Repository
+    <div id="2-git-clone--copy-a-remote-repository" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-git-clone--copy-a-remote-repository" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Downloads a complete copy of a remote repository (including all history and branches) to your local machine.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone &lt;repository-url&gt;
+</span></span><span class="line"><span class="cl">git clone &lt;repository-url&gt; &lt;target-folder-name&gt;</span></span></code></pre></div></div>
+<p><strong>Example — Clone a Terraform project from GitHub:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/org/terraform-infra.git
+</span></span><span class="line"><span class="cl">git clone https://github.com/org/terraform-infra.git my-infra</span></span></code></pre></div></div>
+<blockquote><p>This is almost always the first command you run when joining a project.</p>
+</blockquote><hr>
+
+<h3 class="relative group">3. <code>git status</code> — Check What&rsquo;s Changed
+    <div id="3-git-status--check-whats-changed" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-git-status--check-whats-changed" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Shows the current state of your working directory — which files are modified, staged, or untracked.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git status</span></span></code></pre></div></div>
+<p><strong>Example output:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">On branch feature/add-nginx-config
+</span></span><span class="line"><span class="cl">Changes not staged for commit:
+</span></span><span class="line"><span class="cl">  modified:   nginx/nginx.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Untracked files:
+</span></span><span class="line"><span class="cl">  nginx/ssl.conf</span></span></code></pre></div></div>
+<blockquote><p>Run this constantly. It&rsquo;s your GPS — it tells you exactly where you are.</p>
+</blockquote><hr>
+
+<h3 class="relative group">4. <code>git add</code> — Stage Changes
+    <div id="4-git-add--stage-changes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-git-add--stage-changes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Moves changes from your working directory to the staging area, preparing them for a commit.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add &lt;filename&gt;         <span class="c1"># Stage a specific file</span>
+</span></span><span class="line"><span class="cl">git add .                  <span class="c1"># Stage all changed files</span>
+</span></span><span class="line"><span class="cl">git add -p                 <span class="c1"># Stage changes interactively (hunk by hunk)</span></span></span></code></pre></div></div>
+<p><strong>Example — Stage only the Dockerfile:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add Dockerfile</span></span></code></pre></div></div>
+<p><strong>Example — Stage everything:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .</span></span></code></pre></div></div>
+<blockquote><p>Always review what you&rsquo;re staging before committing, especially in production pipelines.</p>
+</blockquote><hr>
+
+<h3 class="relative group">5. <code>git commit</code> — Save a Snapshot
+    <div id="5-git-commit--save-a-snapshot" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-git-commit--save-a-snapshot" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Records the staged changes into the repository history with a descriptive message.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -m <span class="s2">&#34;your message here&#34;</span>
+</span></span><span class="line"><span class="cl">git commit -am <span class="s2">&#34;message&#34;</span>      <span class="c1"># Stage tracked files and commit in one step</span></span></span></code></pre></div></div>
+<p><strong>Example — Commit a Kubernetes deployment update:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -m <span class="s2">&#34;feat: update nginx deployment replicas to 3 for HA&#34;</span></span></span></code></pre></div></div>
+<p><strong>Best practice for commit messages — follow Conventional Commits:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">feat: add Redis cache configuration
+</span></span><span class="line"><span class="cl">fix: correct wrong port in service manifest
+</span></span><span class="line"><span class="cl">chore: update .gitignore for terraform state files
+</span></span><span class="line"><span class="cl">docs: add runbook for database failover</span></span></code></pre></div></div>
+<blockquote><p>Good commit messages are like documentation. Future-you (and your team) will thank present-you.</p>
+</blockquote><hr>
+
+<h3 class="relative group">6. <code>git log</code> — View Commit History
+    <div id="6-git-log--view-commit-history" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-git-log--view-commit-history" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Displays a list of all commits in the current branch — who made them, when, and the message.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git log                        <span class="c1"># Full history</span>
+</span></span><span class="line"><span class="cl">git log --oneline              <span class="c1"># Compact one-line view</span>
+</span></span><span class="line"><span class="cl">git log --oneline --graph      <span class="c1"># Visual branch tree</span>
+</span></span><span class="line"><span class="cl">git log --oneline -10          <span class="c1"># Last 10 commits</span>
+</span></span><span class="line"><span class="cl">git log --author<span class="o">=</span><span class="s2">&#34;Alice&#34;</span>       <span class="c1"># Filter by author</span>
+</span></span><span class="line"><span class="cl">git log -- path/to/file        <span class="c1"># History of a specific file</span></span></span></code></pre></div></div>
+<p><strong>Example:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git log --oneline --graph --all
+</span></span><span class="line"><span class="cl"><span class="c1"># Output:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># * a3f1c2d (HEAD -&gt; main) feat: add Prometheus scrape config</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># * b7e90ca fix: correct Grafana data source URL</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># * 1d4e8f0 chore: update terraform provider versions</span></span></span></code></pre></div></div>
+<blockquote><p>Use <code>--graph</code> to visualize branch merges — very helpful in complex projects.</p>
+</blockquote><hr>
+
+<h3 class="relative group">7. <code>git branch</code> — Manage Branches
+    <div id="7-git-branch--manage-branches" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-git-branch--manage-branches" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Lists, creates, or deletes branches.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch                     <span class="c1"># List all local branches</span>
+</span></span><span class="line"><span class="cl">git branch -a                  <span class="c1"># List all branches (local + remote)</span>
+</span></span><span class="line"><span class="cl">git branch feature/my-feature  <span class="c1"># Create a new branch</span>
+</span></span><span class="line"><span class="cl">git branch -d feature/done     <span class="c1"># Delete a branch (safe — only if merged)</span>
+</span></span><span class="line"><span class="cl">git branch -D feature/force    <span class="c1"># Force delete a branch</span></span></span></code></pre></div></div>
+<p><strong>Example — List branches in a CI/CD repo:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch -a
+</span></span><span class="line"><span class="cl"><span class="c1"># Output:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># * main</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   feature/add-github-actions</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   remotes/origin/main</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#   remotes/origin/release/v1.2</span></span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group">8. <code>git checkout</code> / <code>git switch</code> — Switch Branches
+    <div id="8-git-checkout--git-switch--switch-branches" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-git-checkout--git-switch--switch-branches" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Moves you to a different branch. <code>git switch</code> is the modern, cleaner alternative to <code>git checkout</code> for branch switching.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout branch-name           <span class="c1"># Old way</span>
+</span></span><span class="line"><span class="cl">git switch branch-name             <span class="c1"># New way (recommended)</span>
+</span></span><span class="line"><span class="cl">git switch -c feature/new-branch   <span class="c1"># Create and switch in one step</span>
+</span></span><span class="line"><span class="cl">git checkout -b feature/new-branch <span class="c1"># Old equivalent</span></span></span></code></pre></div></div>
+<p><strong>Example — Create and move to a new feature branch:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git switch -c feature/add-helm-chart
+</span></span><span class="line"><span class="cl"><span class="c1"># Output: Switched to a new branch &#39;feature/add-helm-chart&#39;</span></span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group">9. <code>git pull</code> — Fetch and Merge Remote Changes
+    <div id="9-git-pull--fetch-and-merge-remote-changes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-git-pull--fetch-and-merge-remote-changes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Downloads changes from the remote repository and immediately merges them into your current branch.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git pull
+</span></span><span class="line"><span class="cl">git pull origin main           <span class="c1"># Pull from a specific remote and branch</span>
+</span></span><span class="line"><span class="cl">git pull --rebase origin main  <span class="c1"># Pull using rebase instead of merge</span></span></span></code></pre></div></div>
+<p><strong>Example — Sync your local branch before starting work:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git switch main
+</span></span><span class="line"><span class="cl">git pull origin main
+</span></span><span class="line"><span class="cl"><span class="c1"># Always pull before you start coding to avoid conflicts later.</span></span></span></code></pre></div></div>
+<blockquote><p><code>git pull --rebase</code> is preferred in many teams as it avoids unnecessary merge commits.</p>
+</blockquote><hr>
+
+<h3 class="relative group">10. <code>git fetch</code> — Download Without Merging
+    <div id="10-git-fetch--download-without-merging" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#10-git-fetch--download-without-merging" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Downloads all changes from the remote but does NOT merge them into your local branch. It just updates your knowledge of the remote.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git fetch
+</span></span><span class="line"><span class="cl">git fetch origin
+</span></span><span class="line"><span class="cl">git fetch --all        <span class="c1"># Fetch from all remotes</span></span></span></code></pre></div></div>
+<p><strong>Example — Check what changed on remote before merging:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git fetch origin
+</span></span><span class="line"><span class="cl">git log HEAD..origin/main --oneline
+</span></span><span class="line"><span class="cl"><span class="c1"># Shows what commits are on remote that you don&#39;t have yet</span></span></span></code></pre></div></div>
+<blockquote><p>Use <code>git fetch</code> when you want to inspect remote changes before applying them.</p>
+</blockquote><hr>
+
+<h3 class="relative group">11. <code>git push</code> — Upload to Remote
+    <div id="11-git-push--upload-to-remote" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-git-push--upload-to-remote" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Sends your local commits to the remote repository.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git push
+</span></span><span class="line"><span class="cl">git push origin main                      <span class="c1"># Push to a specific remote branch</span>
+</span></span><span class="line"><span class="cl">git push -u origin feature/my-feature     <span class="c1"># Push and set upstream tracking</span>
+</span></span><span class="line"><span class="cl">git push --force-with-lease               <span class="c1"># Force push safely (preferred over --force)</span></span></span></code></pre></div></div>
+<p><strong>Example — Push a new feature branch:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git push -u origin feature/add-argo-workflow</span></span></code></pre></div></div>
+<blockquote><p><strong>Never use <code>git push --force</code> on shared branches.</strong> Use <code>--force-with-lease</code> instead — it checks that nobody else has pushed before you.</p>
+</blockquote><hr>
+
+<h3 class="relative group">12. <code>git merge</code> — Combine Branches
+    <div id="12-git-merge--combine-branches" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#12-git-merge--combine-branches" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Merges changes from one branch into the current branch.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git merge feature/branch-name
+</span></span><span class="line"><span class="cl">git merge --no-ff feature/branch-name    <span class="c1"># Always create a merge commit</span>
+</span></span><span class="line"><span class="cl">git merge --squash feature/branch-name   <span class="c1"># Squash all commits into one</span></span></span></code></pre></div></div>
+<p><strong>Example — Merge a feature into main:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git switch main
+</span></span><span class="line"><span class="cl">git pull origin main
+</span></span><span class="line"><span class="cl">git merge feature/add-monitoring-stack
+</span></span><span class="line"><span class="cl">git push origin main</span></span></code></pre></div></div>
+<blockquote><p><code>--no-ff</code> (no fast-forward) creates a merge commit even if the history is linear. This preserves context about the merge in the history.</p>
+</blockquote><hr>
+
+<h3 class="relative group">13. <code>git rebase</code> — Rewrite History Cleanly
+    <div id="13-git-rebase--rewrite-history-cleanly" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#13-git-rebase--rewrite-history-cleanly" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Moves or replays your commits on top of another branch. Produces a linear, cleaner history compared to merge.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git rebase main                  <span class="c1"># Rebase current branch on top of main</span>
+</span></span><span class="line"><span class="cl">git rebase -i HEAD~5             <span class="c1"># Interactive rebase — edit last 5 commits</span></span></span></code></pre></div></div>
+<p><strong>Example — Keep your feature branch up to date with main:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git switch feature/add-fluentd
+</span></span><span class="line"><span class="cl">git rebase main
+</span></span><span class="line"><span class="cl"><span class="c1"># Your commits are now replayed on top of the latest main</span></span></span></code></pre></div></div>
+<p><strong>Interactive rebase — clean up messy commits before PR:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git rebase -i HEAD~3
+</span></span><span class="line"><span class="cl"><span class="c1"># Opens an editor where you can squash, rename, or reorder commits</span></span></span></code></pre></div></div>
+<blockquote><p>⚠️ Never rebase commits that have already been pushed to a shared remote branch.</p>
+</blockquote><hr>
+
+<h3 class="relative group">14. <code>git stash</code> — Temporarily Save Uncommitted Work
+    <div id="14-git-stash--temporarily-save-uncommitted-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#14-git-stash--temporarily-save-uncommitted-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Saves your uncommitted changes to a hidden stack so you can switch context without losing work.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git stash                          <span class="c1"># Stash current changes</span>
+</span></span><span class="line"><span class="cl">git stash push -m <span class="s2">&#34;work in progress on nginx config&#34;</span>   <span class="c1"># Stash with a label</span>
+</span></span><span class="line"><span class="cl">git stash list                     <span class="c1"># See all stashes</span>
+</span></span><span class="line"><span class="cl">git stash pop                      <span class="c1"># Apply latest stash and remove it</span>
+</span></span><span class="line"><span class="cl">git stash apply stash@<span class="o">{</span>2<span class="o">}</span>          <span class="c1"># Apply a specific stash without removing it</span>
+</span></span><span class="line"><span class="cl">git stash drop stash@<span class="o">{</span>0<span class="o">}</span>           <span class="c1"># Delete a stash</span></span></span></code></pre></div></div>
+<p><strong>Example — Urgent hotfix interrupts your work:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># You&#39;re midway through editing a Terraform file</span>
+</span></span><span class="line"><span class="cl">git stash push -m <span class="s2">&#34;wip: vpc peering changes&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Switch to fix the urgent bug</span>
+</span></span><span class="line"><span class="cl">git switch hotfix/fix-lb-timeout
+</span></span><span class="line"><span class="cl"><span class="c1"># ... make fix, commit, push ...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Come back and restore your work</span>
+</span></span><span class="line"><span class="cl">git switch feature/vpc-peering
+</span></span><span class="line"><span class="cl">git stash pop</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group">15. <code>git diff</code> — Compare Changes
+    <div id="15-git-diff--compare-changes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#15-git-diff--compare-changes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Shows the exact line-by-line differences between files, commits, or branches.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git diff                          <span class="c1"># Unstaged changes vs last commit</span>
+</span></span><span class="line"><span class="cl">git diff --staged                 <span class="c1"># Staged changes vs last commit</span>
+</span></span><span class="line"><span class="cl">git diff main..feature/my-branch  <span class="c1"># Difference between two branches</span>
+</span></span><span class="line"><span class="cl">git diff commit1 commit2          <span class="c1"># Difference between two commits</span></span></span></code></pre></div></div>
+<p><strong>Example — Review what you&rsquo;re about to commit:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git diff --staged</span></span></code></pre></div></div>
+<blockquote><p>Always run <code>git diff --staged</code> before committing to catch accidental changes.</p>
+</blockquote><hr>
+
+<h3 class="relative group">16. <code>git reset</code> — Undo Changes
+    <div id="16-git-reset--undo-changes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#16-git-reset--undo-changes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Moves HEAD (and optionally the working directory) back to a previous state.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset --soft HEAD~1    <span class="c1"># Undo last commit, keep changes staged</span>
+</span></span><span class="line"><span class="cl">git reset --mixed HEAD~1   <span class="c1"># Undo last commit, keep changes unstaged (default)</span>
+</span></span><span class="line"><span class="cl">git reset --hard HEAD~1    <span class="c1"># Undo last commit and DISCARD all changes (destructive)</span>
+</span></span><span class="line"><span class="cl">git reset HEAD filename    <span class="c1"># Unstage a specific file</span></span></span></code></pre></div></div>
+<p><strong>Example — Undo a bad commit (but keep the changes):</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset --soft HEAD~1
+</span></span><span class="line"><span class="cl"><span class="c1"># Commit is removed, but your file changes are still staged</span></span></span></code></pre></div></div>
+<blockquote><p>⚠️ <code>--hard</code> permanently destroys uncommitted changes. Use with extreme caution.</p>
+</blockquote><hr>
+
+<h3 class="relative group">17. <code>git revert</code> — Safely Undo a Commit
+    <div id="17-git-revert--safely-undo-a-commit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#17-git-revert--safely-undo-a-commit" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Creates a new commit that reverses the changes of a previous commit. This is the <strong>safe way</strong> to undo in shared/production branches because it doesn&rsquo;t rewrite history.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git revert &lt;commit-hash&gt;
+</span></span><span class="line"><span class="cl">git revert HEAD            <span class="c1"># Revert the latest commit</span></span></span></code></pre></div></div>
+<p><strong>Example — Revert a bad deployment config:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git log --oneline
+</span></span><span class="line"><span class="cl"><span class="c1"># a3f1c2d fix: wrong memory limit in deployment</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git revert a3f1c2d
+</span></span><span class="line"><span class="cl"><span class="c1"># Creates a new commit that undoes the change</span>
+</span></span><span class="line"><span class="cl">git push origin main</span></span></code></pre></div></div>
+<blockquote><p>Use <code>git revert</code> on production/shared branches. Use <code>git reset</code> only on your private local branches.</p>
+</blockquote><hr>
+
+<h3 class="relative group">18. <code>git tag</code> — Mark Releases
+    <div id="18-git-tag--mark-releases" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#18-git-tag--mark-releases" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Creates a permanent, named pointer to a specific commit. Used to mark releases and versions.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git tag                           <span class="c1"># List all tags</span>
+</span></span><span class="line"><span class="cl">git tag v1.0.0                    <span class="c1"># Create a lightweight tag</span>
+</span></span><span class="line"><span class="cl">git tag -a v1.0.0 -m <span class="s2">&#34;Release 1.0.0 — initial stable release&#34;</span>  <span class="c1"># Annotated tag (preferred)</span>
+</span></span><span class="line"><span class="cl">git push origin v1.0.0            <span class="c1"># Push a specific tag</span>
+</span></span><span class="line"><span class="cl">git push origin --tags            <span class="c1"># Push all tags</span></span></span></code></pre></div></div>
+<p><strong>Example — Tag a production release:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git tag -a v2.3.1 -m <span class="s2">&#34;Release v2.3.1 — security patch for CVE-2026-1234&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin v2.3.1</span></span></code></pre></div></div>
+<blockquote><p>Tags are critical in CI/CD — pipelines often trigger production deployments only on tagged commits.</p>
+</blockquote><hr>
+
+<h3 class="relative group">19. <code>git remote</code> — Manage Remote Connections
+    <div id="19-git-remote--manage-remote-connections" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#19-git-remote--manage-remote-connections" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Lets you view, add, rename, or remove connections to remote repositories.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote -v                            <span class="c1"># List remotes with URLs</span>
+</span></span><span class="line"><span class="cl">git remote add origin &lt;url&gt;              <span class="c1"># Add a remote called &#34;origin&#34;</span>
+</span></span><span class="line"><span class="cl">git remote set-url origin &lt;new-url&gt;      <span class="c1"># Change remote URL</span>
+</span></span><span class="line"><span class="cl">git remote remove origin                 <span class="c1"># Remove a remote</span></span></span></code></pre></div></div>
+<p><strong>Example — Point your repo to a new GitLab instance:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote set-url origin https://gitlab.company.com/infra/terraform-aws.git
+</span></span><span class="line"><span class="cl">git remote -v
+</span></span><span class="line"><span class="cl"><span class="c1"># origin  https://gitlab.company.com/infra/terraform-aws.git (fetch)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># origin  https://gitlab.company.com/infra/terraform-aws.git (push)</span></span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group">20. <code>git cherry-pick</code> — Apply a Specific Commit
+    <div id="20-git-cherry-pick--apply-a-specific-commit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#20-git-cherry-pick--apply-a-specific-commit" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Takes a single commit from any branch and applies it to your current branch. Useful for applying a hotfix across multiple branches.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git cherry-pick &lt;commit-hash&gt;
+</span></span><span class="line"><span class="cl">git cherry-pick abc123 def456     <span class="c1"># Cherry-pick multiple commits</span></span></span></code></pre></div></div>
+<p><strong>Example — Apply a critical security fix to a release branch:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Fix was committed on main with hash a1b2c3d</span>
+</span></span><span class="line"><span class="cl">git switch release/v1.5
+</span></span><span class="line"><span class="cl">git cherry-pick a1b2c3d
+</span></span><span class="line"><span class="cl">git push origin release/v1.5</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group">21. <code>git bisect</code> — Find the Bad Commit
+    <div id="21-git-bisect--find-the-bad-commit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-git-bisect--find-the-bad-commit" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Uses binary search to find which commit introduced a bug. Incredibly powerful for debugging regressions.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git bisect start
+</span></span><span class="line"><span class="cl">git bisect bad                    <span class="c1"># Current commit is broken</span>
+</span></span><span class="line"><span class="cl">git bisect good v1.0.0            <span class="c1"># This older tag was working</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Git checks out a middle commit — you test and mark it:</span>
+</span></span><span class="line"><span class="cl">git bisect good                   <span class="c1"># or</span>
+</span></span><span class="line"><span class="cl">git bisect bad
+</span></span><span class="line"><span class="cl"><span class="c1"># Repeat until Git identifies the first bad commit</span>
+</span></span><span class="line"><span class="cl">git bisect reset                  <span class="c1"># End the session</span></span></span></code></pre></div></div>
+<p><strong>Example — Find when a memory leak was introduced:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git bisect start
+</span></span><span class="line"><span class="cl">git bisect bad                    <span class="c1"># HEAD is broken</span>
+</span></span><span class="line"><span class="cl">git bisect good v2.1.0            <span class="c1"># v2.1.0 was stable</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Git will help you narrow it down in ~7 steps for 100 commits</span></span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group">22. <code>git blame</code> — Track Who Changed What
+    <div id="22-git-blame--track-who-changed-what" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-git-blame--track-who-changed-what" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>What it does:</strong> Shows who last modified each line of a file and in which commit.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git blame filename
+</span></span><span class="line"><span class="cl">git blame -L 10,20 filename       <span class="c1"># Show only lines 10–20</span></span></span></code></pre></div></div>
+<p><strong>Example — Find who changed the Jenkinsfile:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git blame Jenkinsfile
+</span></span><span class="line"><span class="cl"><span class="c1"># Output shows commit hash, author, date, and line content for each line</span></span></span></code></pre></div></div>
+<blockquote><p>Not about assigning blame (despite the name) — it&rsquo;s about finding context for changes.</p>
+</blockquote><hr>
+
+<h2 class="relative group">Git Workflow Cheat Sheet for DevOps
+    <div id="git-workflow-cheat-sheet-for-devops" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-workflow-cheat-sheet-for-devops" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Daily Workflow</span>
+</span></span><span class="line"><span class="cl">git switch main <span class="o">&amp;&amp;</span> git pull          <span class="c1"># Start from the latest</span>
+</span></span><span class="line"><span class="cl">git switch -c feature/my-task        <span class="c1"># Create a new branch</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ... make your changes ...</span>
+</span></span><span class="line"><span class="cl">git status                           <span class="c1"># Check what changed</span>
+</span></span><span class="line"><span class="cl">git diff --staged                    <span class="c1"># Review staged changes</span>
+</span></span><span class="line"><span class="cl">git add .                            <span class="c1"># Stage changes</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;feat: describe change&#34;</span> <span class="c1"># Save a snapshot</span>
+</span></span><span class="line"><span class="cl">git push -u origin feature/my-task   <span class="c1"># Push to remote</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Open a Pull Request / Merge Request on GitHub/GitLab</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Keeping your branch up to date</span>
+</span></span><span class="line"><span class="cl">git fetch origin
+</span></span><span class="line"><span class="cl">git rebase origin/main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Quick fix on production</span>
+</span></span><span class="line"><span class="cl">git stash
+</span></span><span class="line"><span class="cl">git switch hotfix/urgent-fix
+</span></span><span class="line"><span class="cl"><span class="c1"># Fix, commit, push</span>
+</span></span><span class="line"><span class="cl">git switch feature/my-task
+</span></span><span class="line"><span class="cl">git stash pop</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Git Configuration — Do This First
+    <div id="git-configuration--do-this-first" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git-configuration--do-this-first" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Set your identity (required before first commit)</span>
+</span></span><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;Your Name&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;you@company.com&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set default branch name to main</span>
+</span></span><span class="line"><span class="cl">git config --global init.defaultBranch main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set VS Code as default editor</span>
+</span></span><span class="line"><span class="cl">git config --global core.editor <span class="s2">&#34;code --wait&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Enable colored output</span>
+</span></span><span class="line"><span class="cl">git config --global color.ui auto
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># View all your config</span>
+</span></span><span class="line"><span class="cl">git config --global --list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set up aliases for common commands</span>
+</span></span><span class="line"><span class="cl">git config --global alias.st status
+</span></span><span class="line"><span class="cl">git config --global alias.co checkout
+</span></span><span class="line"><span class="cl">git config --global alias.lg <span class="s2">&#34;log --oneline --graph --all&#34;</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Useful <code>.gitignore</code> Patterns for DevOps
+    <div id="useful-gitignore-patterns-for-devops" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#useful-gitignore-patterns-for-devops" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><pre tabindex="0"><code class="language-gitignore" data-lang="gitignore"># Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+*.tfvars           # Contains secrets — never commit!
+
+# Ansible
+*.retry
+vault_password_file
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+
+# General secrets
+.env
+*.pem
+*.key
+secrets/
+credentials.json
+
+# OS files
+.DS_Store
+Thumbs.db</code></pre></div>
+<hr>
+
+<h2 class="relative group">Quick Reference Table
+    <div id="quick-reference-table" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quick-reference-table" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>git init</code></td>
+          <td>Start a new repo</td>
+      </tr>
+      <tr>
+          <td><code>git clone &lt;url&gt;</code></td>
+          <td>Copy a remote repo</td>
+      </tr>
+      <tr>
+          <td><code>git status</code></td>
+          <td>Check current state</td>
+      </tr>
+      <tr>
+          <td><code>git add .</code></td>
+          <td>Stage all changes</td>
+      </tr>
+      <tr>
+          <td><code>git commit -m &quot;msg&quot;</code></td>
+          <td>Save a snapshot</td>
+      </tr>
+      <tr>
+          <td><code>git push</code></td>
+          <td>Upload to remote</td>
+      </tr>
+      <tr>
+          <td><code>git pull</code></td>
+          <td>Download and merge</td>
+      </tr>
+      <tr>
+          <td><code>git fetch</code></td>
+          <td>Download without merging</td>
+      </tr>
+      <tr>
+          <td><code>git branch</code></td>
+          <td>List/create branches</td>
+      </tr>
+      <tr>
+          <td><code>git switch -c &lt;name&gt;</code></td>
+          <td>Create and switch branch</td>
+      </tr>
+      <tr>
+          <td><code>git merge &lt;branch&gt;</code></td>
+          <td>Merge a branch</td>
+      </tr>
+      <tr>
+          <td><code>git rebase &lt;branch&gt;</code></td>
+          <td>Rebase onto a branch</td>
+      </tr>
+      <tr>
+          <td><code>git stash</code></td>
+          <td>Save work temporarily</td>
+      </tr>
+      <tr>
+          <td><code>git log --oneline</code></td>
+          <td>View commit history</td>
+      </tr>
+      <tr>
+          <td><code>git diff --staged</code></td>
+          <td>Review staged changes</td>
+      </tr>
+      <tr>
+          <td><code>git reset --soft HEAD~1</code></td>
+          <td>Undo last commit (keep changes)</td>
+      </tr>
+      <tr>
+          <td><code>git revert &lt;hash&gt;</code></td>
+          <td>Safely undo a commit</td>
+      </tr>
+      <tr>
+          <td><code>git tag -a v1.0.0</code></td>
+          <td>Mark a release</td>
+      </tr>
+      <tr>
+          <td><code>git cherry-pick &lt;hash&gt;</code></td>
+          <td>Apply a specific commit</td>
+      </tr>
+      <tr>
+          <td><code>git bisect</code></td>
+          <td>Find which commit broke things</td>
+      </tr>
+      <tr>
+          <td><code>git blame &lt;file&gt;</code></td>
+          <td>See who changed each line</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h2 class="relative group">Summary
+    <div id="summary" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#summary" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Git is not just a developer tool — it is the <strong>backbone of modern DevOps</strong>. Every pipeline, every deployment, every infrastructure change starts with a Git event. Mastering Git means you can collaborate faster, recover from failures with confidence, and maintain a clean, auditable trail of every change in your environment.</p>
+<p>Start with the basics (<code>clone</code>, <code>add</code>, <code>commit</code>, <code>push</code>, <code>pull</code>), build habits around branching and tagging, and gradually add tools like <code>rebase</code>, <code>stash</code>, <code>cherry-pick</code>, and <code>bisect</code> to your daily toolkit. These commands separate a good DevOps engineer from a great one.</p>
+<hr>
+<p><em>Last updated: April 2026 | Tags: git, devops, version-control, gitops, ci-cd</em></p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/docker/docker/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Docker for DevOps: The Complete Guide
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-04-12T00:00:00&#43;00:00">12 April 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hemanth Kumar Motukuri
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>
