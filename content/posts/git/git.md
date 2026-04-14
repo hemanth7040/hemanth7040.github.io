@@ -2,7 +2,6 @@
 title: "Git for DevOps Engineers – The Complete Guide"
 date: 2026-04-14
 draft: false
-tags: ["git", "devops", "version-control", "ci-cd", "devsecops"]
 categories: ["git"]
 description: "A comprehensive guide covering what Git is, why it matters, when to use it, real-world DevOps use cases, and every mandatory Git command every DevOps Engineer must know — with clear explanations and practical examples."
 
