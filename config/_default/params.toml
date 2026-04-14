@@ -8,3 +8,4 @@
   layout = "term-grid"
   showTermCount = false
   cardView = true
+  termByWeight = true

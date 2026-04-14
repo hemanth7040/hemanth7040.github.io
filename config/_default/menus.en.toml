@@ -3,14 +3,6 @@
   pageRef = "categories"
   weight = 10
 
-
-#[[main]]
-#  parent = "Blog"
-#  name = "DevOps"
-#  url = "/categories/DevOps/"
-#  weight = 2
-
-
 [[main]]
   name = "Projects"
   pageRef = "projects"
@@ -23,5 +15,5 @@
 
 [[main]]
   name = "Contact"
-  url = "mailto:hemanthkumarmotukuri@gmail.com"
+  pageRef = "contact.md" # Points to content/contact.md
   weight = 40

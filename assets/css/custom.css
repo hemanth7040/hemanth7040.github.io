@@ -6,3 +6,79 @@
 .prose {
     max-width: 100% !important;
 }
+
+.contact-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.submit-btn {
+    background: linear-gradient(90deg, #e91e63, #f44336); /* Pink to Red gradient like your image */
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+
+.dd-wrap { position: relative; }
+
+.dd-selected {
+  width: 100%;
+  background: #1e2a3a;
+  border: 1px solid #2d3f55;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border .15s;
+  user-select: none;
+}
+.dd-selected.open  { border-color: #4a90d9; border-radius: 8px 8px 0 0; }
+.dd-selected.has-value { color: #e2e8f0; }
+
+.dd-arrow { width: 14px; height: 14px; transition: transform .2s; flex-shrink: 0; }
+.dd-selected.open .dd-arrow { transform: rotate(180deg); }
+
+.dd-list {
+  display: none;
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  background: #1e2a3a;
+  border: 1px solid #4a90d9;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  z-index: 99;
+}
+.dd-list.open { display: block; }
+
+.dd-item { padding: 10px 14px; font-size: 14px; color: #94a3b8; cursor: pointer; transition: background .12s, color .12s; }
+.dd-item:hover { background: #253447; color: #e2e8f0; }
+.dd-item.active { color: #4a90d9; background: #1a2d42; }
