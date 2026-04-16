@@ -3,3 +3,9 @@ languageCode = 'en'
 title = 'Hemanth Kumar Motukuri'
 theme = 'blowfish'
 defaultContentLanguage = "en"
+
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  project = "projects"

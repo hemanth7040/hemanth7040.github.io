@@ -9,3 +9,4 @@
   showTermCount = false
   cardView = true
   termByWeight = true
+  showTermDescription = true

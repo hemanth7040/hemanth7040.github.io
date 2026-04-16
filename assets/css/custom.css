@@ -1,11 +1,61 @@
-/* Blowfish Tailwind width fix */
-.max-w-prose {
+/* ============================================================
+   1. BLOWFISH THEME & LAYOUT FIXES
+   ============================================================ */
+
+/* Remove default width constraints to allow centering */
+.max-w-prose, 
+.prose,
+main article, 
+.lg\:px-32 {
     max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 
-.prose {
-    max-width: 100% !important;
+/* ============================================================
+   2. PROJECTS TAXONOMY & CARD CENTERING
+   ============================================================ */
+
+/* Force the container to center the "Basic" tile */
+section.flex.flex-wrap {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 2rem !important;
 }
+
+/* Style the "Basic" tile as a centered card/pill */
+.term-card {
+    flex: 0 1 auto !important;
+    width: fit-content !important; 
+    min-width: 220px !important;
+    margin: 20px auto !important;
+    padding: 1.5rem !important;
+    text-align: center !important;
+    background-color: #1e293b !important; /* Blowfish slate blue */
+    border: 1px solid #475569 !important;
+    border-radius: 12px !important;
+    transition: transform 0.2s ease;
+}
+
+.term-card:hover {
+    transform: translateY(-5px);
+    border-color: #e91e63 !important;
+}
+
+/* Center the text inside the tile */
+.term-card .card-title {
+    text-align: center !important;
+    justify-content: center !important;
+    display: flex !important;
+    margin: 0 !important;
+}
+
+/* ============================================================
+   3. CONTACT FORM STYLES
+   ============================================================ */
 
 .contact-form {
     margin-top: 2rem;
@@ -30,7 +80,7 @@
 }
 
 .submit-btn {
-    background: linear-gradient(90deg, #e91e63, #f44336); /* Pink to Red gradient like your image */
+    background: linear-gradient(90deg, #e91e63, #f44336);
     color: white;
     padding: 1rem;
     border-radius: 8px;
@@ -43,6 +93,9 @@
     opacity: 0.9;
 }
 
+/* ============================================================
+   4. CUSTOM DROPDOWN STYLES
+   ============================================================ */
 
 .dd-wrap { position: relative; }
 
@@ -61,6 +114,7 @@
   transition: border .15s;
   user-select: none;
 }
+
 .dd-selected.open  { border-color: #4a90d9; border-radius: 8px 8px 0 0; }
 .dd-selected.has-value { color: #e2e8f0; }
 
@@ -77,6 +131,7 @@
   border-radius: 0 0 8px 8px;
   z-index: 99;
 }
+
 .dd-list.open { display: block; }
 
 .dd-item { padding: 10px 14px; font-size: 14px; color: #94a3b8; cursor: pointer; transition: background .12s, color .12s; }
