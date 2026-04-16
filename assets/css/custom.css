@@ -1,76 +1,69 @@
 /* ============================================================
-   1. LAYOUT RESET & FORMS
+   1. GLOBAL & THEME DEFAULTS (Safe for all pages)
    ============================================================ */
-/* Leave default Blowfish max-width alone for grids.
-   Your existing Contact Form and Dropdown styles go here. */
+.max-w-prose { max-width: 100% !important; }
+.prose { max-width: 100% !important; }
 
+/* Contact Form & Dropdown Styles */
 .contact-form { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem; max-width: 600px; }
 .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
 .contact-form input, .contact-form textarea { background: #111; border: 1px solid #333; color: white; padding: 0.8rem; border-radius: 8px; }
 .submit-btn { background: linear-gradient(90deg, #e91e63, #f44336); color: white; padding: 1rem; border-radius: 8px; font-weight: bold; cursor: pointer; transition: opacity 0.3s; }
 .submit-btn:hover { opacity: 0.9; }
 
-.dd-wrap { position: relative; }
-.dd-selected { width: 100%; background: #1e2a3a; border: 1px solid #2d3f55; border-radius: 8px; padding: 10px 14px; font-size: 14px; color: #94a3b8; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: border .15s; user-select: none; }
-.dd-selected.open { border-color: #4a90d9; border-radius: 8px 8px 0 0; }
-.dd-selected.has-value { color: #e2e8f0; }
-.dd-arrow { width: 14px; height: 14px; transition: transform .2s; flex-shrink: 0; }
-.dd-selected.open .dd-arrow { transform: rotate(180deg); }
-.dd-list { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #1e2a3a; border: 1px solid #4a90d9; border-top: none; border-radius: 0 0 8px 8px; z-index: 99; }
-.dd-list.open { display: block; }
-.dd-item { padding: 10px 14px; font-size: 14px; color: #94a3b8; cursor: pointer; transition: background .12s, color .12s; }
-.dd-item:hover { background: #253447; color: #e2e8f0; }
-.dd-item.active { color: #4a90d9; background: #1a2d42; }
-
 /* ============================================================
-   2. TARGETED PROJECTS CENTERING (SLIM & CENTERED)
+   2. PROJECT-SPECIFIC OVERRIDES (Targeted Isolation)
    ============================================================ */
 
-/*
-   Here is the fix. We are specifically looking for the main-content section
-   on the page located at your-site.com/projects/.
-   We are not using broad class matches that affect other pages.
+/* We only apply these rules when the user is on a page that is a child 
+   of the "Projects" section. This prevents the Blog/Technical Topics 
+   from stretching.
 */
 
-/* 1. Reset the massive padding and width on the Projects wrapper */
-main.max-w-prose.mt-12[path="/projects/"],
-.lg\:px-32[path="/projects/"] {
-    max-width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 1rem !important;  /* Reduces standard padding */
-    padding-right: 1rem !important;
-}
-
-/* 2. Target the Flex container holding the Projects grid */
-.term-grid[path="/projects/"],
-section.flex.flex-wrap[path="/projects/"] {
-    justify-content: center !important; /* Force the card to center */
+/* Center the project category tiles only */
+.taxonomy-project .term-grid,
+.section-projects .term-grid {
     display: flex !important;
-    width: 100% !important;
-    gap: 1rem !important; /* Reduces space between tiles if you add more */
-}
-
-/* 3. Style the "Basic" card to be a slim centered pill/button */
-.term-card[path="/projects/"] {
-    flex: 0 1 auto !important;     /* Shrink the box to the text size */
-    width: fit-content !important; 
-    min-width: 220px !important;    /* Professional minimum width */
-    margin: 20px auto !important;   /* Centered layout */
-    padding: 1rem !important;      /* Tighter, button-like padding */
-    text-align: center !important;
-    background-color: #1a1a1a !important; /* Dark background */
-    border: 1px solid #333 !important;
-    border-radius: 12px !important;
-    transition: transform 0.2s ease;
-}
-
-/* 4. Center the text inside the pill */
-.term-card[path="/projects/"] .card-title {
-    text-align: center !important;
     justify-content: center !important;
-    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 2rem !important;
+    margin-top: 3rem !important;
+}
+
+/* Style the project cards to be professional pills/tiles */
+.taxonomy-project .term-card,
+.section-projects .term-card {
+    flex: 0 1 auto !important;
+    width: 280px !important;       /* Fixed professional width */
+    height: auto !important;
+    padding: 1rem !important;
+    text-align: center !important;
+    border-radius: 12px !important;
+    border: 1px solid #333 !important;
+    background-color: #1e293b !important;
+}
+
+/* Ensure images inside these cards don't blow up */
+.section-projects .term-card img {
+    max-height: 150px !important;
+    object-fit: contain !important;
+}
+
+/* ============================================================
+   3. BLOG / CATEGORIES FIX (Restoring SDLC & Others)
+   ============================================================ */
+
+/* Force the Blog categories to keep their original 3-column grid look */
+.taxonomy-category .term-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    gap: 1.5rem !important;
+    justify-content: start !important;
+}
+
+/* Fix for the SDLC/Large image issue you mentioned */
+.taxonomy-category .term-card img {
     width: 100% !important;
-    margin: 0 !important;
-    font-size: 1rem !important; /* Tighter font size for button look */
+    height: 200px !important;      /* Standard height for your blog tiles */
+    object-fit: cover !important;  /* Keeps images from stretching oddly */
 }

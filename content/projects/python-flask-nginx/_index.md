@@ -1,5 +1,5 @@
 ---
-title: "P1 — Automated CI/CD Pipeline for a Python Flask Web App"
+title: "Automated CI/CD Pipeline for a Python Flask Web App"
 date: 2026-04-16
 draft: false
 #project: ["Production-Ready Flask"]
