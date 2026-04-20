@@ -9,3 +9,12 @@ defaultContentLanguage = "en"
   category = "categories"
   tag = "tags"
   project = "projects"
+  series = "series"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+
