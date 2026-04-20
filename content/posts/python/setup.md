@@ -5,8 +5,9 @@ draft: false
 categories: ["python"]
 description: "A complete beginner-friendly guide to installing Python, setting up VS Code, creating virtual environments, and running your first Python file — everything you need before writing a single line of AI code."
 video_url: "https://youtu.be/ygXn5nV5qFc?si=2ai-v1UT8qYrwvev"
-tags: ["python", "vscode", "setup", "beginners", "ai"]
-weight: 1
+series: ["Python Zero to MLOps"]
+series_order: 2
+tags:  [ "Vscode", "Setup", "Beginners", "Ai"]
 ---
 
 {{< youtube "ygXn5nV5qFc" >}}
@@ -400,23 +401,21 @@ The output appears directly below the cell.
 Press `Shift+Enter` to run the current cell and automatically move to a new one. Or click the **+ Code** button at the top.
 
 ---
+### Complete Setup Checklist
 
-## Complete Setup Checklist
+{{< checklist "Python installed — `python --version` shows a version number" >}}
+{{< checklist "VS Code installed and opens correctly" >}}
+{{< checklist "Python extension installed in VS Code" >}}
+{{< checklist "Pylance extension installed" >}}
+{{< checklist "Jupyter extension installed" >}}
+{{< checklist "Project folder created and opened in VS Code" >}}
+{{< checklist "Virtual environment created (`venv` folder exists)" >}}
+{{< checklist "Virtual environment activated (`(venv)` shows in terminal)" >}}
+{{< checklist "VS Code is using the correct Python interpreter" >}}
+{{< checklist "pip list works and shows packages" >}}
+{{< checklist "hello.py runs and prints output" >}}
+{{< checklist "Jupyter notebook opens and a cell runs successfully" >}}
 
-Use this checklist to make sure everything is working before you start learning Python concepts:
-
-- [ ] Python installed — `python --version` shows a version number
-- [ ] VS Code installed and opens correctly
-- [ ] Python extension installed in VS Code
-- [ ] Pylance extension installed
-- [ ] Jupyter extension installed
-- [ ] Project folder created and opened in VS Code
-- [ ] Virtual environment created (`venv` folder exists)
-- [ ] Virtual environment activated (`(venv)` shows in terminal)
-- [ ] VS Code is using the correct Python interpreter
-- [ ] `pip list` works and shows packages
-- [ ] `hello.py` runs and prints output
-- [ ] Jupyter notebook opens and a cell runs successfully
 
 ---
 

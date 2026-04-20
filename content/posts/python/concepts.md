@@ -1,11 +1,13 @@
 ---
-title: "Python Core Concepts for Beginners"
+title: "Phase 0: Python Basics for People Who Already Know Bash"
 date: 2026-04-19T09:00:00+05:30
 draft: false
 categories: ["python"]
 description: "Learn the fundamental building blocks of Python — variables, data types, strings, operators, control flow, data structures, functions, and error handling — explained simply with clear code examples."
 video_url: "https://youtu.be/ygXn5nV5qFc?si=2ai-v1UT8qYrwvev"
-tags: ["python", "beginners", "concepts", "syntax", "functions", "loops", "ai"]
+series: ["Python Zero to MLOps"]
+series_order: 3
+tags: ["Beginners", "Concepts", "Syntax", "Functions", "Loops", "Ai"]
 ---
 
 {{< youtube "ygXn5nV5qFc" >}}
