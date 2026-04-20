@@ -1,0 +1,8 @@
+<label style="display: flex; align-items: center; gap: 12px; padding: 10px 15px; margin: 5px 0; background: rgba(255,255,255,0.03); border-radius: 6px; cursor: pointer; transition: background 0.2s; border: 1px solid rgba(255,255,255,0.05);">
+    <input type="checkbox" style="width: 18px; height: 18px; cursor: pointer; accent-color: #4CAF50; flex-shrink: 0;">
+    <span style="color: inherit; font-size: 0.95rem; line-height: 1.4;">
+        {{ .Get 0 | markdownify | safeHTML }}
+    </span>
+</label>
+
+
