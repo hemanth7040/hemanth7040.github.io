@@ -3,15 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/posts/git/git/</loc>
-    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-19T11:00:00+05:30</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-04-19T11:00:00+05:30</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/python/why_python/</loc>
+    <lastmod>2026-04-19T11:00:00+05:30</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/python/setup/</loc>
+    <lastmod>2026-04-19T10:00:00+05:30</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/python/concepts/</loc>
+    <lastmod>2026-04-19T09:00:00+05:30</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/python/phase1/</loc>
+    <lastmod>2026-04-19T08:00:00+05:30</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/git/git/</loc>
     <lastmod>2026-04-14T00:00:00+00:00</lastmod>
   </url>
   <url>

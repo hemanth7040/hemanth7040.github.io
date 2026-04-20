@@ -1,0 +1,2887 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Phase 0: Python Basics for People Who Already Know Bash &middot; Hemanth Kumar Motukuri</title>
+    <meta name="title" content="Phase 0: Python Basics for People Who Already Know Bash &middot; Hemanth Kumar Motukuri">
+  
+
+  
+  
+    <meta name="description" content="Learn the fundamental building blocks of Python — variables, data types, strings, operators, control flow, data structures, functions, and error handling — explained simply with clear code examples.">
+  
+  
+    <meta name="keywords" content="Beginners,Concepts,Syntax,Functions,Loops,Ai,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/python/concepts/">
+  
+
+  
+  
+    <meta name="author" content="Hemanth Kumar Motukuri">
+  
+  
+    
+      
+        
+          <link href="https://github.com/hemanth7040" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://linkedin.com/in/hemanth-kumar-motukuri" rel="me">
+        
+      
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/python/concepts/">
+  <meta property="og:site_name" content="Hemanth Kumar Motukuri">
+  <meta property="og:title" content="Phase 0: Python Basics for People Who Already Know Bash">
+  <meta property="og:description" content="Learn the fundamental building blocks of Python — variables, data types, strings, operators, control flow, data structures, functions, and error handling — explained simply with clear code examples.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-19T09:00:00+05:30">
+    <meta property="article:modified_time" content="2026-04-19T09:00:00+05:30">
+    <meta property="article:tag" content="Beginners">
+    <meta property="article:tag" content="Concepts">
+    <meta property="article:tag" content="Syntax">
+    <meta property="article:tag" content="Functions">
+    <meta property="article:tag" content="Loops">
+    <meta property="article:tag" content="Ai">
+      <meta property="og:see_also" content="http://localhost:1313/posts/python/why_python/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/python/setup/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/python/phase1/">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Phase 0: Python Basics for People Who Already Know Bash">
+  <meta name="twitter:description" content="Learn the fundamental building blocks of Python — variables, data types, strings, operators, control flow, data structures, functions, and error handling — explained simply with clear code examples.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.ff2d589fef7134f8f746e5c1664332af4d8c4911a5bf3819699b42e2ac883e29b89b2137876c5fde28263950a9a2aacf6394d680837e1b0b6f03c5037c353063.css"
+    integrity="sha512-/y1Yn&#43;9xNPj3RuXBZkMyr02MSRGlvzgZaZtC4qyIPim4myE3h2xf3igmOVCpoqrPY5TWgIN&#43;GwtvA8UDfDUwYw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.c41769a6d0a0f3c9fae21f229a8ff36dbf91ab46022c5e71ec6600b9be681f5f41e6148129be6881788a258ce35a23cb28fb4b739843d8ffc1efec4081c51313.js"
+      integrity="sha512-xBdpptCg88n64h8imo/zbb&#43;Rq0YCLF5x7GYAub5oH19B5hSBKb5ogXiKJYzjWiPLKPtLc5hD2P/B7&#43;xAgcUTEw=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "My Technical Blog",
+    "name": "Phase 0: Python Basics for People Who Already Know Bash",
+    "headline": "Phase 0: Python Basics for People Who Already Know Bash",
+    "description": "Learn the fundamental building blocks of Python — variables, data types, strings, operators, control flow, data structures, functions, and error handling — explained simply with clear code examples.",
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/python/concepts/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hemanth Kumar Motukuri"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-04-19T09:00:00\u002b05:30",
+    "datePublished": "2026-04-19T09:00:00\u002b05:30",
+    
+    "dateModified": "2026-04-19T09:00:00\u002b05:30",
+    
+    "keywords": ["Beginners","Concepts","Syntax","Functions","Loops","Ai"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "4137"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Hemanth Kumar Motukuri
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Technical Topics">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/projects/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Projects"
+      title="Projects">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Projects
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/resume/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Resume"
+      title="Resume">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Resume
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/contact/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Contact"
+      title="Contact">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Contact
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Technical Topics" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/projects/"
+        aria-label="Projects"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Projects" class="text-2xl font-bold tracking-tight">
+          Projects
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/resume/"
+        aria-label="Resume"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Resume" class="text-2xl font-bold tracking-tight">
+          Resume
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/contact/"
+        aria-label="Contact"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Contact" class="text-2xl font-bold tracking-tight">
+          Contact
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Phase 0: Python Basics for People Who Already Know Bash
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-04-19T09:00:00&#43;05:30">19 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>4137 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">20 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/python/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Python
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/beginners/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Beginners
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/concepts/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Concepts
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/syntax/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Syntax
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/functions/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Functions
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/loops/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Loops
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/ai/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Ai
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Hemanth Kumar Motukuri"
+        src="/img/profile_pic_hu_73b016f6fa6bb344.jpg"
+        data-zoom-src="/img/profile_pic_hu_da66a14a1ead8228.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Hemanth Kumar Motukuri
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">DevOps &amp; MLOps | Kubernetes | AWS</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/hemanth7040"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 496 496" xml:space="preserve">
+<path id="SVGCleanerId_0" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+	c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+	c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+	c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+	c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+	c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+	c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+	c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+	c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+<g>
+	<path id="SVGCleanerId_0_1_" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+		c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+		c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+		c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+		c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+		c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+		c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+</g>
+<g>
+	<path style="fill:#114C82;" d="M378.496,109.131c13.128,33.904,4.752,58.928,2.2,65.176c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163c0-29.56-5.152-57.896-14.568-84.2
+		C447.24,133.963,409.184,109.987,378.496,109.131z"/>
+	<path style="fill:#114C82;" d="M192.976,377.323c2.784-5.616,6.184-9.984,9.76-13.144c-30.176-3.456-61.168-11.512-83.048-33.744
+		C136.52,358.451,163.928,371.195,192.976,377.323z"/>
+</g>
+<path style="fill:#6CA9EA;" d="M12.912,270.947c0-137.536,111.048-249,247.992-249c76.04,0,144.056,34.392,189.536,88.488
+	C405.52,46.755,331.616,5.163,247.992,5.163C111.048,5.163,0,116.627,0,254.163c0,61.32,22.12,117.424,58.752,160.792
+	C29.944,374.291,12.912,324.643,12.912,270.947z"/>
+<path style="fill:#083E66;" d="M322.712,426.899c0-23.232-7.928-38.44-16.832-46.128c55.248-6.16,113.24-27.216,113.24-122.848
+	c0-27.184-9.6-49.4-25.52-66.824c2.576-6.296,11.096-31.608-2.456-65.872c0,0-2.576-0.792-7.896-0.488
+	c5.808,25.84-0.416,44.32-2.552,49.568c15.904,17.424,25.504,39.648,25.504,66.832c0,95.64-57.984,116.68-113.232,122.856
+	c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296c0,5.872,3.496,12.568,12.92,12.408
+	C322.488,479.555,322.712,455.659,322.712,426.899z"/>
+<path style="fill:#114C82;" d="M117.464,423.995c5.208,10.72,22.712,36.4,68.888,30.992c-0.064-5.648-0.112-11.976-0.144-18.928
+	C150.584,443.835,129.552,434.667,117.464,423.995z"/>
+<path style="fill:#6CA9EA;" d="M126.368,391.387c-1.592-2.4-4.576-6.472-8.904-10.544
+	C120.272,385.011,123.256,388.507,126.368,391.387z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/hemanth-kumar-motukuri"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 382 382" xml:space="preserve">
+<path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:hemanthkumarmotukuri@gmail.com"
+          
+          target="_blank"
+          aria-label="Gmail"
+          title="Gmail"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?>
+<!-- License: MIT. Made by Garuda Technology: https://github.com/garudatechnologydevelopers/sketch-icons -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z" fill="white"/>
+<path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" fill="#EA4335"/>
+<path d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z" fill="#FBBC05"/>
+<path d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z" fill="#34A853"/>
+<path d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z" fill="#C5221F"/>
+<path d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z" fill="#C5221F"/>
+<path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" fill="#C5221F"/>
+<path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" fill="#4285F4"/>
+</svg></span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+  <details
+    class="mt-2 mb-5 overflow-hidden rounded-lg ms-0 ps-5"
+    >
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 -ms-5 ps-5 dark:bg-primary-800 dark:text-neutral-100">
+    Python Zero to MLOps -
+    This article is part of a series.
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/python/why_python/">
+          Part 1:
+          Why Python When You Already Know Shell Scripting? A DevOps Engineer&#39;s Honest Answer
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/python/setup/">
+          Part 2:
+          Setting Up Python and VS Code
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        Part 3:
+        This Article
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/python/phase1/">
+          Part 4:
+          Phase 1: Replace Your Shell Scripts With Python — Data Literacy for DevOps Engineers
+        </a>
+      </div>
+    
+  
+
+
+  </details>
+
+
+        <div class="article-content max-w-prose mb-20">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ygXn5nV5qFc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<blockquote><p><strong>Video Reference:</strong> Watch the full course by Dave Ebbelaar on YouTube before or alongside this guide.</p>
+</blockquote>
+<h1 class="relative group">Python Core Concepts for Beginners
+    <div id="python-core-concepts-for-beginners" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#python-core-concepts-for-beginners" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>This guide covers every major Python concept you need to start building real programs and AI applications. Every section uses simple language and practical examples. No experience required.</p>
+<hr>
+
+<h2 class="relative group">What Is Programming?
+    <div id="what-is-programming" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-is-programming" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Programming means giving a computer a set of instructions to follow. The computer does exactly what you say — nothing more, nothing less. Your job as a programmer is to write those instructions clearly.</p>
+<p>Python is one of the most popular programming languages in the world — especially for AI. Its code reads almost like plain English, which makes it a great first language.</p>
+<p>Here is a simple example of what Python code looks like:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Alice&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hello, my name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> and I am </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>Output:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Hello, my name is Alice and I am 25 years old.</span></span></code></pre></div></div>
+<p>You will understand every part of that code by the end of this guide.</p>
+<hr>
+
+<h2 class="relative group">Python Syntax and PEP 8
+    <div id="python-syntax-and-pep-8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#python-syntax-and-pep-8" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><strong>Syntax</strong> means the rules of how you write Python code — similar to grammar rules in English.</p>
+<p><strong>PEP 8</strong> is Python&rsquo;s official style guide. It tells you how to format your code so it is clean and easy for other people (and your future self) to read.</p>
+<p>The most important rules to remember:</p>
+<ul>
+<li>Use <strong>4 spaces</strong> for indentation (not tabs)</li>
+<li>Put spaces around operators: <code>x = 1 + 2</code> not <code>x=1+2</code></li>
+<li>Keep lines under 79 characters when possible</li>
+<li>Use lowercase with underscores for variable names: <code>model_name</code>, not <code>modelName</code></li>
+<li>Leave one blank line between blocks of code</li>
+</ul>
+<hr>
+
+<h2 class="relative group">Understanding Errors
+    <div id="understanding-errors" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#understanding-errors" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Python will show you an error message when something goes wrong. Errors are normal — even experienced developers see them every day. The key skill is reading the error and understanding what it means.</p>
+<p>Here are the most common types:</p>
+
+<h3 class="relative group">SyntaxError — You wrote something Python cannot understand
+    <div id="syntaxerror--you-wrote-something-python-cannot-understand" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#syntaxerror--you-wrote-something-python-cannot-understand" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello&#34;</span>   <span class="c1"># missing closing parenthesis</span></span></span></code></pre></div></div>
+<p>Error:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">SyntaxError: &#39;(&#39; was never closed</span></span></code></pre></div></div>
+<p>Fix: Add the missing <code>)</code>.</p>
+<hr>
+
+<h3 class="relative group">NameError — You used a variable that does not exist yet
+    <div id="nameerror--you-used-a-variable-that-does-not-exist-yet" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nameerror--you-used-a-variable-that-does-not-exist-yet" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">nmae</span><span class="p">)</span>   <span class="c1"># typo — &#39;nmae&#39; instead of &#39;name&#39;</span></span></span></code></pre></div></div>
+<p>Error:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">NameError: name &#39;nmae&#39; is not defined</span></span></code></pre></div></div>
+<p>Fix: Check your spelling.</p>
+<hr>
+
+<h3 class="relative group">TypeError — You used the wrong type in an operation
+    <div id="typeerror--you-used-the-wrong-type-in-an-operation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#typeerror--you-used-the-wrong-type-in-an-operation" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">age</span> <span class="o">=</span> <span class="s2">&#34;25&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="o">=</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">5</span>   <span class="c1"># can&#39;t add a string and a number</span></span></span></code></pre></div></div>
+<p>Error:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">TypeError: can only concatenate str (not &#34;int&#34;) to str</span></span></code></pre></div></div>
+<p>Fix: Convert the string to a number first: <code>int(age) + 5</code>.</p>
+<hr>
+
+<h3 class="relative group">How to Debug
+    <div id="how-to-debug" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-to-debug" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>When you see an error:</p>
+<ol>
+<li>Read the last line of the error message — it usually says exactly what went wrong</li>
+<li>Look at the line number it mentions</li>
+<li>Check for typos, missing punctuation, or wrong types</li>
+<li>Fix one thing at a time and run again</li>
+</ol>
+<hr>
+
+<h2 class="relative group">Variables
+    <div id="variables" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#variables" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A <strong>variable</strong> is a named container that holds a value. You can think of it like a labeled box — you put something inside and can retrieve it later using the label.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Claude&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">age</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="n">temperature</span> <span class="o">=</span> <span class="mf">0.7</span>
+</span></span><span class="line"><span class="cl"><span class="n">is_active</span> <span class="o">=</span> <span class="kc">True</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Rules for Variable Names
+    <div id="rules-for-variable-names" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rules-for-variable-names" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>Must start with a letter or underscore: <code>name</code>, <code>_name</code> ✅</li>
+<li>Cannot start with a number: <code>3name</code> ❌</li>
+<li>Cannot have spaces: <code>model name</code> ❌ — use <code>model_name</code> instead</li>
+<li>Cannot use Python keywords like <code>for</code>, <code>if</code>, <code>class</code>, <code>print</code></li>
+<li>Are case-sensitive: <code>Name</code> and <code>name</code> are two different variables</li>
+</ul>
+
+<h3 class="relative group">Assigning and Updating Variables
+    <div id="assigning-and-updating-variables" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#assigning-and-updating-variables" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>       <span class="c1"># create variable with value 0</span>
+</span></span><span class="line"><span class="cl"><span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">10</span>    <span class="c1"># update it to 10</span>
+</span></span><span class="line"><span class="cl"><span class="n">score</span> <span class="o">+=</span> <span class="mi">5</span>      <span class="c1"># shortcut for score = score + 5</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>    <span class="c1"># prints 15</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Comments
+    <div id="comments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#comments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Comments are notes you write in your code for yourself or other people. Python completely ignores them when running your program.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># This is a single-line comment</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Calculate the total cost</span>
+</span></span><span class="line"><span class="cl"><span class="n">price</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="n">quantity</span> <span class="o">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="o">=</span> <span class="n">price</span> <span class="o">*</span> <span class="n">quantity</span>   <span class="c1"># multiply price by quantity</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">This is a multi-line comment.
+</span></span></span><span class="line"><span class="cl"><span class="s2">You can write as many lines as you want.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Useful for longer explanations.
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span></span></span></code></pre></div></div>
+<p>Good comments explain <strong>why</strong> you did something, not just <strong>what</strong> the code does.</p>
+<hr>
+
+<h2 class="relative group">Data Types
+    <div id="data-types" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#data-types" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Every value in Python has a <strong>type</strong> — a category that tells Python what kind of data it is and what you can do with it.</p>
+<p>You can always check the type of any value using <code>type()</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span>         <span class="c1"># &lt;class &#39;int&#39;&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.14</span><span class="p">))</span>       <span class="c1"># &lt;class &#39;float&#39;&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="s2">&#34;hello&#34;</span><span class="p">))</span>    <span class="c1"># &lt;class &#39;str&#39;&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>       <span class="c1"># &lt;class &#39;bool&#39;&gt;</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Numbers — Integers and Floats
+    <div id="numbers--integers-and-floats" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#numbers--integers-and-floats" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Integers (int)
+    <div id="integers-int" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#integers-int" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Whole numbers — no decimal point.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">tokens</span> <span class="o">=</span> <span class="mi">1024</span>
+</span></span><span class="line"><span class="cl"><span class="n">year</span> <span class="o">=</span> <span class="mi">2025</span>
+</span></span><span class="line"><span class="cl"><span class="n">negative</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Floats (float)
+    <div id="floats-float" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#floats-float" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Numbers with a decimal point.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">temperature</span> <span class="o">=</span> <span class="mf">0.7</span>
+</span></span><span class="line"><span class="cl"><span class="n">price</span> <span class="o">=</span> <span class="mf">19.99</span>
+</span></span><span class="line"><span class="cl"><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Common Number Operations
+    <div id="common-number-operations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#common-number-operations" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># 13  — addition</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># 7   — subtraction</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># 30  — multiplication</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># 3.333...  — division (always returns float)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># 3   — floor division (drops the decimal)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># 1   — remainder (modulo)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># 1000  — exponent (10 to the power of 3)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Converting Between Types
+    <div id="converting-between-types" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#converting-between-types" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="s2">&#34;42&#34;</span>          <span class="c1"># this is a string</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>        <span class="c1"># converts to integer: 42</span>
+</span></span><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>      <span class="c1"># converts to float: 42.0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="mf">3.9</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>   <span class="c1"># 3 — drops the decimal, does NOT round</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Strings
+    <div id="strings" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#strings" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A <strong>string</strong> is any text — letters, numbers, symbols, spaces — wrapped in quotes. You can use single quotes <code>'</code> or double quotes <code>&quot;</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">first_name</span> <span class="o">=</span> <span class="s2">&#34;Alice&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">last_name</span> <span class="o">=</span> <span class="s1">&#39;Smith&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&#34;Python is great for AI!&#34;</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Accessing Characters
+    <div id="accessing-characters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#accessing-characters" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Each character in a string has an <strong>index</strong> (position number). Python starts counting from 0.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">word</span> <span class="o">=</span> <span class="s2">&#34;Python&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>    <span class="c1"># P  — first character</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>    <span class="c1"># y</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># n  — last character (negative index counts from the end)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Slicing Strings
+    <div id="slicing-strings" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#slicing-strings" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>You can extract a portion of a string using <code>[start:end]</code>. The end position is not included.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Hello, World!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>     <span class="c1"># Hello</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">7</span><span class="p">:])</span>      <span class="c1"># World!  (from index 7 to the end)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>      <span class="c1"># Hello   (from the start to index 5)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">String Methods
+    <div id="string-methods" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#string-methods" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Python has many built-in functions (called <strong>methods</strong>) that work on strings.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&#34;  hello world  &#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>         <span class="c1"># &#34;  HELLO WORLD  &#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>         <span class="c1"># &#34;  hello world  &#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>         <span class="c1"># &#34;hello world&#34;  — removes spaces from both ends</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">title</span><span class="p">())</span> <span class="c1"># &#34;Hello World&#34;  — capitalizes first letter of each word</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Python is great&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;great&#34;</span><span class="p">,</span> <span class="s2">&#34;amazing&#34;</span><span class="p">))</span>   <span class="c1"># &#34;Python is amazing&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34; &#34;</span><span class="p">))</span>                    <span class="c1"># [&#39;Python&#39;, &#39;is&#39;, &#39;great&#39;]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&#34;Python&#34;</span><span class="p">))</span>          <span class="c1"># True</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&#34;code&#34;</span><span class="p">))</span>              <span class="c1"># False</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>                          <span class="c1"># 15  — number of characters</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">F-Strings (String Formatting)
+    <div id="f-strings-string-formatting" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#f-strings-string-formatting" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>The most modern and readable way to put variables inside strings. Put an <code>f</code> before the opening quote and use <code>{}</code> to insert variables.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Claude&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">version</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="n">cost</span> <span class="o">=</span> <span class="mf">0.015</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Model: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Version: </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Cost per token: $</span><span class="si">{</span><span class="n">cost</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>   <span class="c1"># formats to 4 decimal places</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;2 + 2 = </span><span class="si">{</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>              <span class="c1"># you can do math inside {}</span></span></span></code></pre></div></div>
+<p>Output:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Model: Claude
+</span></span><span class="line"><span class="cl">Version: 3
+</span></span><span class="line"><span class="cl">Cost per token: $0.0150
+</span></span><span class="line"><span class="cl">2 + 2 = 4</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Booleans
+    <div id="booleans" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#booleans" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A <strong>Boolean</strong> has only two possible values: <code>True</code> or <code>False</code>. (Capital T and F — Python is case-sensitive.)</p>
+<p>Booleans are the result of comparisons and are used in decision-making.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">is_trained</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="n">is_deployed</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>    <span class="c1"># &lt;class &#39;bool&#39;&gt;</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Comparison Operators
+    <div id="comparison-operators" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#comparison-operators" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>These produce a Boolean result:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>    <span class="c1"># False — equal to</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">)</span>    <span class="c1"># True  — not equal to</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span>     <span class="c1"># True  — greater than</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>     <span class="c1"># False — less than</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span>   <span class="c1"># True  — greater than or equal to</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">)</span>    <span class="c1"># False — less than or equal to</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Logical Operators
+    <div id="logical-operators" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#logical-operators" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Combine multiple Boolean conditions:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl"><span class="n">has_account</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># and — both conditions must be True</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">18</span> <span class="ow">and</span> <span class="n">has_account</span><span class="p">)</span>   <span class="c1"># True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># or — at least one condition must be True</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span> <span class="ow">or</span> <span class="n">has_account</span><span class="p">)</span>    <span class="c1"># True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># not — reverses the Boolean</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">has_account</span><span class="p">)</span>            <span class="c1"># False</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Operators
+    <div id="operators" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#operators" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Arithmetic Operators
+    <div id="arithmetic-operators" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#arithmetic-operators" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Operator</th>
+          <th>Example</th>
+          <th>Result</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>+</code></td>
+          <td><code>5 + 3</code></td>
+          <td><code>8</code></td>
+      </tr>
+      <tr>
+          <td><code>-</code></td>
+          <td><code>5 - 3</code></td>
+          <td><code>2</code></td>
+      </tr>
+      <tr>
+          <td><code>*</code></td>
+          <td><code>5 * 3</code></td>
+          <td><code>15</code></td>
+      </tr>
+      <tr>
+          <td><code>/</code></td>
+          <td><code>5 / 3</code></td>
+          <td><code>1.666...</code></td>
+      </tr>
+      <tr>
+          <td><code>//</code></td>
+          <td><code>5 // 3</code></td>
+          <td><code>1</code></td>
+      </tr>
+      <tr>
+          <td><code>%</code></td>
+          <td><code>5 % 3</code></td>
+          <td><code>2</code></td>
+      </tr>
+      <tr>
+          <td><code>**</code></td>
+          <td><code>5 ** 3</code></td>
+          <td><code>125</code></td>
+      </tr>
+  </tbody>
+</table>
+
+<h3 class="relative group">Shortcut Assignment Operators
+    <div id="shortcut-assignment-operators" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#shortcut-assignment-operators" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>These update a variable in place:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">count</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="n">count</span> <span class="o">+=</span> <span class="mi">5</span>    <span class="c1"># same as count = count + 5  → 15</span>
+</span></span><span class="line"><span class="cl"><span class="n">count</span> <span class="o">-=</span> <span class="mi">3</span>    <span class="c1"># same as count = count - 3  → 12</span>
+</span></span><span class="line"><span class="cl"><span class="n">count</span> <span class="o">*=</span> <span class="mi">2</span>    <span class="c1"># same as count = count * 2  → 24</span>
+</span></span><span class="line"><span class="cl"><span class="n">count</span> <span class="o">/=</span> <span class="mi">4</span>    <span class="c1"># same as count = count / 4  → 6.0</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Control Flow — Making Decisions
+    <div id="control-flow--making-decisions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#control-flow--making-decisions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Control flow means controlling which parts of your code run based on conditions.</p>
+
+<h3 class="relative group">If / Elif / Else
+    <div id="if--elif--else" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#if--elif--else" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">score</span> <span class="o">=</span> <span class="mi">85</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Grade: A&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Grade: B&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Grade: C&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Grade: F&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>Output:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Grade: B</span></span></code></pre></div></div>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Python checks each condition from top to bottom</li>
+<li>It runs the block under the <strong>first</strong> condition that is <code>True</code></li>
+<li>If no condition is <code>True</code>, it runs the <code>else</code> block</li>
+<li>The indentation (4 spaces) is required — it tells Python which lines belong to each block</li>
+</ul>
+<hr>
+
+<h2 class="relative group">Loops
+    <div id="loops" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#loops" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Loops let you repeat a block of code multiple times without copying it over and over.</p>
+
+<h3 class="relative group">For Loops
+    <div id="for-loops" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#for-loops" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>A <strong>for loop</strong> repeats code for each item in a sequence.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="s2">&#34;banana&#34;</span><span class="p">,</span> <span class="s2">&#34;cherry&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>Output:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">apple
+</span></span><span class="line"><span class="cl">banana
+</span></span><span class="line"><span class="cl">cherry</span></span></code></pre></div></div>
+
+<h3 class="relative group">The range() Function
+    <div id="the-range-function" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-range-function" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Use <code>range()</code> when you want to repeat code a specific number of times:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># prints 0, 1, 2, 3, 4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># prints 1, 2, 3, 4, 5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># prints 0, 2, 4, 6, 8 (step of 2)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">While Loops
+    <div id="while-loops" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#while-loops" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>A <strong>while loop</strong> keeps repeating as long as a condition is <code>True</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Count is: </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>    <span class="c1"># important! must change the condition, or the loop never stops</span></span></span></code></pre></div></div>
+<blockquote><p><strong>Warning:</strong> If the condition never becomes <code>False</code>, the loop runs forever. Always make sure something inside the loop will eventually make the condition <code>False</code>.</p>
+</blockquote>
+<h3 class="relative group">Break and Continue
+    <div id="break-and-continue" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#break-and-continue" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># break — exit the loop immediately</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>     <span class="c1"># stops the loop when i reaches 5</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>      <span class="c1"># prints 0, 1, 2, 3, 4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># continue — skip the rest of this iteration and go to the next</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">continue</span>  <span class="c1"># skip even numbers</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>      <span class="c1"># prints 1, 3, 5, 7, 9</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Data Structures
+    <div id="data-structures" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#data-structures" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Data structures are ways of organizing and storing multiple pieces of information together.</p>
+
+<h3 class="relative group">Lists
+    <div id="lists" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lists" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>A <strong>list</strong> is an ordered collection of items. Lists can hold anything — numbers, strings, other lists. Items can be changed (lists are <strong>mutable</strong>).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;GPT-4&#34;</span><span class="p">,</span> <span class="s2">&#34;Claude&#34;</span><span class="p">,</span> <span class="s2">&#34;Gemini&#34;</span><span class="p">,</span> <span class="s2">&#34;Llama&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Access items by index (starts at 0)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">models</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>     <span class="c1"># GPT-4</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">models</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>    <span class="c1"># Llama (last item)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Slice the list</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">models</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>   <span class="c1"># [&#39;Claude&#39;, &#39;Gemini&#39;]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add items</span>
+</span></span><span class="line"><span class="cl"><span class="n">models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&#34;Mistral&#34;</span><span class="p">)</span>         <span class="c1"># adds to the end</span>
+</span></span><span class="line"><span class="cl"><span class="n">models</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;Claude-3&#34;</span><span class="p">)</span>     <span class="c1"># inserts at position 1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Remove items</span>
+</span></span><span class="line"><span class="cl"><span class="n">models</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&#34;Gemini&#34;</span><span class="p">)</span>          <span class="c1"># removes by value</span>
+</span></span><span class="line"><span class="cl"><span class="k">del</span> <span class="n">models</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>                    <span class="c1"># removes by index</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check membership</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Claude&#34;</span> <span class="ow">in</span> <span class="n">models</span><span class="p">)</span>        <span class="c1"># True or False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Useful list operations</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">))</span>               <span class="c1"># number of items</span>
+</span></span><span class="line"><span class="cl"><span class="n">models</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>                    <span class="c1"># sorts alphabetically (in place)</span>
+</span></span><span class="line"><span class="cl"><span class="n">models</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>                 <span class="c1"># reverses the order</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">models</span><span class="p">))</span>            <span class="c1"># returns a sorted copy without changing original</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Dictionaries
+    <div id="dictionaries" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dictionaries" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>A <strong>dictionary</strong> stores data as <strong>key-value pairs</strong> — like a real dictionary where you look up a word (key) to find its definition (value).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">model</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Claude&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;provider&#34;</span><span class="p">:</span> <span class="s2">&#34;Anthropic&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;max_tokens&#34;</span><span class="p">:</span> <span class="mi">200000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;temperature&#34;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;supports_vision&#34;</span><span class="p">:</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Access values by key</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">])</span>             <span class="c1"># Claude</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;provider&#34;</span><span class="p">))</span>     <span class="c1"># Anthropic (safer — won&#39;t crash if key missing)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add or update a key</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="p">[</span><span class="s2">&#34;version&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="p">[</span><span class="s2">&#34;temperature&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Remove a key</span>
+</span></span><span class="line"><span class="cl"><span class="k">del</span> <span class="n">model</span><span class="p">[</span><span class="s2">&#34;supports_vision&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Loop through a dictionary</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check if a key exists</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;name&#34;</span> <span class="ow">in</span> <span class="n">model</span><span class="p">)</span>           <span class="c1"># True</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Tuples
+    <div id="tuples" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tuples" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>A <strong>tuple</strong> is like a list, but it <strong>cannot be changed</strong> after creation (it is <strong>immutable</strong>). Use tuples for data that should not change — like coordinates or fixed configurations.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">coordinates</span> <span class="o">=</span> <span class="p">(</span><span class="mf">40.7128</span><span class="p">,</span> <span class="o">-</span><span class="mf">74.0060</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">rgb_color</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Access items the same way as lists</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">coordinates</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>    <span class="c1"># 40.7128</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Unpack a tuple into variables</span>
+</span></span><span class="line"><span class="cl"><span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span> <span class="o">=</span> <span class="n">coordinates</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">latitude</span><span class="p">)</span>          <span class="c1"># 40.7128</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Tuples can be used as dictionary keys (lists cannot)</span>
+</span></span><span class="line"><span class="cl"><span class="n">locations</span> <span class="o">=</span> <span class="p">{(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span> <span class="s2">&#34;origin&#34;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span> <span class="s2">&#34;point A&#34;</span><span class="p">}</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Sets
+    <div id="sets" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sets" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>A <strong>set</strong> is an unordered collection of <strong>unique</strong> items. Duplicates are automatically removed. Sets are great for checking membership quickly or finding unique values.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">languages</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;Python&#34;</span><span class="p">,</span> <span class="s2">&#34;JavaScript&#34;</span><span class="p">,</span> <span class="s2">&#34;Python&#34;</span><span class="p">,</span> <span class="s2">&#34;Go&#34;</span><span class="p">,</span> <span class="s2">&#34;Python&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">languages</span><span class="p">)</span>    <span class="c1"># {&#39;Python&#39;, &#39;JavaScript&#39;, &#39;Go&#39;} — duplicates removed</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add and remove items</span>
+</span></span><span class="line"><span class="cl"><span class="n">languages</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;Rust&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">languages</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&#34;Go&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check membership (very fast)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Python&#34;</span> <span class="ow">in</span> <span class="n">languages</span><span class="p">)</span>    <span class="c1"># True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set operations</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">|</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># {1, 2, 3, 4, 5, 6}  — union (all items from both)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># {3, 4}              — intersection (items in both)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>    <span class="c1"># {1, 2}              — difference (in a but not b)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Which Data Structure Should You Use?
+    <div id="which-data-structure-should-you-use" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#which-data-structure-should-you-use" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Situation</th>
+          <th>Use</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Ordered list of items you may change</td>
+          <td>List</td>
+      </tr>
+      <tr>
+          <td>Key-value pairs / labeled data</td>
+          <td>Dictionary</td>
+      </tr>
+      <tr>
+          <td>Fixed, unchanging collection</td>
+          <td>Tuple</td>
+      </tr>
+      <tr>
+          <td>Unique items, fast lookup</td>
+          <td>Set</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h2 class="relative group">Functions
+    <div id="functions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#functions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A <strong>function</strong> is a named block of code that does a specific task. You write it once and can use it (call it) as many times as you want.</p>
+<p>Functions solve two big problems:</p>
+<ol>
+<li><strong>Avoid repetition</strong> — write the code once, use it everywhere</li>
+<li><strong>Organization</strong> — break a big program into small, manageable pieces</li>
+</ol>
+
+<h3 class="relative group">Defining and Calling a Function
+    <div id="defining-and-calling-a-function" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#defining-and-calling-a-function" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Define the function</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello! Welcome to the Python for AI course.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Call (run) the function</span>
+</span></span><span class="line"><span class="cl"><span class="n">greet</span><span class="p">()</span>     <span class="c1"># Hello! Welcome to the Python for AI course.</span>
+</span></span><span class="line"><span class="cl"><span class="n">greet</span><span class="p">()</span>     <span class="c1"># You can call it as many times as you want</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Parameters and Arguments
+    <div id="parameters-and-arguments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parameters-and-arguments" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>Parameters</strong> are the variables listed in the function definition. <strong>Arguments</strong> are the actual values you pass in when calling the function.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet_user</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>       <span class="c1"># &#39;name&#39; is a parameter</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">greet_user</span><span class="p">(</span><span class="s2">&#34;Alice&#34;</span><span class="p">)</span>         <span class="c1"># &#39;Alice&#39; is an argument</span>
+</span></span><span class="line"><span class="cl"><span class="n">greet_user</span><span class="p">(</span><span class="s2">&#34;Bob&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Multiple Parameters
+    <div id="multiple-parameters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#multiple-parameters" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">calculate_cost</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span> <span class="n">price_per_token</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">total</span> <span class="o">=</span> <span class="n">tokens</span> <span class="o">*</span> <span class="n">price_per_token</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Cost: $</span><span class="si">{</span><span class="n">total</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">calculate_cost</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mf">0.00002</span><span class="p">)</span>   <span class="c1"># Cost: $0.0200</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Default Parameter Values
+    <div id="default-parameter-values" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#default-parameter-values" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>You can give parameters a <strong>default value</strong> that is used when the caller does not provide one.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&#34;claude-3&#34;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Model: </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Temperature: </span><span class="si">{</span><span class="n">temperature</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Prompt: </span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">generate</span><span class="p">(</span><span class="s2">&#34;Tell me a joke&#34;</span><span class="p">)</span>                          <span class="c1"># uses defaults</span>
+</span></span><span class="line"><span class="cl"><span class="n">generate</span><span class="p">(</span><span class="s2">&#34;Write code&#34;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&#34;gpt-4&#34;</span><span class="p">)</span>              <span class="c1"># overrides model</span>
+</span></span><span class="line"><span class="cl"><span class="n">generate</span><span class="p">(</span><span class="s2">&#34;Summarize&#34;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&#34;llama&#34;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># overrides both</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Keyword Arguments
+    <div id="keyword-arguments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#keyword-arguments" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>When calling a function, you can name the arguments — this makes the code clearer and lets you pass them in any order.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_model</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">provider</span><span class="p">,</span> <span class="n">max_tokens</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">provider</span><span class="si">}</span><span class="s2">, max </span><span class="si">{</span><span class="n">max_tokens</span><span class="si">}</span><span class="s2"> tokens&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Using keyword arguments (order does not matter)</span>
+</span></span><span class="line"><span class="cl"><span class="n">create_model</span><span class="p">(</span><span class="n">provider</span><span class="o">=</span><span class="s2">&#34;Anthropic&#34;</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">200000</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;Claude&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Return Values
+    <div id="return-values" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#return-values" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Functions can <strong>return</strong> a value back to the caller. This is how you get a result out of a function.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>    <span class="c1"># result = 8</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># You can use the return value directly</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>    <span class="c1"># 30</span></span></span></code></pre></div></div>
+<p>A function without a <code>return</code> statement automatically returns <code>None</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">result</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># You can return multiple values as a tuple</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">min_max</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">low</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="n">min_max</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>    <span class="c1"># 1 9</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Variable Scope
+    <div id="variable-scope" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#variable-scope" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><strong>Scope</strong> determines where a variable can be seen and used in your code.</p>
+
+<h3 class="relative group">Local Variables
+    <div id="local-variables" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#local-variables" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>A variable created <strong>inside</strong> a function only exists inside that function. It disappears when the function finishes.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">local_var</span> <span class="o">=</span> <span class="s2">&#34;I only exist inside this function&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">local_var</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">my_function</span><span class="p">()</span>       <span class="c1"># works fine</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">local_var</span><span class="p">)</span>    <span class="c1"># ERROR: NameError — local_var doesn&#39;t exist here</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Global Variables
+    <div id="global-variables" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#global-variables" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>A variable created <strong>outside</strong> all functions is global — it can be read anywhere in the file.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">model_name</span> <span class="o">=</span> <span class="s2">&#34;Claude&#34;</span>   <span class="c1"># global variable</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">show_model</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>   <span class="c1"># can read the global variable</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">show_model</span><span class="p">()</span>    <span class="c1"># prints &#34;Claude&#34;</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Modifying a Global Variable Inside a Function
+    <div id="modifying-a-global-variable-inside-a-function" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#modifying-a-global-variable-inside-a-function" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>If you need to change a global variable from inside a function, use the <code>global</code> keyword:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">call_count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">make_call</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">call_count</span>
+</span></span><span class="line"><span class="cl">    <span class="n">call_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">make_call</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">make_call</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">call_count</span><span class="p">)</span>   <span class="c1"># 2</span></span></span></code></pre></div></div>
+<blockquote><p><strong>Best practice:</strong> Avoid using global variables as much as possible. It is cleaner to pass values as parameters and get results back with return.</p>
+</blockquote><hr>
+
+<h2 class="relative group">Modules and Imports
+    <div id="modules-and-imports" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#modules-and-imports" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A <strong>module</strong> is a Python file that contains code — functions, variables, classes — that you can use in other files.</p>
+<p>Python comes with many built-in modules. You can also install third-party modules with pip.</p>
+
+<h3 class="relative group">Importing a Module
+    <div id="importing-a-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#importing-a-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>      <span class="c1"># 5.0</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>            <span class="c1"># 3.14159...</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mf">3.2</span><span class="p">))</span>     <span class="c1"># 4</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mf">3.8</span><span class="p">))</span>    <span class="c1"># 3</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Importing Specific Items
+    <div id="importing-specific-items" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#importing-specific-items" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">pi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">49</span><span class="p">))</span>    <span class="c1"># 7.0  — no need to write math.sqrt</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>          <span class="c1"># 3.14159...</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Importing with an Alias
+    <div id="importing-with-an-alias" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#importing-with-an-alias" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>         <span class="c1"># very common convention</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>        <span class="c1"># very common convention</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Now use np and pd instead of the full name</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">The <code>random</code> Module
+    <div id="the-random-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-random-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>        <span class="c1"># random integer between 1 and 10</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">&#34;a&#34;</span><span class="p">,</span> <span class="s2">&#34;b&#34;</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">]))</span>   <span class="c1"># random item from a list</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>              <span class="c1"># random float between 0.0 and 1.0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>             <span class="c1"># shuffles the list in place</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">The <code>datetime</code> Module
+    <div id="the-datetime-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-datetime-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">date</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>                          <span class="c1"># 2025-01-01 14:30:00.123456</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>                     <span class="c1"># 2025</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%B </span><span class="si">%d</span><span class="s2">, %Y&#34;</span><span class="p">))</span>    <span class="c1"># January 01, 2025</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>                        <span class="c1"># 2025-01-01</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Working with Files
+    <div id="working-with-files" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#working-with-files" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Reading and writing files is a very common task — especially for loading data and saving results.</p>
+
+<h3 class="relative group">Reading a Text File
+    <div id="reading-a-text-file" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#reading-a-text-file" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Always use &#39;with&#39; — it automatically closes the file when done</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;notes.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>    <span class="c1"># read the whole file as one string</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Read line by line</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;notes.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>  <span class="c1"># .strip() removes the newline character at the end</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Writing to a File
+    <div id="writing-to-a-file" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#writing-to-a-file" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;output.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;Hello, file!</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;This is a second line.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+<blockquote><p><code>&quot;w&quot;</code> mode creates the file if it doesn&rsquo;t exist, and <strong>overwrites</strong> it if it does. Use <code>&quot;a&quot;</code> (append) to add to the end of an existing file.</p>
+</blockquote>
+<h3 class="relative group">Working with JSON Files
+    <div id="working-with-json-files" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#working-with-json-files" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>JSON is the most common format for sharing data with APIs. Python&rsquo;s built-in <code>json</code> module handles it easily.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Python dictionary</span>
+</span></span><span class="line"><span class="cl"><span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;model&#34;</span><span class="p">:</span> <span class="s2">&#34;claude-3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;temperature&#34;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;max_tokens&#34;</span><span class="p">:</span> <span class="mi">2048</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Save to a JSON file</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;config.json&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Read from a JSON file</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;config.json&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">loaded_config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">loaded_config</span><span class="p">[</span><span class="s2">&#34;model&#34;</span><span class="p">])</span>    <span class="c1"># claude-3</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Error Handling
+    <div id="error-handling" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#error-handling" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>When something goes wrong in your program, Python raises an <strong>exception</strong> (an error). If you do not handle it, your program crashes.</p>
+<p><strong>Try/except</strong> lets you catch errors and respond to them gracefully instead of crashing.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Error: Cannot divide by zero!&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Handling Multiple Error Types
+    <div id="handling-multiple-error-types" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#handling-multiple-error-types" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">safe_convert</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;&#39;</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&#39; cannot be converted to an integer&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Input must be a string or number&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">safe_convert</span><span class="p">(</span><span class="s2">&#34;42&#34;</span><span class="p">))</span>      <span class="c1"># 42</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">safe_convert</span><span class="p">(</span><span class="s2">&#34;hello&#34;</span><span class="p">))</span>   <span class="c1"># error message, returns None</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">safe_convert</span><span class="p">(</span><span class="kc">None</span><span class="p">))</span>      <span class="c1"># error message, returns None</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">The <code>finally</code> Block
+    <div id="the-finally-block" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-finally-block" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Code in <code>finally</code> always runs — whether an error happened or not. Use it for cleanup tasks like closing files.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;data.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;File not found!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">finally</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This always runs.&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Common Exception Types
+    <div id="common-exception-types" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#common-exception-types" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Exception</th>
+          <th>When it happens</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>ValueError</code></td>
+          <td>Wrong value type, e.g. <code>int(&quot;hello&quot;)</code></td>
+      </tr>
+      <tr>
+          <td><code>TypeError</code></td>
+          <td>Wrong data type, e.g. <code>&quot;text&quot; + 5</code></td>
+      </tr>
+      <tr>
+          <td><code>ZeroDivisionError</code></td>
+          <td>Division by zero</td>
+      </tr>
+      <tr>
+          <td><code>FileNotFoundError</code></td>
+          <td>File does not exist</td>
+      </tr>
+      <tr>
+          <td><code>KeyError</code></td>
+          <td>Dictionary key does not exist</td>
+      </tr>
+      <tr>
+          <td><code>IndexError</code></td>
+          <td>List index is out of range</td>
+      </tr>
+      <tr>
+          <td><code>AttributeError</code></td>
+          <td>Calling a method that does not exist</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h2 class="relative group">Classes and Object-Oriented Programming
+    <div id="classes-and-object-oriented-programming" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#classes-and-object-oriented-programming" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A <strong>class</strong> is a blueprint for creating objects. An <strong>object</strong> is an instance of a class — a specific thing built from that blueprint.</p>
+<p>Think of a class as a cookie cutter and objects as the actual cookies.</p>
+
+<h3 class="relative group">Creating a Class
+    <div id="creating-a-class" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#creating-a-class" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">AIModel</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># __init__ is called automatically when you create an object</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># &#39;self&#39; refers to the specific object being created</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">provider</span><span class="p">,</span> <span class="n">max_tokens</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>              <span class="c1"># instance attribute</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">provider</span> <span class="o">=</span> <span class="n">provider</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">max_tokens</span> <span class="o">=</span> <span class="n">max_tokens</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">call_count</span> <span class="o">=</span> <span class="mi">0</span>          <span class="c1"># starts at 0 for every new object</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prompt</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">call_count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">: Generating response for &#39;</span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="s2">&#39;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">provider</span><span class="si">}</span><span class="s2"> | Calls made: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">call_count</span><span class="si">}</span><span class="s2">&#34;</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Creating Objects (Instances)
+    <div id="creating-objects-instances" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#creating-objects-instances" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Create two separate objects from the same class</span>
+</span></span><span class="line"><span class="cl"><span class="n">claude</span> <span class="o">=</span> <span class="n">AIModel</span><span class="p">(</span><span class="s2">&#34;Claude&#34;</span><span class="p">,</span> <span class="s2">&#34;Anthropic&#34;</span><span class="p">,</span> <span class="mi">200000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">gpt</span> <span class="o">=</span> <span class="n">AIModel</span><span class="p">(</span><span class="s2">&#34;GPT-4&#34;</span><span class="p">,</span> <span class="s2">&#34;OpenAI&#34;</span><span class="p">,</span> <span class="mi">128000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Each object is independent</span>
+</span></span><span class="line"><span class="cl"><span class="n">claude</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s2">&#34;Tell me about Python&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">claude</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s2">&#34;Explain neural networks&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">gpt</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s2">&#34;Write a haiku&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">claude</span><span class="o">.</span><span class="n">get_info</span><span class="p">())</span>   <span class="c1"># Claude by Anthropic | Calls made: 2</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">gpt</span><span class="o">.</span><span class="n">get_info</span><span class="p">())</span>      <span class="c1"># GPT-4 by OpenAI | Calls made: 1</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Class Attributes vs Instance Attributes
+    <div id="class-attributes-vs-instance-attributes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#class-attributes-vs-instance-attributes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">AIModel</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Class attribute — shared by ALL instances</span>
+</span></span><span class="line"><span class="cl">    <span class="n">total_models_created</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>                         <span class="c1"># instance attribute</span>
+</span></span><span class="line"><span class="cl">        <span class="n">AIModel</span><span class="o">.</span><span class="n">total_models_created</span> <span class="o">+=</span> <span class="mi">1</span>        <span class="c1"># update class attribute</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">model1</span> <span class="o">=</span> <span class="n">AIModel</span><span class="p">(</span><span class="s2">&#34;Claude&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">model2</span> <span class="o">=</span> <span class="n">AIModel</span><span class="p">(</span><span class="s2">&#34;GPT-4&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">AIModel</span><span class="o">.</span><span class="n">total_models_created</span><span class="p">)</span>    <span class="c1"># 2</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>                     <span class="c1"># Claude</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">model2</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>                     <span class="c1"># GPT-4</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Inheritance
+    <div id="inheritance" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#inheritance" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>A <strong>child class</strong> can inherit everything from a <strong>parent class</strong> and add or change things.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BaseModel</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prompt</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;Response to: </span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ChatModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prompt</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">base</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>   <span class="c1"># call the parent&#39;s method</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;[Chat] </span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CodeModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">respond</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prompt</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">base</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;```</span><span class="se">\n</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="se">\n</span><span class="s2">```&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">chat</span> <span class="o">=</span> <span class="n">ChatModel</span><span class="p">(</span><span class="s2">&#34;Claude-Chat&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">code</span> <span class="o">=</span> <span class="n">CodeModel</span><span class="p">(</span><span class="s2">&#34;Claude-Code&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">chat</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="s2">&#34;Hello!&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [Chat] Response to: Hello!</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">code</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="s2">&#34;Write a loop&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ```</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Response to: Write a loop</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ```</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">When to Use a Class vs a Function
+    <div id="when-to-use-a-class-vs-a-function" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#when-to-use-a-class-vs-a-function" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Use a <strong>function</strong> when:</p>
+<ul>
+<li>You need to do one specific thing and return a result</li>
+<li>There is no need to store state between calls</li>
+</ul>
+<p>Use a <strong>class</strong> when:</p>
+<ul>
+<li>You have data and multiple related operations that work together</li>
+<li>You need to keep track of state between operations</li>
+<li>You want to create multiple independent objects of the same type</li>
+</ul>
+<hr>
+
+<h2 class="relative group">Quick Reference — Python Built-in Functions
+    <div id="quick-reference--python-built-in-functions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quick-reference--python-built-in-functions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>These functions come with Python — no import needed:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Function</th>
+          <th>What it does</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>print()</code></td>
+          <td>Displays output</td>
+          <td><code>print(&quot;hello&quot;)</code></td>
+      </tr>
+      <tr>
+          <td><code>input()</code></td>
+          <td>Gets text from user</td>
+          <td><code>name = input(&quot;Enter name: &quot;)</code></td>
+      </tr>
+      <tr>
+          <td><code>len()</code></td>
+          <td>Length of a string or list</td>
+          <td><code>len(&quot;hello&quot;)</code> → 5</td>
+      </tr>
+      <tr>
+          <td><code>type()</code></td>
+          <td>Type of a value</td>
+          <td><code>type(42)</code> → int</td>
+      </tr>
+      <tr>
+          <td><code>int()</code></td>
+          <td>Converts to integer</td>
+          <td><code>int(&quot;42&quot;)</code> → 42</td>
+      </tr>
+      <tr>
+          <td><code>float()</code></td>
+          <td>Converts to float</td>
+          <td><code>float(&quot;3.14&quot;)</code> → 3.14</td>
+      </tr>
+      <tr>
+          <td><code>str()</code></td>
+          <td>Converts to string</td>
+          <td><code>str(42)</code> → &ldquo;42&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>range()</code></td>
+          <td>Generates a sequence</td>
+          <td><code>range(5)</code> → 0,1,2,3,4</td>
+      </tr>
+      <tr>
+          <td><code>list()</code></td>
+          <td>Converts to list</td>
+          <td><code>list(range(3))</code> → [0,1,2]</td>
+      </tr>
+      <tr>
+          <td><code>sorted()</code></td>
+          <td>Returns sorted copy</td>
+          <td><code>sorted([3,1,2])</code> → [1,2,3]</td>
+      </tr>
+      <tr>
+          <td><code>sum()</code></td>
+          <td>Adds all numbers</td>
+          <td><code>sum([1,2,3])</code> → 6</td>
+      </tr>
+      <tr>
+          <td><code>min()</code></td>
+          <td>Smallest value</td>
+          <td><code>min([3,1,2])</code> → 1</td>
+      </tr>
+      <tr>
+          <td><code>max()</code></td>
+          <td>Largest value</td>
+          <td><code>max([3,1,2])</code> → 3</td>
+      </tr>
+      <tr>
+          <td><code>abs()</code></td>
+          <td>Absolute value</td>
+          <td><code>abs(-5)</code> → 5</td>
+      </tr>
+      <tr>
+          <td><code>round()</code></td>
+          <td>Rounds a number</td>
+          <td><code>round(3.7)</code> → 4</td>
+      </tr>
+      <tr>
+          <td><code>enumerate()</code></td>
+          <td>Index + value pairs</td>
+          <td><code>for i, v in enumerate(list)</code></td>
+      </tr>
+      <tr>
+          <td><code>zip()</code></td>
+          <td>Combines two lists</td>
+          <td><code>for a, b in zip(list1, list2)</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h2 class="relative group">Summary — Concepts at a Glance
+    <div id="summary--concepts-at-a-glance" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#summary--concepts-at-a-glance" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Concept</th>
+          <th>Key Idea</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Variables</td>
+          <td>Named boxes that hold values</td>
+      </tr>
+      <tr>
+          <td>Data types</td>
+          <td>int, float, str, bool</td>
+      </tr>
+      <tr>
+          <td>Strings</td>
+          <td>Text data with many built-in methods</td>
+      </tr>
+      <tr>
+          <td>F-strings</td>
+          <td>Modern way to embed variables in text</td>
+      </tr>
+      <tr>
+          <td>Booleans</td>
+          <td>True/False values from comparisons</td>
+      </tr>
+      <tr>
+          <td>Operators</td>
+          <td>Math, comparison, and logical operations</td>
+      </tr>
+      <tr>
+          <td>if/elif/else</td>
+          <td>Run different code based on conditions</td>
+      </tr>
+      <tr>
+          <td>for loop</td>
+          <td>Repeat code for each item in a sequence</td>
+      </tr>
+      <tr>
+          <td>while loop</td>
+          <td>Repeat code while a condition is True</td>
+      </tr>
+      <tr>
+          <td>List</td>
+          <td>Ordered, changeable collection</td>
+      </tr>
+      <tr>
+          <td>Dictionary</td>
+          <td>Key-value pairs for labeled data</td>
+      </tr>
+      <tr>
+          <td>Tuple</td>
+          <td>Fixed, unchangeable collection</td>
+      </tr>
+      <tr>
+          <td>Set</td>
+          <td>Unique items, great for fast lookup</td>
+      </tr>
+      <tr>
+          <td>Function</td>
+          <td>Named block of code you can reuse</td>
+      </tr>
+      <tr>
+          <td>return</td>
+          <td>Sends a value back from a function</td>
+      </tr>
+      <tr>
+          <td>Scope</td>
+          <td>Where a variable can be seen</td>
+      </tr>
+      <tr>
+          <td>Module</td>
+          <td>A file of ready-made code to import</td>
+      </tr>
+      <tr>
+          <td>Try/except</td>
+          <td>Catch and handle errors gracefully</td>
+      </tr>
+      <tr>
+          <td>Class</td>
+          <td>Blueprint for creating objects</td>
+      </tr>
+      <tr>
+          <td>Inheritance</td>
+          <td>Child class reuses parent class code</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h2 class="relative group">What Comes Next
+    <div id="what-comes-next" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-comes-next" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>You now know the core building blocks of Python. The next step is combining these concepts to build real programs:</p>
+<ul>
+<li><strong>Working with APIs</strong> — send requests to AI models like Claude or GPT</li>
+<li><strong>Data handling</strong> — read CSV files, process data with pandas</li>
+<li><strong>Project structure</strong> — organize code into multiple files and modules</li>
+<li><strong>Git and GitHub</strong> — save and share your code professionally</li>
+<li><strong>AI applications</strong> — build chatbots, summarizers, and AI-powered tools</li>
+</ul>
+<blockquote><p><strong>Practice tip:</strong> The best way to learn programming is to write code every day, even just 20 minutes. Take one concept from this guide and write a small program using it — that is how it really sticks.</p>
+</blockquote>
+          
+          
+          
+        </div>
+        
+        
+  <details class="mt-2 mb-5 overflow-hidden rounded-lg ms-0 ps-5">
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 -ms-5 ps-5 dark:bg-primary-800 dark:text-neutral-100">
+    Python Zero to MLOps -
+    This article is part of a series.
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/python/why_python/">
+          Part 1:
+          Why Python When You Already Know Shell Scripting? A DevOps Engineer&#39;s Honest Answer
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/python/setup/">
+          Part 2:
+          Setting Up Python and VS Code
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        Part 3:
+        This Article
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/python/phase1/">
+          Part 4:
+          Phase 1: Replace Your Shell Scripts With Python — Data Literacy for DevOps Engineers
+        </a>
+      </div>
+    
+  
+
+
+  </details>
+
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/python/phase1/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Phase 1: Replace Your Shell Scripts With Python — Data Literacy for DevOps Engineers
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-04-19T08:00:00&#43;05:30">19 April 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/python/setup/">
+              <span class="leading-6">
+                Setting Up Python and VS Code&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-04-19T10:00:00&#43;05:30">19 April 2026</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hemanth Kumar Motukuri
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

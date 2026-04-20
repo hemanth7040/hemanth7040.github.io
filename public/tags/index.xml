@@ -7,7 +7,137 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
-    <lastBuildDate>Thu, 16 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Apr 2026 11:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Automation</title>
+      <link>http://localhost:1313/tags/automation/</link>
+      <pubDate>Sun, 19 Apr 2026 11:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/automation/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Beginners</title>
+      <link>http://localhost:1313/tags/beginners/</link>
+      <pubDate>Sun, 19 Apr 2026 11:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/beginners/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Sun, 19 Apr 2026 11:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/devops/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>ShellScripting</title>
+      <link>http://localhost:1313/tags/shellscripting/</link>
+      <pubDate>Sun, 19 Apr 2026 11:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/shellscripting/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Ai</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Sun, 19 Apr 2026 10:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Setup</title>
+      <link>http://localhost:1313/tags/setup/</link>
+      <pubDate>Sun, 19 Apr 2026 10:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/setup/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Vscode</title>
+      <link>http://localhost:1313/tags/vscode/</link>
+      <pubDate>Sun, 19 Apr 2026 10:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/vscode/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Concepts</title>
+      <link>http://localhost:1313/tags/concepts/</link>
+      <pubDate>Sun, 19 Apr 2026 09:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/concepts/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Functions</title>
+      <link>http://localhost:1313/tags/functions/</link>
+      <pubDate>Sun, 19 Apr 2026 09:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/functions/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Loops</title>
+      <link>http://localhost:1313/tags/loops/</link>
+      <pubDate>Sun, 19 Apr 2026 09:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/loops/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Syntax</title>
+      <link>http://localhost:1313/tags/syntax/</link>
+      <pubDate>Sun, 19 Apr 2026 09:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/syntax/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>DataLiteracy</title>
+      <link>http://localhost:1313/tags/dataliteracy/</link>
+      <pubDate>Sun, 19 Apr 2026 08:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/dataliteracy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>NumPy</title>
+      <link>http://localhost:1313/tags/numpy/</link>
+      <pubDate>Sun, 19 Apr 2026 08:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/tags/numpy/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>AWS EC2</title>
@@ -25,16 +155,6 @@
       <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/ci/cd/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Devops</title>
-      <link>http://localhost:1313/tags/devops/</link>
-      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/devops/</guid>
       <description></description>
       
     </item>
