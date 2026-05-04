@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DevOps on Hemanth Kumar Motukuri</title>
-    <link>https://hemanth7040.github.io/categories/devops/</link>
+    <link>http://localhost:50354/categories/devops/</link>
     <description>Recent content in DevOps on Hemanth Kumar Motukuri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
-    <lastBuildDate>Tue, 07 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://hemanth7040.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:50354/categories/devops/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The Evolution of DevOps: From Silos to Site Reliability</title>
-      <link>https://hemanth7040.github.io/posts/evolution-of-devops/</link>
+      <link>http://localhost:50354/posts/evolution-of-devops/</link>
       <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://hemanth7040.github.io/posts/evolution-of-devops/</guid>
+      <guid>http://localhost:50354/posts/evolution-of-devops/</guid>
       <description>A deep dive into the origins of DevOps, the shift from Waterfall to Agile, and why it is the backbone of modern cloud engineering.</description>
       
     </item>

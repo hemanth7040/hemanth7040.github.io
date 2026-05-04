@@ -2,69 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technical Topics on Hemanth Kumar Motukuri</title>
-    <link>https://hemanth7040.github.io/categories/</link>
+    <link>http://localhost:50354/categories/</link>
     <description>Recent content in Technical Topics on Hemanth Kumar Motukuri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
-    <lastBuildDate>Sun, 19 Apr 2026 11:00:00 +0530</lastBuildDate><atom:link href="https://hemanth7040.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Apr 2026 11:00:00 +0530</lastBuildDate><atom:link href="http://localhost:50354/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Linux</title>
-      <link>https://hemanth7040.github.io/categories/linux/</link>
+      <link>http://localhost:50354/categories/linux/</link>
       <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://hemanth7040.github.io/categories/linux/</guid>
+      <guid>http://localhost:50354/categories/linux/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Git</title>
-      <link>https://hemanth7040.github.io/categories/git/</link>
+      <link>http://localhost:50354/categories/git/</link>
       <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://hemanth7040.github.io/categories/git/</guid>
+      <guid>http://localhost:50354/categories/git/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>SDLC</title>
-      <link>https://hemanth7040.github.io/categories/sdlc/</link>
+      <link>http://localhost:50354/categories/sdlc/</link>
       <pubDate>Tue, 07 Apr 2026 11:00:00 +0530</pubDate>
       
-      <guid>https://hemanth7040.github.io/categories/sdlc/</guid>
+      <guid>http://localhost:50354/categories/sdlc/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>DevOps</title>
-      <link>https://hemanth7040.github.io/categories/devops/</link>
+      <link>http://localhost:50354/categories/devops/</link>
       <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://hemanth7040.github.io/categories/devops/</guid>
+      <guid>http://localhost:50354/categories/devops/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://hemanth7040.github.io/categories/docker/</link>
+      <link>http://localhost:50354/categories/docker/</link>
       <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://hemanth7040.github.io/categories/docker/</guid>
+      <guid>http://localhost:50354/categories/docker/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://hemanth7040.github.io/categories/python/</link>
+      <link>http://localhost:50354/categories/python/</link>
       <pubDate>Sun, 19 Apr 2026 11:00:00 +0530</pubDate>
       
-      <guid>https://hemanth7040.github.io/categories/python/</guid>
+      <guid>http://localhost:50354/categories/python/</guid>
       <description></description>
       
     </item>
