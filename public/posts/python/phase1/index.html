@@ -70,7 +70,7 @@
     <meta property="article:tag" content="Subprocess">
     <meta property="article:tag" content="Json">
     <meta property="article:tag" content="Logging">
-    <meta property="article:tag" content="DevOps">
+    <meta property="article:tag" content="Devops">
       <meta property="og:see_also" content="http://localhost:1313/posts/python/why_python/">
       <meta property="og:see_also" content="http://localhost:1313/posts/python/setup/">
       <meta property="og:see_also" content="http://localhost:1313/posts/python/concepts/">
@@ -249,7 +249,7 @@
     "keywords": ["os","pathlib","subprocess","json","logging","DevOps","LocalAutomator","Beginners","Python"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "6089"
+    "wordCount": "5433"
   }]
   </script>
 
@@ -632,7 +632,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-04-19T08:00:00&#43;05:30">19 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>6089 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">29 mins</span>
+      <time datetime="2026-04-19T08:00:00&#43;05:30">19 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>5433 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">26 mins</span>
     
 
     
@@ -724,7 +724,7 @@
                 <span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    DevOps
+    Devops
   </span>
 </span>
 
@@ -1069,6 +1069,43 @@ Written for beginners — including people from non-IT backgrounds.</p>
 </table>
 <hr>
 
+<h2 class="relative group">What You Will Learn
+    <div id="what-you-will-learn-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-you-will-learn-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Module</th>
+          <th>What it does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>os</code> and <code>pathlib</code></td>
+          <td>Move files, check directories, read secret keys from the OS</td>
+      </tr>
+      <tr>
+          <td><code>subprocess</code></td>
+          <td>Run any terminal command (<code>git</code>, <code>kubectl</code>, <code>docker</code>) from inside Python</td>
+      </tr>
+      <tr>
+          <td><code>json</code></td>
+          <td>Convert Python data to and from JSON files — the language every API speaks</td>
+      </tr>
+      <tr>
+          <td><code>logging</code></td>
+          <td>Write timestamped records of every action (the professional alternative to <code>print()</code>)</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
 <h2 class="relative group">Before You Start — Two Concepts Every Beginner Must Understand
     <div id="before-you-start--two-concepts-every-beginner-must-understand" class="anchor"></div>
     
@@ -1103,16 +1140,14 @@ where you type commands like <code>git status</code> or <code>ls</code> and the 
     </span>
     
 </h3>
-<p>Every program that runs in a terminal has <strong>two separate output channels</strong>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Your Python script runs a command
-</span></span><span class="line"><span class="cl">         │
-</span></span><span class="line"><span class="cl">         ├──► stdout  (Standard Output)
-</span></span><span class="line"><span class="cl">         │    &#34;The normal result&#34; — what the program prints when everything is OK
-</span></span><span class="line"><span class="cl">         │    Example: git status printing &#34;On branch main&#34;
-</span></span><span class="line"><span class="cl">         │
-</span></span><span class="line"><span class="cl">         └──► stderr  (Standard Error)
-</span></span><span class="line"><span class="cl">              &#34;The error channel&#34; — what the program prints when something goes wrong
-</span></span><span class="line"><span class="cl">              Example: git printing &#34;fatal: not a git repository&#34;</span></span></code></pre></div></div>
+<p>Every program that runs in a terminal has two separate output channels:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">stdout  (Standard Output)
+</span></span><span class="line"><span class="cl">        &#34;The normal result&#34; — what the program prints when everything is OK
+</span></span><span class="line"><span class="cl">        Example: git status printing &#34;On branch main&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">stderr  (Standard Error)
+</span></span><span class="line"><span class="cl">        &#34;The error channel&#34; — what the program prints when something goes wrong
+</span></span><span class="line"><span class="cl">        Example: git printing &#34;fatal: not a git repository&#34;</span></span></code></pre></div></div>
 <p><strong>Real-world analogy:</strong>
 Imagine calling a bank helpline.</p>
 <ul>
@@ -1122,12 +1157,12 @@ Imagine calling a bank helpline.</p>
 <p>They are two separate phone lines. Python can listen to both at the same time.</p>
 <hr>
 
-<h2 class="relative group">Module 1 — <code>os</code> &amp; <code>pathlib</code>: File and Directory Control
-    <div id="module-1--os--pathlib-file-and-directory-control" class="anchor"></div>
+<h2 class="relative group">Module 1 — <code>os</code> and <code>pathlib</code>: File and Directory Control
+    <div id="module-1--os-and-pathlib-file-and-directory-control" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#module-1--os--pathlib-file-and-directory-control" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#module-1--os-and-pathlib-file-and-directory-control" aria-label="Anchor">#</a>
     </span>
     
 </h2>
@@ -1169,23 +1204,23 @@ Imagine calling a bank helpline.</p>
 </span></span><span class="line"><span class="cl"><span class="c1"># how file systems work and adjusts automatically for each operating system.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># ENVIRONMENT VARIABLES — Where you store secrets safely</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Bad practice — NEVER do this:</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># api_key = &#34;sk-abc123secret&#34;   ← hardcoded secret in your code</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># api_key = &#34;sk-abc123secret&#34;   &lt;- hardcoded secret in your code</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># If you push this to GitHub, the whole world can see your API key.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Good practice — read it from the OS instead:</span>
 </span></span><span class="line"><span class="cl"><span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;DEPLOY_API_KEY&#34;</span><span class="p">,</span> <span class="s2">&#34;not-set&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Breaking this down word by word:</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># os          → the os toolbox</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># .getenv()   → a function inside os that reads environment variables</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># &#34;DEPLOY_API_KEY&#34; → the NAME of the variable to look up in the OS</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># os          -&gt; the os toolbox</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># .getenv()   -&gt; a function inside os that reads environment variables</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;DEPLOY_API_KEY&#34; -&gt; the NAME of the variable to look up in the OS</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#                    (someone set this earlier by running: export DEPLOY_API_KEY=sk-abc123)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># &#34;not-set&#34;   → the DEFAULT VALUE — if DEPLOY_API_KEY does not exist in the OS,</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;not-set&#34;   -&gt; the DEFAULT VALUE — if DEPLOY_API_KEY does not exist in the OS,</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#               return &#34;not-set&#34; instead of crashing with an error.</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#               Always provide a default so your script fails gracefully.</span>
 </span></span><span class="line"><span class="cl">
@@ -1195,42 +1230,42 @@ Imagine calling a bank helpline.</p>
 </span></span><span class="line"><span class="cl"><span class="c1"># Here we check: if api_key is not &#34;not-set&#34;, print YES, otherwise print the warning.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># PATH OPERATIONS — Navigate and create directories safely</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">deploy_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&#34;/var/app/releases&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Path() creates a Path object — a smart reference to a folder location.</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># IMPORTANT: Nothing happens on disk at this line.</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># You are just telling Python &#34;I want to work with this folder.&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># Think of it like writing an address on a piece of paper — you haven&#39;t gone there yet.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Think of it like writing an address on a piece of paper — you have not gone there yet.</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">deploy_dir</span><span class="p">)</span>           <span class="c1"># → /var/app/releases</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">deploy_dir</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>      <span class="c1"># → releases          (just the folder name)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">deploy_dir</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>    <span class="c1"># → /var/app           (the folder that contains it)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">deploy_dir</span><span class="p">)</span>           <span class="c1"># -&gt; /var/app/releases</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">deploy_dir</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>      <span class="c1"># -&gt; releases          (just the folder name)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">deploy_dir</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>    <span class="c1"># -&gt; /var/app           (the folder that contains it)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="ow">not</span> <span class="n">deploy_dir</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># .exists() asks the OS: &#34;Does this folder actually exist on disk right now?&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># Returns True if yes, False if no.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># `not` flips the answer:</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#   not True  → False  (folder exists     → skip this block)</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#   not False → True   (folder is missing → run this block)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#   not True  -&gt; False  (folder exists     -&gt; skip this block)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#   not False -&gt; True   (folder is missing -&gt; run this block)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">deploy_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># .mkdir() tells the OS: &#34;Create this folder now.&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># parents=True  → What this means:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># parents=True  -&gt; What this means:</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#   Imagine you want to create /var/app/releases</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#   but /var/app does not exist either.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#   parents=True says: &#34;Create ALL missing parent folders along the way.&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#   Without parents=True → Python crashes saying /var/app does not exist.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#   With    parents=True → Python creates /var, then /var/app, then /var/app/releases.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#   Without parents=True -&gt; Python crashes saying /var/app does not exist.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#   With    parents=True -&gt; Python creates /var, then /var/app, then /var/app/releases.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># exist_ok=True → What this means:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># exist_ok=True -&gt; What this means:</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#   If the folder ALREADY exists, do nothing — do not raise an error.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#   Without exist_ok=True → running mkdir() twice crashes with &#34;folder already exists.&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#   With    exist_ok=True → running mkdir() twice is safe — it silently skips.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#   Without exist_ok=True -&gt; running mkdir() twice crashes with &#34;folder already exists.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#   With    exist_ok=True -&gt; running mkdir() twice is safe — it silently skips.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#   Rule of thumb: always set both parents=True and exist_ok=True in DevOps scripts.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Created: </span><span class="si">{</span><span class="n">deploy_dir</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
@@ -1246,18 +1281,18 @@ Imagine calling a bank helpline.</p>
 </span></span><span class="line"><span class="cl"><span class="c1"># This single habit makes your scripts portable across all operating systems.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Config path: </span><span class="si">{</span><span class="n">config_file</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># → Config path: /var/app/releases/config.json</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -&gt; Config path: /var/app/releases/config.json</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># READING AND WRITING FILES with pathlib</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">log_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&#34;/var/log/deploy/app.log&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">log_file</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Always create the parent directory before writing a file.</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># log_file.parent → /var/log/deploy</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># .mkdir()        → create that folder if it does not exist</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># log_file.parent -&gt; /var/log/deploy</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># .mkdir()        -&gt; create that folder if it does not exist</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">log_file</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s2">&#34;Deploy started</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># .write_text() creates the file and writes the string into it in one step.</span>
@@ -1268,7 +1303,7 @@ Imagine calling a bank helpline.</p>
 </span></span><span class="line"><span class="cl"><span class="c1"># .read_text() opens the file and returns its entire content as a single string.</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># No need to open/close manually — Path handles that for you.</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>  <span class="c1"># → Deploy started</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>  <span class="c1"># -&gt; Deploy started</span></span></span></code></pre></div></div>
 <p><strong>Terminal output:</strong></p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">API key loaded: MISSING — check your environment
 </span></span><span class="line"><span class="cl">/var/app/releases
@@ -1313,13 +1348,11 @@ Imagine calling a bank helpline.</p>
     
 </h3>
 <p>Before the code, understand the three most important switches:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">subprocess.run(command, capture_output=?, text=?, check=?)
-</span></span><span class="line"><span class="cl">                              │              │        │
-</span></span><span class="line"><span class="cl">                              │              │        └── What happens on FAILURE?
-</span></span><span class="line"><span class="cl">                              │              │
-</span></span><span class="line"><span class="cl">                              │              └── What FORMAT should the output be in?
-</span></span><span class="line"><span class="cl">                              │
-</span></span><span class="line"><span class="cl">                              └── Should Python CAPTURE the output or let it print freely?</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">subprocess.run(command, capture_output, text, check)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">capture_output  -&gt;  Should Python CAPTURE the output or let it print freely?
+</span></span><span class="line"><span class="cl">text            -&gt;  What FORMAT should the output be in?
+</span></span><span class="line"><span class="cl">check           -&gt;  What happens on FAILURE?</span></span></code></pre></div></div>
 
 <h4 class="relative group"><code>capture_output</code> — Should Python capture the output?
     <div id="capture_output--should-python-capture-the-output" class="anchor"></div>
@@ -1348,8 +1381,8 @@ Imagine calling a bank helpline.</p>
 </span></span><span class="line"><span class="cl">    Example: checking if &#34;On branch main&#34; is in git status output.</span></span></code></pre></div></div>
 <p><strong>Real-world analogy:</strong></p>
 <ul>
-<li><code>capture_output=False</code> → You ask a colleague a question and they answer out loud. Everyone in the office hears it.</li>
-<li><code>capture_output=True</code>  → You ask the same question but they hand you a written note. Only you see the answer — and you can keep the note.</li>
+<li><code>capture_output=False</code> — You ask a colleague a question and they answer out loud. Everyone in the office hears it.</li>
+<li><code>capture_output=True</code>  — You ask the same question but they hand you a written note. Only you see the answer — and you can keep the note.</li>
 </ul>
 
 <h4 class="relative group"><code>text</code> — What format should the output be in?
@@ -1363,21 +1396,20 @@ Imagine calling a bank helpline.</p>
 </h4>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">text=False  (default)
 </span></span><span class="line"><span class="cl">    Output is returned as RAW BYTES — the computer&#39;s native binary format.
-</span></span><span class="line"><span class="cl">    result.stdout → b&#34;On branch main\n&#34;
-</span></span><span class="line"><span class="cl">                    ↑
-</span></span><span class="line"><span class="cl">                    The b prefix means BYTES — not a normal string.
-</span></span><span class="line"><span class="cl">    You cannot do normal string operations like .split(), .upper(), &#34;main&#34; in result.stdout
+</span></span><span class="line"><span class="cl">    result.stdout -&gt; b&#34;On branch main\n&#34;
+</span></span><span class="line"><span class="cl">                     The b prefix means BYTES — not a normal string.
+</span></span><span class="line"><span class="cl">    You cannot do normal string operations like .split() or .upper()
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">text=True
 </span></span><span class="line"><span class="cl">    Python automatically DECODES the bytes into a normal readable string.
-</span></span><span class="line"><span class="cl">    result.stdout → &#34;On branch main\n&#34;
+</span></span><span class="line"><span class="cl">    result.stdout -&gt; &#34;On branch main\n&#34;
 </span></span><span class="line"><span class="cl">    Now you can search it, split it, print it, compare it — just like any other string.
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    Always set text=True unless you are dealing with binary data (images, executables).</span></span></code></pre></div></div>
 <p><strong>Real-world analogy:</strong></p>
 <ul>
-<li><code>text=False</code> → You receive a fax but it comes out as raw transmission signals. Unreadable.</li>
-<li><code>text=True</code>  → The fax machine decodes those signals into readable printed text automatically.</li>
+<li><code>text=False</code> — You receive a fax but it comes out as raw transmission signals. Unreadable.</li>
+<li><code>text=True</code>  — The fax machine decodes those signals into readable printed text automatically.</li>
 </ul>
 
 <h4 class="relative group"><code>check</code> — What should Python do if the command fails?
@@ -1391,14 +1423,14 @@ Imagine calling a bank helpline.</p>
 </h4>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">check=False  (default)
 </span></span><span class="line"><span class="cl">    Python runs the command and returns the result NO MATTER WHAT.
-</span></span><span class="line"><span class="cl">    Even if the command failed (returncode ≠ 0), Python continues running.
+</span></span><span class="line"><span class="cl">    Even if the command failed (returncode != 0), Python continues running.
 </span></span><span class="line"><span class="cl">    YOU are responsible for checking result.returncode and handling the failure.
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    Use when: you expect the command might fail and you want to handle it yourself.
 </span></span><span class="line"><span class="cl">    Example: checking git status in a folder that might not be a git repo.
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">check=True
-</span></span><span class="line"><span class="cl">    If the command fails (returncode ≠ 0), Python automatically raises an exception
+</span></span><span class="line"><span class="cl">    If the command fails (returncode != 0), Python automatically raises an exception
 </span></span><span class="line"><span class="cl">    called CalledProcessError and STOPS your script immediately.
 </span></span><span class="line"><span class="cl">    You do not need to manually check result.returncode.
 </span></span><span class="line"><span class="cl">
@@ -1406,8 +1438,8 @@ Imagine calling a bank helpline.</p>
 </span></span><span class="line"><span class="cl">    Example: running git pull before a deployment — if it fails, do NOT deploy.</span></span></code></pre></div></div>
 <p><strong>Real-world analogy:</strong></p>
 <ul>
-<li><code>check=False</code> → You ask a contractor to build a wall. If they fail, you personally inspect the work and decide what to do next.</li>
-<li><code>check=True</code>  → You ask the same contractor but tell them upfront: &ldquo;If anything goes wrong, stop work immediately and call me.&rdquo; They halt automatically.</li>
+<li><code>check=False</code> — You ask a contractor to build a wall. If they fail, you personally inspect the work and decide what to do next.</li>
+<li><code>check=True</code>  — You ask the same contractor but tell them upfront: &ldquo;If anything goes wrong, stop work immediately and call me.&rdquo; They halt automatically.</li>
 </ul>
 
 <h4 class="relative group"><code>returncode</code> — The command&rsquo;s exit signal
@@ -1422,19 +1454,19 @@ Imagine calling a bank helpline.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Every terminal command finishes and sends a number back to Python.
 </span></span><span class="line"><span class="cl">This number is called the return code or exit code.
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">returncode == 0    → SUCCESS  (the command worked perfectly)
-</span></span><span class="line"><span class="cl">returncode != 0    → FAILURE  (something went wrong — the number tells you what)
+</span></span><span class="line"><span class="cl">returncode == 0    -&gt; SUCCESS  (the command worked perfectly)
+</span></span><span class="line"><span class="cl">returncode != 0    -&gt; FAILURE  (something went wrong)
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">This is a Unix/Linux convention used by EVERY terminal program:
 </span></span><span class="line"><span class="cl">git, docker, kubectl, npm, pip — all of them follow this same rule.</span></span></code></pre></div></div>
 <p><strong>Real-world analogy:</strong>
 Think of returncode like a delivery confirmation SMS.</p>
 <ul>
-<li><code>0</code>  → &ldquo;Your package was delivered successfully.&rdquo;</li>
-<li><code>1</code>  → &ldquo;Delivery failed — address not found.&rdquo;</li>
-<li><code>128</code> → &ldquo;Delivery failed — recipient refused the package.&rdquo;
-Different numbers mean different types of failure.</li>
+<li><code>0</code>   — &ldquo;Your package was delivered successfully.&rdquo;</li>
+<li><code>1</code>   — &ldquo;Delivery failed — address not found.&rdquo;</li>
+<li><code>128</code> — &ldquo;Delivery failed — recipient refused the package.&rdquo;</li>
 </ul>
+<p>Different numbers mean different types of failure.</p>
 <hr>
 
 <h3 class="relative group">Real DevOps scenario
@@ -1468,10 +1500,10 @@ Different numbers mean different types of failure.</li>
 </span></span></span><span class="line"><span class="cl"><span class="s2">    A reusable helper function that runs any terminal command safely.
 </span></span></span><span class="line"><span class="cl"><span class="s2">
 </span></span></span><span class="line"><span class="cl"><span class="s2">    Parameters:
-</span></span></span><span class="line"><span class="cl"><span class="s2">        command    → the command as a list of strings e.g. [&#34;git&#34;, &#34;status&#34;]
-</span></span></span><span class="line"><span class="cl"><span class="s2">        step_name  → a human-readable label for logging e.g. &#34;Git Status Check&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">        critical   → if True and command fails, raise an exception and stop the script
-</span></span></span><span class="line"><span class="cl"><span class="s2">                     if False and command fails, log the error and continue
+</span></span></span><span class="line"><span class="cl"><span class="s2">        command    -&gt; the command as a list of strings e.g. [&#34;git&#34;, &#34;status&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="s2">        step_name  -&gt; a human-readable label for logging e.g. &#34;Git Status Check&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        critical   -&gt; if True and command fails, raise an exception and stop the script
+</span></span></span><span class="line"><span class="cl"><span class="s2">                      if False and command fails, log the error and continue
 </span></span></span><span class="line"><span class="cl"><span class="s2">
 </span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
 </span></span></span><span class="line"><span class="cl"><span class="s2">        result object containing .stdout, .stderr, .returncode
@@ -1485,59 +1517,44 @@ Different numbers mean different types of failure.</li>
 </span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">            <span class="n">command</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># ── Why a LIST and not a string? ───────────────────────────────</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># subprocess.run(&#34;git status&#34;)          ← WRONG — dangerous</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># subprocess.run([&#34;git&#34;, &#34;status&#34;])     ← CORRECT — safe</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># Why a LIST and not a string?</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># subprocess.run(&#34;git status&#34;)          &lt;- WRONG — dangerous</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># subprocess.run([&#34;git&#34;, &#34;status&#34;])     &lt;- CORRECT — safe</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">#</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># With a plain string, Python passes it through the OS shell (/bin/sh).</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># A malicious input could inject extra commands — called shell injection.</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># Example: if someone passes &#34;git status; rm -rf /&#34; as the command,</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># the shell would run BOTH git status AND delete your entire disk.</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">#</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># With a list, each item is one argument. No shell. No injection risk.</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># [&#34;git&#34;, &#34;status&#34;, &#34;; rm -rf /&#34;] → git simply sees this as a bad argument</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># and fails safely instead of executing the dangerous part.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># We want to CAPTURE the output, not print it live to the terminal.</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># Captured output lands in:</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">#   result.stdout → everything the command printed normally</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">#   result.stderr → everything the command printed as an error</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># Without this, output goes directly to the terminal screen and</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># Python cannot read, log, or act on it.</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#   result.stdout -&gt; everything the command printed normally</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#   result.stderr -&gt; everything the command printed as an error</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># Decode the output from raw bytes into a normal Python string.</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># Without text=True:</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">#   result.stdout → b&#34;On branch main\nnothing to commit\n&#34;  (bytes object)</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">#   &#34;main&#34; in result.stdout → ERROR: can&#39;t search bytes with a string</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#   result.stdout -&gt; b&#34;On branch main\nnothing to commit\n&#34;  (bytes object)</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># With text=True:</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">#   result.stdout → &#34;On branch main\nnothing to commit\n&#34;   (string)</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">#   &#34;main&#34; in result.stdout → True  (works perfectly)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#   result.stdout -&gt; &#34;On branch main\nnothing to commit\n&#34;   (string)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="n">check</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># Do NOT auto-raise an exception on failure.</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># We handle success/failure ourselves below using result.returncode.</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># This gives us full control:</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">#   - Log the exact error message</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">#   - Decide whether to stop or continue based on `critical` parameter</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">#   - Format a useful error for the log file</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># Wait a maximum of 60 seconds for the command to finish.</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># Without timeout, a hanging command (like a network call that never responds)</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># would freeze your script FOREVER.</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># Without timeout, a hanging command would freeze your script FOREVER.</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># After 60 seconds, Python raises TimeoutExpired and you can handle it.</span>
 </span></span><span class="line"><span class="cl">        <span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c1"># ── Check if the command succeeded ────────────────────────────────</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Check if the command succeeded</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">returncode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># returncode 0 = the command completed successfully (Unix convention).</span>
 </span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;✓ </span><span class="si">{</span><span class="n">step_name</span><span class="si">}</span><span class="s2"> passed&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">                <span class="c1"># .strip() removes leading/trailing whitespace and newlines.</span>
-</span></span><span class="line"><span class="cl">                <span class="c1"># We only log stdout if it actually has content (not just blank lines).</span>
 </span></span><span class="line"><span class="cl">                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Output:</span><span class="se">\n</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">result</span>
@@ -1545,7 +1562,6 @@ Different numbers mean different types of failure.</li>
 </span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># returncode != 0 = the command failed.</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># result.stderr contains the error message the command printed.</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># result.returncode tells us the specific type of failure.</span>
 </span></span><span class="line"><span class="cl">            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">                <span class="sa">f</span><span class="s2">&#34;✗ </span><span class="si">{</span><span class="n">step_name</span><span class="si">}</span><span class="s2"> failed &#34;</span>
 </span></span><span class="line"><span class="cl">                <span class="sa">f</span><span class="s2">&#34;(exit code: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">returncode</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&#34;</span>
@@ -1553,22 +1569,20 @@ Different numbers mean different types of failure.</li>
 </span></span><span class="line"><span class="cl">            <span class="p">)</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># Why log stderr and not stdout on failure?</span>
 </span></span><span class="line"><span class="cl">            <span class="c1"># Programs print their ERROR messages to stderr — not stdout.</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># If you only check stdout on failure, you will see nothing useful.</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># Always check stderr when a command fails.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">critical</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Critical step &#39;</span><span class="si">{</span><span class="n">step_name</span><span class="si">}</span><span class="s2">&#39; failed. Pipeline stopped.&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">None</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">TimeoutExpired</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># This exception is raised when the command takes longer than `timeout` seconds.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Raised when the command takes longer than `timeout` seconds.</span>
 </span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;✗ </span><span class="si">{</span><span class="n">step_name</span><span class="si">}</span><span class="s2"> timed out after 60 seconds&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">critical</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">            <span class="k">raise</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># This exception is raised when the command itself does not exist on the system.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Raised when the command itself does not exist on the system.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># Example: running [&#34;kubectl&#34;, &#34;get&#34;, &#34;pods&#34;] on a machine where kubectl is not installed.</span>
 </span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;✗ Command not found: &#39;</span><span class="si">{</span><span class="n">command</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39; — is it installed and in PATH?&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">critical</span><span class="p">:</span>
@@ -1576,9 +1590,9 @@ Different numbers mean different types of failure.</li>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># THE CI PIPELINE — using our helper function</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">run_ci_pipeline</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;=&#34;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
@@ -1590,14 +1604,12 @@ Different numbers mean different types of failure.</li>
 </span></span><span class="line"><span class="cl">        <span class="n">command</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;git&#34;</span><span class="p">,</span> <span class="s2">&#34;status&#34;</span><span class="p">],</span>
 </span></span><span class="line"><span class="cl">        <span class="n">step_name</span><span class="o">=</span><span class="s2">&#34;Git Status Check&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">        <span class="n">critical</span><span class="o">=</span><span class="kc">True</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># critical=True → if git fails, raise an exception and stop everything.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># We cannot deploy from a broken or dirty git state.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># critical=True -&gt; if git fails, raise an exception and stop everything.</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">result</span> <span class="ow">and</span> <span class="s2">&#34;nothing to commit&#34;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># result.stdout contains the full text output of `git status`.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># We check if &#34;nothing to commit&#34; is IN that text.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># If it is NOT there, the working directory has uncommitted changes.</span>
 </span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&#34;Working directory has uncommitted changes — aborting deploy&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&#34;Git working tree is not clean.&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
@@ -1607,22 +1619,19 @@ Different numbers mean different types of failure.</li>
 </span></span><span class="line"><span class="cl">        <span class="n">step_name</span><span class="o">=</span><span class="s2">&#34;Git Pull&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">        <span class="n">critical</span><span class="o">=</span><span class="kc">True</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># If git pull fails (network issue, merge conflict), stop immediately.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># Deploying stale code is worse than not deploying at all.</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1"># STEP 3 — Check kubectl cluster health (non-critical — cluster check is informational)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># STEP 3 — Check kubectl cluster health (non-critical — informational)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="n">run_command</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">        <span class="n">command</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;kubectl&#34;</span><span class="p">,</span> <span class="s2">&#34;get&#34;</span><span class="p">,</span> <span class="s2">&#34;nodes&#34;</span><span class="p">],</span>
 </span></span><span class="line"><span class="cl">        <span class="n">step_name</span><span class="o">=</span><span class="s2">&#34;Kubernetes Node Health&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">        <span class="n">critical</span><span class="o">=</span><span class="kc">False</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># critical=False → if kubectl is not installed or cluster is unreachable,</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># log the error but CONTINUE the pipeline.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># Maybe kubectl isn&#39;t available in this environment — that&#39;s OK.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># critical=False -&gt; if kubectl is not installed, log the error but CONTINUE.</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">node_count</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&#34;Ready&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># result.stdout.count(&#34;Ready&#34;) counts how many times &#34;Ready&#34; appears in the output.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># result.stdout.count(&#34;Ready&#34;) counts how many times &#34;Ready&#34; appears.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># Each healthy node shows &#34;Ready&#34; in the kubectl output.</span>
 </span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Cluster has </span><span class="si">{</span><span class="n">node_count</span><span class="si">}</span><span class="s2"> Ready node(s)&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
@@ -1717,9 +1726,9 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl"><span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">console_handler</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># WRITING — Python dictionary → JSON file</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># WRITING — Python dictionary -&gt; JSON file</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">write_config</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Write a Python dictionary to a JSON file safely.&#34;&#34;&#34;</span>
@@ -1730,37 +1739,34 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># `with open(...) as file:` — the context manager pattern.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;w&#34;              → write mode. Creates the file if it doesn&#39;t exist.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                    Overwrites it completely if it does exist.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                    Use &#34;a&#34; (append) if you want to add to the end instead.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;w&#34;              -&gt; write mode. Creates the file if it does not exist.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#                     Overwrites it completely if it does exist.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#                     Use &#34;a&#34; (append) if you want to add to the end instead.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># encoding=&#34;utf-8&#34; → always specify UTF-8 encoding.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                    Without this, special characters (é, ñ, ₹, 中文)</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                    may get corrupted on Windows machines.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># encoding=&#34;utf-8&#34; -&gt; always specify UTF-8 encoding.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#                     Without this, special characters (e, n, Rs, Chinese)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#                     may get corrupted on Windows machines.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># The `with` block guarantees the file is CLOSED when the block ends —</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># even if an error occurs mid-write. Without `with`, a crash mid-write</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># leaves the file open and possibly corrupted.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># even if an error occurs mid-write.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># json.dump(data, file) → converts Python dict to JSON text and writes to file.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># json.dump(data, file) -&gt; converts Python dict to JSON text and writes to file.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># indent=2         → add 2-space indentation to make the file human-readable.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                    Without indent, the entire JSON is one single unreadable line:</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                    {&#34;app&#34;:&#34;payment&#34;,&#34;replicas&#34;:3,&#34;env&#34;:&#34;production&#34;}</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                    With indent=2, it becomes the clean multi-line format below.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># indent=2         -&gt; add 2-space indentation to make the file human-readable.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#                     Without indent, the entire JSON is one single unreadable line.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#                     With indent=2, it becomes a clean multi-line format.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># ensure_ascii=False → allow non-English characters to be written as-is.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                    Without this, ₹ (Indian Rupee symbol) becomes \u20b9</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                    With this,    ₹ stays as ₹ in the file.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># ensure_ascii=False -&gt; allow non-English characters to be written as-is.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#                     Without this, the Rupee symbol becomes \u20b9</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Config written to </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># READING — JSON file → Python dictionary</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># READING — JSON file -&gt; Python dictionary</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">read_config</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Read a JSON file and return it as a Python dictionary.&#34;&#34;&#34;</span>
@@ -1772,13 +1778,12 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Config file missing: </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;r&#34; → read mode. Opens the file for reading only.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#       Python will raise an error if you try to write in read mode.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#       This protects you from accidentally overwriting important files.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># &#34;r&#34; -&gt; read mode. Opens the file for reading only.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#        Python will raise an error if you try to write in read mode.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="n">config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># json.load(file) → reads ALL the JSON text from the file</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                   and converts it into a Python dictionary.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># json.load(file) -&gt; reads ALL the JSON text from the file</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#                    and converts it into a Python dictionary.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># After this line, `config` is a normal Python dict.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># You can access values with config[&#34;key&#34;] or config.get(&#34;key&#34;).</span>
 </span></span><span class="line"><span class="cl">
@@ -1786,27 +1791,26 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">config</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># SAFE VALUE ACCESS — .get() vs [] — the difference that prevents crashes</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">validate_and_use_config</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Show the safe way to read values from a config dictionary.&#34;&#34;&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1"># Method 1 — Square brackets [] — UNSAFE for optional keys</span>
 </span></span><span class="line"><span class="cl">    <span class="n">app_name</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&#34;app_name&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># If &#34;app_name&#34; EXISTS in the dict → returns its value. Fine.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># If &#34;app_name&#34; is MISSING from the dict → raises KeyError and CRASHES.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># If &#34;app_name&#34; EXISTS in the dict -&gt; returns its value. Fine.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># If &#34;app_name&#34; is MISSING from the dict -&gt; raises KeyError and CRASHES.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># Only use [] when you are 100% certain the key will always be present.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1"># Method 2 — .get(key, default) — SAFE for optional or uncertain keys</span>
 </span></span><span class="line"><span class="cl">    <span class="n">replicas</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;replicas&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># If &#34;replicas&#34; EXISTS → returns its value.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># If &#34;replicas&#34; is MISSING → returns 1 (the default) instead of crashing.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># The default value should be a sensible fallback (1 replica is safe minimum).</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># If &#34;replicas&#34; EXISTS -&gt; returns its value.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># If &#34;replicas&#34; is MISSING -&gt; returns 1 (the default) instead of crashing.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">timeout</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;timeout_seconds&#34;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Not every config file will have &#34;timeout_seconds&#34; — maybe it was added later.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Not every config file will have &#34;timeout_seconds&#34;.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># .get() handles this gracefully. 30 seconds is a safe default.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">debug_mode</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;debug&#34;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
@@ -1821,7 +1825,7 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">missing</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Config is missing required fields: </span><span class="si">{</span><span class="n">missing</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># Raise an error immediately with a clear message listing exactly what is missing.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Raise an error immediately with a clear message listing what is missing.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># This is called &#34;fail fast&#34; — better to crash loudly at startup</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># than silently deploy with broken config.</span>
 </span></span><span class="line"><span class="cl">
@@ -1832,9 +1836,9 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Debug mode:  </span><span class="si">{</span><span class="n">debug_mode</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># REAL USAGE — putting it all together</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">deploy_config</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;app_name&#34;</span><span class="p">:</span> <span class="s2">&#34;payment-service&#34;</span><span class="p">,</span>
@@ -1850,7 +1854,7 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">        <span class="s2">&#34;port&#34;</span><span class="p">:</span> <span class="mi">5432</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">        <span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;payments_db&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Nested dict → nested JSON object. json.dump handles this automatically.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Nested dict -&gt; nested JSON object. json.dump handles this automatically.</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">config_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&#34;configs&#34;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&#34;deploy_config.json&#34;</span>
@@ -1895,25 +1899,22 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
     </span>
     
 </h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">print(&#34;Deploy started&#34;)     ← what a beginner writes
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Problems with print():
-</span></span><span class="line"><span class="cl">  ✗ No timestamp — when exactly did this happen?
-</span></span><span class="line"><span class="cl">  ✗ No severity  — is this normal info or a critical error?
-</span></span><span class="line"><span class="cl">  ✗ No file name — which script printed this?
-</span></span><span class="line"><span class="cl">  ✗ Goes to terminal only — lost forever when the terminal closes
-</span></span><span class="line"><span class="cl">  ✗ Cannot be filtered — you see everything or nothing
-</span></span><span class="line"><span class="cl">  ✗ No way to silence it in production without deleting the line
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">logging.info(&#34;Deploy started&#34;)   ← what a professional writes
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Benefits of logging:
-</span></span><span class="line"><span class="cl">  ✓ Automatic timestamp on every line
-</span></span><span class="line"><span class="cl">  ✓ Severity level (DEBUG / INFO / WARNING / ERROR / CRITICAL)
-</span></span><span class="line"><span class="cl">  ✓ Logger name tells you which module produced the message
-</span></span><span class="line"><span class="cl">  ✓ Writes to file — survives terminal close, server reboot
-</span></span><span class="line"><span class="cl">  ✓ Filter by level — show only ERROR+ in production, DEBUG+ in development
-</span></span><span class="line"><span class="cl">  ✓ One line change to silence all debug logs in production</span></span></code></pre></div></div>
+<p>Using <code>print()</code> has serious problems in production:</p>
+<ul>
+<li>No timestamp — when exactly did this happen?</li>
+<li>No severity — is this normal info or a critical error?</li>
+<li>No file name — which script printed this?</li>
+<li>Goes to terminal only — lost forever when the terminal closes</li>
+<li>Cannot be filtered — you see everything or nothing</li>
+</ul>
+<p>Using <code>logging</code> gives you all of that for free:</p>
+<ul>
+<li>Automatic timestamp on every line</li>
+<li>Severity level (DEBUG / INFO / WARNING / ERROR / CRITICAL)</li>
+<li>Logger name tells you which module produced the message</li>
+<li>Writes to file — survives terminal close, server reboot</li>
+<li>Filter by level — show only ERROR and above in production, DEBUG and above in development</li>
+</ul>
 
 <h3 class="relative group">The five severity levels — with real examples
     <div id="the-five-severity-levels--with-real-examples" class="anchor"></div>
@@ -1924,26 +1925,20 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
     </span>
     
 </h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">DEBUG    → &#34;I am about to open the file at /etc/app/config.json&#34;
-</span></span><span class="line"><span class="cl">           Extremely detailed developer notes. Never needed in production.
-</span></span><span class="line"><span class="cl">           Set level=DEBUG only when actively debugging a problem.
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">DEBUG    -&gt; &#34;I am about to open the file at /etc/app/config.json&#34;
+</span></span><span class="line"><span class="cl">            Extremely detailed developer notes. Never needed in production.
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">INFO     → &#34;Deployment pipeline started for version 2.1.0&#34;
-</span></span><span class="line"><span class="cl">           Normal, expected operations. The script is working as designed.
-</span></span><span class="line"><span class="cl">           This is your &#34;heartbeat&#34; — proof the script is running and progressing.
+</span></span><span class="line"><span class="cl">INFO     -&gt; &#34;Deployment pipeline started for version 2.1.0&#34;
+</span></span><span class="line"><span class="cl">            Normal, expected operations. The script is working as designed.
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">WARNING  → &#34;Config key &#39;timeout&#39; not found — using default 30s&#34;
-</span></span><span class="line"><span class="cl">           Something unexpected happened but the script recovered and continued.
-</span></span><span class="line"><span class="cl">           You should investigate it tomorrow, not at 3 AM.
+</span></span><span class="line"><span class="cl">WARNING  -&gt; &#34;Config key &#39;timeout&#39; not found — using default 30s&#34;
+</span></span><span class="line"><span class="cl">            Something unexpected happened but the script recovered and continued.
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">ERROR    → &#34;Failed to connect to database after 3 retries&#34;
-</span></span><span class="line"><span class="cl">           A real problem that needs fixing. The script may continue (with reduced
-</span></span><span class="line"><span class="cl">           functionality) or it may stop — but you MUST investigate this.
-</span></span><span class="line"><span class="cl">           Triggers alerts in production monitoring systems.
+</span></span><span class="line"><span class="cl">ERROR    -&gt; &#34;Failed to connect to database after 3 retries&#34;
+</span></span><span class="line"><span class="cl">            A real problem that needs fixing.
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">CRITICAL → &#34;Disk 100% full — cannot write logs — deployment aborted&#34;
-</span></span><span class="line"><span class="cl">           The script cannot continue at all. Requires IMMEDIATE human action.
-</span></span><span class="line"><span class="cl">           Wake-up-call severity — reserved for catastrophic failures only.</span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl">CRITICAL -&gt; &#34;Disk 100% full — cannot write logs — deployment aborted&#34;
+</span></span><span class="line"><span class="cl">            The script cannot continue at all. Requires IMMEDIATE human action.</span></span></code></pre></div></div>
 
 <h3 class="relative group">Real DevOps scenario
     <div id="real-devops-scenario-3" class="anchor"></div>
@@ -1965,17 +1960,17 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span></span><span class="line"><span class="cl"><span class="s2">    Factory function that creates a production-grade named logger.
 </span></span></span><span class="line"><span class="cl"><span class="s2">
 </span></span></span><span class="line"><span class="cl"><span class="s2">    Parameters:
-</span></span></span><span class="line"><span class="cl"><span class="s2">        name     → the logger&#39;s name — appears in every log line.
-</span></span></span><span class="line"><span class="cl"><span class="s2">                   Use the module name so you know where each message came from.
-</span></span></span><span class="line"><span class="cl"><span class="s2">                   Convention: pass __name__ when calling from another module.
-</span></span></span><span class="line"><span class="cl"><span class="s2">        log_file → optional path to a log file.
-</span></span></span><span class="line"><span class="cl"><span class="s2">                   If None, logs only to the terminal.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        name     -&gt; the logger&#39;s name — appears in every log line.
+</span></span></span><span class="line"><span class="cl"><span class="s2">                    Use the module name so you know where each message came from.
+</span></span></span><span class="line"><span class="cl"><span class="s2">                    Convention: pass __name__ when calling from another module.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        log_file -&gt; optional path to a log file.
+</span></span></span><span class="line"><span class="cl"><span class="s2">                    If None, logs only to the terminal.
 </span></span></span><span class="line"><span class="cl"><span class="s2">
 </span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
 </span></span></span><span class="line"><span class="cl"><span class="s2">        A configured Logger object ready to use.
 </span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1"># ── STEP 1: Create the logger ──────────────────────────────────</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># STEP 1: Create the logger</span>
 </span></span><span class="line"><span class="cl">    <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># logging.getLogger(name) creates a NEW logger with the given name.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># If you call getLogger(&#34;deploy&#34;) twice, you get the SAME logger object</span>
@@ -1987,18 +1982,16 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">    <span class="c1"># Their debug messages flood YOUR log file.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># Named loggers are isolated — only YOUR code writes to YOUR logger.</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1"># ── STEP 2: Set the logger level ──────────────────────────────</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># STEP 2: Set the logger level</span>
 </span></span><span class="line"><span class="cl">    <span class="n">env</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;APP_ENV&#34;</span><span class="p">,</span> <span class="s2">&#34;development&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">log_level</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span> <span class="k">if</span> <span class="n">env</span> <span class="o">==</span> <span class="s2">&#34;development&#34;</span> <span class="k">else</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># In development: show EVERYTHING including debug details.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># In production:  show INFO and above only — skip noisy debug lines.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># This single environment variable switch controls verbosity across ALL environments.</span>
 </span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">log_level</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># setLevel() sets the MINIMUM severity the logger will process.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Messages below this level are discarded before they even reach the handlers.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Think of it as a noise gate on a microphone — quiet sounds don&#39;t get through.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Messages below this level are discarded before they reach the handlers.</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1"># ── STEP 3: Create the formatter ──────────────────────────────</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># STEP 3: Create the formatter</span>
 </span></span><span class="line"><span class="cl">    <span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">        <span class="n">fmt</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">%(asctime)s</span><span class="s2"> [</span><span class="si">%(levelname)-8s</span><span class="s2">] </span><span class="si">%(name)s</span><span class="s2"> — </span><span class="si">%(message)s</span><span class="s2">&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">        <span class="n">datefmt</span><span class="o">=</span><span class="s2">&#34;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&#34;</span>
@@ -2006,51 +1999,36 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">    <span class="c1"># Formatter defines how EACH LOG LINE looks.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># fmt tokens — each is replaced automatically:</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># %(asctime)s    → timestamp: &#34;2026-04-19 10:00:01&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># %(levelname)s  → severity word: &#34;INFO&#34;, &#34;ERROR&#34;, etc.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># -8s            → left-align the level name in an 8-character wide column.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#                  This keeps all log lines vertically aligned:</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#                  [INFO    ] ← padded to 8 chars</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#                  [WARNING ] ← padded to 8 chars</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#                  [CRITICAL] ← exactly 8 chars</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># %(name)s       → the logger name you set in getLogger(&#34;deploy_pipeline&#34;)</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># %(message)s    → the actual message you passed to logger.info(...)</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># datefmt → controls the timestamp format using strftime codes:</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># %Y = 4-digit year, %m = month, %d = day</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># %H = hour (24h), %M = minute, %S = second</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># %(asctime)s    -&gt; timestamp: &#34;2026-04-19 10:00:01&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># %(levelname)s  -&gt; severity word: &#34;INFO&#34;, &#34;ERROR&#34;, etc.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># -8s            -&gt; left-align the level name in an 8-character wide column:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#                   [INFO    ]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#                   [WARNING ]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#                   [CRITICAL]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># %(name)s       -&gt; the logger name you set in getLogger(&#34;deploy_pipeline&#34;)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># %(message)s    -&gt; the actual message you passed to logger.info(...)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1"># ── STEP 4a: Console handler — logs to terminal ────────────────</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># STEP 4a: Console handler — logs to terminal</span>
 </span></span><span class="line"><span class="cl">    <span class="n">console_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># StreamHandler() sends log messages to the terminal (stdout by default).</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># This is what you see live while the script runs.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">console_handler</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># Handler-level filter — separate from the logger-level filter above.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># Logger level:  messages below this are DISCARDED completely.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># Handler level: messages below this are not sent to THIS handler,</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#                but may still go to other handlers.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Example: logger.setLevel(INFO), console_handler.setLevel(DEBUG)</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># The logger discards DEBUG before it reaches any handler.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Setting handler to DEBUG here has no extra effect — the logger already filtered it.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># But if logger.setLevel(DEBUG), then console shows DEBUG while</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># file_handler could be set to WARNING to keep the file clean.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">console_handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># Attach the formatter — tell this handler how to format each line.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Without this, log lines have no timestamp, no level, no name — just raw text.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">console_handler</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># addHandler() connects the handler to the logger.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Now: logger.info(&#34;x&#34;) → formatter formats it → console_handler prints it.</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1"># ── STEP 4b: File handler — logs to disk (optional) ────────────</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># STEP 4b: File handler — logs to disk (optional)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">log_file</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">log_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">log_file</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">log_path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># Ensure the log directory exists before creating the file handler.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># FileHandler will crash if the directory doesn&#39;t exist.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="n">file_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">            <span class="n">filename</span><span class="o">=</span><span class="n">log_path</span><span class="p">,</span>
@@ -2059,36 +2037,30 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">        <span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># FileHandler(filename) writes every log line to a file on disk.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># mode=&#34;a&#34; → APPEND mode. New log lines are added to the END of the file.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#            The file is never overwritten — you keep the full history.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#            Use mode=&#34;w&#34; only if you want a fresh log file every time.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#            In production: always use &#34;a&#34;.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># encoding=&#34;utf-8&#34; → ensures special characters are written correctly.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#                    Without this, non-ASCII characters may corrupt the file.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># mode=&#34;a&#34; -&gt; APPEND mode. New log lines are added to the END of the file.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#             The file is never overwritten — you keep the full history.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#             Use mode=&#34;w&#34; only if you want a fresh log file every time.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#             In production: always use &#34;a&#34;.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="n">file_handler</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># File only receives WARNING and above.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># Reason: INFO and DEBUG create huge log files very quickly.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># In production you want the file to contain only things that need attention.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># The terminal still shows INFO+ for the human watching live.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="n">file_handler</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">file_handler</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1"># ── Prevent duplicate log messages ────────────────────────────</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Prevent duplicate log messages</span>
 </span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">propagate</span> <span class="o">=</span> <span class="kc">False</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># By default, a named logger passes its messages UP to the root logger,</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># which may print them again if basicConfig() was called anywhere.</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># propagate=False stops that — your logger handles its own messages only.</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Without this, every message can appear twice in the terminal.</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">logger</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># USING THE LOGGER — in a real deployment script</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ─────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------------------------------------</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">logger</span> <span class="o">=</span> <span class="n">create_logger</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="n">name</span><span class="o">=</span><span class="s2">&#34;deploy_pipeline&#34;</span><span class="p">,</span>
@@ -2103,7 +2075,6 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Reading config from configs/</span><span class="si">{</span><span class="n">environment</span><span class="si">}</span><span class="s2">.json&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># DEBUG — low-level detail. Only visible in development (APP_ENV=development).</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># Useful when debugging &#34;why is the wrong config being loaded?&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">environment</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&#34;staging&#34;</span><span class="p">,</span> <span class="s2">&#34;production&#34;</span><span class="p">]:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Invalid environment &#39;</span><span class="si">{</span><span class="n">environment</span><span class="si">}</span><span class="s2">&#39; — must be staging or production&#34;</span><span class="p">)</span>
@@ -2113,11 +2084,8 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">environment</span> <span class="o">==</span> <span class="s2">&#34;production&#34;</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&#34;Deploying to PRODUCTION — double-check version and approvals&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># WARNING — not an error, but demands the human&#39;s attention.</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># The deploy continues, but this line will appear in the log file</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># (because it meets the WARNING threshold for the file handler).</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># Simulate deployment steps</span>
 </span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Step 1/4 — pulling Docker image&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Step 2/4 — running database migrations&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Step 3/4 — updating Kubernetes deployment&#34;</span><span class="p">)</span>
@@ -2131,7 +2099,7 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
 </span></span><span class="line"><span class="cl">            <span class="sa">f</span><span class="s2">&#34;Deployment FAILED catastrophically: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="n">exc_info</span><span class="o">=</span><span class="kc">True</span>
 </span></span><span class="line"><span class="cl">        <span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># exc_info=True → attaches the full Python traceback (stack trace) to the log line.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># exc_info=True -&gt; attaches the full Python traceback (stack trace) to the log line.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># Without exc_info: you see the error message but not WHERE it happened.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># With    exc_info: you see the file name, line number, and full call chain.</span>
 </span></span><span class="line"><span class="cl">        <span class="c1"># Always use exc_info=True on CRITICAL and ERROR when inside an except block.</span>
@@ -2161,7 +2129,7 @@ Python dictionaries are like that form filled out on your desk (in Python&rsquo;
     
 </h2>
 <blockquote><p>File: <code>devops_automator.py</code>
-One unified script: environment config → directory setup → JSON config write → CI checks via subprocess → everything logged with named logger.</p>
+One unified script: environment config, directory setup, JSON config write, CI checks via subprocess, everything logged with named logger.</p>
 </blockquote><div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">logging</span>
@@ -2256,10 +2224,10 @@ One unified script: environment config → directory setup → JSON config write
 </span></span><span class="line"><span class="cl">    <span class="n">releases</span> <span class="o">=</span> <span class="n">setup_directories</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&#34;/var/app&#34;</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">    <span class="n">cfg_path</span>  <span class="o">=</span> <span class="n">write_deploy_config</span><span class="p">(</span><span class="n">releases</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">run_command</span><span class="p">([</span><span class="s2">&#34;git&#34;</span><span class="p">,</span> <span class="s2">&#34;status&#34;</span><span class="p">],</span>                            <span class="s2">&#34;Git Status&#34;</span><span class="p">,</span>       <span class="n">critical</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">run_command</span><span class="p">([</span><span class="s2">&#34;git&#34;</span><span class="p">,</span> <span class="s2">&#34;pull&#34;</span><span class="p">,</span> <span class="s2">&#34;origin&#34;</span><span class="p">,</span> <span class="s2">&#34;main&#34;</span><span class="p">],</span>            <span class="s2">&#34;Git Pull&#34;</span><span class="p">,</span>         <span class="n">critical</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">run_command</span><span class="p">([</span><span class="s2">&#34;python&#34;</span><span class="p">,</span> <span class="s2">&#34;-m&#34;</span><span class="p">,</span> <span class="s2">&#34;pytest&#34;</span><span class="p">,</span> <span class="s2">&#34;tests/&#34;</span><span class="p">,</span> <span class="s2">&#34;-q&#34;</span><span class="p">],</span>   <span class="s2">&#34;Unit Tests&#34;</span><span class="p">,</span>       <span class="n">critical</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">run_command</span><span class="p">([</span><span class="s2">&#34;kubectl&#34;</span><span class="p">,</span> <span class="s2">&#34;get&#34;</span><span class="p">,</span> <span class="s2">&#34;nodes&#34;</span><span class="p">],</span>                   <span class="s2">&#34;K8s Node Health&#34;</span><span class="p">,</span>  <span class="n">critical</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">run_command</span><span class="p">([</span><span class="s2">&#34;git&#34;</span><span class="p">,</span> <span class="s2">&#34;status&#34;</span><span class="p">],</span>                           <span class="s2">&#34;Git Status&#34;</span><span class="p">,</span>      <span class="n">critical</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">run_command</span><span class="p">([</span><span class="s2">&#34;git&#34;</span><span class="p">,</span> <span class="s2">&#34;pull&#34;</span><span class="p">,</span> <span class="s2">&#34;origin&#34;</span><span class="p">,</span> <span class="s2">&#34;main&#34;</span><span class="p">],</span>           <span class="s2">&#34;Git Pull&#34;</span><span class="p">,</span>        <span class="n">critical</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">run_command</span><span class="p">([</span><span class="s2">&#34;python&#34;</span><span class="p">,</span> <span class="s2">&#34;-m&#34;</span><span class="p">,</span> <span class="s2">&#34;pytest&#34;</span><span class="p">,</span> <span class="s2">&#34;tests/&#34;</span><span class="p">,</span> <span class="s2">&#34;-q&#34;</span><span class="p">],</span>  <span class="s2">&#34;Unit Tests&#34;</span><span class="p">,</span>      <span class="n">critical</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">run_command</span><span class="p">([</span><span class="s2">&#34;kubectl&#34;</span><span class="p">,</span> <span class="s2">&#34;get&#34;</span><span class="p">,</span> <span class="s2">&#34;nodes&#34;</span><span class="p">],</span>                  <span class="s2">&#34;K8s Node Health&#34;</span><span class="p">,</span> <span class="n">critical</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;=&#34;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Pipeline completed — ready to deploy&#34;</span><span class="p">)</span>
@@ -2308,7 +2276,7 @@ One unified script: environment config → directory setup → JSON config write
           <td>So you can read, log, and act on command output</td>
       </tr>
       <tr>
-          <td>Use <code>check=False</code> + manual <code>returncode</code> check</td>
+          <td>Use <code>check=False</code> and manual <code>returncode</code> check</td>
           <td>Full control over failure handling</td>
       </tr>
       <tr>
@@ -2342,7 +2310,7 @@ One unified script: environment config → directory setup → JSON config write
   </tbody>
 </table>
 <hr>
-<p><em>Phase 1 complete. Next: Phase 2 — Cloud SDK &amp; API Calls.</em></p>
+<p><em>Phase 1 complete. Next: Phase 2 — Cloud SDK and API Calls.</em></p>
 
           
           
