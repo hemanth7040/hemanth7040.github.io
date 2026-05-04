@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Hemanth Kumar Motukuri</title>
-    <link>http://localhost:1313/series/</link>
+    <link>https://hemanth7040.github.io/series/</link>
     <description>Recent content in Series on Hemanth Kumar Motukuri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
-    <lastBuildDate>Sun, 19 Apr 2026 11:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Apr 2026 11:00:00 +0530</lastBuildDate><atom:link href="https://hemanth7040.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Python Zero to MLOps</title>
-      <link>http://localhost:1313/series/python-zero-to-mlops/</link>
+      <link>https://hemanth7040.github.io/series/python-zero-to-mlops/</link>
       <pubDate>Sun, 19 Apr 2026 11:00:00 +0530</pubDate>
       
-      <guid>http://localhost:1313/series/python-zero-to-mlops/</guid>
+      <guid>https://hemanth7040.github.io/series/python-zero-to-mlops/</guid>
       <description></description>
       
     </item>

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SDLC on Hemanth Kumar Motukuri</title>
-    <link>http://localhost:1313/categories/sdlc/</link>
+    <link>https://hemanth7040.github.io/categories/sdlc/</link>
     <description>Recent content in SDLC on Hemanth Kumar Motukuri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
-    <lastBuildDate>Tue, 07 Apr 2026 11:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/categories/sdlc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Apr 2026 11:00:00 +0530</lastBuildDate><atom:link href="https://hemanth7040.github.io/categories/sdlc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SDLC: The Foundation That Made DevOps Necessary</title>
-      <link>http://localhost:1313/posts/sdlc-phases-explained/</link>
+      <link>https://hemanth7040.github.io/posts/sdlc-phases-explained/</link>
       <pubDate>Tue, 07 Apr 2026 11:00:00 +0530</pubDate>
       
-      <guid>http://localhost:1313/posts/sdlc-phases-explained/</guid>
+      <guid>https://hemanth7040.github.io/posts/sdlc-phases-explained/</guid>
       <description>Before DevOps, there was SDLC. Understanding the Software Development Life Cycle is the first step to understanding why DevOps was born — and why it matters today.</description>
       
     </item>
