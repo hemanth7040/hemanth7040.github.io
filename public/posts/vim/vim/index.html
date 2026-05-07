@@ -1,0 +1,2873 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Vim Commands for DevOps Engineers &middot; Hemanth Kumar Motukuri</title>
+    <meta name="title" content="Vim Commands for DevOps Engineers &middot; Hemanth Kumar Motukuri">
+  
+
+  
+  
+    <meta name="description" content="A complete guide to essential Vim commands every DevOps engineer must know — with examples for every command">
+  
+  
+    <meta name="keywords" content="devops,linux,cheatsheet,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/vim/vim/">
+  
+
+  
+  
+    <meta name="author" content="Hemanth Kumar Motukuri">
+  
+  
+    
+      
+        
+          <link href="https://github.com/hemanth7040" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://linkedin.com/in/hemanth-kumar-motukuri" rel="me">
+        
+      
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/vim/vim/">
+  <meta property="og:site_name" content="Hemanth Kumar Motukuri">
+  <meta property="og:title" content="Vim Commands for DevOps Engineers">
+  <meta property="og:description" content="A complete guide to essential Vim commands every DevOps engineer must know — with examples for every command">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-05-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-07T00:00:00+00:00">
+    <meta property="article:tag" content="Devops">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Cheatsheet">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Vim Commands for DevOps Engineers">
+  <meta name="twitter:description" content="A complete guide to essential Vim commands every DevOps engineer must know — with examples for every command">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.ff2d589fef7134f8f746e5c1664332af4d8c4911a5bf3819699b42e2ac883e29b89b2137876c5fde28263950a9a2aacf6394d680837e1b0b6f03c5037c353063.css"
+    integrity="sha512-/y1Yn&#43;9xNPj3RuXBZkMyr02MSRGlvzgZaZtC4qyIPim4myE3h2xf3igmOVCpoqrPY5TWgIN&#43;GwtvA8UDfDUwYw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.c41769a6d0a0f3c9fae21f229a8ff36dbf91ab46022c5e71ec6600b9be681f5f41e6148129be6881788a258ce35a23cb28fb4b739843d8ffc1efec4081c51313.js"
+      integrity="sha512-xBdpptCg88n64h8imo/zbb&#43;Rq0YCLF5x7GYAub5oH19B5hSBKb5ogXiKJYzjWiPLKPtLc5hD2P/B7&#43;xAgcUTEw=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "My Technical Blog",
+    "name": "Vim Commands for DevOps Engineers",
+    "headline": "Vim Commands for DevOps Engineers",
+    "description": "A complete guide to essential Vim commands every DevOps engineer must know — with examples for every command",
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/vim/vim/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hemanth Kumar Motukuri"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-05-07T00:00:00\u002b00:00",
+    "datePublished": "2026-05-07T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-05-07T00:00:00\u002b00:00",
+    
+    "keywords": ["devops","linux","cheatsheet"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "4066"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Hemanth Kumar Motukuri
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Technical Topics">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/projects/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Projects"
+      title="Projects">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Projects
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/resume/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Resume"
+      title="Resume">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Resume
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/contact/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Contact"
+      title="Contact">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Contact
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Technical Topics" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/projects/"
+        aria-label="Projects"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Projects" class="text-2xl font-bold tracking-tight">
+          Projects
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/resume/"
+        aria-label="Resume"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Resume" class="text-2xl font-bold tracking-tight">
+          Resume
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/contact/"
+        aria-label="Contact"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Contact" class="text-2xl font-bold tracking-tight">
+          Contact
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Vim Commands for DevOps Engineers
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-05-07T00:00:00&#43;00:00">7 May 2026</time><span class="px-2 text-primary-500">&middot;</span><span>4066 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">20 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/vim/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Vim
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/devops/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Devops
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/linux/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Linux
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/cheatsheet/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Cheatsheet
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Hemanth Kumar Motukuri"
+        src="/img/profile_pic_hu_73b016f6fa6bb344.jpg"
+        data-zoom-src="/img/profile_pic_hu_da66a14a1ead8228.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Hemanth Kumar Motukuri
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">DevOps &amp; MLOps | Kubernetes | AWS</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/hemanth7040"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 496 496" xml:space="preserve">
+<path id="SVGCleanerId_0" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+	c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+	c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+	c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+	c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+	c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+	c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+	c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+	c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+<g>
+	<path id="SVGCleanerId_0_1_" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+		c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+		c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+		c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+		c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+		c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+		c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+</g>
+<g>
+	<path style="fill:#114C82;" d="M378.496,109.131c13.128,33.904,4.752,58.928,2.2,65.176c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163c0-29.56-5.152-57.896-14.568-84.2
+		C447.24,133.963,409.184,109.987,378.496,109.131z"/>
+	<path style="fill:#114C82;" d="M192.976,377.323c2.784-5.616,6.184-9.984,9.76-13.144c-30.176-3.456-61.168-11.512-83.048-33.744
+		C136.52,358.451,163.928,371.195,192.976,377.323z"/>
+</g>
+<path style="fill:#6CA9EA;" d="M12.912,270.947c0-137.536,111.048-249,247.992-249c76.04,0,144.056,34.392,189.536,88.488
+	C405.52,46.755,331.616,5.163,247.992,5.163C111.048,5.163,0,116.627,0,254.163c0,61.32,22.12,117.424,58.752,160.792
+	C29.944,374.291,12.912,324.643,12.912,270.947z"/>
+<path style="fill:#083E66;" d="M322.712,426.899c0-23.232-7.928-38.44-16.832-46.128c55.248-6.16,113.24-27.216,113.24-122.848
+	c0-27.184-9.6-49.4-25.52-66.824c2.576-6.296,11.096-31.608-2.456-65.872c0,0-2.576-0.792-7.896-0.488
+	c5.808,25.84-0.416,44.32-2.552,49.568c15.904,17.424,25.504,39.648,25.504,66.832c0,95.64-57.984,116.68-113.232,122.856
+	c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296c0,5.872,3.496,12.568,12.92,12.408
+	C322.488,479.555,322.712,455.659,322.712,426.899z"/>
+<path style="fill:#114C82;" d="M117.464,423.995c5.208,10.72,22.712,36.4,68.888,30.992c-0.064-5.648-0.112-11.976-0.144-18.928
+	C150.584,443.835,129.552,434.667,117.464,423.995z"/>
+<path style="fill:#6CA9EA;" d="M126.368,391.387c-1.592-2.4-4.576-6.472-8.904-10.544
+	C120.272,385.011,123.256,388.507,126.368,391.387z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/hemanth-kumar-motukuri"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 382 382" xml:space="preserve">
+<path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:hemanthkumarmotukuri@gmail.com"
+          
+          target="_blank"
+          aria-label="Gmail"
+          title="Gmail"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?>
+<!-- License: MIT. Made by Garuda Technology: https://github.com/garudatechnologydevelopers/sketch-icons -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z" fill="white"/>
+<path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" fill="#EA4335"/>
+<path d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z" fill="#FBBC05"/>
+<path d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z" fill="#34A853"/>
+<path d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z" fill="#C5221F"/>
+<path d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z" fill="#C5221F"/>
+<path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" fill="#C5221F"/>
+<path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" fill="#4285F4"/>
+</svg></span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">Vim Commands for DevOps Engineers
+    <div id="vim-commands-for-devops-engineers" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vim-commands-for-devops-engineers" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Vim is a powerful text editor available on almost every Linux/Unix system. As a DevOps engineer,
+you will use it daily to edit config files, YAML pipelines, Dockerfiles, and shell scripts —
+often on remote servers where no GUI is available. This guide covers all the essential commands
+with simple explanations and a real example for every single command.</p>
+<hr>
+
+<h2 class="relative group">Modes
+    <div id="modes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#modes" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Vim has different modes. You need to switch between them to do different things.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>i</code></td>
+          <td>Insert mode before the cursor</td>
+      </tr>
+      <tr>
+          <td><code>a</code></td>
+          <td>Insert mode after the cursor</td>
+      </tr>
+      <tr>
+          <td><code>I</code></td>
+          <td>Insert at the beginning of the line</td>
+      </tr>
+      <tr>
+          <td><code>A</code></td>
+          <td>Insert at the end of the line</td>
+      </tr>
+      <tr>
+          <td><code>v</code></td>
+          <td>Visual mode (select character by character)</td>
+      </tr>
+      <tr>
+          <td><code>V</code></td>
+          <td>Visual line mode (select entire lines)</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl+v</code></td>
+          <td>Visual block mode (column selection)</td>
+      </tr>
+      <tr>
+          <td><code>Esc</code></td>
+          <td>Return to Normal mode</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h3 class="relative group"><code>i</code> — Insert mode before the cursor
+    <div id="i--insert-mode-before-the-cursor" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#i--insert-mode-before-the-cursor" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Start typing at the current cursor position.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Your cursor is here → [l]isten: 80
+</span></span><span class="line"><span class="cl"># You want to add &#34;# &#34; before &#34;listen&#34;
+</span></span><span class="line"><span class="cl">Press i
+</span></span><span class="line"><span class="cl">Type: # 
+</span></span><span class="line"><span class="cl">Result: # listen: 80</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>a</code> — Insert mode after the cursor
+    <div id="a--insert-mode-after-the-cursor" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a--insert-mode-after-the-cursor" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Start typing one character after where the cursor is.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Your cursor is on the last digit → listen: 8[0]
+</span></span><span class="line"><span class="cl"># You want to change it to 8080
+</span></span><span class="line"><span class="cl">Press a
+</span></span><span class="line"><span class="cl">Type: 80
+</span></span><span class="line"><span class="cl">Result: listen: 8080</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>I</code> — Insert at the beginning of the line
+    <div id="i--insert-at-the-beginning-of-the-line" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#i--insert-at-the-beginning-of-the-line" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Jumps to the very start of the line and enters insert mode.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You are anywhere on this line:
+</span></span><span class="line"><span class="cl">    server_name example.com;
+</span></span><span class="line"><span class="cl"># You want to add a comment at the very start
+</span></span><span class="line"><span class="cl">Press I
+</span></span><span class="line"><span class="cl">Type: # 
+</span></span><span class="line"><span class="cl">Result: #     server_name example.com;</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>A</code> — Insert at the end of the line
+    <div id="a--insert-at-the-end-of-the-line" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a--insert-at-the-end-of-the-line" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Jumps to the very end of the line and enters insert mode.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Your line looks like this:
+</span></span><span class="line"><span class="cl">EXPOSE 8080
+</span></span><span class="line"><span class="cl"># You want to add a comment after it
+</span></span><span class="line"><span class="cl">Press A
+</span></span><span class="line"><span class="cl">Type:   # app port
+</span></span><span class="line"><span class="cl">Result: EXPOSE 8080   # app port</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>v</code> — Visual mode (select character by character)
+    <div id="v--visual-mode-select-character-by-character" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#v--visual-mode-select-character-by-character" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Lets you highlight text one character at a time.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to select and delete just the word &#34;debug&#34;
+</span></span><span class="line"><span class="cl"># in this line: log_level: debug
+</span></span><span class="line"><span class="cl">Move cursor to &#34;d&#34; in debug
+</span></span><span class="line"><span class="cl">Press v
+</span></span><span class="line"><span class="cl">Press w        → selects the word &#34;debug&#34;
+</span></span><span class="line"><span class="cl">Press d        → deletes it
+</span></span><span class="line"><span class="cl">Result: log_level: </span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>V</code> — Visual line mode (select entire lines)
+    <div id="v--visual-line-mode-select-entire-lines" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#v--visual-line-mode-select-entire-lines" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Selects one full line at a time.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to copy 3 lines of a docker-compose service block
+</span></span><span class="line"><span class="cl">Press V
+</span></span><span class="line"><span class="cl">Press 2j       → selects 3 lines downward
+</span></span><span class="line"><span class="cl">Press y        → copies all 3 lines
+</span></span><span class="line"><span class="cl">Move to where you want to paste
+</span></span><span class="line"><span class="cl">Press p        → pastes them</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>Ctrl+v</code> — Visual block mode (column selection)
+    <div id="ctrlv--visual-block-mode-column-selection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ctrlv--visual-block-mode-column-selection" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Selects a rectangular block across multiple lines — perfect for adding # to many lines at once.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to comment out these 4 lines:
+</span></span><span class="line"><span class="cl">RUN apt-get update
+</span></span><span class="line"><span class="cl">RUN apt-get install curl
+</span></span><span class="line"><span class="cl">RUN apt-get install git
+</span></span><span class="line"><span class="cl">RUN apt-get clean
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Press Ctrl+v
+</span></span><span class="line"><span class="cl">Press 3j       → select 4 lines downward (column)
+</span></span><span class="line"><span class="cl">Press I        → insert at start of block
+</span></span><span class="line"><span class="cl">Type: # 
+</span></span><span class="line"><span class="cl">Press Esc      → # is added to all 4 lines
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Result:
+</span></span><span class="line"><span class="cl"># RUN apt-get update
+</span></span><span class="line"><span class="cl"># RUN apt-get install curl
+</span></span><span class="line"><span class="cl"># RUN apt-get install git
+</span></span><span class="line"><span class="cl"># RUN apt-get clean</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>Esc</code> — Return to Normal mode
+    <div id="esc--return-to-normal-mode" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#esc--return-to-normal-mode" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Exit insert or visual mode and go back to normal mode.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You were typing and want to stop
+</span></span><span class="line"><span class="cl">i              → entered insert mode
+</span></span><span class="line"><span class="cl">Type: server_name myapp.com;
+</span></span><span class="line"><span class="cl">Press Esc      → back to normal mode, safe to run other commands</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">File Operations
+    <div id="file-operations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#file-operations" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>vim filename</code></td>
+          <td>Open a file</td>
+      </tr>
+      <tr>
+          <td><code>:w</code></td>
+          <td>Save the file</td>
+      </tr>
+      <tr>
+          <td><code>:q</code></td>
+          <td>Quit Vim</td>
+      </tr>
+      <tr>
+          <td><code>:wq</code> / <code>:x</code> / <code>ZZ</code></td>
+          <td>Save and quit</td>
+      </tr>
+      <tr>
+          <td><code>:q!</code></td>
+          <td>Force quit without saving</td>
+      </tr>
+      <tr>
+          <td><code>:wq!</code></td>
+          <td>Force save and quit</td>
+      </tr>
+      <tr>
+          <td><code>:e filename</code></td>
+          <td>Open another file</td>
+      </tr>
+      <tr>
+          <td><code>:w filename</code></td>
+          <td>Save as a new file</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h3 class="relative group"><code>vim filename</code> — Open a file
+    <div id="vim-filename--open-a-file" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vim-filename--open-a-file" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Opens a file in Vim from the terminal.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">vim /etc/nginx/nginx.conf
+</span></span><span class="line"><span class="cl">vim Dockerfile
+</span></span><span class="line"><span class="cl">vim deployment.yaml</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:w</code> — Save the file
+    <div id="w--save-the-file" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#w--save-the-file" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Writes (saves) your changes to disk without closing Vim.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You edited the nginx config and want to save
+</span></span><span class="line"><span class="cl">:w
+</span></span><span class="line"><span class="cl"># Bottom of screen shows: &#34;nginx.conf&#34; 42L, 1.2K written</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:q</code> — Quit Vim
+    <div id="q--quit-vim" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#q--quit-vim" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Closes Vim. Only works if you have no unsaved changes.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You opened a file just to read it, no changes made
+</span></span><span class="line"><span class="cl">:q
+</span></span><span class="line"><span class="cl"># Vim closes cleanly</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:wq</code> or <code>:x</code> or <code>ZZ</code> — Save and quit
+    <div id="wq-or-x-or-zz--save-and-quit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wq-or-x-or-zz--save-and-quit" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Saves your changes and closes Vim in one step.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You finished editing the Dockerfile
+</span></span><span class="line"><span class="cl">:wq
+</span></span><span class="line"><span class="cl"># OR
+</span></span><span class="line"><span class="cl">:x
+</span></span><span class="line"><span class="cl"># OR (in normal mode, no colon needed)
+</span></span><span class="line"><span class="cl">ZZ</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:q!</code> — Force quit without saving
+    <div id="q--force-quit-without-saving" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#q--force-quit-without-saving" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Exits Vim and throws away all changes. Use when you made a mistake and want to start over.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You accidentally edited the wrong file
+</span></span><span class="line"><span class="cl">:q!
+</span></span><span class="line"><span class="cl"># Vim exits, original file is untouched</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:wq!</code> — Force save and quit
+    <div id="wq--force-save-and-quit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wq--force-save-and-quit" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Saves even if the file is read-only (if you have sudo permission).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># File is owned by root but you opened with sudo vim
+</span></span><span class="line"><span class="cl">sudo vim /etc/hosts
+</span></span><span class="line"><span class="cl"># Make changes
+</span></span><span class="line"><span class="cl">:wq!
+</span></span><span class="line"><span class="cl"># Forces the save</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:e filename</code> — Open another file
+    <div id="e-filename--open-another-file" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#e-filename--open-another-file" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Opens a different file without leaving Vim.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You are editing nginx.conf and want to check the upstream config
+</span></span><span class="line"><span class="cl">:e /etc/nginx/conf.d/upstream.conf
+</span></span><span class="line"><span class="cl"># Switches to that file in the same Vim window</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:w filename</code> — Save as a new file
+    <div id="w-filename--save-as-a-new-file" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#w-filename--save-as-a-new-file" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Saves a copy of the current content to a different file name.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to back up the config before making changes
+</span></span><span class="line"><span class="cl">:w /etc/nginx/nginx.conf.bak
+</span></span><span class="line"><span class="cl"># Original file stays open, backup is saved</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Navigation
+    <div id="navigation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#navigation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>h j k l</code></td>
+          <td>Move left / down / up / right</td>
+      </tr>
+      <tr>
+          <td><code>gg</code></td>
+          <td>Go to the first line</td>
+      </tr>
+      <tr>
+          <td><code>G</code></td>
+          <td>Go to the last line</td>
+      </tr>
+      <tr>
+          <td><code>:42</code></td>
+          <td>Go to a specific line number</td>
+      </tr>
+      <tr>
+          <td><code>0</code></td>
+          <td>Go to the start of the line</td>
+      </tr>
+      <tr>
+          <td><code>$</code></td>
+          <td>Go to the end of the line</td>
+      </tr>
+      <tr>
+          <td><code>w</code></td>
+          <td>Jump to the next word</td>
+      </tr>
+      <tr>
+          <td><code>b</code></td>
+          <td>Jump to the previous word</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl+d</code></td>
+          <td>Scroll half page down</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl+u</code></td>
+          <td>Scroll half page up</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl+f</code></td>
+          <td>Scroll full page down</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl+b</code></td>
+          <td>Scroll full page up</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h3 class="relative group"><code>h j k l</code> — Move left / down / up / right
+    <div id="h-j-k-l--move-left--down--up--right" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#h-j-k-l--move-left--down--up--right" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>The basic movement keys in Vim (instead of arrow keys).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">h → move left  (like ←)
+</span></span><span class="line"><span class="cl">j → move down  (like ↓)
+</span></span><span class="line"><span class="cl">k → move up    (like ↑)
+</span></span><span class="line"><span class="cl">l → move right (like →)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Move down 5 lines quickly
+</span></span><span class="line"><span class="cl">5j
+</span></span><span class="line"><span class="cl"># Move right 3 characters
+</span></span><span class="line"><span class="cl">3l</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>gg</code> — Go to the first line
+    <div id="gg--go-to-the-first-line" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#gg--go-to-the-first-line" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Jumps straight to line 1 of the file.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You are at the bottom of a 500-line config file
+</span></span><span class="line"><span class="cl"># and want to go back to the top
+</span></span><span class="line"><span class="cl">gg
+</span></span><span class="line"><span class="cl"># Cursor jumps to line 1 instantly</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>G</code> — Go to the last line
+    <div id="g--go-to-the-last-line" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#g--go-to-the-last-line" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Jumps to the very last line of the file.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to add a new rule at the end of a firewall script
+</span></span><span class="line"><span class="cl">G
+</span></span><span class="line"><span class="cl"># Cursor is now on the last line
+</span></span><span class="line"><span class="cl">A          → start typing at end of that line</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:42</code> — Go to a specific line number
+    <div id="42--go-to-a-specific-line-number" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42--go-to-a-specific-line-number" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Jumps directly to any line by its number.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Your CI pipeline log says &#34;error on line 87&#34; in your Jenkinsfile
+</span></span><span class="line"><span class="cl">:87
+</span></span><span class="line"><span class="cl"># Cursor jumps to line 87 directly</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>0</code> — Go to the start of the line
+    <div id="0--go-to-the-start-of-the-line" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#0--go-to-the-start-of-the-line" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Moves the cursor to the very first character of the current line.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You are at the end of this line:
+</span></span><span class="line"><span class="cl">    listen       80;
+</span></span><span class="line"><span class="cl"># and want to go to the start to add a comment
+</span></span><span class="line"><span class="cl">Press 0
+</span></span><span class="line"><span class="cl"># Cursor is now on the first character of the line</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>$</code> — Go to the end of the line
+    <div id="--go-to-the-end-of-the-line" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#--go-to-the-end-of-the-line" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Moves the cursor to the last character of the current line.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to append a semicolon at the end of a line that is missing one
+</span></span><span class="line"><span class="cl">Press $
+</span></span><span class="line"><span class="cl">Press a        → insert after last character
+</span></span><span class="line"><span class="cl">Type: ;
+</span></span><span class="line"><span class="cl">Press Esc</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>w</code> — Jump to the next word
+    <div id="w--jump-to-the-next-word" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#w--jump-to-the-next-word" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Moves the cursor forward one word at a time.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Line: server_name example.com myapp.com;
+</span></span><span class="line"><span class="cl"># Cursor is on &#34;server_name&#34;, press w to move word by word:
+</span></span><span class="line"><span class="cl">w → cursor on &#34;example.com&#34;
+</span></span><span class="line"><span class="cl">w → cursor on &#34;myapp.com&#34;
+</span></span><span class="line"><span class="cl">w → cursor on &#34;;&#34;</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>b</code> — Jump to the previous word
+    <div id="b--jump-to-the-previous-word" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b--jump-to-the-previous-word" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Moves the cursor backward one word at a time.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Line: server_name example.com myapp.com;
+</span></span><span class="line"><span class="cl"># Cursor is on &#34;myapp.com&#34;, press b to go back:
+</span></span><span class="line"><span class="cl">b → cursor on &#34;example.com&#34;
+</span></span><span class="line"><span class="cl">b → cursor on &#34;server_name&#34;</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>Ctrl+d</code> — Scroll half page down
+    <div id="ctrld--scroll-half-page-down" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ctrld--scroll-half-page-down" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Moves the view down by half a screen — useful for long config files.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You are reading a long /etc/ssh/sshd_config
+</span></span><span class="line"><span class="cl"># and want to scroll through it quickly
+</span></span><span class="line"><span class="cl">Ctrl+d     → moves half page down
+</span></span><span class="line"><span class="cl">Ctrl+d     → moves another half page down</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>Ctrl+u</code> — Scroll half page up
+    <div id="ctrlu--scroll-half-page-up" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ctrlu--scroll-half-page-up" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Moves the view up by half a screen.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You scrolled too far down, go back up
+</span></span><span class="line"><span class="cl">Ctrl+u     → moves half page up</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>Ctrl+f</code> — Scroll full page down
+    <div id="ctrlf--scroll-full-page-down" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ctrlf--scroll-full-page-down" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Moves the view down by a full screen.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Quickly jump through a very long Terraform file
+</span></span><span class="line"><span class="cl">Ctrl+f     → full page down
+</span></span><span class="line"><span class="cl">Ctrl+f     → another full page down</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>Ctrl+b</code> — Scroll full page up
+    <div id="ctrlb--scroll-full-page-up" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ctrlb--scroll-full-page-up" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Moves the view up by a full screen.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Go back to the top area of the file quickly
+</span></span><span class="line"><span class="cl">Ctrl+b     → full page up</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Editing
+    <div id="editing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#editing" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>dd</code></td>
+          <td>Delete (cut) the current line</td>
+      </tr>
+      <tr>
+          <td><code>3dd</code></td>
+          <td>Delete multiple lines at once</td>
+      </tr>
+      <tr>
+          <td><code>yy</code></td>
+          <td>Copy (yank) the current line</td>
+      </tr>
+      <tr>
+          <td><code>3yy</code></td>
+          <td>Copy multiple lines</td>
+      </tr>
+      <tr>
+          <td><code>p</code></td>
+          <td>Paste after the cursor</td>
+      </tr>
+      <tr>
+          <td><code>P</code></td>
+          <td>Paste before the cursor</td>
+      </tr>
+      <tr>
+          <td><code>x</code></td>
+          <td>Delete one character</td>
+      </tr>
+      <tr>
+          <td><code>dw</code></td>
+          <td>Delete a word</td>
+      </tr>
+      <tr>
+          <td><code>D</code></td>
+          <td>Delete to end of line</td>
+      </tr>
+      <tr>
+          <td><code>cc</code></td>
+          <td>Delete line and start typing</td>
+      </tr>
+      <tr>
+          <td><code>cw</code></td>
+          <td>Change a word</td>
+      </tr>
+      <tr>
+          <td><code>r</code></td>
+          <td>Replace one character</td>
+      </tr>
+      <tr>
+          <td><code>u</code></td>
+          <td>Undo</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl+r</code></td>
+          <td>Redo</td>
+      </tr>
+      <tr>
+          <td><code>.</code></td>
+          <td>Repeat last command</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h3 class="relative group"><code>dd</code> — Delete (cut) the current line
+    <div id="dd--delete-cut-the-current-line" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dd--delete-cut-the-current-line" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Removes the entire line your cursor is on. It is also copied, so you can paste it.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to remove a wrong environment variable line
+</span></span><span class="line"><span class="cl"># ENV DEBUG=true   ← cursor is here
+</span></span><span class="line"><span class="cl">dd
+</span></span><span class="line"><span class="cl"># That line is gone (and copied to clipboard)</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>3dd</code> — Delete multiple lines at once
+    <div id="3dd--delete-multiple-lines-at-once" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3dd--delete-multiple-lines-at-once" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Deletes the current line plus the next lines (3 total in this case).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to remove an entire 3-line stanza in nginx.conf:
+</span></span><span class="line"><span class="cl">location /old-path {      ← cursor here
+</span></span><span class="line"><span class="cl">    return 301 /new-path;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">3dd
+</span></span><span class="line"><span class="cl"># All 3 lines are deleted</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>yy</code> — Copy (yank) the current line
+    <div id="yy--copy-yank-the-current-line" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#yy--copy-yank-the-current-line" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Copies the current line without deleting it.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to duplicate a LABEL line in a Dockerfile
+</span></span><span class="line"><span class="cl"># LABEL maintainer=&#34;devops@company.com&#34;   ← cursor here
+</span></span><span class="line"><span class="cl">yy
+</span></span><span class="line"><span class="cl">j          → move down one line
+</span></span><span class="line"><span class="cl">p          → paste the copied line below</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>3yy</code> — Copy multiple lines
+    <div id="3yy--copy-multiple-lines" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3yy--copy-multiple-lines" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Copies the current line and the next lines (3 total).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to copy a 3-line environment block:
+</span></span><span class="line"><span class="cl">- name: DB_HOST       ← cursor here
+</span></span><span class="line"><span class="cl">  value: &#34;localhost&#34;
+</span></span><span class="line"><span class="cl">- name: DB_PORT
+</span></span><span class="line"><span class="cl">3yy
+</span></span><span class="line"><span class="cl">G          → go to end of file
+</span></span><span class="line"><span class="cl">p          → paste the 3 lines</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>p</code> — Paste after the cursor
+    <div id="p--paste-after-the-cursor" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p--paste-after-the-cursor" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Pastes whatever was last copied or deleted, below the current line.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You copied a line with yy and want to paste it
+</span></span><span class="line"><span class="cl">yy         → copy current line
+</span></span><span class="line"><span class="cl">5j         → move 5 lines down
+</span></span><span class="line"><span class="cl">p          → paste the copied line below cursor position</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>P</code> — Paste before the cursor
+    <div id="p--paste-before-the-cursor" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#p--paste-before-the-cursor" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Pastes above the current line instead of below.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to paste a line ABOVE where you are
+</span></span><span class="line"><span class="cl">yy         → copy a line
+</span></span><span class="line"><span class="cl">k          → move up one line
+</span></span><span class="line"><span class="cl">P          → paste above current line</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>x</code> — Delete one character
+    <div id="x--delete-one-character" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#x--delete-one-character" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Deletes only the single character under the cursor.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You have a typo: &#34;poort: 8080&#34; (extra &#39;o&#39;)
+</span></span><span class="line"><span class="cl"># Move cursor to the second &#39;o&#39; in &#34;poort&#34;
+</span></span><span class="line"><span class="cl">x
+</span></span><span class="line"><span class="cl"># Result: &#34;port: 8080&#34;</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>dw</code> — Delete a word
+    <div id="dw--delete-a-word" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dw--delete-a-word" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Deletes from the cursor position to the start of the next word.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Line: server_name old-server.com;
+</span></span><span class="line"><span class="cl"># Cursor is on &#34;old-server.com&#34;
+</span></span><span class="line"><span class="cl">dw
+</span></span><span class="line"><span class="cl"># Result: server_name ;
+</span></span><span class="line"><span class="cl"># Now type the new name:
+</span></span><span class="line"><span class="cl">i → new-server.com</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>D</code> — Delete to end of line
+    <div id="d--delete-to-end-of-line" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d--delete-to-end-of-line" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Deletes everything from the cursor to the end of the line.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Line: listen 80; # TODO: change to 443 later
+</span></span><span class="line"><span class="cl"># Cursor is on &#34;#&#34;
+</span></span><span class="line"><span class="cl"># You want to remove the comment part
+</span></span><span class="line"><span class="cl">D
+</span></span><span class="line"><span class="cl"># Result: listen 80;</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>cc</code> — Delete line and start typing
+    <div id="cc--delete-line-and-start-typing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cc--delete-line-and-start-typing" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Clears the entire line and puts you in insert mode to type a replacement.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to completely rewrite this line:
+</span></span><span class="line"><span class="cl"># server_name _;
+</span></span><span class="line"><span class="cl"># Cursor is anywhere on that line
+</span></span><span class="line"><span class="cl">cc
+</span></span><span class="line"><span class="cl"># Line is cleared, you are now in insert mode
+</span></span><span class="line"><span class="cl">Type: server_name myapp.com;
+</span></span><span class="line"><span class="cl">Press Esc</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>cw</code> — Change a word
+    <div id="cw--change-a-word" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cw--change-a-word" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Deletes the current word and puts you in insert mode to type a new one.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Line: image: nginx:1.19
+</span></span><span class="line"><span class="cl"># Cursor is on &#34;1.19&#34; and you want to update the version
+</span></span><span class="line"><span class="cl">cw
+</span></span><span class="line"><span class="cl"># &#34;1.19&#34; is deleted, insert mode starts
+</span></span><span class="line"><span class="cl">Type: 1.25
+</span></span><span class="line"><span class="cl">Press Esc
+</span></span><span class="line"><span class="cl"># Result: image: nginx:1.25</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>r</code> — Replace one character
+    <div id="r--replace-one-character" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#r--replace-one-character" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Replaces just the single character under the cursor without entering insert mode.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Line: port: 8o80   (letter &#39;o&#39; instead of &#39;0&#39;)
+</span></span><span class="line"><span class="cl"># Move cursor to the &#39;o&#39;
+</span></span><span class="line"><span class="cl">r
+</span></span><span class="line"><span class="cl">Type: 0
+</span></span><span class="line"><span class="cl"># Result: port: 8080
+</span></span><span class="line"><span class="cl"># No need to press Esc — stays in normal mode</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>u</code> — Undo
+    <div id="u--undo" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#u--undo" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Reverses your last action. Press multiple times to keep undoing.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You accidentally deleted an important line
+</span></span><span class="line"><span class="cl">dd
+</span></span><span class="line"><span class="cl">u
+</span></span><span class="line"><span class="cl"># The line is back!
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Undo multiple steps
+</span></span><span class="line"><span class="cl">u      → undo last change
+</span></span><span class="line"><span class="cl">u      → undo the change before that
+</span></span><span class="line"><span class="cl">u      → keep going back</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>Ctrl+r</code> — Redo
+    <div id="ctrlr--redo" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ctrlr--redo" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Re-applies something you undid.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You undid a change but actually it was correct
+</span></span><span class="line"><span class="cl">u          → undid a change
+</span></span><span class="line"><span class="cl">Ctrl+r     → redid it, change is back</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>.</code> — Repeat last command
+    <div id="--repeat-last-command" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#--repeat-last-command" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Repeats whatever editing command you last ran — very powerful for repetitive edits.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You deleted a line with dd and want to delete more lines too
+</span></span><span class="line"><span class="cl">dd         → deleted line 1
+</span></span><span class="line"><span class="cl">.          → deletes the next line (repeats dd)
+</span></span><span class="line"><span class="cl">.          → deletes another line
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># You changed a word with cw and want to change all similar words
+</span></span><span class="line"><span class="cl">cw         → changed word to new value
+</span></span><span class="line"><span class="cl">n          → jump to next match
+</span></span><span class="line"><span class="cl">.          → applies the same change to that word</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Search &amp; Replace / File-wide Operations
+    <div id="search--replace--file-wide-operations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#search--replace--file-wide-operations" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>/pattern</code></td>
+          <td>Search forward</td>
+      </tr>
+      <tr>
+          <td><code>?pattern</code></td>
+          <td>Search backward</td>
+      </tr>
+      <tr>
+          <td><code>n</code></td>
+          <td>Jump to next match</td>
+      </tr>
+      <tr>
+          <td><code>N</code></td>
+          <td>Jump to previous match</td>
+      </tr>
+      <tr>
+          <td><code>*</code></td>
+          <td>Search for word under cursor (forward)</td>
+      </tr>
+      <tr>
+          <td><code>#</code></td>
+          <td>Search for word under cursor (backward)</td>
+      </tr>
+      <tr>
+          <td><code>:%s/old/new/g</code></td>
+          <td>Replace all occurrences</td>
+      </tr>
+      <tr>
+          <td><code>:%s/old/new/gc</code></td>
+          <td>Replace with confirmation</td>
+      </tr>
+      <tr>
+          <td><code>:n,ms/old/new/g</code></td>
+          <td>Replace between specific lines</td>
+      </tr>
+      <tr>
+          <td><code>:%d</code></td>
+          <td>Delete all lines in the file</td>
+      </tr>
+      <tr>
+          <td><code>:%y</code></td>
+          <td>Copy entire file content</td>
+      </tr>
+      <tr>
+          <td><code>:%s/^#.*//g</code></td>
+          <td>Remove all comment lines</td>
+      </tr>
+      <tr>
+          <td><code>:%s/  */ /g</code></td>
+          <td>Replace multiple spaces with one</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h3 class="relative group"><code>/pattern</code> — Search forward
+    <div id="pattern--search-forward" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pattern--search-forward" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Searches for text from the cursor downward.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Find all occurrences of &#34;timeout&#34; in nginx.conf
+</span></span><span class="line"><span class="cl">/timeout
+</span></span><span class="line"><span class="cl"># First match is highlighted, press n to jump to the next one</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>?pattern</code> — Search backward
+    <div id="pattern--search-backward" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pattern--search-backward" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Searches for text from the cursor upward.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You are at the bottom of the file and want to search upward
+</span></span><span class="line"><span class="cl">?server_name
+</span></span><span class="line"><span class="cl"># Finds the previous occurrence above the cursor</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>n</code> — Jump to next match
+    <div id="n--jump-to-next-match" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#n--jump-to-next-match" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>After a search, jump to the next occurrence.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/ENV       → finds first ENV in Dockerfile
+</span></span><span class="line"><span class="cl">n          → jumps to second ENV
+</span></span><span class="line"><span class="cl">n          → jumps to third ENV</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>N</code> — Jump to previous match
+    <div id="n--jump-to-previous-match" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#n--jump-to-previous-match" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>After a search, go back to the previous occurrence.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/ENV       → found a match
+</span></span><span class="line"><span class="cl">n          → went forward too far
+</span></span><span class="line"><span class="cl">N          → goes back to previous match</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>*</code> — Search for word under cursor (forward)
+    <div id="--search-for-word-under-cursor-forward" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#--search-for-word-under-cursor-forward" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Place your cursor on any word and press <code>*</code> to find all matching words going forward.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Your cursor is on the word &#34;backend&#34; in a config file
+</span></span><span class="line"><span class="cl">*
+</span></span><span class="line"><span class="cl"># Jumps to the next place &#34;backend&#34; appears in the file
+</span></span><span class="line"><span class="cl">n          → keeps jumping forward through all matches</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>#</code> — Search for word under cursor (backward)
+    <div id="--search-for-word-under-cursor-backward" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#--search-for-word-under-cursor-backward" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Same as <code>*</code> but searches backward (upward in the file).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Cursor is on &#34;upstream&#34;
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Jumps to the previous occurrence of &#34;upstream&#34; above</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:%s/old/new/g</code> — Replace all occurrences
+    <div id="soldnewg--replace-all-occurrences" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#soldnewg--replace-all-occurrences" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Replaces every instance of a word throughout the entire file.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Update the database host across the whole config
+</span></span><span class="line"><span class="cl">:%s/db-server-old/db-server-new/g
+</span></span><span class="line"><span class="cl"># Every occurrence is replaced instantly
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Update an old IP address everywhere in the file
+</span></span><span class="line"><span class="cl">:%s/192.168.1.100/10.0.0.50/g</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:%s/old/new/gc</code> — Replace with confirmation
+    <div id="soldnewgc--replace-with-confirmation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#soldnewgc--replace-with-confirmation" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Same as above but asks &ldquo;replace? (y/n)&rdquo; for each match — safe for important files.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to rename a variable but review each change
+</span></span><span class="line"><span class="cl">:%s/api_key/auth_token/gc
+</span></span><span class="line"><span class="cl"># Vim shows each match and asks:
+</span></span><span class="line"><span class="cl"># replace with auth_token (y/n/a/q/l)?
+</span></span><span class="line"><span class="cl"># y = yes this one, n = skip, a = replace all, q = quit</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:n,ms/old/new/g</code> — Replace between specific lines
+    <div id="nmsoldnewg--replace-between-specific-lines" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nmsoldnewg--replace-between-specific-lines" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Replaces text only within a range of lines, not the whole file.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Replace &#34;http&#34; with &#34;https&#34; only between lines 10 and 30
+</span></span><span class="line"><span class="cl">:10,30s/http/https/g
+</span></span><span class="line"><span class="cl"># Only those lines are affected, rest of file is untouched</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:%d</code> — Delete all lines in the file
+    <div id="d--delete-all-lines-in-the-file" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d--delete-all-lines-in-the-file" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Wipes out every single line in the buffer. Be very careful with this.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to completely rewrite a config file from scratch
+</span></span><span class="line"><span class="cl">:%d
+</span></span><span class="line"><span class="cl"># File buffer is now empty, start typing fresh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Made a mistake? Undo immediately!
+</span></span><span class="line"><span class="cl">u
+</span></span><span class="line"><span class="cl"># All lines are restored</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:%y</code> — Copy entire file content
+    <div id="y--copy-entire-file-content" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#y--copy-entire-file-content" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Yanks (copies) all lines into the clipboard buffer.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to copy everything from one config and paste into another
+</span></span><span class="line"><span class="cl">:%y
+</span></span><span class="line"><span class="cl">:e /etc/nginx/conf.d/new-site.conf
+</span></span><span class="line"><span class="cl">gg         → go to top of new file
+</span></span><span class="line"><span class="cl">p          → paste everything from the old file</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:%s/^#.*//g</code> — Remove all comment lines
+    <div id="sg--remove-all-comment-lines" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sg--remove-all-comment-lines" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Deletes the content of all lines that start with <code>#</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Your shell script has many comment lines and you want a clean version
+</span></span><span class="line"><span class="cl">:%s/^#.*//g
+</span></span><span class="line"><span class="cl"># All comment lines are now blank</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:%s/  */ /g</code> — Replace multiple spaces with one
+    <div id="s---g--replace-multiple-spaces-with-one" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#s---g--replace-multiple-spaces-with-one" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Cleans up files that have inconsistent spacing.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Your file has lines like:
+</span></span><span class="line"><span class="cl"># server_name    example.com     myapp.com;
+</span></span><span class="line"><span class="cl">:%s/  */ /g
+</span></span><span class="line"><span class="cl"># Result:
+</span></span><span class="line"><span class="cl"># server_name example.com myapp.com;</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Vim Settings
+    <div id="vim-settings" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vim-settings" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>:set number</code></td>
+          <td>Show line numbers</td>
+      </tr>
+      <tr>
+          <td><code>:set nonumber</code></td>
+          <td>Hide line numbers</td>
+      </tr>
+      <tr>
+          <td><code>:set paste</code></td>
+          <td>Enable paste mode</td>
+      </tr>
+      <tr>
+          <td><code>:set nopaste</code></td>
+          <td>Disable paste mode</td>
+      </tr>
+      <tr>
+          <td><code>:set tabstop=2</code></td>
+          <td>Set tab width</td>
+      </tr>
+      <tr>
+          <td><code>:set expandtab</code></td>
+          <td>Use spaces instead of tabs</td>
+      </tr>
+      <tr>
+          <td><code>:syntax on</code></td>
+          <td>Enable syntax highlighting</td>
+      </tr>
+      <tr>
+          <td><code>:set hlsearch</code></td>
+          <td>Highlight search results</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h3 class="relative group"><code>:set number</code> — Show line numbers
+    <div id="set-number--show-line-numbers" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-number--show-line-numbers" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Displays line numbers on the left side of the screen.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">:set number
+</span></span><span class="line"><span class="cl"># Now every line has a number:
+</span></span><span class="line"><span class="cl"># 1  server {
+</span></span><span class="line"><span class="cl"># 2      listen 80;
+</span></span><span class="line"><span class="cl"># 3      server_name example.com;</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:set nonumber</code> — Hide line numbers
+    <div id="set-nonumber--hide-line-numbers" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-nonumber--hide-line-numbers" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Turns off line numbers.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">:set nonumber
+</span></span><span class="line"><span class="cl"># Line numbers disappear from the left side</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:set paste</code> — Enable paste mode
+    <div id="set-paste--enable-paste-mode" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-paste--enable-paste-mode" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Prevents Vim from auto-indenting or reformatting when you paste from clipboard.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Without paste mode, pasting YAML from clipboard can break indentation
+</span></span><span class="line"><span class="cl">:set paste
+</span></span><span class="line"><span class="cl"># Now paste with Ctrl+Shift+V — indentation is preserved exactly as copied</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:set nopaste</code> — Disable paste mode
+    <div id="set-nopaste--disable-paste-mode" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-nopaste--disable-paste-mode" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Turn off paste mode after you are done pasting so normal features work again.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">:set nopaste
+</span></span><span class="line"><span class="cl"># Auto-indent and other features work normally again</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:set tabstop=2</code> — Set tab width
+    <div id="set-tabstop2--set-tab-width" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-tabstop2--set-tab-width" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Controls how wide a tab character appears on screen.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># For Kubernetes YAML files (2-space indent is standard)
+</span></span><span class="line"><span class="cl">:set tabstop=2
+</span></span><span class="line"><span class="cl"># Tabs now display as 2 spaces wide</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:set expandtab</code> — Use spaces instead of tabs
+    <div id="set-expandtab--use-spaces-instead-of-tabs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-expandtab--use-spaces-instead-of-tabs" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>When you press Tab, Vim inserts spaces instead of a tab character.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Critical for YAML files — tab characters cause parse errors in YAML!
+</span></span><span class="line"><span class="cl">:set expandtab
+</span></span><span class="line"><span class="cl">:set tabstop=2
+</span></span><span class="line"><span class="cl"># Now the Tab key inserts 2 spaces instead of a tab character</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:syntax on</code> — Enable syntax highlighting
+    <div id="syntax-on--enable-syntax-highlighting" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#syntax-on--enable-syntax-highlighting" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Colors your code based on the file type — makes config files much easier to read.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">vim Dockerfile
+</span></span><span class="line"><span class="cl">:syntax on
+</span></span><span class="line"><span class="cl"># Keywords like FROM, RUN, COPY are now highlighted in different colors</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:set hlsearch</code> — Highlight search results
+    <div id="set-hlsearch--highlight-search-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-hlsearch--highlight-search-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>After you search, all matching words are highlighted across the file.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">:set hlsearch
+</span></span><span class="line"><span class="cl">/listen
+</span></span><span class="line"><span class="cl"># Every occurrence of &#34;listen&#34; is highlighted in yellow across the file</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Split Windows &amp; Tabs
+    <div id="split-windows--tabs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#split-windows--tabs" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>:sp filename</code></td>
+          <td>Horizontal split</td>
+      </tr>
+      <tr>
+          <td><code>:vsp filename</code></td>
+          <td>Vertical split</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl+w w</code></td>
+          <td>Switch between splits</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl+w q</code></td>
+          <td>Close a split</td>
+      </tr>
+      <tr>
+          <td><code>:tabnew filename</code></td>
+          <td>Open file in a new tab</td>
+      </tr>
+      <tr>
+          <td><code>gt</code></td>
+          <td>Go to next tab</td>
+      </tr>
+      <tr>
+          <td><code>gT</code></td>
+          <td>Go to previous tab</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h3 class="relative group"><code>:sp filename</code> — Horizontal split
+    <div id="sp-filename--horizontal-split" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sp-filename--horizontal-split" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Opens a second file in a pane above/below the current one.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to check a reference config while editing a new one
+</span></span><span class="line"><span class="cl">:sp /etc/nginx/nginx.conf.example
+</span></span><span class="line"><span class="cl"># Screen splits horizontally — new file on top, current file on bottom
+</span></span><span class="line"><span class="cl">Ctrl+w w    → switch between the two panes</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:vsp filename</code> — Vertical split
+    <div id="vsp-filename--vertical-split" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vsp-filename--vertical-split" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Opens a second file in a pane side-by-side with the current one.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Compare current deployment.yaml with the previous version side by side
+</span></span><span class="line"><span class="cl">:vsp deployment.yaml.bak
+</span></span><span class="line"><span class="cl"># Two files shown side by side for easy comparison
+</span></span><span class="line"><span class="cl">Ctrl+w w    → switch focus between left and right pane</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>Ctrl+w w</code> — Switch between splits
+    <div id="ctrlw-w--switch-between-splits" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ctrlw-w--switch-between-splits" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Moves your cursor/focus to the next open split pane.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You have two split panes open
+</span></span><span class="line"><span class="cl">Ctrl+w w    → focus moves to the other pane
+</span></span><span class="line"><span class="cl">Ctrl+w w    → focus moves back to original pane</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>Ctrl+w q</code> — Close a split
+    <div id="ctrlw-q--close-a-split" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ctrlw-q--close-a-split" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Closes the currently focused split pane.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You are done looking at the reference file in the split
+</span></span><span class="line"><span class="cl">Ctrl+w q
+</span></span><span class="line"><span class="cl"># That split closes, you are back to a single window</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>:tabnew filename</code> — Open file in a new tab
+    <div id="tabnew-filename--open-file-in-a-new-tab" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tabnew-filename--open-file-in-a-new-tab" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Opens a file in a new Vim tab (similar to browser tabs).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You are editing nginx.conf and want to open the SSL config separately
+</span></span><span class="line"><span class="cl">:tabnew /etc/nginx/conf.d/ssl.conf
+</span></span><span class="line"><span class="cl"># A new tab opens with the SSL config
+</span></span><span class="line"><span class="cl"># Tab bar at the top shows: nginx.conf | ssl.conf</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>gt</code> — Go to next tab
+    <div id="gt--go-to-next-tab" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#gt--go-to-next-tab" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Switches to the tab on the right.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You have 3 tabs open: nginx.conf | ssl.conf | upstream.conf
+</span></span><span class="line"><span class="cl"># Currently on nginx.conf
+</span></span><span class="line"><span class="cl">gt    → switches to ssl.conf
+</span></span><span class="line"><span class="cl">gt    → switches to upstream.conf</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group"><code>gT</code> — Go to previous tab
+    <div id="gt--go-to-previous-tab" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#gt--go-to-previous-tab" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Switches to the tab on the left.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Currently on upstream.conf
+</span></span><span class="line"><span class="cl">gT    → switches to ssl.conf
+</span></span><span class="line"><span class="cl">gT    → switches back to nginx.conf</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Comment / Uncomment Multiple Lines
+    <div id="comment--uncomment-multiple-lines" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#comment--uncomment-multiple-lines" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Ctrl+v</code> → <code>I</code> → <code>#</code> → <code>Esc</code></td>
+          <td>Comment out multiple lines</td>
+      </tr>
+      <tr>
+          <td><code>Ctrl+v</code> → select <code>#</code> column → <code>d</code></td>
+          <td>Uncomment multiple lines</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h3 class="relative group">Comment out multiple lines using <code>Ctrl+v</code>
+    <div id="comment-out-multiple-lines-using-ctrlv" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#comment-out-multiple-lines-using-ctrlv" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to disable these 3 lines in a shell script:
+</span></span><span class="line"><span class="cl">export DB_HOST=localhost       ← move cursor here first
+</span></span><span class="line"><span class="cl">export DB_PORT=5432
+</span></span><span class="line"><span class="cl">export DB_NAME=myapp
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Step 1: Press Ctrl+v             → enter visual block mode
+</span></span><span class="line"><span class="cl">Step 2: Press 2j                 → select all 3 lines downward
+</span></span><span class="line"><span class="cl">Step 3: Press I                  → insert at beginning of block
+</span></span><span class="line"><span class="cl">Step 4: Type: #                  → type the comment character
+</span></span><span class="line"><span class="cl">Step 5: Press Esc                → # is added to all 3 lines at once
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Result:
+</span></span><span class="line"><span class="cl">#export DB_HOST=localhost
+</span></span><span class="line"><span class="cl">#export DB_PORT=5432
+</span></span><span class="line"><span class="cl">#export DB_NAME=myapp</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group">Uncomment multiple lines using <code>Ctrl+v</code>
+    <div id="uncomment-multiple-lines-using-ctrlv" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#uncomment-multiple-lines-using-ctrlv" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># You want to re-enable those commented lines:
+</span></span><span class="line"><span class="cl">#export DB_HOST=localhost       ← move cursor onto the # here
+</span></span><span class="line"><span class="cl">#export DB_PORT=5432
+</span></span><span class="line"><span class="cl">#export DB_NAME=myapp
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Step 1: Press Ctrl+v             → enter visual block mode
+</span></span><span class="line"><span class="cl">Step 2: Press 2j                 → select the # column on all 3 lines
+</span></span><span class="line"><span class="cl">Step 3: Press d                  → delete that column
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Result:
+</span></span><span class="line"><span class="cl">export DB_HOST=localhost
+</span></span><span class="line"><span class="cl">export DB_PORT=5432
+</span></span><span class="line"><span class="cl">export DB_NAME=myapp</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">⚠️ Important Warning About <code>:%d</code>
+    <div id="-important-warning-about-d" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-important-warning-about-d" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<blockquote><p>If you run <code>:%d</code> and then save with <code>:w</code>, the file on disk becomes permanently empty.
+Always undo with <code>u</code> <strong>before</strong> saving!</p>
+</blockquote><div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">:%d        → all lines deleted from buffer
+</span></span><span class="line"><span class="cl">u          → all lines restored ✅ (safe — file on disk is untouched)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># DANGEROUS combination:
+</span></span><span class="line"><span class="cl">:%d
+</span></span><span class="line"><span class="cl">:w         → file is now empty on disk ❌ (hard to recover!)</span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Quick Reference — Most Used by DevOps
+    <div id="quick-reference--most-used-by-devops" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quick-reference--most-used-by-devops" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Task</th>
+          <th>Command</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Open a file</td>
+          <td><code>vim filename</code></td>
+      </tr>
+      <tr>
+          <td>Save and exit</td>
+          <td><code>:wq</code> or <code>ZZ</code></td>
+      </tr>
+      <tr>
+          <td>Exit without saving</td>
+          <td><code>:q!</code></td>
+      </tr>
+      <tr>
+          <td>Go to a specific line</td>
+          <td><code>:87</code></td>
+      </tr>
+      <tr>
+          <td>Search for text</td>
+          <td><code>/text</code> then <code>n</code></td>
+      </tr>
+      <tr>
+          <td>Replace text everywhere</td>
+          <td><code>:%s/old/new/g</code></td>
+      </tr>
+      <tr>
+          <td>Delete a line</td>
+          <td><code>dd</code></td>
+      </tr>
+      <tr>
+          <td>Undo</td>
+          <td><code>u</code></td>
+      </tr>
+      <tr>
+          <td>Redo</td>
+          <td><code>Ctrl+r</code></td>
+      </tr>
+      <tr>
+          <td>Delete all lines</td>
+          <td><code>:%d</code></td>
+      </tr>
+      <tr>
+          <td>Undo delete all</td>
+          <td><code>u</code></td>
+      </tr>
+      <tr>
+          <td>Enable line numbers</td>
+          <td><code>:set number</code></td>
+      </tr>
+      <tr>
+          <td>Safe paste (no indent issues)</td>
+          <td><code>:set paste</code></td>
+      </tr>
+      <tr>
+          <td>Comment multiple lines</td>
+          <td><code>Ctrl+v</code> → select → <code>I</code> → <code>#</code> → <code>Esc</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<h2 class="relative group">Pro Tips
+    <div id="pro-tips" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pro-tips" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>Always use <code>:set paste</code> before pasting from your clipboard — it prevents broken indentation.</li>
+<li>Use <code>ggdG</code> as a shortcut to delete all content (go to top, then delete to bottom).</li>
+<li>Vim is almost always available on remote servers, even when <code>nano</code> is not installed.</li>
+<li>Save your preferred settings in <code>~/.vimrc</code> so they load automatically every time you open Vim.</li>
+</ul>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Recommended ~/.vimrc for DevOps work</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> number
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> expandtab
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">tabstop</span><span class="o">=</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> hlsearch
+</span></span><span class="line"><span class="cl">syntax on</span></span></code></pre></div></div>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/python/why_python/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Why Python When You Already Know Shell Scripting? A DevOps Engineer's Honest Answer
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-04-19T11:00:00&#43;05:30">19 April 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hemanth Kumar Motukuri
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>
