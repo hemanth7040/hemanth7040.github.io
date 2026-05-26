@@ -16,7 +16,7 @@
 [params.author]
   name = "Hemanth Kumar Motukuri"
   image = "img/profile_pic.jpg"
-  headline = "DevOps & MLOps Engineer"
+  headline = "DevOps & AI Infrastructure Engineer"
   bio = "DevOps & MLOps | Kubernetes | AWS"
   links = [
     { github = "https://github.com/hemanth7040" },

@@ -1,26 +1,65 @@
 /* ============================================================
-   1. GLOBAL & THEME DEFAULTS (Safe for all pages)
+   1. GLOBAL & THEME DEFAULTS
    ============================================================ */
-.max-w-prose { max-width: 100% !important; }
-.prose { max-width: 100% !important; }
 
-/* Contact Form & Dropdown Styles */
-.contact-form { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem; max-width: 600px; }
-.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-.contact-form input, .contact-form textarea { background: #111; border: 1px solid #333; color: white; padding: 0.8rem; border-radius: 8px; }
-.submit-btn { background: linear-gradient(90deg, #e91e63, #f44336); color: white; padding: 1rem; border-radius: 8px; font-weight: bold; cursor: pointer; transition: opacity 0.3s; }
-.submit-btn:hover { opacity: 0.9; }
+/* Better content width for desktop readability */
+.max-w-prose {
+    max-width: 850px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Prevent overly narrow prose containers */
+.prose {
+    max-width: 100% !important;
+}
 
 /* ============================================================
-   2. PROJECT-SPECIFIC OVERRIDES (Targeted Isolation)
+   2. CONTACT FORM STYLING
    ============================================================ */
 
-/* We only apply these rules when the user is on a page that is a child 
-   of the "Projects" section. This prevents the Blog/Technical Topics 
-   from stretching.
-*/
+.contact-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+}
 
-/* Center the project category tiles only */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.submit-btn {
+    background: linear-gradient(90deg, #e91e63, #f44336);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+/* ============================================================
+   3. PROJECT SECTION STYLING
+   ============================================================ */
+
+/* Center project category tiles */
 .taxonomy-project .term-grid,
 .section-projects .term-grid {
     display: flex !important;
@@ -30,30 +69,38 @@
     margin-top: 3rem !important;
 }
 
-/* Style the project cards to be professional pills/tiles */
+/* Project cards */
 .taxonomy-project .term-card,
 .section-projects .term-card {
     flex: 0 1 auto !important;
-    width: 280px !important;       /* Fixed professional width */
+    width: 280px !important;
     height: auto !important;
     padding: 1rem !important;
     text-align: center !important;
     border-radius: 12px !important;
     border: 1px solid #333 !important;
     background-color: #1e293b !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Ensure images inside these cards don't blow up */
+/* Hover effect */
+.taxonomy-project .term-card:hover,
+.section-projects .term-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Project images */
 .section-projects .term-card img {
     max-height: 150px !important;
     object-fit: contain !important;
 }
 
 /* ============================================================
-   3. BLOG / CATEGORIES FIX (Restoring SDLC & Others)
+   4. BLOG / CATEGORY FIXES
    ============================================================ */
 
-/* Force the Blog categories to keep their original 3-column grid look */
+/* Restore proper blog category grid */
 .taxonomy-category .term-grid {
     display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
@@ -61,9 +108,155 @@
     justify-content: start !important;
 }
 
-/* Fix for the SDLC/Large image issue you mentioned */
+/* Fix stretched category images */
 .taxonomy-category .term-card img {
     width: 100% !important;
-    height: 200px !important;      /* Standard height for your blog tiles */
-    object-fit: cover !important;  /* Keeps images from stretching oddly */
+    height: 200px !important;
+    object-fit: cover !important;
+}
+
+/* ============================================================
+   5. HOMEPAGE HERO SECTION
+   ============================================================ */
+
+/* Override Blowfish vertical centering */
+main {
+    display: block !important;
+    min-height: auto !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Homepage hero section */
+.home-profile,
+.hero {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Move hero upward slightly */
+.home-profile {
+    margin-top: -180px !important;
+}
+
+/* Profile image spacing */
+.home-profile img {
+    margin-bottom: 1rem !important;
+}
+
+/* Title spacing */
+.home-profile h1 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Intro paragraph spacing */
+.home-profile p {
+    margin-top: 1rem !important;
+    line-height: 1.8 !important;
+}
+
+/* ============================================================
+   6. DESKTOP OPTIMIZATION
+   ============================================================ */
+
+@media (min-width: 1024px) {
+
+    .home-profile {
+        margin-top: -220px !important;
+    }
+
+    .home-profile h1 {
+        font-size: 3.5rem !important;
+    }
+
+    .home-profile p {
+        font-size: 1.15rem !important;
+    }
+}
+
+/* ============================================================
+   7. MOBILE OPTIMIZATION
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .home-profile {
+        margin-top: -80px !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .home-profile h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .home-profile p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .taxonomy-project .term-card,
+    .section-projects .term-card {
+        width: 100% !important;
+    }
+}
+
+/* ============================================================
+   8. TECH STACK SECTION
+   ============================================================ */
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tech-badge {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59,130,246,0.2);
+}
+
+/* ============================================================
+   HERO CTA BUTTONS
+   ============================================================ */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.hero-btn {
+    background: #2563eb;
+    color: white !important;
+    padding: 0.65rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37,99,235,0.3);
 }
