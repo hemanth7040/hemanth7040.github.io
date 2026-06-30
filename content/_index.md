@@ -1,73 +1,51 @@
 ---
 title: "Home"
 ---
-
 <br>
+Building self-healing infrastructure and intelligent cloud automation.
 
-DevOps Engineer with 7 years of experience building scalable Kubernetes platforms, CI/CD pipelines, and cloud infrastructure automation.  
-Currently focused on MLOps, RAG systems, and AI infrastructure engineering.
-
+7+ years building Kubernetes, AWS, and CI/CD infrastructure — now focused on MLOps, RAG systems, and AI-powered DevOps tooling.
 <br>
-
-[**About Me →**](/about/)
 
 <div class="hero-buttons">
-
 <a class="hero-btn" href="/projects/">View Projects</a>
-
 <a class="hero-btn" href="/resume/">Download Resume</a>
-
 <a class="hero-btn" href="/contact/">Contact</a>
-
 </div>
 
-# Tech Stack
-
-## Cloud & DevOps
+## Core Technologies
 
 <div class="tech-stack">
-
 <span class="tech-badge">AWS</span>
 <span class="tech-badge">Kubernetes</span>
 <span class="tech-badge">Docker</span>
 <span class="tech-badge">Terraform</span>
 <span class="tech-badge">Jenkins</span>
 <span class="tech-badge">GitHub Actions</span>
-<span class="tech-badge">Linux</span>
-
-</div>
-
-## AI / Infrastructure
-
-<div class="tech-stack">
-
 <span class="tech-badge">Python</span>
 <span class="tech-badge">LangChain</span>
 <span class="tech-badge">Ollama</span>
 <span class="tech-badge">Qdrant</span>
 <span class="tech-badge">RAG</span>
-<span class="tech-badge">Vector Databases</span>
-
+<span class="tech-badge">MLOps</span>
 </div>
 
-<br><br>
+<br>
 
 # Featured Projects
+## DevOps AI Troubleshooting Agent 
 
-## Local RAG Pipeline
+Building an agentic AI system that combines Retrieval-Augmented Generation (RAG), Kubernetes tooling, and cloud integrations to diagnose infrastructure issues and provide remediation guidance.
 
-Built a local Retrieval-Augmented Generation (RAG) pipeline using Ollama, LangChain, sentence-transformers, and Qdrant for semantic document retrieval and grounded AI responses.
-
-**Tech Stack:** Python • LangChain • Ollama • Qdrant • RAG
+**Tech Stack:** Python • LangChain • Ollama • Qdrant • Kubernetes • AWS
 
 [View Project →](/projects/)
 
-<br><br>
-
 ## Kubernetes Monitoring Stack
 
-Implemented centralized Kubernetes monitoring using Prometheus, Grafana, and Alertmanager with production-style observability workflows.
+Implemented a production-style Kubernetes observability platform using Prometheus, Grafana, and Alertmanager for centralized metrics collection and monitoring.
 
 **Tech Stack:** Kubernetes • Prometheus • Grafana • Alertmanager
 
 [View Project →](/projects/)
+

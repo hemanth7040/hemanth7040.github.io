@@ -260,3 +260,57 @@ main {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(37,99,235,0.3);
 }
+
+/* ============================================================
+   9. SECTION NORMALIZATION
+   ============================================================ */
+
+/* Targets major landing page blocks uniformly */
+.homepage-section, 
+section,
+.home-profile {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+/* Enhanced hover effect for theme tech badges */
+.tech-stack span, 
+.tech-badge,
+a[href*="tags"] {
+    transition: all 0.2s ease-in-out !important;
+}
+
+.tech-stack span:hover, 
+.tech-badge:hover,
+a[href*="tags"]:hover {
+    transform: scale(1.05) !important;
+    border-color: #3b82f6 !important; /* Elegant blue border shift */
+    background-color: #1e293b !important; /* Slightly lighter background */
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+/* ============================================================
+   10. SECTION DIVIDER (FIXED)
+   ============================================================ */
+
+/* 1. Remove the accidental line from the hero/header area */
+section:nth-of-type(3),
+.home-profile {
+    border-top: none !important;
+}
+
+/* 2. Place a clean, faint divider precisely above Featured Projects */
+div:has(> #featured-projects),
+h2:contains("Featured Projects"),
+main section + section {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-top: 4rem !important;
+    margin-top: 2rem !important;
+}
+
+/* Alternative foolproof fallback: Attach it to the bottom of the tech stack instead */
+.tech-stack {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    padding-bottom: 4rem !important;
+    margin-bottom: 2rem !important;
+}
