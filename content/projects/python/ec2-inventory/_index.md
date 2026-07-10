@@ -255,22 +255,28 @@ Benefits include:
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/<your-github>/ec2-inventory-generator.git
+git clone https://github.com/hemanth7040/Python-Automation.git
 ```
 
-**2. Install dependencies**
+**2. Change directory**
+
+```bash
+cd 01-ec2-inventory-generator
+```
+
+**3. Install dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**3. Configure AWS credentials**
+**4. Configure AWS credentials**
 
 ```bash
 aws configure
 ```
 
-**4. Run the application**
+**5. Run the application**
 
 ```bash
 python main.py
