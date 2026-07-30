@@ -55,19 +55,19 @@
 
   
   <meta property="og:url" content="http://localhost:1313/posts/git/git/">
-  <meta property="og:site_name" content="Hemanth Kumar Motukuri">
-  <meta property="og:title" content="Git for DevOps Engineers – The Complete Guide">
-  <meta property="og:description" content="A comprehensive guide covering what Git is, why it matters, when to use it, real-world DevOps use cases, and every mandatory Git command every DevOps Engineer must know — with clear explanations and practical examples.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-04-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-04-14T00:00:00+00:00">
+	<meta property="og:site_name" content="Hemanth Kumar Motukuri">
+	<meta property="og:title" content="Git for DevOps Engineers – The Complete Guide">
+	<meta property="og:description" content="A comprehensive guide covering what Git is, why it matters, when to use it, real-world DevOps use cases, and every mandatory Git command every DevOps Engineer must know — with clear explanations and practical examples.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-04-14T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-04-14T00:00:00+00:00">
 
   
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Git for DevOps Engineers – The Complete Guide">
-  <meta name="twitter:description" content="A comprehensive guide covering what Git is, why it matters, when to use it, real-world DevOps use cases, and every mandatory Git command every DevOps Engineer must know — with clear explanations and practical examples.">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Git for DevOps Engineers – The Complete Guide">
+	<meta name="twitter:description" content="A comprehensive guide covering what Git is, why it matters, when to use it, real-world DevOps use cases, and every mandatory Git command every DevOps Engineer must know — with clear explanations and practical examples.">
 
   
   
@@ -737,8 +737,8 @@
         width="96"
         height="96"
         alt="Hemanth Kumar Motukuri"
-        src="/img/profile_pic_hu_73b016f6fa6bb344.jpg"
-        data-zoom-src="/img/profile_pic_hu_da66a14a1ead8228.jpg">
+        src="/img/profile_pic_hu_f57b3ef112bc3de6.jpg"
+        data-zoom-src="/img/profile_pic_hu_d6b149a9a3d854d6.jpg">
     
   
   <div class="place-self-center">
@@ -923,38 +923,38 @@
 <p>As a DevOps engineer, you sit at the intersection of development and operations. Git is your single source of truth for everything — application code, infrastructure-as-code (IaC), CI/CD pipelines, configuration files, Helm charts, Kubernetes manifests, and more.</p>
 <p>Here is why Git is non-negotiable:</p>
 <table>
-  <thead>
-      <tr>
-          <th>Reason</th>
-          <th>Explanation</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Collaboration</strong></td>
-          <td>Multiple engineers can work on the same codebase simultaneously without overwriting each other&rsquo;s work.</td>
-      </tr>
-      <tr>
-          <td><strong>History &amp; Audit Trail</strong></td>
-          <td>Every change is recorded — who made it, when, and why. Critical for compliance and debugging.</td>
-      </tr>
-      <tr>
-          <td><strong>Rollback</strong></td>
-          <td>Made a bad deployment? Git lets you revert to any previous state within seconds.</td>
-      </tr>
-      <tr>
-          <td><strong>Branching</strong></td>
-          <td>Isolate features, hotfixes, and experiments in separate branches without touching production.</td>
-      </tr>
-      <tr>
-          <td><strong>GitOps</strong></td>
-          <td>The entire infrastructure (Terraform, Ansible, K8s manifests) can be managed and deployed through Git workflows.</td>
-      </tr>
-      <tr>
-          <td><strong>CI/CD Integration</strong></td>
-          <td>Every major pipeline tool (Jenkins, GitHub Actions, GitLab CI, ArgoCD) is triggered by Git events.</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Reason</th>
+					<th>Explanation</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Collaboration</strong></td>
+					<td>Multiple engineers can work on the same codebase simultaneously without overwriting each other&rsquo;s work.</td>
+			</tr>
+			<tr>
+					<td><strong>History &amp; Audit Trail</strong></td>
+					<td>Every change is recorded — who made it, when, and why. Critical for compliance and debugging.</td>
+			</tr>
+			<tr>
+					<td><strong>Rollback</strong></td>
+					<td>Made a bad deployment? Git lets you revert to any previous state within seconds.</td>
+			</tr>
+			<tr>
+					<td><strong>Branching</strong></td>
+					<td>Isolate features, hotfixes, and experiments in separate branches without touching production.</td>
+			</tr>
+			<tr>
+					<td><strong>GitOps</strong></td>
+					<td>The entire infrastructure (Terraform, Ansible, K8s manifests) can be managed and deployed through Git workflows.</td>
+			</tr>
+			<tr>
+					<td><strong>CI/CD Integration</strong></td>
+					<td>Every major pipeline tool (Jenkins, GitHub Actions, GitLab CI, ArgoCD) is triggered by Git events.</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 
@@ -992,46 +992,46 @@
 </h2>
 <p>Before jumping into commands, understand these key building blocks:</p>
 <table>
-  <thead>
-      <tr>
-          <th>Term</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Repository (Repo)</strong></td>
-          <td>The project folder tracked by Git. Contains all files and their entire history.</td>
-      </tr>
-      <tr>
-          <td><strong>Commit</strong></td>
-          <td>A saved snapshot of your changes at a point in time.</td>
-      </tr>
-      <tr>
-          <td><strong>Branch</strong></td>
-          <td>An independent line of development. <code>main</code> is the default production branch.</td>
-      </tr>
-      <tr>
-          <td><strong>Remote</strong></td>
-          <td>A version of your repo hosted on a server (GitHub, GitLab, Bitbucket, Azure Repos).</td>
-      </tr>
-      <tr>
-          <td><strong>Staging Area (Index)</strong></td>
-          <td>A preparation area where you decide what goes into your next commit.</td>
-      </tr>
-      <tr>
-          <td><strong>HEAD</strong></td>
-          <td>A pointer to the current commit you are working from.</td>
-      </tr>
-      <tr>
-          <td><strong>Merge</strong></td>
-          <td>Combining changes from one branch into another.</td>
-      </tr>
-      <tr>
-          <td><strong>Rebase</strong></td>
-          <td>Replaying commits from one branch on top of another — creates a cleaner history.</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Term</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Repository (Repo)</strong></td>
+					<td>The project folder tracked by Git. Contains all files and their entire history.</td>
+			</tr>
+			<tr>
+					<td><strong>Commit</strong></td>
+					<td>A saved snapshot of your changes at a point in time.</td>
+			</tr>
+			<tr>
+					<td><strong>Branch</strong></td>
+					<td>An independent line of development. <code>main</code> is the default production branch.</td>
+			</tr>
+			<tr>
+					<td><strong>Remote</strong></td>
+					<td>A version of your repo hosted on a server (GitHub, GitLab, Bitbucket, Azure Repos).</td>
+			</tr>
+			<tr>
+					<td><strong>Staging Area (Index)</strong></td>
+					<td>A preparation area where you decide what goes into your next commit.</td>
+			</tr>
+			<tr>
+					<td><strong>HEAD</strong></td>
+					<td>A pointer to the current commit you are working from.</td>
+			</tr>
+			<tr>
+					<td><strong>Merge</strong></td>
+					<td>Combining changes from one branch into another.</td>
+			</tr>
+			<tr>
+					<td><strong>Rebase</strong></td>
+					<td>Replaying commits from one branch on top of another — creates a cleaner history.</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 
@@ -1619,98 +1619,98 @@ Thumbs.db</code></pre></div>
     
 </h2>
 <table>
-  <thead>
-      <tr>
-          <th>Command</th>
-          <th>Purpose</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>git init</code></td>
-          <td>Start a new repo</td>
-      </tr>
-      <tr>
-          <td><code>git clone &lt;url&gt;</code></td>
-          <td>Copy a remote repo</td>
-      </tr>
-      <tr>
-          <td><code>git status</code></td>
-          <td>Check current state</td>
-      </tr>
-      <tr>
-          <td><code>git add .</code></td>
-          <td>Stage all changes</td>
-      </tr>
-      <tr>
-          <td><code>git commit -m &quot;msg&quot;</code></td>
-          <td>Save a snapshot</td>
-      </tr>
-      <tr>
-          <td><code>git push</code></td>
-          <td>Upload to remote</td>
-      </tr>
-      <tr>
-          <td><code>git pull</code></td>
-          <td>Download and merge</td>
-      </tr>
-      <tr>
-          <td><code>git fetch</code></td>
-          <td>Download without merging</td>
-      </tr>
-      <tr>
-          <td><code>git branch</code></td>
-          <td>List/create branches</td>
-      </tr>
-      <tr>
-          <td><code>git switch -c &lt;name&gt;</code></td>
-          <td>Create and switch branch</td>
-      </tr>
-      <tr>
-          <td><code>git merge &lt;branch&gt;</code></td>
-          <td>Merge a branch</td>
-      </tr>
-      <tr>
-          <td><code>git rebase &lt;branch&gt;</code></td>
-          <td>Rebase onto a branch</td>
-      </tr>
-      <tr>
-          <td><code>git stash</code></td>
-          <td>Save work temporarily</td>
-      </tr>
-      <tr>
-          <td><code>git log --oneline</code></td>
-          <td>View commit history</td>
-      </tr>
-      <tr>
-          <td><code>git diff --staged</code></td>
-          <td>Review staged changes</td>
-      </tr>
-      <tr>
-          <td><code>git reset --soft HEAD~1</code></td>
-          <td>Undo last commit (keep changes)</td>
-      </tr>
-      <tr>
-          <td><code>git revert &lt;hash&gt;</code></td>
-          <td>Safely undo a commit</td>
-      </tr>
-      <tr>
-          <td><code>git tag -a v1.0.0</code></td>
-          <td>Mark a release</td>
-      </tr>
-      <tr>
-          <td><code>git cherry-pick &lt;hash&gt;</code></td>
-          <td>Apply a specific commit</td>
-      </tr>
-      <tr>
-          <td><code>git bisect</code></td>
-          <td>Find which commit broke things</td>
-      </tr>
-      <tr>
-          <td><code>git blame &lt;file&gt;</code></td>
-          <td>See who changed each line</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>Purpose</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>git init</code></td>
+					<td>Start a new repo</td>
+			</tr>
+			<tr>
+					<td><code>git clone &lt;url&gt;</code></td>
+					<td>Copy a remote repo</td>
+			</tr>
+			<tr>
+					<td><code>git status</code></td>
+					<td>Check current state</td>
+			</tr>
+			<tr>
+					<td><code>git add .</code></td>
+					<td>Stage all changes</td>
+			</tr>
+			<tr>
+					<td><code>git commit -m &quot;msg&quot;</code></td>
+					<td>Save a snapshot</td>
+			</tr>
+			<tr>
+					<td><code>git push</code></td>
+					<td>Upload to remote</td>
+			</tr>
+			<tr>
+					<td><code>git pull</code></td>
+					<td>Download and merge</td>
+			</tr>
+			<tr>
+					<td><code>git fetch</code></td>
+					<td>Download without merging</td>
+			</tr>
+			<tr>
+					<td><code>git branch</code></td>
+					<td>List/create branches</td>
+			</tr>
+			<tr>
+					<td><code>git switch -c &lt;name&gt;</code></td>
+					<td>Create and switch branch</td>
+			</tr>
+			<tr>
+					<td><code>git merge &lt;branch&gt;</code></td>
+					<td>Merge a branch</td>
+			</tr>
+			<tr>
+					<td><code>git rebase &lt;branch&gt;</code></td>
+					<td>Rebase onto a branch</td>
+			</tr>
+			<tr>
+					<td><code>git stash</code></td>
+					<td>Save work temporarily</td>
+			</tr>
+			<tr>
+					<td><code>git log --oneline</code></td>
+					<td>View commit history</td>
+			</tr>
+			<tr>
+					<td><code>git diff --staged</code></td>
+					<td>Review staged changes</td>
+			</tr>
+			<tr>
+					<td><code>git reset --soft HEAD~1</code></td>
+					<td>Undo last commit (keep changes)</td>
+			</tr>
+			<tr>
+					<td><code>git revert &lt;hash&gt;</code></td>
+					<td>Safely undo a commit</td>
+			</tr>
+			<tr>
+					<td><code>git tag -a v1.0.0</code></td>
+					<td>Mark a release</td>
+			</tr>
+			<tr>
+					<td><code>git cherry-pick &lt;hash&gt;</code></td>
+					<td>Apply a specific commit</td>
+			</tr>
+			<tr>
+					<td><code>git bisect</code></td>
+					<td>Find which commit broke things</td>
+			</tr>
+			<tr>
+					<td><code>git blame &lt;file&gt;</code></td>
+					<td>See who changed each line</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 

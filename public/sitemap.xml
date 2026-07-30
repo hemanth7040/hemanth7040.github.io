@@ -4,11 +4,15 @@
 
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/kubernetes/01-why-kubernetes/</loc>
+    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/posts/vim/vim/</loc>

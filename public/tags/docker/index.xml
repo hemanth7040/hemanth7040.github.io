@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
-    <lastBuildDate>Thu, 16 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Why Kubernetes? | Kubernetes From Scratch - Day 1</title>
+      <link>http://localhost:1313/posts/kubernetes/01-why-kubernetes/</link>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/kubernetes/01-why-kubernetes/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;Why Kubernetes?&#xA;    &lt;div id=&#34;why-kubernetes&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#why-kubernetes&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Series:&lt;/strong&gt; Kubernetes From Scratch&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Day 1 of 60&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;Welcome to the &lt;strong&gt;Kubernetes From Scratch&lt;/strong&gt; series.&lt;/p&gt;&#xA;&lt;p&gt;Whether you&amp;rsquo;re a student, developer, DevOps engineer, cloud engineer, or someone preparing for Kubernetes certifications, this series will help you understand Kubernetes from the ground up.&lt;/p&gt;&#xA;&lt;p&gt;We won&amp;rsquo;t just learn &lt;strong&gt;what Kubernetes is&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;ll understand:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Why Kubernetes was created&lt;/li&gt;&#xA;&lt;li&gt;What problem it solves&lt;/li&gt;&#xA;&lt;li&gt;How it works internally&lt;/li&gt;&#xA;&lt;li&gt;How companies use it in production&lt;/li&gt;&#xA;&lt;li&gt;How you can use it yourself&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Each article builds on the previous one.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Automated CI/CD Pipeline for a Python Flask Web App</title>

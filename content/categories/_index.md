@@ -13,4 +13,5 @@ series:
   - name: "SDLC"    # refers to content/categories/SDLC/ (Match your folder case!)
   - name: "DevOps"  # refers to content/categories/DevOps/ (Match your folder case!)
   - name: "docker"  # refers to content/categories/docker/
+  - name: "Kubernetes"
 ---

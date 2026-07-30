@@ -14,10 +14,6 @@ tags:
   - DevOps
   - Automation
 
-categories:
-  - AWS Automation
-  - Cloud
-
 tech:
   - Python
   - AWS EC2

@@ -55,19 +55,19 @@
 
   
   <meta property="og:url" content="http://localhost:1313/posts/linux/linux-commands/">
-  <meta property="og:site_name" content="Hemanth Kumar Motukuri">
-  <meta property="og:title" content="Linux Commands Every DevOps Engineer Must Know">
-  <meta property="og:description" content="A practical reference of must-know Linux commands for DevOps and MLOps engineers — covering files, processes, networking, Docker, Kubernetes, and log analysis.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-01-02T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-01-02T00:00:00+00:00">
+	<meta property="og:site_name" content="Hemanth Kumar Motukuri">
+	<meta property="og:title" content="Linux Commands Every DevOps Engineer Must Know">
+	<meta property="og:description" content="A practical reference of must-know Linux commands for DevOps and MLOps engineers — covering files, processes, networking, Docker, Kubernetes, and log analysis.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2024-01-02T00:00:00+00:00">
+		<meta property="article:modified_time" content="2024-01-02T00:00:00+00:00">
 
   
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Linux Commands Every DevOps Engineer Must Know">
-  <meta name="twitter:description" content="A practical reference of must-know Linux commands for DevOps and MLOps engineers — covering files, processes, networking, Docker, Kubernetes, and log analysis.">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Linux Commands Every DevOps Engineer Must Know">
+	<meta name="twitter:description" content="A practical reference of must-know Linux commands for DevOps and MLOps engineers — covering files, processes, networking, Docker, Kubernetes, and log analysis.">
 
   
   
@@ -737,8 +737,8 @@
         width="96"
         height="96"
         alt="Hemanth Kumar Motukuri"
-        src="/img/profile_pic_hu_73b016f6fa6bb344.jpg"
-        data-zoom-src="/img/profile_pic_hu_da66a14a1ead8228.jpg">
+        src="/img/profile_pic_hu_f57b3ef112bc3de6.jpg"
+        data-zoom-src="/img/profile_pic_hu_d6b149a9a3d854d6.jpg">
     
   
   <div class="place-self-center">
@@ -948,26 +948,26 @@
 </span></span><span class="line"><span class="cl">ls -lah /var/log</span></span></code></pre></div></div>
 <p><strong>Breaking down <code>ls -lah</code>:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Flag</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>-l</code></td>
-          <td>Long format — shows permissions, owner, size, date</td>
-      </tr>
-      <tr>
-          <td><code>-a</code></td>
-          <td>All files — includes hidden files (files starting with <code>.</code>)</td>
-      </tr>
-      <tr>
-          <td><code>-h</code></td>
-          <td>Human readable — shows sizes as KB, MB, GB instead of raw bytes</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Flag</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>-l</code></td>
+					<td>Long format — shows permissions, owner, size, date</td>
+			</tr>
+			<tr>
+					<td><code>-a</code></td>
+					<td>All files — includes hidden files (files starting with <code>.</code>)</td>
+			</tr>
+			<tr>
+					<td><code>-h</code></td>
+					<td>Human readable — shows sizes as KB, MB, GB instead of raw bytes</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>What the output looks like:</strong></p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">drwxr-xr-x  3 root root 4.0K Jan  1 10:00 nginx/
@@ -996,34 +996,34 @@
 </span></span><span class="line"><span class="cl">find . -name <span class="s2">&#34;*.py&#34;</span> -size +1M</span></span></code></pre></div></div>
 <p><strong>Breaking it down:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Part</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>/etc</code></td>
-          <td>Start searching from this directory (<code>.</code> means current directory)</td>
-      </tr>
-      <tr>
-          <td><code>-name &quot;*.conf&quot;</code></td>
-          <td>Match files whose name ends in <code>.conf</code> (<code>*</code> is a wildcard)</td>
-      </tr>
-      <tr>
-          <td><code>-type f</code></td>
-          <td>Only files (<code>f</code>). Use <code>-type d</code> for directories</td>
-      </tr>
-      <tr>
-          <td><code>-mtime -1</code></td>
-          <td>Modified in the last 1 day (<code>-</code> means &ldquo;less than&rdquo;)</td>
-      </tr>
-      <tr>
-          <td><code>-size +1M</code></td>
-          <td>Larger than 1 Megabyte</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Part</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>/etc</code></td>
+					<td>Start searching from this directory (<code>.</code> means current directory)</td>
+			</tr>
+			<tr>
+					<td><code>-name &quot;*.conf&quot;</code></td>
+					<td>Match files whose name ends in <code>.conf</code> (<code>*</code> is a wildcard)</td>
+			</tr>
+			<tr>
+					<td><code>-type f</code></td>
+					<td>Only files (<code>f</code>). Use <code>-type d</code> for directories</td>
+			</tr>
+			<tr>
+					<td><code>-mtime -1</code></td>
+					<td>Modified in the last 1 day (<code>-</code> means &ldquo;less than&rdquo;)</td>
+			</tr>
+			<tr>
+					<td><code>-size +1M</code></td>
+					<td>Larger than 1 Megabyte</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Real-world use:</strong> You deployed an app and it created config files but you don&rsquo;t know where. Run:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">find / -name <span class="s2">&#34;app.conf&#34;</span> -type f 2&gt;/dev/null</span></span></code></pre></div></div>
@@ -1043,34 +1043,34 @@
 </span></span><span class="line"><span class="cl">du -sh /* 2&gt;/dev/null <span class="p">|</span> sort -rh <span class="p">|</span> head -10</span></span></code></pre></div></div>
 <p><strong>Breaking it down:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Flag</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>-s</code></td>
-          <td>Summary — show only the total, not every subfolder</td>
-      </tr>
-      <tr>
-          <td><code>-h</code></td>
-          <td>Human readable (MB, GB)</td>
-      </tr>
-      <tr>
-          <td><code>/*</code></td>
-          <td>Check every top-level directory</td>
-      </tr>
-      <tr>
-          <td><code>sort -rh</code></td>
-          <td>Sort by size, largest first (<code>r</code> = reverse, <code>h</code> = human-readable sizes)</td>
-      </tr>
-      <tr>
-          <td><code>head -10</code></td>
-          <td>Show only the top 10 results</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Flag</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>-s</code></td>
+					<td>Summary — show only the total, not every subfolder</td>
+			</tr>
+			<tr>
+					<td><code>-h</code></td>
+					<td>Human readable (MB, GB)</td>
+			</tr>
+			<tr>
+					<td><code>/*</code></td>
+					<td>Check every top-level directory</td>
+			</tr>
+			<tr>
+					<td><code>sort -rh</code></td>
+					<td>Sort by size, largest first (<code>r</code> = reverse, <code>h</code> = human-readable sizes)</td>
+			</tr>
+			<tr>
+					<td><code>head -10</code></td>
+					<td>Show only the top 10 results</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Real-world use:</strong> Your server disk is at 95%. Run the second command to find the biggest directories and figure out what is eating your space. Docker image cache (<code>/var/lib/docker</code>) is a very common culprit.</p>
 <hr>
@@ -1124,34 +1124,34 @@
 </span></span><span class="line"><span class="cl">tar -xzf backup.tar.gz -C /opt/myapp</span></span></code></pre></div></div>
 <p><strong>Breaking down the flags:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Flag</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>-c</code></td>
-          <td>Create a new archive</td>
-      </tr>
-      <tr>
-          <td><code>-x</code></td>
-          <td>Extract from an archive</td>
-      </tr>
-      <tr>
-          <td><code>-z</code></td>
-          <td>Use gzip compression (makes the file smaller)</td>
-      </tr>
-      <tr>
-          <td><code>-f</code></td>
-          <td>The next argument is the filename of the archive</td>
-      </tr>
-      <tr>
-          <td><code>-C /path</code></td>
-          <td>Extract into this directory (must already exist)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Flag</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>-c</code></td>
+					<td>Create a new archive</td>
+			</tr>
+			<tr>
+					<td><code>-x</code></td>
+					<td>Extract from an archive</td>
+			</tr>
+			<tr>
+					<td><code>-z</code></td>
+					<td>Use gzip compression (makes the file smaller)</td>
+			</tr>
+			<tr>
+					<td><code>-f</code></td>
+					<td>The next argument is the filename of the archive</td>
+			</tr>
+			<tr>
+					<td><code>-C /path</code></td>
+					<td>Extract into this directory (must already exist)</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Memory trick:</strong> Think <strong>c</strong>reate, e<strong>x</strong>tract, g<strong>z</strong>ip, <strong>f</strong>ile.</p>
 <hr>
@@ -1171,40 +1171,40 @@
 <p><strong>Understanding the numbers in chmod:</strong></p>
 <p>Each digit represents permissions for: Owner | Group | Everyone else</p>
 <table>
-  <thead>
-      <tr>
-          <th>Number</th>
-          <th>Permission</th>
-          <th>What it means</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>7</td>
-          <td>rwx</td>
-          <td>Read + Write + Execute</td>
-      </tr>
-      <tr>
-          <td>6</td>
-          <td>rw-</td>
-          <td>Read + Write only</td>
-      </tr>
-      <tr>
-          <td>5</td>
-          <td>r-x</td>
-          <td>Read + Execute only</td>
-      </tr>
-      <tr>
-          <td>4</td>
-          <td>r&ndash;</td>
-          <td>Read only</td>
-      </tr>
-      <tr>
-          <td>0</td>
-          <td>&mdash;</td>
-          <td>No permissions at all</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Number</th>
+					<th>Permission</th>
+					<th>What it means</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>7</td>
+					<td>rwx</td>
+					<td>Read + Write + Execute</td>
+			</tr>
+			<tr>
+					<td>6</td>
+					<td>rw-</td>
+					<td>Read + Write only</td>
+			</tr>
+			<tr>
+					<td>5</td>
+					<td>r-x</td>
+					<td>Read + Execute only</td>
+			</tr>
+			<tr>
+					<td>4</td>
+					<td>r&ndash;</td>
+					<td>Read only</td>
+			</tr>
+			<tr>
+					<td>0</td>
+					<td>&mdash;</td>
+					<td>No permissions at all</td>
+			</tr>
+	</tbody>
 </table>
 <p>So <code>chmod 755</code> means:</p>
 <ul>
@@ -1246,26 +1246,26 @@
 </span></span><span class="line"><span class="cl">%Cpu(s):  5.2 us,  1.3 sy, 92.8 id
 </span></span><span class="line"><span class="cl">MiB Mem :   3934.0 total,    412.3 free,   2100.4 used</span></span></code></pre></div></div>
 <table>
-  <thead>
-      <tr>
-          <th>Field</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>load average: 0.52</code></td>
-          <td>Average number of processes waiting for CPU in last 1/5/15 min. If this exceeds your CPU count, your system is overloaded</td>
-      </tr>
-      <tr>
-          <td><code>%Cpu id: 92.8</code></td>
-          <td>92.8% of CPU is idle (good). If this drops below 10%, CPU is very busy</td>
-      </tr>
-      <tr>
-          <td><code>MiB Mem used: 2100</code></td>
-          <td>2.1 GB of RAM is in use</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Field</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>load average: 0.52</code></td>
+					<td>Average number of processes waiting for CPU in last 1/5/15 min. If this exceeds your CPU count, your system is overloaded</td>
+			</tr>
+			<tr>
+					<td><code>%Cpu id: 92.8</code></td>
+					<td>92.8% of CPU is idle (good). If this drops below 10%, CPU is very busy</td>
+			</tr>
+			<tr>
+					<td><code>MiB Mem used: 2100</code></td>
+					<td>2.1 GB of RAM is in use</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Keyboard shortcuts inside top:</strong></p>
 <ul>
@@ -1290,55 +1290,55 @@
 </span></span><span class="line"><span class="cl">ps -ef --forest</span></span></code></pre></div></div>
 <p><strong>Breaking down <code>ps aux</code>:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Flag</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>a</code></td>
-          <td>Show processes from ALL users (not just you)</td>
-      </tr>
-      <tr>
-          <td><code>u</code></td>
-          <td>User-oriented format (shows username, CPU%, MEM%)</td>
-      </tr>
-      <tr>
-          <td><code>x</code></td>
-          <td>Include processes not attached to a terminal</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Flag</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>a</code></td>
+					<td>Show processes from ALL users (not just you)</td>
+			</tr>
+			<tr>
+					<td><code>u</code></td>
+					<td>User-oriented format (shows username, CPU%, MEM%)</td>
+			</tr>
+			<tr>
+					<td><code>x</code></td>
+					<td>Include processes not attached to a terminal</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Understanding the output columns:</strong></p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">USER   PID  %CPU  %MEM   VSZ    RSS  TTY   STAT  START   TIME  COMMAND
 </span></span><span class="line"><span class="cl">root   123   0.0   0.1  5120   1024  ?     Ss    10:00   0:00  nginx: master</span></span></code></pre></div></div>
 <table>
-  <thead>
-      <tr>
-          <th>Column</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>PID</code></td>
-          <td>Process ID — the unique number for this process</td>
-      </tr>
-      <tr>
-          <td><code>%CPU</code></td>
-          <td>How much CPU it is using right now</td>
-      </tr>
-      <tr>
-          <td><code>%MEM</code></td>
-          <td>How much RAM it is using</td>
-      </tr>
-      <tr>
-          <td><code>STAT</code></td>
-          <td>S=sleeping (idle), R=running, Z=zombie (stuck/dead)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Column</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PID</code></td>
+					<td>Process ID — the unique number for this process</td>
+			</tr>
+			<tr>
+					<td><code>%CPU</code></td>
+					<td>How much CPU it is using right now</td>
+			</tr>
+			<tr>
+					<td><code>%MEM</code></td>
+					<td>How much RAM it is using</td>
+			</tr>
+			<tr>
+					<td><code>STAT</code></td>
+					<td>S=sleeping (idle), R=running, Z=zombie (stuck/dead)</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong><code>ps aux | grep nginx</code></strong> — The <code>|</code> (pipe) sends the output of <code>ps aux</code> into <code>grep</code>, which filters to only show lines containing &ldquo;nginx&rdquo;. This is how you quickly check if a specific service is running.</p>
 <p><strong><code>ps -ef --forest</code></strong> — Shows processes as a tree so you can see parent-child relationships. Useful for understanding which process launched which.</p>
@@ -1358,30 +1358,30 @@
 </span></span><span class="line"><span class="cl">killall nginx</span></span></code></pre></div></div>
 <p><strong>Why <code>-9</code>?</strong> Linux sends signals to processes. Signal <code>-9</code> is <code>SIGKILL</code> — the strongest, meaning &ldquo;stop immediately, no cleanup&rdquo;. Use this when a process is frozen and won&rsquo;t respond normally.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Signal</th>
-          <th>Number</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>SIGTERM</td>
-          <td>15</td>
-          <td>&ldquo;Please shut down gracefully&rdquo; — this is the default</td>
-      </tr>
-      <tr>
-          <td>SIGKILL</td>
-          <td>9</td>
-          <td>&ldquo;Stop immediately, no choice&rdquo; — cannot be ignored</td>
-      </tr>
-      <tr>
-          <td>SIGHUP</td>
-          <td>1</td>
-          <td>&ldquo;Reload your config&rdquo; — used for nginx, etc.</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Signal</th>
+					<th>Number</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>SIGTERM</td>
+					<td>15</td>
+					<td>&ldquo;Please shut down gracefully&rdquo; — this is the default</td>
+			</tr>
+			<tr>
+					<td>SIGKILL</td>
+					<td>9</td>
+					<td>&ldquo;Stop immediately, no choice&rdquo; — cannot be ignored</td>
+			</tr>
+			<tr>
+					<td>SIGHUP</td>
+					<td>1</td>
+					<td>&ldquo;Reload your config&rdquo; — used for nginx, etc.</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Best practice:</strong> First try <code>kill 1234</code> (graceful SIGTERM). If the process does not stop within a few seconds, escalate to <code>kill -9 1234</code>.</p>
 <p><strong><code>pkill -f &quot;python app.py&quot;</code></strong> — Kill by matching the full command line string. Useful when you don&rsquo;t know the PID but know the command name.</p>
@@ -1444,38 +1444,38 @@
 </span></span><span class="line"><span class="cl">journalctl --disk-usage</span></span></code></pre></div></div>
 <p><strong>Breaking down the flags:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Flag</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>-u nginx</code></td>
-          <td>Show logs only for the nginx unit/service</td>
-      </tr>
-      <tr>
-          <td><code>-f</code></td>
-          <td>Follow — keep printing new lines as they appear (live stream)</td>
-      </tr>
-      <tr>
-          <td><code>--since &quot;2 hours ago&quot;</code></td>
-          <td>Only show logs from the last 2 hours</td>
-      </tr>
-      <tr>
-          <td><code>-p err</code></td>
-          <td>Only show error-level messages and above</td>
-      </tr>
-      <tr>
-          <td><code>-b</code></td>
-          <td>Only show logs from the current boot (since last restart)</td>
-      </tr>
-      <tr>
-          <td><code>-n 50</code></td>
-          <td>Show only the last 50 lines</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Flag</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>-u nginx</code></td>
+					<td>Show logs only for the nginx unit/service</td>
+			</tr>
+			<tr>
+					<td><code>-f</code></td>
+					<td>Follow — keep printing new lines as they appear (live stream)</td>
+			</tr>
+			<tr>
+					<td><code>--since &quot;2 hours ago&quot;</code></td>
+					<td>Only show logs from the last 2 hours</td>
+			</tr>
+			<tr>
+					<td><code>-p err</code></td>
+					<td>Only show error-level messages and above</td>
+			</tr>
+			<tr>
+					<td><code>-b</code></td>
+					<td>Only show logs from the current boot (since last restart)</td>
+			</tr>
+			<tr>
+					<td><code>-n 50</code></td>
+					<td>Show only the last 50 lines</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Real-world use:</strong> Your nginx service failed to start. Run:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">journalctl -u nginx -n <span class="m">50</span> --no-pager</span></span></code></pre></div></div>
@@ -1663,42 +1663,42 @@
 </span></span><span class="line"><span class="cl">curl -o custom-name.tar.gz https://example.com/file.tar.gz</span></span></code></pre></div></div>
 <p><strong>Breaking down the flags:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Flag</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>-I</code></td>
-          <td>HEAD request — fetch only response headers, not the body</td>
-      </tr>
-      <tr>
-          <td><code>-s</code></td>
-          <td>Silent — suppress progress bar and error messages</td>
-      </tr>
-      <tr>
-          <td><code>-o /dev/null</code></td>
-          <td>Throw away the response body (<code>/dev/null</code> is a black hole in Linux)</td>
-      </tr>
-      <tr>
-          <td><code>-w &quot;%{http_code}&quot;</code></td>
-          <td>After the request, print this info (here: the HTTP status code)</td>
-      </tr>
-      <tr>
-          <td><code>-X POST</code></td>
-          <td>Use HTTP POST method (default is GET)</td>
-      </tr>
-      <tr>
-          <td><code>-H &quot;...&quot;</code></td>
-          <td>Add a header to the request (can use multiple <code>-H</code> flags)</td>
-      </tr>
-      <tr>
-          <td><code>-d '...'</code></td>
-          <td>The request body data to send</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Flag</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>-I</code></td>
+					<td>HEAD request — fetch only response headers, not the body</td>
+			</tr>
+			<tr>
+					<td><code>-s</code></td>
+					<td>Silent — suppress progress bar and error messages</td>
+			</tr>
+			<tr>
+					<td><code>-o /dev/null</code></td>
+					<td>Throw away the response body (<code>/dev/null</code> is a black hole in Linux)</td>
+			</tr>
+			<tr>
+					<td><code>-w &quot;%{http_code}&quot;</code></td>
+					<td>After the request, print this info (here: the HTTP status code)</td>
+			</tr>
+			<tr>
+					<td><code>-X POST</code></td>
+					<td>Use HTTP POST method (default is GET)</td>
+			</tr>
+			<tr>
+					<td><code>-H &quot;...&quot;</code></td>
+					<td>Add a header to the request (can use multiple <code>-H</code> flags)</td>
+			</tr>
+			<tr>
+					<td><code>-d '...'</code></td>
+					<td>The request body data to send</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Real-world DevOps use:</strong> In a CI/CD pipeline, check if your newly deployed service is healthy before marking the deployment as successful:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">STATUS</span><span class="o">=</span><span class="k">$(</span>curl -s -o /dev/null -w <span class="s2">&#34;%{http_code}&#34;</span> https://myapp.com/health<span class="k">)</span>
@@ -1722,34 +1722,34 @@
 </span></span><span class="line"><span class="cl">ss -tulnp <span class="p">|</span> grep <span class="m">8080</span></span></span></code></pre></div></div>
 <p><strong>Breaking down <code>ss -tulnp</code>:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Flag</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>-t</code></td>
-          <td>Show TCP connections</td>
-      </tr>
-      <tr>
-          <td><code>-u</code></td>
-          <td>Show UDP connections</td>
-      </tr>
-      <tr>
-          <td><code>-l</code></td>
-          <td>Only show LISTENING sockets (services waiting for connections)</td>
-      </tr>
-      <tr>
-          <td><code>-n</code></td>
-          <td>Show port numbers instead of service names (e.g., show 80 not &ldquo;http&rdquo;)</td>
-      </tr>
-      <tr>
-          <td><code>-p</code></td>
-          <td>Show which process owns the socket</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Flag</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>-t</code></td>
+					<td>Show TCP connections</td>
+			</tr>
+			<tr>
+					<td><code>-u</code></td>
+					<td>Show UDP connections</td>
+			</tr>
+			<tr>
+					<td><code>-l</code></td>
+					<td>Only show LISTENING sockets (services waiting for connections)</td>
+			</tr>
+			<tr>
+					<td><code>-n</code></td>
+					<td>Show port numbers instead of service names (e.g., show 80 not &ldquo;http&rdquo;)</td>
+			</tr>
+			<tr>
+					<td><code>-p</code></td>
+					<td>Show which process owns the socket</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Sample output:</strong></p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Netid  State   Local Address:Port   Process
@@ -1833,50 +1833,50 @@
 </span></span><span class="line"><span class="cl">grep -A <span class="m">5</span> -B <span class="m">2</span> <span class="s2">&#34;NullPointerException&#34;</span> app.log</span></span></code></pre></div></div>
 <p><strong>Breaking down the flags:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Flag</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>-r</code></td>
-          <td>Recursive — search inside all files in the directory and subdirectories</td>
-      </tr>
-      <tr>
-          <td><code>-n</code></td>
-          <td>Show line numbers alongside matches</td>
-      </tr>
-      <tr>
-          <td><code>--include=&quot;*.log&quot;</code></td>
-          <td>Only search files matching this pattern</td>
-      </tr>
-      <tr>
-          <td><code>-v</code></td>
-          <td>Invert match — show lines that do NOT contain the pattern</td>
-      </tr>
-      <tr>
-          <td><code>-E</code></td>
-          <td>Extended regex — enables the <code>|</code> pipe for OR logic</td>
-      </tr>
-      <tr>
-          <td><code>-c</code></td>
-          <td>Count — print the number of matching lines instead of the lines themselves</td>
-      </tr>
-      <tr>
-          <td><code>-i</code></td>
-          <td>Case-insensitive — matches ERROR, error, Error all the same</td>
-      </tr>
-      <tr>
-          <td><code>-A 5</code></td>
-          <td>Print 5 lines After each match (for context)</td>
-      </tr>
-      <tr>
-          <td><code>-B 2</code></td>
-          <td>Print 2 lines Before each match</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Flag</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>-r</code></td>
+					<td>Recursive — search inside all files in the directory and subdirectories</td>
+			</tr>
+			<tr>
+					<td><code>-n</code></td>
+					<td>Show line numbers alongside matches</td>
+			</tr>
+			<tr>
+					<td><code>--include=&quot;*.log&quot;</code></td>
+					<td>Only search files matching this pattern</td>
+			</tr>
+			<tr>
+					<td><code>-v</code></td>
+					<td>Invert match — show lines that do NOT contain the pattern</td>
+			</tr>
+			<tr>
+					<td><code>-E</code></td>
+					<td>Extended regex — enables the <code>|</code> pipe for OR logic</td>
+			</tr>
+			<tr>
+					<td><code>-c</code></td>
+					<td>Count — print the number of matching lines instead of the lines themselves</td>
+			</tr>
+			<tr>
+					<td><code>-i</code></td>
+					<td>Case-insensitive — matches ERROR, error, Error all the same</td>
+			</tr>
+			<tr>
+					<td><code>-A 5</code></td>
+					<td>Print 5 lines After each match (for context)</td>
+			</tr>
+			<tr>
+					<td><code>-B 2</code></td>
+					<td>Print 2 lines Before each match</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Real-world use:</strong> Your Java app crashed. Get the full stack trace (exception + the 10 lines before it):</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep -B <span class="m">10</span> <span class="s2">&#34;Exception&#34;</span> app.log <span class="p">|</span> tail -60</span></span></code></pre></div></div>
@@ -2059,34 +2059,34 @@
 </span></span><span class="line"><span class="cl">docker run -d -p 8080:80 --name web nginx</span></span></code></pre></div></div>
 <p><strong>Breaking down <code>docker run -d -p 8080:80 --name web nginx</code>:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Part</th>
-          <th>Meaning</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>run</code></td>
-          <td>Create and start a new container</td>
-      </tr>
-      <tr>
-          <td><code>-d</code></td>
-          <td>Detached mode — run in the background (don&rsquo;t take over your terminal)</td>
-      </tr>
-      <tr>
-          <td><code>-p 8080:80</code></td>
-          <td>Port mapping: host port 8080 → container port 80</td>
-      </tr>
-      <tr>
-          <td><code>--name web</code></td>
-          <td>Give the container a memorable name instead of a random one</td>
-      </tr>
-      <tr>
-          <td><code>nginx</code></td>
-          <td>The image to use (downloaded from Docker Hub automatically if not local)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Part</th>
+					<th>Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>run</code></td>
+					<td>Create and start a new container</td>
+			</tr>
+			<tr>
+					<td><code>-d</code></td>
+					<td>Detached mode — run in the background (don&rsquo;t take over your terminal)</td>
+			</tr>
+			<tr>
+					<td><code>-p 8080:80</code></td>
+					<td>Port mapping: host port 8080 → container port 80</td>
+			</tr>
+			<tr>
+					<td><code>--name web</code></td>
+					<td>Give the container a memorable name instead of a random one</td>
+			</tr>
+			<tr>
+					<td><code>nginx</code></td>
+					<td>The image to use (downloaded from Docker Hub automatically if not local)</td>
+			</tr>
+	</tbody>
 </table>
 <p><strong>Port mapping <code>-p 8080:80</code></strong> — Format is <code>HOST_PORT:CONTAINER_PORT</code>. Nginx inside the container listens on port 80. You access it from your browser on port 8080 (<code>http://localhost:8080</code>). The container&rsquo;s port 80 is not directly accessible from outside without this mapping.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Start a stopped container</span>
@@ -2261,42 +2261,42 @@
 <p>Kubernetes (K8s) is a system for running and managing containers across multiple servers automatically. It handles automatic restarts, scaling, load balancing, and rolling deployments.</p>
 <p><strong>Key concepts you must know before the commands:</strong></p>
 <table>
-  <thead>
-      <tr>
-          <th>Term</th>
-          <th>What it is</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Pod</strong></td>
-          <td>Smallest deployable unit. One or more containers running together on the same node</td>
-      </tr>
-      <tr>
-          <td><strong>Deployment</strong></td>
-          <td>Manages a set of identical Pods. Handles rolling updates, scaling, and self-healing</td>
-      </tr>
-      <tr>
-          <td><strong>Service</strong></td>
-          <td>A stable network endpoint in front of Pods (Pods come and go, Services stay stable)</td>
-      </tr>
-      <tr>
-          <td><strong>Namespace</strong></td>
-          <td>A virtual cluster inside the cluster — used to separate environments (dev, staging, prod)</td>
-      </tr>
-      <tr>
-          <td><strong>Node</strong></td>
-          <td>A physical or virtual machine that runs Pods</td>
-      </tr>
-      <tr>
-          <td><strong>ConfigMap</strong></td>
-          <td>Store non-sensitive configuration data (key-value pairs)</td>
-      </tr>
-      <tr>
-          <td><strong>Secret</strong></td>
-          <td>Store sensitive data like passwords and tokens (base64 encoded)</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Term</th>
+					<th>What it is</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Pod</strong></td>
+					<td>Smallest deployable unit. One or more containers running together on the same node</td>
+			</tr>
+			<tr>
+					<td><strong>Deployment</strong></td>
+					<td>Manages a set of identical Pods. Handles rolling updates, scaling, and self-healing</td>
+			</tr>
+			<tr>
+					<td><strong>Service</strong></td>
+					<td>A stable network endpoint in front of Pods (Pods come and go, Services stay stable)</td>
+			</tr>
+			<tr>
+					<td><strong>Namespace</strong></td>
+					<td>A virtual cluster inside the cluster — used to separate environments (dev, staging, prod)</td>
+			</tr>
+			<tr>
+					<td><strong>Node</strong></td>
+					<td>A physical or virtual machine that runs Pods</td>
+			</tr>
+			<tr>
+					<td><strong>ConfigMap</strong></td>
+					<td>Store non-sensitive configuration data (key-value pairs)</td>
+			</tr>
+			<tr>
+					<td><strong>Secret</strong></td>
+					<td>Store sensitive data like passwords and tokens (base64 encoded)</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 
@@ -2767,65 +2767,65 @@
 </h2>
 <p>When something is slow or broken, work through this checklist:</p>
 <table>
-  <thead>
-      <tr>
-          <th>Symptom</th>
-          <th>First command</th>
-          <th>Follow-up</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>High CPU usage</td>
-          <td><code>top</code> (press <code>P</code> to sort by CPU)</td>
-          <td><code>ps aux --sort=-%cpu | head -10</code></td>
-      </tr>
-      <tr>
-          <td>High memory</td>
-          <td><code>free -h</code></td>
-          <td><code>ps aux --sort=-%mem | head -10</code></td>
-      </tr>
-      <tr>
-          <td>Disk full</td>
-          <td><code>df -h</code></td>
-          <td><code>du -sh /* 2&gt;/dev/null | sort -rh | head -10</code></td>
-      </tr>
-      <tr>
-          <td>Port already in use</td>
-          <td><code>ss -tulnp | grep PORT</code></td>
-          <td><code>lsof -i :PORT</code></td>
-      </tr>
-      <tr>
-          <td>Service won&rsquo;t start</td>
-          <td><code>systemctl status svc</code></td>
-          <td><code>journalctl -u svc -n 100 --no-pager</code></td>
-      </tr>
-      <tr>
-          <td>DNS not resolving</td>
-          <td><code>dig example.com</code></td>
-          <td><code>cat /etc/resolv.conf</code></td>
-      </tr>
-      <tr>
-          <td>Container crash loop</td>
-          <td><code>kubectl describe pod name</code></td>
-          <td><code>kubectl logs name --previous</code></td>
-      </tr>
-      <tr>
-          <td>Pod stuck Pending</td>
-          <td><code>kubectl describe pod name</code></td>
-          <td>Look at Events — usually a resource quota or node selector issue</td>
-      </tr>
-      <tr>
-          <td>Node not ready</td>
-          <td><code>kubectl describe node name</code></td>
-          <td>SSH to node: <code>journalctl -u kubelet -n 50</code></td>
-      </tr>
-      <tr>
-          <td>Slow response times</td>
-          <td><code>curl -w &quot;\nTime: %{time_total}s\n&quot; URL</code></td>
-          <td>Check <code>top</code> for CPU/memory pressure</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Symptom</th>
+					<th>First command</th>
+					<th>Follow-up</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>High CPU usage</td>
+					<td><code>top</code> (press <code>P</code> to sort by CPU)</td>
+					<td><code>ps aux --sort=-%cpu | head -10</code></td>
+			</tr>
+			<tr>
+					<td>High memory</td>
+					<td><code>free -h</code></td>
+					<td><code>ps aux --sort=-%mem | head -10</code></td>
+			</tr>
+			<tr>
+					<td>Disk full</td>
+					<td><code>df -h</code></td>
+					<td><code>du -sh /* 2&gt;/dev/null | sort -rh | head -10</code></td>
+			</tr>
+			<tr>
+					<td>Port already in use</td>
+					<td><code>ss -tulnp | grep PORT</code></td>
+					<td><code>lsof -i :PORT</code></td>
+			</tr>
+			<tr>
+					<td>Service won&rsquo;t start</td>
+					<td><code>systemctl status svc</code></td>
+					<td><code>journalctl -u svc -n 100 --no-pager</code></td>
+			</tr>
+			<tr>
+					<td>DNS not resolving</td>
+					<td><code>dig example.com</code></td>
+					<td><code>cat /etc/resolv.conf</code></td>
+			</tr>
+			<tr>
+					<td>Container crash loop</td>
+					<td><code>kubectl describe pod name</code></td>
+					<td><code>kubectl logs name --previous</code></td>
+			</tr>
+			<tr>
+					<td>Pod stuck Pending</td>
+					<td><code>kubectl describe pod name</code></td>
+					<td>Look at Events — usually a resource quota or node selector issue</td>
+			</tr>
+			<tr>
+					<td>Node not ready</td>
+					<td><code>kubectl describe node name</code></td>
+					<td>SSH to node: <code>journalctl -u kubelet -n 50</code></td>
+			</tr>
+			<tr>
+					<td>Slow response times</td>
+					<td><code>curl -w &quot;\nTime: %{time_total}s\n&quot; URL</code></td>
+					<td>Check <code>top</code> for CPU/memory pressure</td>
+			</tr>
+	</tbody>
 </table>
 <hr>
 
