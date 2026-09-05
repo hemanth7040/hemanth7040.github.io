@@ -1,0 +1,2587 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Hemanth Kumar Motukuri</title>
+    <meta name="title" content=" &middot; Hemanth Kumar Motukuri">
+  
+
+  
+  
+    <meta name="description" content="Technical blog documenting my journey through Kubernetes, AWS, and MLOps.">
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/git/devops_ai_platform_notion_notes/">
+  
+
+  
+  
+    <meta name="author" content="Hemanth Kumar Motukuri">
+  
+  
+    
+      
+        
+          <link href="https://github.com/hemanth7040" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://linkedin.com/in/hemanth-kumar-motukuri" rel="me">
+        
+      
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/git/devops_ai_platform_notion_notes/">
+	<meta property="og:site_name" content="Hemanth Kumar Motukuri">
+	<meta property="og:title" content="Hemanth Kumar Motukuri">
+	<meta property="og:description" content="DevOps AI Platform — Backend Notes (Up to User Creation) # 1. Project Goal # We are building a DevOps AI Platform: a single dashboard that will eventually bring multiple DevOps capabilities/tools into one place.
+Current backend foundation:
+FastAPI Pydantic / Pydantic Settings SQLAlchemy PostgreSQL Alembic Uvicorn Swagger/OpenAPI 2. High-Level Architecture # Runtime request/data flow # Swagger UI / Frontend | | HTTP request v FastAPI | v Route Layer | v Pydantic Schema Validation | v Service Layer Business Logic | v SQLAlchemy Model | v SQLAlchemy Session | v PostgreSQL | v Database Separate database-schema flow # SQLAlchemy Models | v Alembic | v Migration File | v PostgreSQL Schema Important: Alembic manages database structure/schema changes. It is not normally involved in every API request.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Hemanth Kumar Motukuri">
+	<meta name="twitter:description" content="DevOps AI Platform — Backend Notes (Up to User Creation) # 1. Project Goal # We are building a DevOps AI Platform: a single dashboard that will eventually bring multiple DevOps capabilities/tools into one place.
+Current backend foundation:
+FastAPI Pydantic / Pydantic Settings SQLAlchemy PostgreSQL Alembic Uvicorn Swagger/OpenAPI 2. High-Level Architecture # Runtime request/data flow # Swagger UI / Frontend | | HTTP request v FastAPI | v Route Layer | v Pydantic Schema Validation | v Service Layer Business Logic | v SQLAlchemy Model | v SQLAlchemy Session | v PostgreSQL | v Database Separate database-schema flow # SQLAlchemy Models | v Alembic | v Migration File | v PostgreSQL Schema Important: Alembic manages database structure/schema changes. It is not normally involved in every API request.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.e42b8738daaa01b7a39847acf7782479a60c4fa1a7a994dd0bc104c9c5eb45bfa6392d53a404952aa24dfff6c935660eee9f2fd364e6be1c2f73c30ae35bcd4f.css"
+    integrity="sha512-5CuHONqqAbejmEes93gkeaYMT6GnqZTdC8EEycXrRb&#43;mOS1TpASVKqJN//bJNWYO7p8v02Tmvhwvc8MK41vNTw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.c41769a6d0a0f3c9fae21f229a8ff36dbf91ab46022c5e71ec6600b9be681f5f41e6148129be6881788a258ce35a23cb28fb4b739843d8ffc1efec4081c51313.js"
+      integrity="sha512-xBdpptCg88n64h8imo/zbb&#43;Rq0YCLF5x7GYAub5oH19B5hSBKb5ogXiKJYzjWiPLKPtLc5hD2P/B7&#43;xAgcUTEw=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "My Technical Blog",
+    "name": "",
+    "headline": "",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/git/devops_ai_platform_notion_notes/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hemanth Kumar Motukuri"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2259"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Hemanth Kumar Motukuri
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Technical Topics">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/projects/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Projects"
+      title="Projects">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Projects
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/resume/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Resume"
+      title="Resume">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Resume
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About Me"
+      title="About Me">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About Me
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/contact/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Contact"
+      title="Contact">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Contact
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Technical Topics" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/projects/"
+        aria-label="Projects"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Projects" class="text-2xl font-bold tracking-tight">
+          Projects
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/resume/"
+        aria-label="Resume"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Resume" class="text-2xl font-bold tracking-tight">
+          Resume
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About Me"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About Me" class="text-2xl font-bold tracking-tight">
+          About Me
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/contact/"
+        aria-label="Contact"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Contact" class="text-2xl font-bold tracking-tight">
+          Contact
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>2259 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Hemanth Kumar Motukuri"
+        src="/img/profile_pic_hu_f57b3ef112bc3de6.jpg"
+        data-zoom-src="/img/profile_pic_hu_d6b149a9a3d854d6.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Hemanth Kumar Motukuri
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">DevOps &amp; MLOps | Kubernetes | AWS</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/hemanth7040"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 496 496" xml:space="preserve">
+<path id="SVGCleanerId_0" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+	c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+	c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+	c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+	c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+	c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+	c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+	c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+	c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+<g>
+	<path id="SVGCleanerId_0_1_" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+		c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+		c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+		c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+		c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+		c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+		c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+</g>
+<g>
+	<path style="fill:#114C82;" d="M378.496,109.131c13.128,33.904,4.752,58.928,2.2,65.176c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163c0-29.56-5.152-57.896-14.568-84.2
+		C447.24,133.963,409.184,109.987,378.496,109.131z"/>
+	<path style="fill:#114C82;" d="M192.976,377.323c2.784-5.616,6.184-9.984,9.76-13.144c-30.176-3.456-61.168-11.512-83.048-33.744
+		C136.52,358.451,163.928,371.195,192.976,377.323z"/>
+</g>
+<path style="fill:#6CA9EA;" d="M12.912,270.947c0-137.536,111.048-249,247.992-249c76.04,0,144.056,34.392,189.536,88.488
+	C405.52,46.755,331.616,5.163,247.992,5.163C111.048,5.163,0,116.627,0,254.163c0,61.32,22.12,117.424,58.752,160.792
+	C29.944,374.291,12.912,324.643,12.912,270.947z"/>
+<path style="fill:#083E66;" d="M322.712,426.899c0-23.232-7.928-38.44-16.832-46.128c55.248-6.16,113.24-27.216,113.24-122.848
+	c0-27.184-9.6-49.4-25.52-66.824c2.576-6.296,11.096-31.608-2.456-65.872c0,0-2.576-0.792-7.896-0.488
+	c5.808,25.84-0.416,44.32-2.552,49.568c15.904,17.424,25.504,39.648,25.504,66.832c0,95.64-57.984,116.68-113.232,122.856
+	c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296c0,5.872,3.496,12.568,12.92,12.408
+	C322.488,479.555,322.712,455.659,322.712,426.899z"/>
+<path style="fill:#114C82;" d="M117.464,423.995c5.208,10.72,22.712,36.4,68.888,30.992c-0.064-5.648-0.112-11.976-0.144-18.928
+	C150.584,443.835,129.552,434.667,117.464,423.995z"/>
+<path style="fill:#6CA9EA;" d="M126.368,391.387c-1.592-2.4-4.576-6.472-8.904-10.544
+	C120.272,385.011,123.256,388.507,126.368,391.387z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/hemanth-kumar-motukuri"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 382 382" xml:space="preserve">
+<path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:hemanthkumarmotukuri@gmail.com"
+          
+          target="_blank"
+          aria-label="Gmail"
+          title="Gmail"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?>
+<!-- License: MIT. Made by Garuda Technology: https://github.com/garudatechnologydevelopers/sketch-icons -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z" fill="white"/>
+<path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" fill="#EA4335"/>
+<path d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z" fill="#FBBC05"/>
+<path d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z" fill="#34A853"/>
+<path d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z" fill="#C5221F"/>
+<path d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z" fill="#C5221F"/>
+<path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" fill="#C5221F"/>
+<path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" fill="#4285F4"/>
+</svg></span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">DevOps AI Platform — Backend Notes (Up to User Creation)
+    <div id="devops-ai-platform--backend-notes-up-to-user-creation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#devops-ai-platform--backend-notes-up-to-user-creation" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+
+<h2 class="relative group">1. Project Goal
+    <div id="1-project-goal" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-project-goal" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We are building a DevOps AI Platform: a single dashboard that will eventually bring multiple DevOps capabilities/tools into one place.</p>
+<p>Current backend foundation:</p>
+<ul>
+<li>FastAPI</li>
+<li>Pydantic / Pydantic Settings</li>
+<li>SQLAlchemy</li>
+<li>PostgreSQL</li>
+<li>Alembic</li>
+<li>Uvicorn</li>
+<li>Swagger/OpenAPI</li>
+</ul>
+<hr>
+
+<h2 class="relative group">2. High-Level Architecture
+    <div id="2-high-level-architecture" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-high-level-architecture" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Runtime request/data flow
+    <div id="runtime-requestdata-flow" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#runtime-requestdata-flow" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Swagger UI / Frontend
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        | HTTP request
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">     FastAPI
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">   Route Layer
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl"> Pydantic Schema
+</span></span><span class="line"><span class="cl">   Validation
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">  Service Layer
+</span></span><span class="line"><span class="cl"> Business Logic
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">SQLAlchemy Model
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">SQLAlchemy Session
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">  PostgreSQL
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">   Database</span></span></code></pre></div></div>
+
+<h3 class="relative group">Separate database-schema flow
+    <div id="separate-database-schema-flow" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#separate-database-schema-flow" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">SQLAlchemy Models
+</span></span><span class="line"><span class="cl">       |
+</span></span><span class="line"><span class="cl">       v
+</span></span><span class="line"><span class="cl">    Alembic
+</span></span><span class="line"><span class="cl">       |
+</span></span><span class="line"><span class="cl">       v
+</span></span><span class="line"><span class="cl">Migration File
+</span></span><span class="line"><span class="cl">       |
+</span></span><span class="line"><span class="cl">       v
+</span></span><span class="line"><span class="cl">PostgreSQL Schema</span></span></code></pre></div></div>
+<p><strong>Important:</strong> Alembic manages database structure/schema changes. It is not normally involved in every API request.</p>
+<hr>
+
+<h1 class="relative group">3. Project Structure
+    <div id="3-project-structure" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-project-structure" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">backend/
+</span></span><span class="line"><span class="cl">├── .env
+</span></span><span class="line"><span class="cl">├── requirements.txt
+</span></span><span class="line"><span class="cl">├── alembic.ini
+</span></span><span class="line"><span class="cl">│
+</span></span><span class="line"><span class="cl">├── alembic/
+</span></span><span class="line"><span class="cl">│   ├── env.py
+</span></span><span class="line"><span class="cl">│   └── versions/
+</span></span><span class="line"><span class="cl">│       └── &lt;migration files&gt;
+</span></span><span class="line"><span class="cl">│
+</span></span><span class="line"><span class="cl">└── app/
+</span></span><span class="line"><span class="cl">    ├── main.py
+</span></span><span class="line"><span class="cl">    ├── config/
+</span></span><span class="line"><span class="cl">    │   └── settings.py
+</span></span><span class="line"><span class="cl">    ├── database/
+</span></span><span class="line"><span class="cl">    │   ├── base.py
+</span></span><span class="line"><span class="cl">    │   └── session.py
+</span></span><span class="line"><span class="cl">    ├── models/
+</span></span><span class="line"><span class="cl">    │   └── user.py
+</span></span><span class="line"><span class="cl">    ├── schemas/
+</span></span><span class="line"><span class="cl">    │   └── user.py
+</span></span><span class="line"><span class="cl">    ├── services/
+</span></span><span class="line"><span class="cl">    │   └── user_service.py
+</span></span><span class="line"><span class="cl">    └── routes/
+</span></span><span class="line"><span class="cl">        ├── health.py
+</span></span><span class="line"><span class="cl">        └── users.py</span></span></code></pre></div></div>
+<p>You do not need to memorize every file. Learn the responsibility of each layer.</p>
+<hr>
+
+<h1 class="relative group">4. <code>.env</code> — Configuration
+    <div id="4-env--configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-env--configuration" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>File:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">backend/.env</span></span></code></pre></div></div>
+<p>Contains environment-specific values such as:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-env" data-lang="env"><span class="line"><span class="cl"><span class="nv">APP_NAME</span><span class="o">=</span>DevOps AI Platform
+</span></span><span class="line"><span class="cl"><span class="nv">APP_VERSION</span><span class="o">=</span>1.0.0
+</span></span><span class="line"><span class="cl"><span class="nv">APP_ENV</span><span class="o">=</span>development
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">HOST</span><span class="o">=</span>0.0.0.0
+</span></span><span class="line"><span class="cl"><span class="nv">PORT</span><span class="o">=</span><span class="m">8000</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DEBUG</span><span class="o">=</span><span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">DATABASE_HOST</span><span class="o">=</span>localhost
+</span></span><span class="line"><span class="cl"><span class="nv">DATABASE_PORT</span><span class="o">=</span><span class="m">5432</span>
+</span></span><span class="line"><span class="cl"><span class="nv">DATABASE_NAME</span><span class="o">=</span>devops_ai_platform
+</span></span><span class="line"><span class="cl"><span class="nv">DATABASE_USER</span><span class="o">=</span>hemanth
+</span></span><span class="line"><span class="cl"><span class="nv">DATABASE_PASSWORD</span><span class="o">=</span>...</span></span></code></pre></div></div>
+<p>Why use <code>.env</code>?</p>
+<ul>
+<li>Avoid hardcoding configuration</li>
+<li>Keep secrets out of source code</li>
+<li>Easily change values between environments</li>
+<li>Centralize configuration</li>
+</ul>
+<hr>
+
+<h1 class="relative group">5. <code>settings.py</code> — Pydantic Settings
+    <div id="5-settingspy--pydantic-settings" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-settingspy--pydantic-settings" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>File:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/config/settings.py</span></span></code></pre></div></div>
+<p>This defines a <code>Settings</code> class using <code>BaseSettings</code>.</p>
+<p>Conceptually:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">.env
+</span></span><span class="line"><span class="cl">  |
+</span></span><span class="line"><span class="cl">  v
+</span></span><span class="line"><span class="cl">Pydantic Settings
+</span></span><span class="line"><span class="cl">  |
+</span></span><span class="line"><span class="cl">  v
+</span></span><span class="line"><span class="cl">settings object</span></span></code></pre></div></div>
+<p>Other files can then use:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">settings</span><span class="o">.</span><span class="n">database_name</span>
+</span></span><span class="line"><span class="cl"><span class="n">settings</span><span class="o">.</span><span class="n">database_host</span>
+</span></span><span class="line"><span class="cl"><span class="n">settings</span><span class="o">.</span><span class="n">port</span>
+</span></span><span class="line"><span class="cl"><span class="n">settings</span><span class="o">.</span><span class="n">app_name</span></span></span></code></pre></div></div>
+<p>Pydantic Settings also converts/validates types. For example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-env" data-lang="env"><span class="line"><span class="cl"><span class="nv">PORT</span><span class="o">=</span><span class="m">8000</span></span></span></code></pre></div></div>
+<p>can become:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">port</span><span class="p">:</span> <span class="nb">int</span></span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">6. PostgreSQL
+    <div id="6-postgresql" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-postgresql" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>We installed PostgreSQL 17 and created:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">devops_ai_platform</span></span></code></pre></div></div>
+<p>database.</p>
+<p>Connect:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">psql devops_ai_platform</span></span></code></pre></div></div>
+<p>The directory from which you run <code>psql</code> does not matter.</p>
+<p>Useful commands:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="err">\</span><span class="n">l</span></span></span></code></pre></div></div>
+<p>List databases.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="err">\</span><span class="n">dt</span></span></span></code></pre></div></div>
+<p>List tables.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="err">\</span><span class="n">d</span><span class="w"> </span><span class="n">users</span></span></span></code></pre></div></div>
+<p>Describe the users table.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>Read users.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>Count users.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="err">\</span><span class="n">q</span></span></span></code></pre></div></div>
+<p>Exit.</p>
+
+<h3 class="relative group"><code>psql</code> prompt
+    <div id="psql-prompt" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#psql-prompt" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">devops_ai_platform=#</span></span></code></pre></div></div>
+<p>means PostgreSQL is ready for a new command.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">devops_ai_platform-#</span></span></code></pre></div></div>
+<p>means PostgreSQL is waiting for the current SQL statement to finish.</p>
+<p>Usually you forgot the semicolon:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>If stuck, press <code>Ctrl+C</code>.</p>
+<hr>
+
+<h1 class="relative group">7. SQLAlchemy — ORM
+    <div id="7-sqlalchemy--orm" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-sqlalchemy--orm" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>SQLAlchemy is the Python SQL toolkit/ORM.</p>
+<p>ORM means:</p>
+<blockquote><p>Object-Relational Mapping</p>
+</blockquote><p>The basic relationship is:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Python Class       &lt;-&gt; Database Table
+</span></span><span class="line"><span class="cl">Python Object      &lt;-&gt; Database Row
+</span></span><span class="line"><span class="cl">Python Attribute   &lt;-&gt; Database Column</span></span></code></pre></div></div>
+<p>Example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&#34;users&#34;</span></span></span></code></pre></div></div>
+<p>represents the <code>users</code> database table.</p>
+<hr>
+
+<h1 class="relative group">8. <code>database/base.py</code> — SQLAlchemy Base
+    <div id="8-databasebasepy--sqlalchemy-base" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-databasebasepy--sqlalchemy-base" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>File:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/database/base.py</span></span></code></pre></div></div>
+<p>We created:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">DeclarativeBase</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Base</span><span class="p">(</span><span class="n">DeclarativeBase</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span></span></span></code></pre></div></div>
+<p>Our SQLAlchemy models inherit from <code>Base</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span></span></span></code></pre></div></div>
+<p><code>Base.metadata</code> contains information about the application&rsquo;s SQLAlchemy tables.</p>
+<p>Alembic uses this metadata for autogeneration.</p>
+<hr>
+
+<h1 class="relative group">9. <code>models/user.py</code> — Database Model
+    <div id="9-modelsuserpy--database-model" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-modelsuserpy--database-model" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>File:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/models/user.py</span></span></code></pre></div></div>
+<p>Our model is conceptually:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&#34;users&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">id</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span><span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">username</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">email</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span></span></span></code></pre></div></div>
+<p>This represents the PostgreSQL <code>users</code> table.</p>
+<p>Conceptually:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">User class
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">users table
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">id        -&gt; id column
+</span></span><span class="line"><span class="cl">username  -&gt; username column
+</span></span><span class="line"><span class="cl">email     -&gt; email column</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">10. Alembic — Database Migrations
+    <div id="10-alembic--database-migrations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#10-alembic--database-migrations" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Alembic manages database schema changes.</p>
+<p>Examples:</p>
+<ul>
+<li>Create a table</li>
+<li>Add a column</li>
+<li>Rename a column</li>
+<li>Add an index</li>
+<li>Change a constraint</li>
+</ul>
+<p>We used:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">alembic revision --autogenerate -m <span class="s2">&#34;create users table&#34;</span></span></span></code></pre></div></div>
+<p>to generate a migration.</p>
+<p>Then:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">alembic upgrade head</span></span></code></pre></div></div>
+<p>to apply it.</p>
+<p>Migration files live under:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">alembic/versions/</span></span></code></pre></div></div>
+
+<h3 class="relative group">Alembic flow
+    <div id="alembic-flow" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#alembic-flow" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">SQLAlchemy Model
+</span></span><span class="line"><span class="cl">      |
+</span></span><span class="line"><span class="cl">      v
+</span></span><span class="line"><span class="cl">Base.metadata
+</span></span><span class="line"><span class="cl">      |
+</span></span><span class="line"><span class="cl">      v
+</span></span><span class="line"><span class="cl">Alembic
+</span></span><span class="line"><span class="cl">      |
+</span></span><span class="line"><span class="cl">      v
+</span></span><span class="line"><span class="cl">Migration
+</span></span><span class="line"><span class="cl">      |
+</span></span><span class="line"><span class="cl">      v
+</span></span><span class="line"><span class="cl">PostgreSQL</span></span></code></pre></div></div>
+<p>We currently have:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">devops_ai_platform
+</span></span><span class="line"><span class="cl">├── alembic_version
+</span></span><span class="line"><span class="cl">└── users</span></span></code></pre></div></div>
+<p><code>alembic_version</code> is maintained by Alembic to track applied migrations.</p>
+<hr>
+
+<h1 class="relative group">11. <code>alembic/env.py</code>
+    <div id="11-alembicenvpy" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-alembicenvpy" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>File:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">alembic/env.py</span></span></code></pre></div></div>
+<p>This connects Alembic to our application configuration and SQLAlchemy metadata.</p>
+<p>It imports:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">app.config.settings</span> <span class="kn">import</span> <span class="n">settings</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">app.database.base</span> <span class="kn">import</span> <span class="n">Base</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">app.models.user</span> <span class="kn">import</span> <span class="n">User</span></span></span></code></pre></div></div>
+<p>and uses:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">target_metadata</span> <span class="o">=</span> <span class="n">Base</span><span class="o">.</span><span class="n">metadata</span></span></span></code></pre></div></div>
+<p>This allows Alembic&rsquo;s autogeneration to discover the <code>users</code> table from the SQLAlchemy model.</p>
+<hr>
+
+<h1 class="relative group">12. <code>database/session.py</code> — Engine and Session
+    <div id="12-databasesessionpy--engine-and-session" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#12-databasesessionpy--engine-and-session" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>File:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/database/session.py</span></span></code></pre></div></div>
+<p>First, we build the database URL:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">DATABASE_URL</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="sa">f</span><span class="s2">&#34;postgresql+psycopg://&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">settings</span><span class="o">.</span><span class="n">database_user</span><span class="si">}</span><span class="s2">:&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">settings</span><span class="o">.</span><span class="n">database_password</span><span class="si">}</span><span class="s2">@&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">settings</span><span class="o">.</span><span class="n">database_host</span><span class="si">}</span><span class="s2">:&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">settings</span><span class="o">.</span><span class="n">database_port</span><span class="si">}</span><span class="s2">/&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">settings</span><span class="o">.</span><span class="n">database_name</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<p>Then:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">DATABASE_URL</span><span class="p">)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Engine
+    <div id="engine" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#engine" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>The SQLAlchemy engine knows how to communicate with PostgreSQL.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">DATABASE_URL
+</span></span><span class="line"><span class="cl">      |
+</span></span><span class="line"><span class="cl">      v
+</span></span><span class="line"><span class="cl">SQLAlchemy Engine
+</span></span><span class="line"><span class="cl">      |
+</span></span><span class="line"><span class="cl">      v
+</span></span><span class="line"><span class="cl">PostgreSQL</span></span></code></pre></div></div>
+<p>Then we create a session factory:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">SessionLocal</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">autocommit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">autoflush</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<p>Think:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">SessionLocal()
+</span></span><span class="line"><span class="cl">     |
+</span></span><span class="line"><span class="cl">     v
+</span></span><span class="line"><span class="cl">SQLAlchemy Database Session</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">13. <code>get_db()</code> — Database Dependency
+    <div id="13-get_db--database-dependency" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#13-get_db--database-dependency" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Also in:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/database/session.py</span></span></code></pre></div></div>
+<p>we have:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_db</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">db</span> <span class="o">=</span> <span class="n">SessionLocal</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">yield</span> <span class="n">db</span>
+</span></span><span class="line"><span class="cl">    <span class="k">finally</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></span></span></code></pre></div></div>
+<p>What it does:</p>
+<ol>
+<li>Create a database session.</li>
+<li>Give the session to the request.</li>
+<li>After the request finishes, close the session.</li>
+</ol>
+<p>Conceptually:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Request starts
+</span></span><span class="line"><span class="cl">     |
+</span></span><span class="line"><span class="cl">     v
+</span></span><span class="line"><span class="cl">get_db()
+</span></span><span class="line"><span class="cl">     |
+</span></span><span class="line"><span class="cl">     v
+</span></span><span class="line"><span class="cl">SessionLocal()
+</span></span><span class="line"><span class="cl">     |
+</span></span><span class="line"><span class="cl">     v
+</span></span><span class="line"><span class="cl">Create Session
+</span></span><span class="line"><span class="cl">     |
+</span></span><span class="line"><span class="cl">     v
+</span></span><span class="line"><span class="cl">Give Session to route
+</span></span><span class="line"><span class="cl">     |
+</span></span><span class="line"><span class="cl">     v
+</span></span><span class="line"><span class="cl">Route/service uses it
+</span></span><span class="line"><span class="cl">     |
+</span></span><span class="line"><span class="cl">     v
+</span></span><span class="line"><span class="cl">Request finishes
+</span></span><span class="line"><span class="cl">     |
+</span></span><span class="line"><span class="cl">     v
+</span></span><span class="line"><span class="cl">db.close()</span></span></code></pre></div></div>
+<p><strong>Important:</strong> The service does not execute <code>session.py</code>. The <code>session.py</code> module defines how sessions are created and managed. FastAPI obtains a session through <code>get_db()</code>, and the service uses that session object.</p>
+<hr>
+
+<h1 class="relative group">14. Pydantic Schema
+    <div id="14-pydantic-schema" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#14-pydantic-schema" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>File:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/schemas/user.py</span></span></code></pre></div></div>
+<p>We created a request schema similar to:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">EmailStr</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">UserCreate</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">    <span class="n">email</span><span class="p">:</span> <span class="n">EmailStr</span></span></span></code></pre></div></div>
+<p>This is different from the SQLAlchemy model.</p>
+
+<h3 class="relative group">Pydantic Schema
+    <div id="pydantic-schema" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pydantic-schema" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Purpose:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Validate API input</span></span></code></pre></div></div>
+
+<h3 class="relative group">SQLAlchemy Model
+    <div id="sqlalchemy-model" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sqlalchemy-model" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Purpose:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Represent database table/data</span></span></code></pre></div></div>
+<p>Remember:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Pydantic
+</span></span><span class="line"><span class="cl">    -&gt; API data validation
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SQLAlchemy
+</span></span><span class="line"><span class="cl">    -&gt; Database mapping/operations</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">15. What Pydantic Actually Validates
+    <div id="15-what-pydantic-actually-validates" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#15-what-pydantic-actually-validates" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Suppose Swagger sends:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;username&#34;</span><span class="p">:</span> <span class="s2">&#34;hemanth&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;email&#34;</span><span class="p">:</span> <span class="s2">&#34;hemanth@gmail.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>Pydantic checks the request against:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">UserCreate</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span>
+</span></span><span class="line"><span class="cl">    <span class="n">email</span><span class="p">:</span> <span class="n">EmailStr</span></span></span></code></pre></div></div>
+<p>So it checks things such as:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">username provided?       Yes
+</span></span><span class="line"><span class="cl">username is a string?    Yes
+</span></span><span class="line"><span class="cl">email provided?          Yes
+</span></span><span class="line"><span class="cl">email has valid format?  Yes</span></span></code></pre></div></div>
+<p>Pydantic does <strong>not</strong> query PostgreSQL to ask whether <code>hemanth</code> already exists.</p>
+<p>That is database/business logic.</p>
+<hr>
+
+<h1 class="relative group">16. <code>EmailStr</code> and <code>email-validator</code>
+    <div id="16-emailstr-and-email-validator" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#16-emailstr-and-email-validator" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>When we used:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">email</span><span class="p">:</span> <span class="n">EmailStr</span></span></span></code></pre></div></div>
+<p>Pydantic required the <code>email-validator</code> dependency.</p>
+<p>We encountered:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ModuleNotFoundError: No module named &#39;email_validator&#39;</span></span></code></pre></div></div>
+<p>This illustrates an important dependency relationship:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">EmailStr
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">email-validator package</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">17. <code>routes/users.py</code> — API Route
+    <div id="17-routesuserspy--api-route" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#17-routesuserspy--api-route" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>File:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/routes/users.py</span></span></code></pre></div></div>
+<p>Conceptually:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@router.post</span><span class="p">(</span><span class="s2">&#34;/users&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_new_user</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">user</span><span class="p">:</span> <span class="n">UserCreate</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">db</span><span class="p">:</span> <span class="n">Session</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_db</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">create_user</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>The route receives:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">user
+</span></span><span class="line"><span class="cl">  |
+</span></span><span class="line"><span class="cl">  +--&gt; Pydantic UserCreate object
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">db
+</span></span><span class="line"><span class="cl">  |
+</span></span><span class="line"><span class="cl">  +--&gt; SQLAlchemy Session</span></span></code></pre></div></div>
+<p>The route is responsible for the HTTP/API layer.</p>
+<p>It delegates the actual application logic to the service.</p>
+<hr>
+
+<h1 class="relative group">18. <code>Depends(get_db)</code>
+    <div id="18-dependsget_db" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#18-dependsget_db" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>This:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">db</span><span class="p">:</span> <span class="n">Session</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_db</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>means:</p>
+<blockquote><p>FastAPI should call <code>get_db()</code> and provide the resulting database session here.</p>
+</blockquote><p>It does not mean:</p>
+<blockquote><p>Execute the entire <code>session.py</code> file.</p>
+</blockquote><p>The relationship is:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">session.py
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    | defines
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">get_db()
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    | creates
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">SQLAlchemy Session
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    | provided to
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Route</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">19. <code>services/user_service.py</code> — Business Logic
+    <div id="19-servicesuser_servicepy--business-logic" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#19-servicesuser_servicepy--business-logic" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>File:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/services/user_service.py</span></span></code></pre></div></div>
+<p>The service receives both:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">db   -&gt; SQLAlchemy Session
+</span></span><span class="line"><span class="cl">user -&gt; validated Pydantic object</span></span></code></pre></div></div>
+<p>Conceptually:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">UserCreate</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">username</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">email</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_user</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">new_user</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">new_user</span></span></span></code></pre></div></div>
+<p>The exact implementation can evolve, but the responsibility remains:</p>
+<blockquote><p>Application/business logic for users.</p>
+</blockquote><hr>
+
+<h1 class="relative group">20. Service vs Session
+    <div id="20-service-vs-session" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#20-service-vs-session" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>These are different.</p>
+
+<h3 class="relative group">Service
+    <div id="service" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#service" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/services/user_service.py</span></span></code></pre></div></div>
+<p>Responsible for:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Business/application logic</span></span></code></pre></div></div>
+
+<h3 class="relative group">Session
+    <div id="session" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#session" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/database/session.py</span></span></code></pre></div></div>
+<p>Responsible for:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Creating/managing SQLAlchemy database sessions</span></span></code></pre></div></div>
+<p>Relationship:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Service
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   | uses
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">SQLAlchemy Session
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   | communicates with
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">PostgreSQL</span></span></code></pre></div></div>
+<p>The service does not execute the session file.</p>
+<p>It receives a session object and uses it.</p>
+<hr>
+
+<h1 class="relative group">21. <code>db.add()</code>
+    <div id="21-dbadd" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-dbadd" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>When the service calls:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_user</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>SQLAlchemy begins tracking the new object in the current transaction.</p>
+<p>It is not the same as permanently committing the row.</p>
+<hr>
+
+<h1 class="relative group">22. <code>db.commit()</code>
+    <div id="22-dbcommit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-dbcommit" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Then:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></span></span></code></pre></div></div>
+<p>commits the transaction.</p>
+<p>Conceptually:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">new_user
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">db.add()
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">Current transaction
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">db.commit()
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">PostgreSQL</span></span></code></pre></div></div>
+<p>This is where the transaction is committed to PostgreSQL.</p>
+<p>SQLAlchemy generates the appropriate SQL.</p>
+<p>Conceptually, it is similar to:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;hemanth&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;hemanth@gmail.com&#39;</span><span class="p">);</span></span></span></code></pre></div></div>
+<p>We normally do not have to write that SQL ourselves.</p>
+<hr>
+
+<h1 class="relative group">23. <code>db.refresh()</code>
+    <div id="23-dbrefresh" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#23-dbrefresh" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>After committing:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">new_user</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>can refresh the Python object with values generated by the database.</p>
+<p>For example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Before database insert:
+</span></span><span class="line"><span class="cl">id = ?
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">After commit/refresh:
+</span></span><span class="line"><span class="cl">id = 1</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">24. Swagger UI
+    <div id="24-swagger-ui" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#24-swagger-ui" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>FastAPI automatically provides Swagger UI, normally at:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">http://127.0.0.1:8000/docs</span></span></code></pre></div></div>
+<p>Swagger is currently our API testing client.</p>
+<p>It is not our final frontend.</p>
+<p>Later:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">React Frontend
+</span></span><span class="line"><span class="cl">      |
+</span></span><span class="line"><span class="cl">      v
+</span></span><span class="line"><span class="cl">FastAPI</span></span></code></pre></div></div>
+<p>Instead of:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Swagger
+</span></span><span class="line"><span class="cl">      |
+</span></span><span class="line"><span class="cl">      v
+</span></span><span class="line"><span class="cl">FastAPI</span></span></code></pre></div></div>
+<p>Swagger is simply convenient during backend development.</p>
+<hr>
+
+<h1 class="relative group">25. Complete POST <code>/users</code> Flow
+    <div id="25-complete-post-users-flow" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#25-complete-post-users-flow" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Suppose Swagger sends:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">POST /api/v1/users
+</span></span></span><span class="line"><span class="cl"><span class="err">Content-Type: application/json</span></span></span></code></pre></div></div>
+<p>Body:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;username&#34;</span><span class="p">:</span> <span class="s2">&#34;hemanth&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;email&#34;</span><span class="p">:</span> <span class="s2">&#34;hemanth@gmail.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 1 — Swagger
+    <div id="step-1--swagger" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-1--swagger" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Swagger sends an HTTP request.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Swagger UI
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    | POST /api/v1/users
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">FastAPI</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 2 — Route
+    <div id="step-2--route" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-2--route" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>File:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/routes/users.py</span></span></code></pre></div></div>
+<p>FastAPI finds the <code>POST /users</code> route and calls it.</p>
+
+<h3 class="relative group">Step 3 — Pydantic
+    <div id="step-3--pydantic" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-3--pydantic" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>The request body is mapped to:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">user</span><span class="p">:</span> <span class="n">UserCreate</span></span></span></code></pre></div></div>
+<p>Pydantic validates it.</p>
+<p>If invalid, FastAPI returns a validation error and the service is not called.</p>
+
+<h3 class="relative group">Step 4 — Database dependency
+    <div id="step-4--database-dependency" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-4--database-dependency" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>FastAPI sees:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Depends</span><span class="p">(</span><span class="n">get_db</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>and calls:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/database/session.py
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">get_db()
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">SessionLocal()
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">SQLAlchemy Session</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 5 — Route calls service
+    <div id="step-5--route-calls-service" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-5--route-calls-service" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">create_user</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>The service receives:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">db
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> +--&gt; SQLAlchemy Session
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">user
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> +--&gt; Pydantic UserCreate</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 6 — Service creates SQLAlchemy object
+    <div id="step-6--service-creates-sqlalchemy-object" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-6--service-creates-sqlalchemy-object" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">username</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">email</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<p>This transfers values from the Pydantic object into a SQLAlchemy database model object.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Pydantic UserCreate
+</span></span><span class="line"><span class="cl">       |
+</span></span><span class="line"><span class="cl">       | copy values
+</span></span><span class="line"><span class="cl">       v
+</span></span><span class="line"><span class="cl">SQLAlchemy User</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 7 — Add
+    <div id="step-7--add" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-7--add" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_user</span><span class="p">)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 8 — Commit
+    <div id="step-8--commit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-8--commit" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span></span></span></code></pre></div></div>
+<p>SQLAlchemy communicates with PostgreSQL and commits the transaction.</p>
+
+<h3 class="relative group">Step 9 — Database
+    <div id="step-9--database" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-9--database" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>PostgreSQL now stores the row in:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">users</span></span></code></pre></div></div>
+<p>For example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">id | username | email
+</span></span><span class="line"><span class="cl">---+----------+--------------------
+</span></span><span class="line"><span class="cl">1  | hemanth  | hemanth@gmail.com</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 10 — Refresh
+    <div id="step-10--refresh" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-10--refresh" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">new_user</span><span class="p">)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 11 — Return
+    <div id="step-11--return" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-11--return" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>The service returns the result.</p>
+<p>FastAPI serializes the response to JSON.</p>
+<p>Swagger displays it.</p>
+
+<h3 class="relative group">Step 12 — Close session
+    <div id="step-12--close-session" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-12--close-session" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>After the request finishes:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></span></span></code></pre></div></div>
+<p>runs through the dependency cleanup.</p>
+<hr>
+
+<h1 class="relative group">26. Complete Runtime Flow — Memorize This
+    <div id="26-complete-runtime-flow--memorize-this" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#26-complete-runtime-flow--memorize-this" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Swagger UI / Frontend
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">POST /api/v1/users
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">FastAPI Route
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Pydantic UserCreate
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Validation
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Depends(get_db)
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">get_db()
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">SessionLocal()
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">SQLAlchemy Session
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">user_service.py
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Create SQLAlchemy User object
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">db.add()
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">db.commit()
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">PostgreSQL users table
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">db.refresh()
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">JSON response
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Swagger UI</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">27. Database Structure Flow — Memorize Separately
+    <div id="27-database-structure-flow--memorize-separately" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#27-database-structure-flow--memorize-separately" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>When changing tables:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app/models/user.py
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">User SQLAlchemy Model
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Base.metadata
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Alembic
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Migration File
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">alembic upgrade head
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">PostgreSQL Schema</span></span></code></pre></div></div>
+<p>Examples:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Create users table
+</span></span><span class="line"><span class="cl">Add password column
+</span></span><span class="line"><span class="cl">Add index
+</span></span><span class="line"><span class="cl">Create another table
+</span></span><span class="line"><span class="cl">Change a constraint</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">28. File-by-File Responsibility
+    <div id="28-file-by-file-responsibility" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#28-file-by-file-responsibility" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<table>
+	<thead>
+			<tr>
+					<th>File</th>
+					<th>Responsibility</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>.env</code></td>
+					<td>Configuration values/secrets</td>
+			</tr>
+			<tr>
+					<td><code>app/config/settings.py</code></td>
+					<td>Loads and validates configuration</td>
+			</tr>
+			<tr>
+					<td><code>app/main.py</code></td>
+					<td>Creates FastAPI app and registers routers</td>
+			</tr>
+			<tr>
+					<td><code>app/routes/health.py</code></td>
+					<td>Health endpoint</td>
+			</tr>
+			<tr>
+					<td><code>app/routes/users.py</code></td>
+					<td>User HTTP endpoints</td>
+			</tr>
+			<tr>
+					<td><code>app/schemas/user.py</code></td>
+					<td>Pydantic request/response validation</td>
+			</tr>
+			<tr>
+					<td><code>app/models/user.py</code></td>
+					<td>SQLAlchemy database model</td>
+			</tr>
+			<tr>
+					<td><code>app/database/base.py</code></td>
+					<td>SQLAlchemy declarative Base</td>
+			</tr>
+			<tr>
+					<td><code>app/database/session.py</code></td>
+					<td>Engine, SessionLocal, <code>get_db()</code></td>
+			</tr>
+			<tr>
+					<td><code>app/services/user_service.py</code></td>
+					<td>User business/application logic</td>
+			</tr>
+			<tr>
+					<td><code>alembic/env.py</code></td>
+					<td>Connects Alembic to config and SQLAlchemy metadata</td>
+			</tr>
+			<tr>
+					<td><code>alembic/versions/</code></td>
+					<td>Migration files</td>
+			</tr>
+			<tr>
+					<td><code>alembic.ini</code></td>
+					<td>Alembic configuration</td>
+			</tr>
+	</tbody>
+</table>
+<hr>
+
+<h1 class="relative group">29. What We Have Built
+    <div id="29-what-we-have-built" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#29-what-we-have-built" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+
+<h2 class="relative group">Application
+    <div id="application" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#application" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>FastAPI application</li>
+<li>Uvicorn server</li>
+<li>Root endpoint</li>
+<li>Health endpoint</li>
+<li>User endpoint</li>
+</ul>
+
+<h2 class="relative group">Configuration
+    <div id="configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#configuration" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li><code>.env</code></li>
+<li>Pydantic Settings</li>
+<li>Centralized configuration</li>
+</ul>
+
+<h2 class="relative group">Database
+    <div id="database" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#database" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>PostgreSQL installed</li>
+<li><code>devops_ai_platform</code> database created</li>
+<li><code>users</code> table created</li>
+<li><code>alembic_version</code> table created</li>
+</ul>
+
+<h2 class="relative group">ORM
+    <div id="orm" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#orm" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>SQLAlchemy</li>
+<li>SQLAlchemy Base</li>
+<li>User model</li>
+<li>Database engine</li>
+<li>Database session</li>
+</ul>
+
+<h2 class="relative group">Migrations
+    <div id="migrations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#migrations" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>Alembic initialized</li>
+<li>Autogeneration configured</li>
+<li>User migration generated</li>
+<li>Migration applied</li>
+</ul>
+
+<h2 class="relative group">Validation
+    <div id="validation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#validation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>Pydantic <code>UserCreate</code></li>
+<li>Username validation</li>
+<li>Email validation</li>
+<li><code>EmailStr</code></li>
+</ul>
+
+<h2 class="relative group">API
+    <div id="api" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#api" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>POST user endpoint</li>
+<li>Database dependency</li>
+<li>Service layer</li>
+<li>Swagger testing</li>
+</ul>
+<hr>
+
+<h1 class="relative group">30. What We Have Not Built Yet
+    <div id="30-what-we-have-not-built-yet" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#30-what-we-have-not-built-yet" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Possible next stages:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">GET /users
+</span></span><span class="line"><span class="cl">GET /users/{id}
+</span></span><span class="line"><span class="cl">PUT /users/{id}
+</span></span><span class="line"><span class="cl">DELETE /users/{id}</span></span></code></pre></div></div>
+<p>Then:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Authentication
+</span></span><span class="line"><span class="cl">JWT
+</span></span><span class="line"><span class="cl">Password hashing
+</span></span><span class="line"><span class="cl">Authorization</span></span></code></pre></div></div>
+<p>Eventually:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">AWS integration
+</span></span><span class="line"><span class="cl">Terraform integration
+</span></span><span class="line"><span class="cl">Kubernetes integration
+</span></span><span class="line"><span class="cl">CI/CD
+</span></span><span class="line"><span class="cl">Monitoring
+</span></span><span class="line"><span class="cl">AI features
+</span></span><span class="line"><span class="cl">DevOps tool integrations
+</span></span><span class="line"><span class="cl">React dashboard</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">31. Interview Explanation
+    <div id="31-interview-explanation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-interview-explanation" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>If asked:</p>
+<blockquote><p>Explain your project architecture.</p>
+</blockquote><p>A strong answer:</p>
+<blockquote><p>&ldquo;I&rsquo;m building a DevOps AI Platform with FastAPI as the backend. I use Pydantic for request validation, SQLAlchemy as the ORM, PostgreSQL as the database, and Alembic for database schema migrations. The application follows a layered structure. Incoming requests enter through the route layer, Pydantic validates the request body, the route obtains a database session through FastAPI dependency injection, and then passes the validated data and session to the service layer. The service contains the application logic and uses SQLAlchemy to create or modify database records. SQLAlchemy communicates with PostgreSQL through the database session. Alembic is separate from the runtime request flow and is used to manage database schema changes.&rdquo;</p>
+</blockquote><hr>
+
+<h1 class="relative group">32. What You Actually Need to Remember
+    <div id="32-what-you-actually-need-to-remember" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-what-you-actually-need-to-remember" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Do not try to memorize every line.</p>
+<p>Remember these relationships:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">.env
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">settings.py
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">Application configuration</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">SQLAlchemy Model
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">Alembic
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">Database Table</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Pydantic Schema
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">Validate API input</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Session
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">Database communication</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Service
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">Business logic</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Route
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">HTTP/API layer</span></span></code></pre></div></div>
+<p>Most important runtime flow:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Client
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">FastAPI Route
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">Pydantic
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">get_db()
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">Service
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">SQLAlchemy Session
+</span></span><span class="line"><span class="cl">  ↓
+</span></span><span class="line"><span class="cl">PostgreSQL</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">33. Simple Mental Model
+    <div id="33-simple-mental-model" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-simple-mental-model" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Think of a restaurant:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Swagger / Frontend
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl">    Customer
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl"> FastAPI Route
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl">     Waiter
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl">    Pydantic
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl">Check that the order is valid
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl">    Service
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl">    Kitchen
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl">SQLAlchemy Session
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl">Database communication
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl"> PostgreSQL
+</span></span><span class="line"><span class="cl">       ↓
+</span></span><span class="line"><span class="cl">   Storage</span></span></code></pre></div></div>
+<p>Alembic is different:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Alembic
+</span></span><span class="line"><span class="cl">   ↓
+</span></span><span class="line"><span class="cl">Changes the restaurant&#39;s structure
+</span></span><span class="line"><span class="cl">(tables/columns/indexes)</span></span></code></pre></div></div>
+<p>It is not normally involved in every customer order.</p>
+<hr>
+
+<h1 class="relative group">34. Final Mental Picture
+    <div id="34-final-mental-picture" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-final-mental-picture" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">                         CLIENT
+</span></span><span class="line"><span class="cl">                           |
+</span></span><span class="line"><span class="cl">                    Swagger / Frontend
+</span></span><span class="line"><span class="cl">                           |
+</span></span><span class="line"><span class="cl">                           v
+</span></span><span class="line"><span class="cl">                    +-------------+
+</span></span><span class="line"><span class="cl">                    |   FastAPI   |
+</span></span><span class="line"><span class="cl">                    |    Route    |
+</span></span><span class="line"><span class="cl">                    +------+------+ 
+</span></span><span class="line"><span class="cl">                           |
+</span></span><span class="line"><span class="cl">                    Request Data
+</span></span><span class="line"><span class="cl">                           |
+</span></span><span class="line"><span class="cl">                           v
+</span></span><span class="line"><span class="cl">                    +-------------+
+</span></span><span class="line"><span class="cl">                    |   Pydantic  |
+</span></span><span class="line"><span class="cl">                    |  Validation |
+</span></span><span class="line"><span class="cl">                    +------+------+ 
+</span></span><span class="line"><span class="cl">                           |
+</span></span><span class="line"><span class="cl">                     Valid Data
+</span></span><span class="line"><span class="cl">                           |
+</span></span><span class="line"><span class="cl">                           v
+</span></span><span class="line"><span class="cl">                    +-------------+
+</span></span><span class="line"><span class="cl">                    |   Service   |
+</span></span><span class="line"><span class="cl">                    |    Logic    |
+</span></span><span class="line"><span class="cl">                    +------+------+ 
+</span></span><span class="line"><span class="cl">                           |
+</span></span><span class="line"><span class="cl">                    SQLAlchemy Model
+</span></span><span class="line"><span class="cl">                           |
+</span></span><span class="line"><span class="cl">                           v
+</span></span><span class="line"><span class="cl">                    +-------------+
+</span></span><span class="line"><span class="cl">                    |   Session   |
+</span></span><span class="line"><span class="cl">                    |  db.add()   |
+</span></span><span class="line"><span class="cl">                    |  db.commit()|
+</span></span><span class="line"><span class="cl">                    +------+------+ 
+</span></span><span class="line"><span class="cl">                           |
+</span></span><span class="line"><span class="cl">                           v
+</span></span><span class="line"><span class="cl">                    +-------------+
+</span></span><span class="line"><span class="cl">                    | PostgreSQL  |
+</span></span><span class="line"><span class="cl">                    |    users    |
+</span></span><span class="line"><span class="cl">                    +-------------+
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DATABASE STRUCTURE FLOW
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">SQLAlchemy Models
+</span></span><span class="line"><span class="cl">       |
+</span></span><span class="line"><span class="cl">       v
+</span></span><span class="line"><span class="cl">    Alembic
+</span></span><span class="line"><span class="cl">       |
+</span></span><span class="line"><span class="cl">       v
+</span></span><span class="line"><span class="cl">   Migration
+</span></span><span class="line"><span class="cl">       |
+</span></span><span class="line"><span class="cl">       v
+</span></span><span class="line"><span class="cl">  PostgreSQL</span></span></code></pre></div></div>
+<p><strong>If you understand these two diagrams, you understand the architecture we have built so far.</strong></p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/linux/linux-commands/">
+              <span class="leading-6">
+                Linux Commands Every DevOps Engineer Must Know&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2024-01-02T00:00:00&#43;00:00">2 January 2024</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hemanth Kumar Motukuri
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

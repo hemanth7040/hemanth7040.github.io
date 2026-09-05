@@ -4,11 +4,19 @@
 
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-05T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/linux/ffle_system_hierarchy/</loc>
+    <lastmod>2026-09-05T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/linux/linux_system_administration_commands/</loc>
+    <lastmod>2026-09-05T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-05T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/posts/kubernetes/01-why-kubernetes/</loc>
@@ -65,6 +73,9 @@
   <url>
     <loc>http://localhost:1313/posts/linux/linux-commands/</loc>
     <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/git/devops_ai_platform_notion_notes/</loc>
   </url>
   <url>
     <loc>http://localhost:1313/contact/</loc>
