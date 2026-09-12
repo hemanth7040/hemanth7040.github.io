@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
-    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Sep 2026 00:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Docker Interview &amp; Learning Guide: From Fundamentals to Production</title>
+      <link>http://localhost:1313/posts/docker/docker_interview/</link>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0530</pubDate>
+      
+      <guid>http://localhost:1313/posts/docker/docker_interview/</guid>
+      <description>17 essential Docker topics explained in simple language with commands, diagrams, real-world examples, and senior-level interview scenarios — built for DevOps engineers preparing for technical interviews.</description>
+      
+    </item>
     
     <item>
       <title>Why Kubernetes? | Kubernetes From Scratch - Day 1</title>
