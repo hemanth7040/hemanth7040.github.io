@@ -1,0 +1,2639 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Amazon EKS: A Beginner-Friendly Hands-On Setup Guide &middot; Hemanth Kumar Motukuri</title>
+    <meta name="title" content="Amazon EKS: A Beginner-Friendly Hands-On Setup Guide &middot; Hemanth Kumar Motukuri">
+  
+
+  
+  
+    <meta name="description" content="A beginner-friendly, hands-on guide to Amazon EKS with simple real-world examples for every concept — create a cluster, connect kubectl, deploy an app, expose it with a LoadBalancer, scale it, update it, troubleshoot it, and clean up.">
+  
+  
+    <meta name="keywords" content="AWS,EKS,Kubernetes,DevOps,kubectl,eksctl,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/eks/eks/">
+  
+
+  
+  
+    <meta name="author" content="Hemanth Kumar Motukuri">
+  
+  
+    
+      
+        
+          <link href="https://github.com/hemanth7040" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://linkedin.com/in/hemanth-kumar-motukuri" rel="me">
+        
+      
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/eks/eks/">
+	<meta property="og:site_name" content="Hemanth Kumar Motukuri">
+	<meta property="og:title" content="Amazon EKS: A Beginner-Friendly Hands-On Setup Guide">
+	<meta property="og:description" content="A beginner-friendly, hands-on guide to Amazon EKS with simple real-world examples for every concept — create a cluster, connect kubectl, deploy an app, expose it with a LoadBalancer, scale it, update it, troubleshoot it, and clean up.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-09-14T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-09-14T00:00:00+00:00">
+		<meta property="article:tag" content="AWS">
+		<meta property="article:tag" content="EKS">
+		<meta property="article:tag" content="Kubernetes">
+		<meta property="article:tag" content="Devops">
+		<meta property="article:tag" content="Kubectl">
+		<meta property="article:tag" content="Eksctl">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Amazon EKS: A Beginner-Friendly Hands-On Setup Guide">
+	<meta name="twitter:description" content="A beginner-friendly, hands-on guide to Amazon EKS with simple real-world examples for every concept — create a cluster, connect kubectl, deploy an app, expose it with a LoadBalancer, scale it, update it, troubleshoot it, and clean up.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.e42b8738daaa01b7a39847acf7782479a60c4fa1a7a994dd0bc104c9c5eb45bfa6392d53a404952aa24dfff6c935660eee9f2fd364e6be1c2f73c30ae35bcd4f.css"
+    integrity="sha512-5CuHONqqAbejmEes93gkeaYMT6GnqZTdC8EEycXrRb&#43;mOS1TpASVKqJN//bJNWYO7p8v02Tmvhwvc8MK41vNTw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.c41769a6d0a0f3c9fae21f229a8ff36dbf91ab46022c5e71ec6600b9be681f5f41e6148129be6881788a258ce35a23cb28fb4b739843d8ffc1efec4081c51313.js"
+      integrity="sha512-xBdpptCg88n64h8imo/zbb&#43;Rq0YCLF5x7GYAub5oH19B5hSBKb5ogXiKJYzjWiPLKPtLc5hD2P/B7&#43;xAgcUTEw=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "My Technical Blog",
+    "name": "Amazon EKS: A Beginner-Friendly Hands-On Setup Guide",
+    "headline": "Amazon EKS: A Beginner-Friendly Hands-On Setup Guide",
+    "description": "A beginner-friendly, hands-on guide to Amazon EKS with simple real-world examples for every concept — create a cluster, connect kubectl, deploy an app, expose it with a LoadBalancer, scale it, update it, troubleshoot it, and clean up.",
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/eks/eks/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hemanth Kumar Motukuri"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-09-14T00:00:00\u002b00:00",
+    "datePublished": "2026-09-14T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-09-14T00:00:00\u002b00:00",
+    
+    "keywords": ["AWS","EKS","Kubernetes","DevOps","kubectl","eksctl"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3169"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Hemanth Kumar Motukuri
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Technical Topics">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/projects/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Projects"
+      title="Projects">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Projects
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/resume/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Resume"
+      title="Resume">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Resume
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About Me"
+      title="About Me">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About Me
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/contact/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Contact"
+      title="Contact">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Contact
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Technical Topics" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/projects/"
+        aria-label="Projects"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Projects" class="text-2xl font-bold tracking-tight">
+          Projects
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/resume/"
+        aria-label="Resume"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Resume" class="text-2xl font-bold tracking-tight">
+          Resume
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About Me"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About Me" class="text-2xl font-bold tracking-tight">
+          About Me
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/contact/"
+        aria-label="Contact"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Contact" class="text-2xl font-bold tracking-tight">
+          Contact
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Amazon EKS: A Beginner-Friendly Hands-On Setup Guide
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-09-14T00:00:00&#43;00:00">14 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3169 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">15 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/eks/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Eks
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/aws/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AWS
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/eks/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    EKS
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Kubernetes
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/devops/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Devops
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/kubectl/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Kubectl
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/eksctl/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Eksctl
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Hemanth Kumar Motukuri"
+        src="/img/profile_pic_hu_f57b3ef112bc3de6.jpg"
+        data-zoom-src="/img/profile_pic_hu_d6b149a9a3d854d6.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Hemanth Kumar Motukuri
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">DevOps &amp; MLOps | Kubernetes | AWS</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/hemanth7040"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 496 496" xml:space="preserve">
+<path id="SVGCleanerId_0" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+	c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+	c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+	c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+	c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+	c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+	c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+	c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+	c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+<g>
+	<path id="SVGCleanerId_0_1_" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+		c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+		c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+		c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+		c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+		c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+		c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+</g>
+<g>
+	<path style="fill:#114C82;" d="M378.496,109.131c13.128,33.904,4.752,58.928,2.2,65.176c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163c0-29.56-5.152-57.896-14.568-84.2
+		C447.24,133.963,409.184,109.987,378.496,109.131z"/>
+	<path style="fill:#114C82;" d="M192.976,377.323c2.784-5.616,6.184-9.984,9.76-13.144c-30.176-3.456-61.168-11.512-83.048-33.744
+		C136.52,358.451,163.928,371.195,192.976,377.323z"/>
+</g>
+<path style="fill:#6CA9EA;" d="M12.912,270.947c0-137.536,111.048-249,247.992-249c76.04,0,144.056,34.392,189.536,88.488
+	C405.52,46.755,331.616,5.163,247.992,5.163C111.048,5.163,0,116.627,0,254.163c0,61.32,22.12,117.424,58.752,160.792
+	C29.944,374.291,12.912,324.643,12.912,270.947z"/>
+<path style="fill:#083E66;" d="M322.712,426.899c0-23.232-7.928-38.44-16.832-46.128c55.248-6.16,113.24-27.216,113.24-122.848
+	c0-27.184-9.6-49.4-25.52-66.824c2.576-6.296,11.096-31.608-2.456-65.872c0,0-2.576-0.792-7.896-0.488
+	c5.808,25.84-0.416,44.32-2.552,49.568c15.904,17.424,25.504,39.648,25.504,66.832c0,95.64-57.984,116.68-113.232,122.856
+	c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296c0,5.872,3.496,12.568,12.92,12.408
+	C322.488,479.555,322.712,455.659,322.712,426.899z"/>
+<path style="fill:#114C82;" d="M117.464,423.995c5.208,10.72,22.712,36.4,68.888,30.992c-0.064-5.648-0.112-11.976-0.144-18.928
+	C150.584,443.835,129.552,434.667,117.464,423.995z"/>
+<path style="fill:#6CA9EA;" d="M126.368,391.387c-1.592-2.4-4.576-6.472-8.904-10.544
+	C120.272,385.011,123.256,388.507,126.368,391.387z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/hemanth-kumar-motukuri"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 382 382" xml:space="preserve">
+<path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:hemanthkumarmotukuri@gmail.com"
+          
+          target="_blank"
+          aria-label="Gmail"
+          title="Gmail"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?>
+<!-- License: MIT. Made by Garuda Technology: https://github.com/garudatechnologydevelopers/sketch-icons -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z" fill="white"/>
+<path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" fill="#EA4335"/>
+<path d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z" fill="#FBBC05"/>
+<path d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z" fill="#34A853"/>
+<path d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z" fill="#C5221F"/>
+<path d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z" fill="#C5221F"/>
+<path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" fill="#C5221F"/>
+<path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" fill="#4285F4"/>
+</svg></span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">Amazon EKS: A Beginner-Friendly Hands-On Setup Guide
+    <div id="amazon-eks-a-beginner-friendly-hands-on-setup-guide" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#amazon-eks-a-beginner-friendly-hands-on-setup-guide" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>If you are new to Amazon EKS, the best way to learn is to create a cluster yourself and deploy a small application.</p>
+<p>This guide takes you from an AWS account to a working EKS application.</p>
+<p>We will use:</p>
+<ul>
+<li><strong>Amazon EKS</strong> for Kubernetes</li>
+<li><strong>AWS CLI</strong> to interact with AWS</li>
+<li><strong>kubectl</strong> to interact with Kubernetes</li>
+<li><strong>eksctl</strong> to create the EKS cluster</li>
+<li><strong>Nginx</strong> as our sample application</li>
+<li><strong>Amazon ECR</strong> briefly when we deploy a custom image</li>
+</ul>
+<p>The goal is:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">AWS Account
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">Configure AWS CLI
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">Install kubectl + eksctl
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">Create EKS Cluster
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">Connect kubectl
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">Deploy Application
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">Create Service
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">Access Application
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">Scale / Update / Rollback
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">Cleanup</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">1. What Are We Going to Build?
+    <div id="1-what-are-we-going-to-build" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-what-are-we-going-to-build" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Our example application will be Nginx.</p>
+<p>At the end, the architecture will look like:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">                    AWS Cloud
+</span></span><span class="line"><span class="cl">                       |
+</span></span><span class="line"><span class="cl">                       v
+</span></span><span class="line"><span class="cl">                Amazon EKS Cluster
+</span></span><span class="line"><span class="cl">                       |
+</span></span><span class="line"><span class="cl">              +--------+--------+
+</span></span><span class="line"><span class="cl">              |                 |
+</span></span><span class="line"><span class="cl">         Worker Node 1     Worker Node 2
+</span></span><span class="line"><span class="cl">              |                 |
+</span></span><span class="line"><span class="cl">           Pod Nginx         Pod Nginx
+</span></span><span class="line"><span class="cl">              |                 |
+</span></span><span class="line"><span class="cl">              +--------+--------+
+</span></span><span class="line"><span class="cl">                       |
+</span></span><span class="line"><span class="cl">                       v
+</span></span><span class="line"><span class="cl">               Kubernetes Service
+</span></span><span class="line"><span class="cl">                       |
+</span></span><span class="line"><span class="cl">                       v
+</span></span><span class="line"><span class="cl">                AWS Load Balancer
+</span></span><span class="line"><span class="cl">                       |
+</span></span><span class="line"><span class="cl">                       v
+</span></span><span class="line"><span class="cl">                     User</span></span></code></pre></div></div>
+<p>We will first deploy the public Nginx image so that beginners can focus on EKS.</p>
+<p>Later, we will see how your own image from ECR fits into the same setup.</p>
+<blockquote><p><strong>Easy example:</strong> Think of EKS as a hotel. AWS builds and maintains the hotel building (the control plane). You bring your own guests (your application, Nginx in this case) and the hotel gives them rooms (worker nodes) to stay in. Your job is to check the guests in, not to build the hotel.</p>
+</blockquote><hr>
+
+<h1 class="relative group">2. Prerequisites
+    <div id="2-prerequisites" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-prerequisites" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>You need:</p>
+<ul>
+<li>An AWS account</li>
+<li>An IAM identity with permissions to create the required resources</li>
+<li>AWS CLI</li>
+<li><code>kubectl</code></li>
+<li><code>eksctl</code></li>
+<li>A terminal</li>
+</ul>
+<p>This tutorial uses <code>ap-south-1</code> as the example AWS Region. You can replace it with another Region that supports EKS.</p>
+<p>For a real production environment, use your organization&rsquo;s approved IAM and AWS account setup.</p>
+<hr>
+
+<h1 class="relative group">3. Configure AWS CLI
+    <div id="3-configure-aws-cli" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-configure-aws-cli" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Check whether AWS CLI is installed:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws --version</span></span></code></pre></div></div>
+<p>Configure your AWS credentials:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws configure</span></span></code></pre></div></div>
+<p>Example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">AWS Access Key ID: ********
+</span></span><span class="line"><span class="cl">AWS Secret Access Key: ********
+</span></span><span class="line"><span class="cl">Default region name: ap-south-1
+</span></span><span class="line"><span class="cl">Default output format: json</span></span></code></pre></div></div>
+<p>For production, prefer temporary credentials, IAM roles, or federation instead of long-lived access keys where possible.</p>
+<hr>
+
+<h1 class="relative group">4. Verify AWS Access
+    <div id="4-verify-aws-access" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-verify-aws-access" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Run:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws sts get-caller-identity</span></span></code></pre></div></div>
+<p>Example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;Account&#34;</span><span class="p">:</span> <span class="s2">&#34;123456789012&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;Arn&#34;</span><span class="p">:</span> <span class="s2">&#34;arn:aws:iam::123456789012:user/devops-user&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>If this command fails, fix AWS authentication before continuing.</p>
+<hr>
+
+<h1 class="relative group">5. Install kubectl
+    <div id="5-install-kubectl" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-install-kubectl" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p><code>kubectl</code> is the command-line tool used to communicate with Kubernetes.</p>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl version --client</span></span></code></pre></div></div>
+<p>The relationship is:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Your Laptop
+</span></span><span class="line"><span class="cl">     |
+</span></span><span class="line"><span class="cl">     | kubectl
+</span></span><span class="line"><span class="cl">     v
+</span></span><span class="line"><span class="cl">EKS Kubernetes API Server</span></span></code></pre></div></div>
+<p>We will configure <code>kubectl</code> after creating the cluster.</p>
+<hr>
+
+<h1 class="relative group">6. Install eksctl
+    <div id="6-install-eksctl" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-install-eksctl" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p><code>eksctl</code> is a command-line tool that simplifies EKS cluster creation and management.</p>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eksctl version</span></span></code></pre></div></div>
+<p>For beginners, <code>eksctl</code> is a good way to learn EKS because it handles much of the basic cluster setup.</p>
+<p>Later, you can learn how to create EKS infrastructure using Terraform for more controlled infrastructure-as-code workflows.</p>
+<hr>
+
+<h1 class="relative group">7. Choose the AWS Region
+    <div id="7-choose-the-aws-region" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-choose-the-aws-region" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>For this tutorial:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">AWS_REGION</span><span class="o">=</span>ap-south-1</span></span></code></pre></div></div>
+<p>Verify:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$AWS_REGION</span></span></span></code></pre></div></div>
+<p>You should see:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">ap-south-1</span></span></code></pre></div></div>
+<p>If you use another Region, replace <code>ap-south-1</code> in the commands.</p>
+<hr>
+
+<h1 class="relative group">8. Create Your First EKS Cluster
+    <div id="8-create-your-first-eks-cluster" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-create-your-first-eks-cluster" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Now create the cluster:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eksctl create cluster   --name my-first-eks   --region ap-south-1   --nodes <span class="m">2</span>   --node-type t3.medium</span></span></code></pre></div></div>
+<p>This means:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Cluster name : my-first-eks
+</span></span><span class="line"><span class="cl">Region       : ap-south-1
+</span></span><span class="line"><span class="cl">Nodes        : 2
+</span></span><span class="line"><span class="cl">Instance type: t3.medium</span></span></code></pre></div></div>
+<p>Cluster creation can take several minutes because AWS needs to create and configure multiple resources.</p>
+<hr>
+
+<h1 class="relative group">9. What Does <code>eksctl</code> Create?
+    <div id="9-what-does-eksctl-create" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-what-does-eksctl-create" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>A beginner may think that an EKS cluster is only a Kubernetes control plane.</p>
+<p>In reality, a basic EKS environment also needs networking, compute, IAM, and security configuration.</p>
+<p>Conceptually:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">eksctl
+</span></span><span class="line"><span class="cl">  |
+</span></span><span class="line"><span class="cl">  +----&gt; VPC / Subnets
+</span></span><span class="line"><span class="cl">  |
+</span></span><span class="line"><span class="cl">  +----&gt; EKS Control Plane
+</span></span><span class="line"><span class="cl">  |
+</span></span><span class="line"><span class="cl">  +----&gt; Worker Node Group
+</span></span><span class="line"><span class="cl">  |
+</span></span><span class="line"><span class="cl">  +----&gt; IAM Configuration
+</span></span><span class="line"><span class="cl">  |
+</span></span><span class="line"><span class="cl">  +----&gt; Security Groups
+</span></span><span class="line"><span class="cl">  |
+</span></span><span class="line"><span class="cl">  +----&gt; Kubernetes Access Configuration</span></span></code></pre></div></div>
+<p>The exact resources depend on the options and <code>eksctl</code> version you use.</p>
+<blockquote><p><strong>Easy example:</strong> Ordering a &ldquo;combo meal&rdquo; at a restaurant is one order, but you get a burger, fries, and a drink together. Running one <code>eksctl create cluster</code> command is similar — it is one instruction, but AWS creates many resources behind the scenes (network, servers, security rules, and more) to give you a working cluster.</p>
+</blockquote><hr>
+
+<h1 class="relative group">10. Understand the EKS Control Plane and Nodes
+    <div id="10-understand-the-eks-control-plane-and-nodes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#10-understand-the-eks-control-plane-and-nodes" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>An EKS cluster has two major areas.</p>
+
+<h2 class="relative group">Control Plane
+    <div id="control-plane" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#control-plane" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>AWS manages the EKS control plane.</p>
+<p>It contains Kubernetes control-plane components such as:</p>
+<ul>
+<li>API server</li>
+<li>Scheduler</li>
+<li>Controllers</li>
+<li>Cluster state storage</li>
+</ul>
+<p>You don&rsquo;t manage the underlying control-plane machines yourself.</p>
+
+<h2 class="relative group">Worker Nodes
+    <div id="worker-nodes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#worker-nodes" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Worker nodes run your application Pods.</p>
+<p>Example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">EKS Cluster
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> +-- AWS-managed Control Plane
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> +-- Worker Node 1
+</span></span><span class="line"><span class="cl"> |      |
+</span></span><span class="line"><span class="cl"> |      +-- Pod
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> +-- Worker Node 2
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        +-- Pod</span></span></code></pre></div></div>
+<p>This is one of the main benefits of EKS: AWS manages the Kubernetes control plane for you.</p>
+<blockquote><p><strong>Easy example:</strong> Picture a delivery company. AWS runs the head office that plans routes and tracks packages (the control plane). Your worker nodes are the delivery trucks that actually carry the packages (your Pods). You never have to manage the head office — you just load the trucks with the right packages.</p>
+</blockquote><hr>
+
+<h1 class="relative group">11. Verify the Cluster
+    <div id="11-verify-the-cluster" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-verify-the-cluster" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Run:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eksctl get cluster</span></span></code></pre></div></div>
+<p>Example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">NAME            REGION       EKSCTL CREATED
+</span></span><span class="line"><span class="cl">my-first-eks    ap-south-1   True</span></span></code></pre></div></div>
+<p>You can also check with AWS CLI:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws eks list-clusters --region ap-south-1</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">12. Configure kubectl
+    <div id="12-configure-kubectl" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#12-configure-kubectl" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Now connect your local <code>kubectl</code> to EKS:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws eks update-kubeconfig   --region ap-south-1   --name my-first-eks</span></span></code></pre></div></div>
+<p>This updates your kubeconfig with the EKS cluster information.</p>
+<p>Conceptually:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">kubectl
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">kubeconfig
+</span></span><span class="line"><span class="cl">   |
+</span></span><span class="line"><span class="cl">   v
+</span></span><span class="line"><span class="cl">EKS API Server</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">13. Verify the Worker Nodes
+    <div id="13-verify-the-worker-nodes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#13-verify-the-worker-nodes" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Run:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get nodes</span></span></code></pre></div></div>
+<p>Example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">NAME                                         STATUS   ROLES
+</span></span><span class="line"><span class="cl">ip-10-0-1-10.ap-south-1.compute.internal   Ready    &lt;none&gt;
+</span></span><span class="line"><span class="cl">ip-10-0-2-20.ap-south-1.compute.internal   Ready    &lt;none&gt;</span></span></code></pre></div></div>
+<p>The important value is:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">STATUS = Ready</span></span></code></pre></div></div>
+<p>If your nodes are Ready, the basic EKS cluster is working.</p>
+<hr>
+
+<h1 class="relative group">14. Check Kubernetes Namespaces
+    <div id="14-check-kubernetes-namespaces" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#14-check-kubernetes-namespaces" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Run:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get namespaces</span></span></code></pre></div></div>
+<p>You will normally see namespaces such as:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">default
+</span></span><span class="line"><span class="cl">kube-node-lease
+</span></span><span class="line"><span class="cl">kube-public
+</span></span><span class="line"><span class="cl">kube-system</span></span></code></pre></div></div>
+<p>For this beginner example, we will use the <code>default</code> namespace.</p>
+<p>For real applications, use a namespace strategy that matches your project and environment structure.</p>
+<hr>
+
+<h1 class="relative group">15. Deploy Your First Application
+    <div id="15-deploy-your-first-application" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#15-deploy-your-first-application" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Now deploy Nginx:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create deployment nginx   --image<span class="o">=</span>nginx:latest</span></span></code></pre></div></div>
+<p>Check the Deployment:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get deployment</span></span></code></pre></div></div>
+<p>Example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">NAME    READY   UP-TO-DATE   AVAILABLE
+</span></span><span class="line"><span class="cl">nginx   1/1     1            1</span></span></code></pre></div></div>
+<p>Check the Pod:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods</span></span></code></pre></div></div>
+<p>Example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">NAME                     READY   STATUS    RESTARTS
+</span></span><span class="line"><span class="cl">nginx-7f8c6d9d4f-abc12  1/1     Running   0</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">16. Understand Deployment → ReplicaSet → Pod
+    <div id="16-understand-deployment--replicaset--pod" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#16-understand-deployment--replicaset--pod" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>When you create a Deployment, Kubernetes creates the resources needed to maintain the desired number of Pods.</p>
+<p>The simplified relationship is:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Deployment
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">ReplicaSet
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Pod
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Container
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Nginx</span></span></code></pre></div></div>
+<p>If the Pod crashes, the Deployment/ReplicaSet can create another Pod to maintain the desired state.</p>
+<p>This is one of the core ideas of Kubernetes.</p>
+<blockquote><p><strong>Easy example:</strong> Think of a call center that must always have 3 agents answering calls. The Deployment is the policy (&ldquo;always keep 3 agents on duty&rdquo;). The ReplicaSet is the shift supervisor who checks the count and calls in a replacement the moment someone leaves. The Pod is the actual agent taking calls. If one agent goes home sick, the supervisor immediately brings in a new one so the count stays at 3.</p>
+</blockquote><hr>
+
+<h1 class="relative group">17. Check Pod Details
+    <div id="17-check-pod-details" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#17-check-pod-details" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Get the Pod name:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods</span></span></code></pre></div></div>
+<p>Then:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl describe pod &lt;pod-name&gt;</span></span></code></pre></div></div>
+<p>For example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl describe pod nginx-7f8c6d9d4f-abc12</span></span></code></pre></div></div>
+<p>This is an important troubleshooting command.</p>
+<p>It shows information such as:</p>
+<ul>
+<li>Pod status</li>
+<li>Node</li>
+<li>Container</li>
+<li>Image</li>
+<li>Events</li>
+<li>Volumes</li>
+<li>Conditions</li>
+</ul>
+<hr>
+
+<h1 class="relative group">18. Check Application Logs
+    <div id="18-check-application-logs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#18-check-application-logs" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Run:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl logs &lt;pod-name&gt;</span></span></code></pre></div></div>
+<p>For example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl logs nginx-7f8c6d9d4f-abc12</span></span></code></pre></div></div>
+<p>When an application fails, logs are usually one of the first things you should check.</p>
+<hr>
+
+<h1 class="relative group">19. Test the Application with Port Forwarding
+    <div id="19-test-the-application-with-port-forwarding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#19-test-the-application-with-port-forwarding" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Before creating an AWS Load Balancer, we can test Nginx locally.</p>
+<p>Run:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl port-forward deployment/nginx 8080:80</span></span></code></pre></div></div>
+<p>Now open:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">http://localhost:8080</span></span></code></pre></div></div>
+<p>You should see the Nginx welcome page.</p>
+<p>Port forwarding is useful for quick testing.</p>
+<hr>
+
+<h1 class="relative group">20. Expose the Application Using a Service
+    <div id="20-expose-the-application-using-a-service" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#20-expose-the-application-using-a-service" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>For external access, create a Kubernetes Service:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl expose deployment nginx   --type<span class="o">=</span>LoadBalancer   --port<span class="o">=</span><span class="m">80</span>   --target-port<span class="o">=</span><span class="m">80</span></span></span></code></pre></div></div>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get service nginx</span></span></code></pre></div></div>
+<p>Initially, the external address may show:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">&lt;pending&gt;</span></span></code></pre></div></div>
+<p>Wait for AWS to provision the load balancer and check again:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get service nginx</span></span></code></pre></div></div>
+<p>The external address will normally be an AWS load balancer hostname.</p>
+<hr>
+
+<h1 class="relative group">21. Understand the Service Traffic Flow
+    <div id="21-understand-the-service-traffic-flow" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-understand-the-service-traffic-flow" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>The request path becomes:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">User
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> v
+</span></span><span class="line"><span class="cl">AWS Load Balancer
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> v
+</span></span><span class="line"><span class="cl">Kubernetes Service
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> v
+</span></span><span class="line"><span class="cl">Nginx Pod
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> v
+</span></span><span class="line"><span class="cl">Nginx Container</span></span></code></pre></div></div>
+<p>The Service selects Pods using labels.</p>
+<blockquote><p><strong>Easy example:</strong> A Service is like a restaurant&rsquo;s phone number. Customers (users) always dial the same number, no matter which staff member (Pod) answers. Staff can change shifts, take breaks, or be replaced, but the phone number stays the same, so customers never notice the difference.</p>
+</blockquote><p>You can inspect the Service:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl describe service nginx</span></span></code></pre></div></div>
+<p>You can also inspect the endpoints:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get endpoints nginx</span></span></code></pre></div></div>
+<p>On newer Kubernetes versions, EndpointSlices can also be inspected:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get endpointslices</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">22. Scale the Application
+    <div id="22-scale-the-application" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-scale-the-application" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Suppose you want three copies of Nginx.</p>
+<p>Run:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl scale deployment nginx --replicas<span class="o">=</span><span class="m">3</span></span></span></code></pre></div></div>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods</span></span></code></pre></div></div>
+<p>You should see three Pods.</p>
+<blockquote><p><strong>Easy example:</strong> Imagine a coffee shop that gets busier around lunchtime. Scaling from 1 Pod to 3 Pods is like calling in two extra baristas so more customers can be served at once, without changing the recipe for the coffee itself.</p>
+</blockquote><p>The architecture becomes:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">                 Load Balancer
+</span></span><span class="line"><span class="cl">                      |
+</span></span><span class="line"><span class="cl">                      v
+</span></span><span class="line"><span class="cl">                   Service
+</span></span><span class="line"><span class="cl">                      |
+</span></span><span class="line"><span class="cl">          +-----------+-----------+
+</span></span><span class="line"><span class="cl">          |           |           |
+</span></span><span class="line"><span class="cl">          v           v           v
+</span></span><span class="line"><span class="cl">        Pod 1       Pod 2       Pod 3</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">23. Use Kubernetes YAML Instead of Imperative Commands
+    <div id="23-use-kubernetes-yaml-instead-of-imperative-commands" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#23-use-kubernetes-yaml-instead-of-imperative-commands" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>The commands above are useful for learning.</p>
+<p>For real projects, you should normally keep Kubernetes configuration in YAML and store it in Git.</p>
+<blockquote><p><strong>Easy example:</strong> Typing commands one by one is like giving a chef instructions verbally, step by step — nothing is written down, so it is easy to forget a step or repeat it differently next time. A YAML file is like a written recipe card: anyone on the team can follow the exact same steps, and you can keep old versions of the recipe to see what changed.</p>
+</blockquote><p>Create:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">deployment.yaml</span></span></code></pre></div></div>
+<p>Example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">apps/v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Deployment</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">nginx:1.27</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="m">80</span></span></span></code></pre></div></div>
+<p>Apply it:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f deployment.yaml</span></span></code></pre></div></div>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get deployment
+</span></span><span class="line"><span class="cl">kubectl get pods</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">24. Create the Service Using YAML
+    <div id="24-create-the-service-using-yaml" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#24-create-the-service-using-yaml" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Create:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">service.yaml</span></span></code></pre></div></div>
+<p>Example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Service</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">LoadBalancer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">80</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="m">80</span></span></span></code></pre></div></div>
+<p>Apply:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f service.yaml</span></span></code></pre></div></div>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get service</span></span></code></pre></div></div>
+<p>Now your Kubernetes configuration can be version-controlled.</p>
+<hr>
+
+<h1 class="relative group">25. Create a Namespace for Your Project
+    <div id="25-create-a-namespace-for-your-project" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#25-create-a-namespace-for-your-project" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>For a real application, you may want a dedicated namespace.</p>
+<p>Create:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create namespace my-app</span></span></code></pre></div></div>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get namespaces</span></span></code></pre></div></div>
+<p>Deploy into it:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f deployment.yaml -n my-app</span></span></code></pre></div></div>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods -n my-app</span></span></code></pre></div></div>
+<p>A possible environment structure is:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">EKS Cluster
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> +-- dev
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> +-- staging
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> +-- production</span></span></code></pre></div></div>
+<p>The exact structure depends on your organization&rsquo;s requirements.</p>
+<blockquote><p><strong>Easy example:</strong> A namespace is like a labeled folder on a shared computer. Everyone uses the same computer (the cluster), but the &ldquo;dev&rdquo; folder, &ldquo;staging&rdquo; folder, and &ldquo;production&rdquo; folder keep each team&rsquo;s files separate so they don&rsquo;t get mixed up.</p>
+</blockquote><hr>
+
+<h1 class="relative group">26. Update the Application
+    <div id="26-update-the-application" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#26-update-the-application" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Suppose your Deployment currently uses:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">nginx:1.27</span></span></span></code></pre></div></div>
+<p>Change it to:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">nginx:1.28</span></span></span></code></pre></div></div>
+<p>Apply the updated YAML:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f deployment.yaml</span></span></code></pre></div></div>
+<p>Check the rollout:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl rollout status deployment/nginx</span></span></code></pre></div></div>
+<p>Kubernetes will perform a rolling update according to the Deployment strategy.</p>
+<hr>
+
+<h1 class="relative group">27. Check Deployment History
+    <div id="27-check-deployment-history" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#27-check-deployment-history" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Run:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl rollout <span class="nb">history</span> deployment/nginx</span></span></code></pre></div></div>
+<p>This helps you understand previous Deployment revisions.</p>
+<hr>
+
+<h1 class="relative group">28. Roll Back the Application
+    <div id="28-roll-back-the-application" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#28-roll-back-the-application" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>If the new version has a problem:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl rollout undo deployment/nginx</span></span></code></pre></div></div>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl rollout status deployment/nginx</span></span></code></pre></div></div>
+<p>This is a simple and useful production recovery technique.</p>
+<blockquote><p><strong>Easy example:</strong> Rolling back is like undoing a bad software update on your phone. If the new version has a bug, you simply go back to the last version that worked well, instead of trying to fix the new version under pressure.</p>
+</blockquote><hr>
+
+<h1 class="relative group">29. Use Your Own Docker Image from ECR
+    <div id="29-use-your-own-docker-image-from-ecr" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#29-use-your-own-docker-image-from-ecr" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>In a real project, you usually won&rsquo;t deploy the public Nginx image.</p>
+<p>You will build your own application image:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Application Source Code
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Docker Build
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Amazon ECR
+</span></span><span class="line"><span class="cl">        |
+</span></span><span class="line"><span class="cl">        v
+</span></span><span class="line"><span class="cl">Amazon EKS</span></span></code></pre></div></div>
+<p>For example:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">my-app</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="m">123456789012.</span><span class="l">dkr.ecr.ap-south-1.amazonaws.com/my-app:1.0.0</span></span></span></code></pre></div></div>
+<p>The EKS nodes/workload identity need appropriate AWS permissions to pull the private ECR image.</p>
+<p>Your ECR blog can contain the detailed Docker-to-ECR setup; this section only shows where ECR fits into EKS.</p>
+<blockquote><p><strong>Easy example:</strong> Using the public Nginx image is like buying a plain, ready-made shirt from a public store. Using ECR is like using your own private tailor shop: you make your own shirt (Docker image), store it in your own warehouse (ECR), and only your team can access it, instead of everyone in the world.</p>
+</blockquote><hr>
+
+<h1 class="relative group">30. Common EKS Troubleshooting
+    <div id="30-common-eks-troubleshooting" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#30-common-eks-troubleshooting" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Learning EKS also means learning how to troubleshoot it.</p>
+<p>A useful general flow is:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Application
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Pod
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Deployment
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Service
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Load Balancer
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">AWS Networking</span></span></code></pre></div></div>
+<p>Check each layer instead of guessing.</p>
+<blockquote><p><strong>Easy example:</strong> Troubleshooting EKS is like figuring out why a letter never arrived. You check step by step: Did the sender write the address correctly (Application)? Was it picked up by the mail carrier (Pod)? Did the post office sort it correctly (Service)? Did it reach the right delivery truck (Load Balancer)? Checking each step in order is faster than guessing where it went wrong.</p>
+</blockquote><hr>
+
+<h1 class="relative group">31. Pod Is <code>Pending</code>
+    <div id="31-pod-is-pending" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-pod-is-pending" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods</span></span></code></pre></div></div>
+<p>If you see:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Pending</span></span></code></pre></div></div>
+<p>run:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl describe pod &lt;pod-name&gt;</span></span></code></pre></div></div>
+<p>Look at the Events section.</p>
+<p>Common reasons:</p>
+<ul>
+<li>Not enough CPU or memory</li>
+<li>Scheduling constraints</li>
+<li>Node problems</li>
+<li>Storage problems</li>
+<li>Resource requests that cannot be satisfied</li>
+</ul>
+<hr>
+
+<h1 class="relative group">32. Pod Is <code>CrashLoopBackOff</code>
+    <div id="32-pod-is-crashloopbackoff" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-pod-is-crashloopbackoff" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>If you see:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">CrashLoopBackOff</span></span></code></pre></div></div>
+<p>the container is repeatedly starting and failing.</p>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl logs &lt;pod-name&gt;</span></span></code></pre></div></div>
+<p>Also:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl describe pod &lt;pod-name&gt;</span></span></code></pre></div></div>
+<p>Common causes:</p>
+<ul>
+<li>Application crash</li>
+<li>Wrong startup command</li>
+<li>Missing configuration</li>
+<li>Missing environment variable</li>
+<li>Dependency failure</li>
+<li>Health-check failure</li>
+<li>Permission issue</li>
+</ul>
+<hr>
+
+<h1 class="relative group">33. Pod Is <code>ImagePullBackOff</code>
+    <div id="33-pod-is-imagepullbackoff" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-pod-is-imagepullbackoff" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl describe pod &lt;pod-name&gt;</span></span></code></pre></div></div>
+<p>Common causes:</p>
+<ul>
+<li>Wrong image name</li>
+<li>Wrong image tag</li>
+<li>Image doesn&rsquo;t exist</li>
+<li>ECR permission problem</li>
+<li>Network problem</li>
+<li>Wrong AWS Region</li>
+<li>Private registry authentication problem</li>
+</ul>
+<p>For an ECR image, verify:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws ecr describe-images   --repository-name my-app   --region ap-south-1</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">34. Node Is <code>NotReady</code>
+    <div id="34-node-is-notready" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-node-is-notready" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get nodes</span></span></code></pre></div></div>
+<p>If a node shows:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">NotReady</span></span></code></pre></div></div>
+<p>run:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl describe node &lt;node-name&gt;</span></span></code></pre></div></div>
+<p>Also check the EKS node group:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eksctl get nodegroup   --cluster my-first-eks   --region ap-south-1</span></span></code></pre></div></div>
+<p>Investigate:</p>
+<ul>
+<li>EC2 instance health</li>
+<li>Node resources</li>
+<li>Kubelet</li>
+<li>Networking</li>
+<li>IAM</li>
+<li>Security groups</li>
+<li>Node group status</li>
+</ul>
+<hr>
+
+<h1 class="relative group">35. Service Is Not Accessible
+    <div id="35-service-is-not-accessible" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#35-service-is-not-accessible" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get service</span></span></code></pre></div></div>
+<p>Then:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl describe service nginx</span></span></code></pre></div></div>
+<p>Check whether the Service has endpoints:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get endpoints nginx</span></span></code></pre></div></div>
+<p>Also check:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods -o wide</span></span></code></pre></div></div>
+<p>Use this troubleshooting path:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">User
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> v
+</span></span><span class="line"><span class="cl">Load Balancer
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> v
+</span></span><span class="line"><span class="cl">Service
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> v
+</span></span><span class="line"><span class="cl">Endpoints
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> v
+</span></span><span class="line"><span class="cl">Pod
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> v
+</span></span><span class="line"><span class="cl">Container
+</span></span><span class="line"><span class="cl"> |
+</span></span><span class="line"><span class="cl"> v
+</span></span><span class="line"><span class="cl">Application</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">36. Useful EKS and Kubernetes Commands
+    <div id="36-useful-eks-and-kubernetes-commands" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#36-useful-eks-and-kubernetes-commands" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+
+<h3 class="relative group">EKS cluster
+    <div id="eks-cluster" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#eks-cluster" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eksctl get cluster</span></span></code></pre></div></div>
+
+<h3 class="relative group">Kubernetes cluster information
+    <div id="kubernetes-cluster-information" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#kubernetes-cluster-information" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl cluster-info</span></span></code></pre></div></div>
+
+<h3 class="relative group">Nodes
+    <div id="nodes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nodes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get nodes</span></span></code></pre></div></div>
+
+<h3 class="relative group">Pods
+    <div id="pods" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pods" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods</span></span></code></pre></div></div>
+
+<h3 class="relative group">Pods with node information
+    <div id="pods-with-node-information" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pods-with-node-information" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods -o wide</span></span></code></pre></div></div>
+
+<h3 class="relative group">Deployments
+    <div id="deployments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployments" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get deployments</span></span></code></pre></div></div>
+
+<h3 class="relative group">Services
+    <div id="services" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#services" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get services</span></span></code></pre></div></div>
+
+<h3 class="relative group">All resources
+    <div id="all-resources" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#all-resources" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get all</span></span></code></pre></div></div>
+
+<h3 class="relative group">Pod details
+    <div id="pod-details" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pod-details" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl describe pod &lt;pod-name&gt;</span></span></code></pre></div></div>
+
+<h3 class="relative group">Logs
+    <div id="logs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#logs" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl logs &lt;pod-name&gt;</span></span></code></pre></div></div>
+
+<h3 class="relative group">Shell inside a container
+    <div id="shell-inside-a-container" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#shell-inside-a-container" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl <span class="nb">exec</span> -it &lt;pod-name&gt; -- /bin/sh</span></span></code></pre></div></div>
+
+<h3 class="relative group">Apply YAML
+    <div id="apply-yaml" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#apply-yaml" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f deployment.yaml</span></span></code></pre></div></div>
+
+<h3 class="relative group">Delete YAML resources
+    <div id="delete-yaml-resources" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#delete-yaml-resources" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl delete -f deployment.yaml</span></span></code></pre></div></div>
+
+<h3 class="relative group">Rollout status
+    <div id="rollout-status" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rollout-status" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl rollout status deployment/nginx</span></span></code></pre></div></div>
+
+<h3 class="relative group">Rollback
+    <div id="rollback" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rollback" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl rollout undo deployment/nginx</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">37. Basic Production Considerations
+    <div id="37-basic-production-considerations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#37-basic-production-considerations" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>The cluster created in this tutorial is intended for learning.</p>
+<p>A production EKS environment needs more planning.</p>
+
+<h2 class="relative group">Networking
+    <div id="networking" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#networking" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Consider:</p>
+<ul>
+<li>VPC design</li>
+<li>Multiple Availability Zones</li>
+<li>Public and private subnets</li>
+<li>Security groups</li>
+<li>Network policies</li>
+<li>NAT Gateway</li>
+<li>VPC endpoints</li>
+</ul>
+
+<h2 class="relative group">Compute
+    <div id="compute" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#compute" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Consider:</p>
+<ul>
+<li>Managed node groups</li>
+<li>Instance sizing</li>
+<li>On-Demand vs Spot</li>
+<li>Karpenter</li>
+<li>Cluster Autoscaler</li>
+</ul>
+
+<h2 class="relative group">Security
+    <div id="security" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#security" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Consider:</p>
+<ul>
+<li>Least-privilege IAM</li>
+<li>EKS Pod Identity</li>
+<li>IRSA where appropriate</li>
+<li>Secrets management</li>
+<li>Network policies</li>
+<li>Image scanning</li>
+<li>Non-root containers</li>
+</ul>
+
+<h2 class="relative group">Availability
+    <div id="availability" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#availability" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Consider:</p>
+<ul>
+<li>Multiple Availability Zones</li>
+<li>Multiple worker nodes</li>
+<li>Multiple Pod replicas</li>
+<li>Readiness probes</li>
+<li>Liveness probes</li>
+<li>PodDisruptionBudgets</li>
+</ul>
+
+<h2 class="relative group">Deployment
+    <div id="deployment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Consider:</p>
+<ul>
+<li>CI/CD</li>
+<li>Helm</li>
+<li>GitOps</li>
+<li>Rolling deployments</li>
+<li>Blue/green deployments</li>
+<li>Canary deployments</li>
+</ul>
+<hr>
+
+<h1 class="relative group">38. Recommended Project Structure
+    <div id="38-recommended-project-structure" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#38-recommended-project-structure" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Once you start deploying your own applications, keep Kubernetes configuration organized.</p>
+<p>A simple project can look like:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">my-app/
+</span></span><span class="line"><span class="cl">|
+</span></span><span class="line"><span class="cl">+-- Dockerfile
+</span></span><span class="line"><span class="cl">+-- src/
+</span></span><span class="line"><span class="cl">|
+</span></span><span class="line"><span class="cl">+-- k8s/
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    +-- namespace.yaml
+</span></span><span class="line"><span class="cl">    +-- deployment.yaml
+</span></span><span class="line"><span class="cl">    +-- service.yaml
+</span></span><span class="line"><span class="cl">    +-- configmap.yaml
+</span></span><span class="line"><span class="cl">    +-- ingress.yaml</span></span></code></pre></div></div>
+<p>Store these files in Git.</p>
+<p>That gives your team a history of Kubernetes configuration changes.</p>
+<hr>
+
+<h1 class="relative group">39. Complete Beginner Workflow
+    <div id="39-complete-beginner-workflow" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#39-complete-beginner-workflow" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Let&rsquo;s summarize the entire exercise.</p>
+
+<h3 class="relative group">Step 1: Configure AWS
+    <div id="step-1-configure-aws" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-1-configure-aws" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws configure</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 2: Verify AWS
+    <div id="step-2-verify-aws" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-2-verify-aws" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws sts get-caller-identity</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 3: Create EKS
+    <div id="step-3-create-eks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-3-create-eks" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eksctl create cluster   --name my-first-eks   --region ap-south-1   --nodes <span class="m">2</span>   --node-type t3.medium</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 4: Configure kubectl
+    <div id="step-4-configure-kubectl" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-4-configure-kubectl" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws eks update-kubeconfig   --region ap-south-1   --name my-first-eks</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 5: Verify nodes
+    <div id="step-5-verify-nodes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-5-verify-nodes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get nodes</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 6: Deploy Nginx
+    <div id="step-6-deploy-nginx" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-6-deploy-nginx" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create deployment nginx   --image<span class="o">=</span>nginx:latest</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 7: Verify Pods
+    <div id="step-7-verify-pods" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-7-verify-pods" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 8: Expose the application
+    <div id="step-8-expose-the-application" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-8-expose-the-application" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl expose deployment nginx   --type<span class="o">=</span>LoadBalancer   --port<span class="o">=</span><span class="m">80</span>   --target-port<span class="o">=</span><span class="m">80</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 9: Get the Load Balancer
+    <div id="step-9-get-the-load-balancer" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-9-get-the-load-balancer" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get service nginx</span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 10: Scale
+    <div id="step-10-scale" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-10-scale" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl scale deployment nginx --replicas<span class="o">=</span><span class="m">3</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Step 11: Clean up
+    <div id="step-11-clean-up" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-11-clean-up" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eksctl delete cluster   --name my-first-eks   --region ap-south-1</span></span></code></pre></div></div>
+<hr>
+
+<h1 class="relative group">40. Important: AWS Costs
+    <div id="40-important-aws-costs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#40-important-aws-costs" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>An EKS learning environment can create AWS resources that incur charges.</p>
+<p>Before creating the cluster, understand that costs can come from resources such as:</p>
+<ul>
+<li>EKS cluster</li>
+<li>EC2 worker nodes</li>
+<li>Load Balancer</li>
+<li>NAT Gateway</li>
+<li>EBS volumes</li>
+<li>Other AWS resources</li>
+</ul>
+<p>When you finish your learning exercise, delete the cluster:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eksctl delete cluster   --name my-first-eks   --region ap-south-1</span></span></code></pre></div></div>
+<p>Then check the AWS Console for resources that were created separately and are not automatically removed.</p>
+<hr>
+
+<h1 class="relative group">41. What You Have Learned
+    <div id="41-what-you-have-learned" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-what-you-have-learned" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>After completing this guide, you should be able to:</p>
+<ul>
+<li>Configure AWS CLI</li>
+<li>Install and use <code>kubectl</code></li>
+<li>Install and use <code>eksctl</code></li>
+<li>Create an EKS cluster</li>
+<li>Understand the basic EKS architecture</li>
+<li>Connect <code>kubectl</code> to EKS</li>
+<li>Verify worker nodes</li>
+<li>Deploy an application</li>
+<li>Understand Deployment, ReplicaSet, and Pod</li>
+<li>Create a Kubernetes Service</li>
+<li>Expose an application using a Load Balancer</li>
+<li>Scale an application</li>
+<li>Update an application</li>
+<li>Roll back a Deployment</li>
+<li>Use Kubernetes YAML</li>
+<li>Create namespaces</li>
+<li>Troubleshoot common Pod problems</li>
+<li>Understand where ECR fits into EKS</li>
+<li>Delete the EKS environment after testing</li>
+</ul>
+<hr>
+
+<h1 class="relative group">42. What to Learn Next
+    <div id="42-what-to-learn-next" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-what-to-learn-next" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>After successfully completing this basic EKS setup, continue with:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">EKS Basics
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">EKS VPC Networking
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Managed Node Groups
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Kubernetes Services
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Ingress
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">AWS Load Balancer Controller
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">EKS + ECR
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">IAM / EKS Pod Identity
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">ConfigMaps and Secrets
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">EBS / EFS Storage
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">HPA
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Karpenter
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Monitoring and Logging
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Helm
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">CI/CD
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">GitOps
+</span></span><span class="line"><span class="cl">    |
+</span></span><span class="line"><span class="cl">    v
+</span></span><span class="line"><span class="cl">Production Troubleshooting</span></span></code></pre></div></div>
+<p>The most important part is to actually run the commands yourself.</p>
+<p>Create the cluster, deploy an application, expose it, scale it, update it, intentionally troubleshoot a failure, and finally delete the environment.</p>
+<p>That hands-on process gives you a much stronger understanding of EKS than learning only the definitions.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/ecr/ecr/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Amazon ECR Interview Guide for Senior DevOps Engineers
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-09-12T00:00:00&#43;00:00">12 September 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hemanth Kumar Motukuri
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

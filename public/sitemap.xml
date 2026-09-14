@@ -3,15 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/posts/docker/docker_interview/</loc>
-    <lastmod>2026-09-12T00:00:00+05:30</lastmod>
+    <loc>http://localhost:1313/posts/eks/eks/</loc>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-09-12T00:00:00+05:30</lastmod>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/ecr/ecr/</loc>
+    <lastmod>2026-09-12T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/docker/docker_interview/</loc>
     <lastmod>2026-09-12T00:00:00+05:30</lastmod>
   </url>
   <url>

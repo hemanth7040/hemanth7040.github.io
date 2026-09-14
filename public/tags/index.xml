@@ -7,14 +7,94 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
-    <lastBuildDate>Sat, 12 Sep 2026 00:00:00 +0530</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AWS</title>
+      <link>http://localhost:1313/tags/aws/</link>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/aws/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/devops/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>EKS</title>
+      <link>http://localhost:1313/tags/eks/</link>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/eks/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Eksctl</title>
+      <link>http://localhost:1313/tags/eksctl/</link>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/eksctl/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Kubectl</title>
+      <link>http://localhost:1313/tags/kubectl/</link>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/kubectl/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://localhost:1313/tags/kubernetes/</link>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/kubernetes/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>CI/CD</title>
       <link>http://localhost:1313/tags/ci/cd/</link>
-      <pubDate>Sat, 12 Sep 2026 00:00:00 +0530</pubDate>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/ci/cd/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/tags/docker/</link>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/docker/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>ECR</title>
+      <link>http://localhost:1313/tags/ecr/</link>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/ecr/</guid>
       <description></description>
       
     </item>
@@ -30,41 +110,11 @@
     </item>
     
     <item>
-      <title>Devops</title>
-      <link>http://localhost:1313/tags/devops/</link>
-      <pubDate>Sat, 12 Sep 2026 00:00:00 +0530</pubDate>
-      
-      <guid>http://localhost:1313/tags/devops/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>http://localhost:1313/tags/docker/</link>
-      <pubDate>Sat, 12 Sep 2026 00:00:00 +0530</pubDate>
-      
-      <guid>http://localhost:1313/tags/docker/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Interview Prep</title>
       <link>http://localhost:1313/tags/interview-prep/</link>
       <pubDate>Sat, 12 Sep 2026 00:00:00 +0530</pubDate>
       
       <guid>http://localhost:1313/tags/interview-prep/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>http://localhost:1313/tags/kubernetes/</link>
-      <pubDate>Sat, 12 Sep 2026 00:00:00 +0530</pubDate>
-      
-      <guid>http://localhost:1313/tags/kubernetes/</guid>
       <description></description>
       
     </item>
@@ -85,16 +135,6 @@
       <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/automation/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>AWS</title>
-      <link>http://localhost:1313/tags/aws/</link>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/aws/</guid>
       <description></description>
       
     </item>
