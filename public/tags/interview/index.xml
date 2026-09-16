@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interview on Hemanth Kumar Motukuri</title>
+    <link>http://localhost:1313/tags/interview/</link>
+    <description>Recent content in Interview on Hemanth Kumar Motukuri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Hemanth Kumar Motukuri</copyright>
+    <atom:link href="http://localhost:1313/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>15 Kubernetes Scenario-Based Interview Questions and Answers for 7&#43; Years DevOps Experience</title>
+      <link>http://localhost:1313/posts/kubernetes/scenario_qa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/kubernetes/scenario_qa/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;15 Kubernetes Scenario-Based Interview Questions and Answers&#xA;    &lt;div id=&#34;15-kubernetes-scenario-based-interview-questions-and-answers&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#15-kubernetes-scenario-based-interview-questions-and-answers&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;For a DevOps engineer with 7+ years of experience, Kubernetes interviews are usually less about definitions and more about &lt;strong&gt;production troubleshooting&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The interviewer may give you a symptom such as:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&amp;ldquo;The Pod is running, but users cannot access the application. What would you check?&amp;rdquo;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;A strong senior-level answer should show a systematic approach:&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

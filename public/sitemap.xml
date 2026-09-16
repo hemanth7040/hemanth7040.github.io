@@ -94,6 +94,9 @@
     <loc>http://localhost:1313/posts/git/devops_ai_platform_notion_notes/</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/posts/kubernetes/scenario_qa/</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/contact/</loc>
   </url>
 </urlset>
