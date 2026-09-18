@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes Interview Questions & Answers (7+ Years DevOps Experience)"
-date: 2026-09-18T15:12:44+00:00
+date: 2026-09-18
 draft: false
 description: "A comprehensive, structured list of Kubernetes interview questions and answers covering architecture, networking, storage, security, troubleshooting, and real production scenarios — aimed at senior DevOps/SRE engineers with 7+ years of experience."
 tags: ["kubernetes", "devops", "interview-questions", "sre", "cloud-native", "docker", "helm", "ci-cd"]
