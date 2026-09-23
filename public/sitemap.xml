@@ -3,15 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/posts/eks/eks/</loc>
-    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-09-18T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/posts/kubernetes/interview_questions/</loc>
+    <lastmod>2026-09-18T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-09-18T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/eks/eks/</loc>
     <lastmod>2026-09-14T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -85,10 +89,6 @@
   <url>
     <loc>http://localhost:1313/posts/evolution-of-devops/</loc>
     <lastmod>2026-04-07T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/linux/linux-commands/</loc>
-    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/posts/git/devops_ai_platform_notion_notes/</loc>

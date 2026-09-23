@@ -1,0 +1,2151 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Kubernetes Interview Questions & Answers (7&#43; Years DevOps Experience) &middot; Hemanth Kumar Motukuri</title>
+    <meta name="title" content="Kubernetes Interview Questions & Answers (7&#43; Years DevOps Experience) &middot; Hemanth Kumar Motukuri">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="A comprehensive, structured list of Kubernetes interview questions and answers covering architecture, networking, storage, security, troubleshooting, and real production scenarios — aimed at senior DevOps/SRE engineers with 7&#43; years of experience.">
+  
+  
+    <meta name="keywords" content="kubernetes,devops,interview-questions,sre,cloud-native,docker,helm,ci-cd,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/kubernetes/interview_questions/">
+  
+  
+  
+
+  
+  
+    <meta name="author" content="Hemanth Kumar Motukuri">
+  
+  
+    
+      
+        
+          <link href="https://github.com/hemanth7040" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://linkedin.com/in/hemanth-kumar-motukuri" rel="me">
+        
+      
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/kubernetes/interview_questions/">
+	<meta property="og:site_name" content="Hemanth Kumar Motukuri">
+	<meta property="og:title" content="Kubernetes Interview Questions & Answers (7&#43; Years DevOps Experience)">
+	<meta property="og:description" content="A comprehensive, structured list of Kubernetes interview questions and answers covering architecture, networking, storage, security, troubleshooting, and real production scenarios — aimed at senior DevOps/SRE engineers with 7&#43; years of experience.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-09-18T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-09-18T00:00:00+00:00">
+		<meta property="article:tag" content="Kubernetes">
+		<meta property="article:tag" content="Devops">
+		<meta property="article:tag" content="Interview-Questions">
+		<meta property="article:tag" content="Sre">
+		<meta property="article:tag" content="Cloud-Native">
+		<meta property="article:tag" content="Docker">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Kubernetes Interview Questions & Answers (7&#43; Years DevOps Experience)">
+	<meta name="twitter:description" content="A comprehensive, structured list of Kubernetes interview questions and answers covering architecture, networking, storage, security, troubleshooting, and real production scenarios — aimed at senior DevOps/SRE engineers with 7&#43; years of experience.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.9e949c152877be2b943cf16ba64eb015b9010aa5f6744389321c5c988db35be9eefba0dcaf57fbf3f3648bb4ba45c21bab1e6c817b665379fb0363a1eb4ed919.css"
+    integrity="sha512-npScFSh3viuUPPFrpk6wFbkBCqX2dEOJMhxcmI2zW&#43;nu&#43;6Dcr1f78/Nki7S6RcIbqx5sgXtmU3n7A2Oh607ZGQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.764f412f07ea715415e9123a5eb5f355429502d0b760146b9bcab854bc50829dee14488594acd935dfcdc6a0fe7e6d14d7bee914ebb9272b251aa238cb52c4dd.js"
+    integrity="sha512-dk9BLwfqcVQV6RI6XrXzVUKVAtC3YBRrm8q4VLxQgp3uFEiFlKzZNd/NxqD&#43;fm0U177pFOu5JyslGqI4y1LE3Q=="></script>
+  
+
+
+  
+  
+  
+  
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.be4a11c293f9b8ab20ab872f73c6b0c584fcba4a0df2c8ef7f414a5805c0ddab955ac23bec4a6d92a06087498d445cb2bf26a6602a27981980efe2bda70104a4.js"
+      integrity="sha512-vkoRwpP5uKsgq4cvc8awxYT8ukoN8sjvf0FKWAXA3auVWsI77EptkqBgh0mNRFyyvyamYConmBmA7&#43;K9pwEEpA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "My Technical Blog",
+    "name": "Kubernetes Interview Questions \u0026 Answers (7\u002b Years DevOps Experience)",
+    "headline": "Kubernetes Interview Questions \u0026 Answers (7\u002b Years DevOps Experience)",
+    "description": "A comprehensive, structured list of Kubernetes interview questions and answers covering architecture, networking, storage, security, troubleshooting, and real production scenarios — aimed at senior DevOps\/SRE engineers with 7\u002b years of experience.",
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/kubernetes/interview_questions/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hemanth Kumar Motukuri",
+      "image": "http://localhost:1313/img/profile_pic.jpg",
+      "sameAs": ["https://github.com/hemanth7040", "https://linkedin.com/in/hemanth-kumar-motukuri"]
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-09-18T00:00:00\u002b00:00",
+    "datePublished": "2026-09-18T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-09-18T00:00:00\u002b00:00",
+    
+    "keywords": ["kubernetes","devops","interview-questions","sre","cloud-native","docker","helm","ci-cd"],
+    
+    "mainEntityOfPage": "http://localhost:1313/posts/kubernetes/interview_questions/",
+    "wordCount":  3263 
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    <header>
+      
+      
+        <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Hemanth Kumar Motukuri
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="Main menu" class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Technical Topics">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/projects/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Projects"
+      title="Projects">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Projects
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/resume/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Resume"
+      title="Resume">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Resume
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About Me"
+      title="About Me">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          About Me
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/contact/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Contact"
+      title="Contact">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Contact
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Switch to dark appearance"
+        type="button"
+        class="text-sm bf-icon-color-hover"
+        title="Switch to dark appearance">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd
+        id="search-shortcut-hint"
+        class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400"
+        aria-hidden="true">
+        ⌘K
+      </kbd>
+    </button>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row relative flex items-center h-14 gap-4">
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Switch to dark appearance"
+      title="Switch to dark appearance"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label
+      for="mobile-menu-toggle"
+      tabindex="0"
+      role="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu-dialog"
+      aria-label="Main menu"
+      class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      id="mobile-menu-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Main menu"
+      style="scrollbar-gutter: stable;"
+      class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100
+      
+        fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99
+      
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        tabindex="0"
+        role="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu-dialog"
+        class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only">Close menu</span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav
+        aria-label="Mobile menu"
+        class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/categories/"
+          aria-label="Blog"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Technical Topics" class="text-2xl font-bold tracking-tight">
+            Blog
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/projects/"
+          aria-label="Projects"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Projects" class="text-2xl font-bold tracking-tight">
+            Projects
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/resume/"
+          aria-label="Resume"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Resume" class="text-2xl font-bold tracking-tight">
+            Resume
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/about/"
+          aria-label="About Me"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="About Me" class="text-2xl font-bold tracking-tight">
+            About Me
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/contact/"
+          aria-label="Contact"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Contact" class="text-2xl font-bold tracking-tight">
+            Contact
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      
+    </header>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Kubernetes Interview Questions & Answers (7+ Years DevOps Experience)
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-09-18T00:00:00&#43;00:00">18 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3263 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">16 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/kubernetes/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kubernetes
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kubernetes
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/devops/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Devops
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/interview-questions/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Interview-Questions
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/sre/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Sre
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/cloud-native/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Cloud-Native
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/docker/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Docker
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Helm
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/ci-cd/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Ci-Cd
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+      
+      
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Hemanth Kumar Motukuri"
+        src="/img/profile_pic_hu_f1f3554a1a022441.jpg"
+        data-zoom-src="/img/profile_pic_hu_1d06270a67dfafaf.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Hemanth Kumar Motukuri
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">DevOps &amp; MLOps | Kubernetes | AWS</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/hemanth7040"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 496 496" xml:space="preserve">
+<path id="SVGCleanerId_0" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+	c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+	c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+	c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+	c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+	c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+	c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+	c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+	c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+<g>
+	<path id="SVGCleanerId_0_1_" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+		c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+		c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+		c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+		c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+		c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+		c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+</g>
+<g>
+	<path style="fill:#114C82;" d="M378.496,109.131c13.128,33.904,4.752,58.928,2.2,65.176c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163c0-29.56-5.152-57.896-14.568-84.2
+		C447.24,133.963,409.184,109.987,378.496,109.131z"/>
+	<path style="fill:#114C82;" d="M192.976,377.323c2.784-5.616,6.184-9.984,9.76-13.144c-30.176-3.456-61.168-11.512-83.048-33.744
+		C136.52,358.451,163.928,371.195,192.976,377.323z"/>
+</g>
+<path style="fill:#6CA9EA;" d="M12.912,270.947c0-137.536,111.048-249,247.992-249c76.04,0,144.056,34.392,189.536,88.488
+	C405.52,46.755,331.616,5.163,247.992,5.163C111.048,5.163,0,116.627,0,254.163c0,61.32,22.12,117.424,58.752,160.792
+	C29.944,374.291,12.912,324.643,12.912,270.947z"/>
+<path style="fill:#083E66;" d="M322.712,426.899c0-23.232-7.928-38.44-16.832-46.128c55.248-6.16,113.24-27.216,113.24-122.848
+	c0-27.184-9.6-49.4-25.52-66.824c2.576-6.296,11.096-31.608-2.456-65.872c0,0-2.576-0.792-7.896-0.488
+	c5.808,25.84-0.416,44.32-2.552,49.568c15.904,17.424,25.504,39.648,25.504,66.832c0,95.64-57.984,116.68-113.232,122.856
+	c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296c0,5.872,3.496,12.568,12.92,12.408
+	C322.488,479.555,322.712,455.659,322.712,426.899z"/>
+<path style="fill:#114C82;" d="M117.464,423.995c5.208,10.72,22.712,36.4,68.888,30.992c-0.064-5.648-0.112-11.976-0.144-18.928
+	C150.584,443.835,129.552,434.667,117.464,423.995z"/>
+<path style="fill:#6CA9EA;" d="M126.368,391.387c-1.592-2.4-4.576-6.472-8.904-10.544
+	C120.272,385.011,123.256,388.507,126.368,391.387z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/hemanth-kumar-motukuri"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 382 382" xml:space="preserve">
+<path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:hemanthkumarmotukuri@gmail.com"
+          
+          target="_blank"
+          aria-label="Gmail"
+          title="Gmail"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?>
+<!-- License: MIT. Made by Garuda Technology: https://github.com/garudatechnologydevelopers/sketch-icons -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z" fill="white"/>
+<path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" fill="#EA4335"/>
+<path d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z" fill="#FBBC05"/>
+<path d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z" fill="#34A853"/>
+<path d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z" fill="#C5221F"/>
+<path d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z" fill="#C5221F"/>
+<path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" fill="#C5221F"/>
+<path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" fill="#4285F4"/>
+</svg></span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+    
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Introduction
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This guide compiles Kubernetes interview questions ranging from core fundamentals to deep, scenario-based questions that a <strong>senior DevOps/SRE engineer (7+ years experience)</strong> would realistically be asked. Instead of just definitions, many answers include the &ldquo;why&rdquo; and &ldquo;how it breaks in production,&rdquo; since senior interviews focus heavily on troubleshooting and design trade-offs.</p>
+<hr>
+
+<h2 class="relative group">1. Core Architecture &amp; Concepts
+    <div id="1-core-architecture--concepts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-core-architecture--concepts" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.1 Explain the Kubernetes architecture in detail.
+    <div id="11-explain-the-kubernetes-architecture-in-detail" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-explain-the-kubernetes-architecture-in-detail" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Kubernetes has a <strong>control plane</strong> and <strong>worker nodes</strong>.</p>
+<ul>
+<li>
+<p><strong>Control Plane components:</strong></p>
+<ul>
+<li><code>kube-apiserver</code> – front door for all REST operations; validates and processes requests.</li>
+<li><code>etcd</code> – distributed key-value store holding cluster state.</li>
+<li><code>kube-scheduler</code> – assigns pods to nodes based on resource requirements, affinity rules, taints/tolerations.</li>
+<li><code>kube-controller-manager</code> – runs controllers (node, replication, endpoints, service account controllers).</li>
+<li><code>cloud-controller-manager</code> – integrates with cloud provider APIs (load balancers, nodes, routes).</li>
+</ul>
+</li>
+<li>
+<p><strong>Node components:</strong></p>
+<ul>
+<li><code>kubelet</code> – agent that ensures containers described in PodSpecs are running.</li>
+<li><code>kube-proxy</code> – maintains network rules for service-to-pod communication.</li>
+<li>Container runtime (containerd, CRI-O).</li>
+</ul>
+</li>
+</ul>
+
+<h3 class="relative group">1.2 What happens end-to-end when you run <code>kubectl apply -f deployment.yaml</code>?
+    <div id="12-what-happens-end-to-end-when-you-run-kubectl-apply--f-deploymentyaml" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#12-what-happens-end-to-end-when-you-run-kubectl-apply--f-deploymentyaml" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><code>kubectl</code> sends the manifest to the API server over HTTPS.</li>
+<li>API server authenticates (certs/tokens), authorizes (RBAC), and runs admission controllers (mutating/validating webhooks).</li>
+<li>Object is persisted in <code>etcd</code>.</li>
+<li><code>kube-scheduler</code> watches for unscheduled pods and binds them to nodes.</li>
+<li><code>kubelet</code> on the target node watches the API server, pulls the image, and starts containers via the container runtime (CRI).</li>
+<li><code>kube-proxy</code> updates iptables/IPVS rules so the Service can route traffic to the new pod.</li>
+<li>Controllers (Deployment → ReplicaSet → Pod) reconcile desired vs actual state continuously.</li>
+</ol>
+
+<h3 class="relative group">1.3 What is the difference between a Deployment, ReplicaSet, and Pod?
+    <div id="13-what-is-the-difference-between-a-deployment-replicaset-and-pod" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#13-what-is-the-difference-between-a-deployment-replicaset-and-pod" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Pod</strong> – smallest deployable unit; one or more containers sharing network/storage namespace.</li>
+<li><strong>ReplicaSet</strong> – ensures a specified number of pod replicas are running; usually not managed directly.</li>
+<li><strong>Deployment</strong> – manages ReplicaSets, provides rolling updates, rollbacks, and declarative versioning.</li>
+</ul>
+
+<h3 class="relative group">1.4 StatefulSet vs Deployment — when do you use each?
+    <div id="14-statefulset-vs-deployment--when-do-you-use-each" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#14-statefulset-vs-deployment--when-do-you-use-each" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Use a <strong>StatefulSet</strong> when pods need:</p>
+<ul>
+<li>Stable, unique network identities (<code>pod-0</code>, <code>pod-1</code>, &hellip;)</li>
+<li>Stable persistent storage tied to pod identity</li>
+<li>Ordered, graceful deployment/scaling (useful for databases, Kafka, Zookeeper, Elasticsearch)</li>
+</ul>
+<p>Use a <strong>Deployment</strong> for stateless workloads where any pod replica is interchangeable.</p>
+
+<h3 class="relative group">1.5 What is a DaemonSet and when would you use one?
+    <div id="15-what-is-a-daemonset-and-when-would-you-use-one" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#15-what-is-a-daemonset-and-when-would-you-use-one" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Ensures a copy of a pod runs on every (or selected) node. Common use cases: log collectors (Fluentd/Fluent Bit), node monitoring agents (Node Exporter), CNI plugins, security agents.</p>
+
+<h3 class="relative group">1.6 Explain Namespaces and when NOT to use them.
+    <div id="16-explain-namespaces-and-when-not-to-use-them" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#16-explain-namespaces-and-when-not-to-use-them" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Namespaces provide logical isolation for resource organization, RBAC scoping, and resource quotas. Avoid over-segmenting namespaces for tightly coupled services that need frequent cross-namespace calls — it increases network policy/DNS complexity unnecessarily.</p>
+<hr>
+
+<h2 class="relative group">2. Networking
+    <div id="2-networking" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-networking" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.1 How does Pod-to-Pod networking work across nodes?
+    <div id="21-how-does-pod-to-pod-networking-work-across-nodes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-how-does-pod-to-pod-networking-work-across-nodes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Kubernetes requires a flat network model where every pod can reach every other pod without NAT. This is implemented by a <strong>CNI plugin</strong> (Calico, Cilium, Flannel, Weave). Each node gets a subnet from the cluster CIDR; the CNI plugin sets up routes/overlays (VXLAN, BGP, eBPF) so pod IPs are routable cluster-wide.</p>
+
+<h3 class="relative group">2.2 What&rsquo;s the difference between ClusterIP, NodePort, LoadBalancer, and ExternalName services?
+    <div id="22-whats-the-difference-between-clusterip-nodeport-loadbalancer-and-externalname-services" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-whats-the-difference-between-clusterip-nodeport-loadbalancer-and-externalname-services" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>ClusterIP</strong> – internal-only virtual IP, default type.</li>
+<li><strong>NodePort</strong> – exposes a static port on every node&rsquo;s IP (30000–32767 range).</li>
+<li><strong>LoadBalancer</strong> – provisions a cloud load balancer pointing to the NodePort/ClusterIP.</li>
+<li><strong>ExternalName</strong> – maps a Service to an external DNS name (CNAME), no proxying involved.</li>
+</ul>
+
+<h3 class="relative group">2.3 How does <code>kube-proxy</code> route traffic? iptables vs IPVS?
+    <div id="23-how-does-kube-proxy-route-traffic-iptables-vs-ipvs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#23-how-does-kube-proxy-route-traffic-iptables-vs-ipvs" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>iptables mode</strong> – uses random selection with chains of NAT rules; O(n) rule evaluation, degrades at very large service counts.</li>
+<li><strong>IPVS mode</strong> – uses a hash table in the kernel for O(1) lookups, supports more load-balancing algorithms (round robin, least connection), scales better for large clusters.</li>
+</ul>
+
+<h3 class="relative group">2.4 Explain Ingress vs Gateway API vs Service Mesh.
+    <div id="24-explain-ingress-vs-gateway-api-vs-service-mesh" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#24-explain-ingress-vs-gateway-api-vs-service-mesh" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Ingress</strong> – L7 HTTP(S) routing into the cluster via an Ingress Controller (NGINX, Traefik, ALB).</li>
+<li><strong>Gateway API</strong> – newer, more expressive, role-oriented successor to Ingress supporting more protocols and finer-grained routing.</li>
+<li><strong>Service Mesh</strong> (Istio, Linkerd) – adds mTLS, retries, circuit breaking, and fine-grained traffic shaping via sidecar proxies for <strong>east-west</strong> (service-to-service) traffic, whereas Ingress typically handles <strong>north-south</strong> traffic.</li>
+</ul>
+
+<h3 class="relative group">2.5 How does DNS resolution work inside a cluster?
+    <div id="25-how-does-dns-resolution-work-inside-a-cluster" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#25-how-does-dns-resolution-work-inside-a-cluster" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>CoreDNS runs as a cluster add-on. Each pod&rsquo;s <code>/etc/resolv.conf</code> points to the CoreDNS service IP. Services get DNS records like <code>&lt;service&gt;.&lt;namespace&gt;.svc.cluster.local</code>. Pods can resolve other services within the same namespace using short names.</p>
+
+<h3 class="relative group">2.6 Troubleshooting scenario: A pod can&rsquo;t reach another service — walk through your debugging steps.
+    <div id="26-troubleshooting-scenario-a-pod-cant-reach-another-service--walk-through-your-debugging-steps" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#26-troubleshooting-scenario-a-pod-cant-reach-another-service--walk-through-your-debugging-steps" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><code>kubectl get pods -o wide</code> – confirm both pods are Running and note their IPs/nodes.</li>
+<li><code>kubectl exec</code> into the pod and <code>curl</code>/<code>nc</code> the target service IP and pod IP directly (isolates DNS vs network issue).</li>
+<li><code>kubectl get svc,endpoints</code> – confirm the Service has valid Endpoints (labels/selectors match).</li>
+<li>Check <code>NetworkPolicy</code> resources restricting traffic.</li>
+<li>Check CoreDNS pod logs/health if DNS resolution fails.</li>
+<li>Check CNI plugin health/logs on both nodes (<code>calico-node</code>, <code>cilium</code> pods).</li>
+<li>Verify security groups/firewall rules if nodes span subnets or cloud VPCs.</li>
+</ol>
+<hr>
+
+<h2 class="relative group">3. Storage
+    <div id="3-storage" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-storage" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">3.1 Explain PV, PVC, and StorageClass.
+    <div id="31-explain-pv-pvc-and-storageclass" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-explain-pv-pvc-and-storageclass" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>PersistentVolume (PV)</strong> – cluster-wide storage resource provisioned by an admin or dynamically.</li>
+<li><strong>PersistentVolumeClaim (PVC)</strong> – a user&rsquo;s request for storage (size, access mode).</li>
+<li><strong>StorageClass</strong> – defines a provisioner (EBS, GCE PD, Azure Disk, Ceph, etc.) and parameters for dynamic provisioning.</li>
+</ul>
+
+<h3 class="relative group">3.2 What are access modes and which one is commonly misunderstood?
+    <div id="32-what-are-access-modes-and-which-one-is-commonly-misunderstood" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-what-are-access-modes-and-which-one-is-commonly-misunderstood" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><code>ReadWriteOnce (RWO)</code> – mounted read-write by a single node.</li>
+<li><code>ReadOnlyMany (ROX)</code> – read-only by many nodes.</li>
+<li><code>ReadWriteMany (RWX)</code> – read-write by many nodes (needs NFS/EFS/CephFS-type backends).</li>
+</ul>
+<p>Misconception: RWO means single <strong>pod</strong>, but it&rsquo;s actually single <strong>node</strong> — multiple pods on the same node can mount an RWO volume simultaneously.</p>
+
+<h3 class="relative group">3.3 What is a CSI driver and why did Kubernetes move away from in-tree volume plugins?
+    <div id="33-what-is-a-csi-driver-and-why-did-kubernetes-move-away-from-in-tree-volume-plugins" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-what-is-a-csi-driver-and-why-did-kubernetes-move-away-from-in-tree-volume-plugins" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>The <strong>Container Storage Interface (CSI)</strong> decouples storage vendor code from the Kubernetes core, allowing vendors to ship/update drivers independently instead of requiring core Kubernetes releases. This improves maintainability, security, and release velocity.</p>
+
+<h3 class="relative group">3.4 How does <code>volumeClaimTemplates</code> work in a StatefulSet?
+    <div id="34-how-does-volumeclaimtemplates-work-in-a-statefulset" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-how-does-volumeclaimtemplates-work-in-a-statefulset" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Each StatefulSet replica gets its own PVC created from the template, named predictably (<code>data-mypod-0</code>, <code>data-mypod-1</code>), and that PVC&rsquo;s binding persists even if the pod is rescheduled or deleted, preserving data continuity.</p>
+<hr>
+
+<h2 class="relative group">4. Scheduling &amp; Resource Management
+    <div id="4-scheduling--resource-management" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-scheduling--resource-management" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">4.1 How does the scheduler decide where to place a pod?
+    <div id="41-how-does-the-scheduler-decide-where-to-place-a-pod" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-how-does-the-scheduler-decide-where-to-place-a-pod" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Two phases:</p>
+<ol>
+<li><strong>Filtering</strong> – eliminate nodes that don&rsquo;t satisfy resource requests, taints/tolerations, affinity/anti-affinity, node selectors.</li>
+<li><strong>Scoring</strong> – rank remaining nodes (e.g., least requested resources, spread priority) and pick the highest score.</li>
+</ol>
+
+<h3 class="relative group">4.2 Explain requests vs limits and what happens when limits are exceeded.
+    <div id="42-explain-requests-vs-limits-and-what-happens-when-limits-are-exceeded" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-explain-requests-vs-limits-and-what-happens-when-limits-are-exceeded" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Requests</strong> – guaranteed minimum resources; used by the scheduler for placement.</li>
+<li><strong>Limits</strong> – hard ceiling. Exceeding a CPU limit results in throttling; exceeding a memory limit results in the container being OOMKilled.</li>
+</ul>
+
+<h3 class="relative group">4.3 What are QoS classes in Kubernetes?
+    <div id="43-what-are-qos-classes-in-kubernetes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#43-what-are-qos-classes-in-kubernetes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Guaranteed</strong> – requests == limits for all containers.</li>
+<li><strong>Burstable</strong> – at least one container has requests &lt; limits.</li>
+<li><strong>BestEffort</strong> – no requests/limits set.</li>
+</ul>
+<p>QoS class determines eviction priority under node pressure — BestEffort pods are evicted first.</p>
+
+<h3 class="relative group">4.4 Taints and tolerations vs Node affinity — what&rsquo;s the difference?
+    <div id="44-taints-and-tolerations-vs-node-affinity--whats-the-difference" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#44-taints-and-tolerations-vs-node-affinity--whats-the-difference" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Taints/Tolerations</strong> – repel pods from nodes unless the pod explicitly tolerates the taint (node-centric control).</li>
+<li><strong>Node Affinity</strong> – attracts pods to nodes based on labels (pod-centric preference), can be required or preferred.
+They&rsquo;re often combined: taint dedicated nodes (e.g., GPU nodes) and use both a toleration and node affinity to ensure only intended pods land there.</li>
+</ul>
+
+<h3 class="relative group">4.5 Scenario: Pods are stuck in <code>Pending</code>. How do you debug?
+    <div id="45-scenario-pods-are-stuck-in-pending-how-do-you-debug" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#45-scenario-pods-are-stuck-in-pending-how-do-you-debug" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><code>kubectl describe pod &lt;pod&gt;</code> – check Events section for scheduling failures (insufficient CPU/memory, no matching nodes, unsatisfied affinity/taints).</li>
+<li><code>kubectl get nodes -o wide</code> and check node conditions (<code>kubectl describe node</code>) for <code>MemoryPressure</code>, <code>DiskPressure</code>, or <code>NotReady</code>.</li>
+<li>Check if a PVC is unbound (storage provisioning issue) blocking the pod.</li>
+<li>Check ResourceQuota/LimitRange in the namespace.</li>
+<li>Check Cluster Autoscaler logs if using dynamic node scaling — is it hitting cloud quota limits?</li>
+</ol>
+<hr>
+
+<h2 class="relative group">5. Autoscaling
+    <div id="5-autoscaling" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-autoscaling" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">5.1 HPA vs VPA vs Cluster Autoscaler — how do they differ and can they be combined?
+    <div id="51-hpa-vs-vpa-vs-cluster-autoscaler--how-do-they-differ-and-can-they-be-combined" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#51-hpa-vs-vpa-vs-cluster-autoscaler--how-do-they-differ-and-can-they-be-combined" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>HPA (Horizontal Pod Autoscaler)</strong> – scales pod replica count based on metrics (CPU, memory, custom/external metrics via Prometheus Adapter).</li>
+<li><strong>VPA (Vertical Pod Autoscaler)</strong> – adjusts CPU/memory requests/limits of existing pods (usually requires a restart).</li>
+<li><strong>Cluster Autoscaler</strong> – adds/removes <strong>nodes</strong> based on unschedulable pods or underutilized nodes.</li>
+</ul>
+<p>Combining HPA + VPA on the same metric can conflict; typically HPA handles CPU-based scaling while VPA is set to &ldquo;off&rdquo;/recommendation-only mode alongside it, or VPA manages memory while HPA manages CPU.</p>
+
+<h3 class="relative group">5.2 What is KEDA and why would you use it over standard HPA?
+    <div id="52-what-is-keda-and-why-would-you-use-it-over-standard-hpa" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#52-what-is-keda-and-why-would-you-use-it-over-standard-hpa" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>KEDA (Kubernetes Event-Driven Autoscaling) extends HPA to scale based on external event sources — queue length (SQS, RabbitMQ, Kafka lag), cron schedules, etc., including scale-to-zero, which standard HPA can&rsquo;t do.</p>
+<hr>
+
+<h2 class="relative group">6. Security
+    <div id="6-security" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-security" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">6.1 Explain RBAC components: Role, ClusterRole, RoleBinding, ClusterRoleBinding.
+    <div id="61-explain-rbac-components-role-clusterrole-rolebinding-clusterrolebinding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#61-explain-rbac-components-role-clusterrole-rolebinding-clusterrolebinding" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Role</strong> – namespace-scoped permission set (verbs on resources).</li>
+<li><strong>ClusterRole</strong> – cluster-scoped (or reusable across namespaces).</li>
+<li><strong>RoleBinding</strong> – grants a Role (or ClusterRole) to a subject within a namespace.</li>
+<li><strong>ClusterRoleBinding</strong> – grants cluster-wide permissions.</li>
+</ul>
+
+<h3 class="relative group">6.2 What are Pod Security Standards / Pod Security Admission?
+    <div id="62-what-are-pod-security-standards--pod-security-admission" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#62-what-are-pod-security-standards--pod-security-admission" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Replacing the deprecated PodSecurityPolicy, Pod Security Admission enforces three levels — <code>Privileged</code>, <code>Baseline</code>, <code>Restricted</code> — at the namespace level via labels, controlling things like host namespace usage, privilege escalation, and capabilities.</p>
+
+<h3 class="relative group">6.3 How do you securely manage Secrets in Kubernetes?
+    <div id="63-how-do-you-securely-manage-secrets-in-kubernetes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#63-how-do-you-securely-manage-secrets-in-kubernetes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>Enable <strong>encryption at rest</strong> for etcd (<code>EncryptionConfiguration</code>).</li>
+<li>Avoid committing raw Secrets to Git — use <strong>Sealed Secrets</strong>, <strong>External Secrets Operator</strong>, or cloud-native secret managers (AWS Secrets Manager, Vault, GCP Secret Manager).</li>
+<li>Restrict RBAC access to <code>secrets</code> resource.</li>
+<li>Consider mounting secrets as volumes rather than env vars (env vars can leak via logs/child processes more easily).</li>
+</ul>
+
+<h3 class="relative group">6.4 How do NetworkPolicies work, and what&rsquo;s a common pitfall?
+    <div id="64-how-do-networkpolicies-work-and-whats-a-common-pitfall" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#64-how-do-networkpolicies-work-and-whats-a-common-pitfall" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>NetworkPolicies are <strong>allow-list</strong> based and require a CNI that supports them (not all do, e.g., basic Flannel doesn&rsquo;t enforce them). A common pitfall: once you apply <em>any</em> NetworkPolicy selecting a pod, <strong>all non-explicitly-allowed traffic is denied</strong> by default — teams forget to allow DNS (port 53 to kube-system) and break pod DNS resolution.</p>
+
+<h3 class="relative group">6.5 What is a Service Account and how is it different from a User account?
+    <div id="65-what-is-a-service-account-and-how-is-it-different-from-a-user-account" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#65-what-is-a-service-account-and-how-is-it-different-from-a-user-account" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Service Accounts are for <strong>processes/pods</strong> to authenticate to the API server, managed within Kubernetes (bound via tokens, often projected as short-lived JWTs today). User accounts are managed externally (OIDC, certificates, cloud IAM) — Kubernetes doesn&rsquo;t have a built-in User object.</p>
+
+<h3 class="relative group">6.6 How would you harden a production cluster?
+    <div id="66-how-would-you-harden-a-production-cluster" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#66-how-would-you-harden-a-production-cluster" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>Enable audit logging.</li>
+<li>Use least-privilege RBAC, avoid <code>cluster-admin</code> bindings.</li>
+<li>Enforce Pod Security Admission (<code>Restricted</code> where possible).</li>
+<li>Use NetworkPolicies for default-deny east-west traffic.</li>
+<li>Scan images (Trivy, Grype) in CI; use admission controllers (OPA/Gatekeeper, Kyverno) to block unscanned/untrusted images.</li>
+<li>Rotate certificates, enable etcd encryption at rest, restrict API server access via private endpoints/bastion.</li>
+<li>Run nodes with minimal OS images, enable seccomp/AppArmor profiles.</li>
+</ul>
+<hr>
+
+<h2 class="relative group">7. Helm &amp; Package Management
+    <div id="7-helm--package-management" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-helm--package-management" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">7.1 What problem does Helm solve?
+    <div id="71-what-problem-does-helm-solve" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#71-what-problem-does-helm-solve" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Templating and packaging of Kubernetes manifests, versioned releases, rollback support, and dependency management (subcharts) — avoiding copy-pasted YAML across environments.</p>
+
+<h3 class="relative group">7.2 Explain Helm&rsquo;s release lifecycle and how rollback works.
+    <div id="72-explain-helms-release-lifecycle-and-how-rollback-works" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#72-explain-helms-release-lifecycle-and-how-rollback-works" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Helm stores release history as Secrets (or ConfigMaps) in the cluster. <code>helm upgrade</code> renders a new manifest and diffs against the live state; <code>helm rollback &lt;release&gt; &lt;revision&gt;</code> reapplies a previous rendered manifest from history.</p>
+
+<h3 class="relative group">7.3 What are Helm hooks?
+    <div id="73-what-are-helm-hooks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#73-what-are-helm-hooks" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Special annotations (<code>helm.sh/hook: pre-install</code>, <code>post-upgrade</code>, etc.) that let you run Jobs at specific points in the release lifecycle — e.g., database migrations before an upgrade completes.</p>
+
+<h3 class="relative group">7.4 Helm vs Kustomize — how do you decide?
+    <div id="74-helm-vs-kustomize--how-do-you-decide" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#74-helm-vs-kustomize--how-do-you-decide" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Helm</strong> – templating language, parameterization, packaging/versioning, good for distributing reusable charts (e.g., third-party software).</li>
+<li><strong>Kustomize</strong> – patch-based, template-free, built into <code>kubectl</code>, good for environment-specific overlays of your own manifests without introducing a templating DSL.
+Many teams use Kustomize for internal app overlays and Helm for third-party charts (ingress-nginx, cert-manager, Prometheus stack).</li>
+</ul>
+<hr>
+
+<h2 class="relative group">8. Troubleshooting &amp; Operations (Scenario-Based)
+    <div id="8-troubleshooting--operations-scenario-based" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-troubleshooting--operations-scenario-based" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">8.1 A pod is in <code>CrashLoopBackOff</code>. What&rsquo;s your process?
+    <div id="81-a-pod-is-in-crashloopbackoff-whats-your-process" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#81-a-pod-is-in-crashloopbackoff-whats-your-process" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><code>kubectl logs &lt;pod&gt; --previous</code> – check the last crashed container&rsquo;s logs.</li>
+<li><code>kubectl describe pod</code> – check exit code and reason (OOMKilled, Error, non-zero exit).</li>
+<li>Check liveness probe configuration — an overly aggressive probe can kill a slow-starting app.</li>
+<li>Check resource limits — OOMKilled (exit code 137) means memory limit too low.</li>
+<li>Validate config/secrets are correctly mounted (missing env var causing app to exit immediately).</li>
+</ol>
+
+<h3 class="relative group">8.2 <code>kubectl get nodes</code> shows a node as <code>NotReady</code>. What do you check?
+    <div id="82-kubectl-get-nodes-shows-a-node-as-notready-what-do-you-check" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#82-kubectl-get-nodes-shows-a-node-as-notready-what-do-you-check" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><code>kubectl describe node &lt;node&gt;</code> – check Conditions and Events.</li>
+<li>SSH to node, check <code>kubelet</code> service status/logs (<code>journalctl -u kubelet</code>).</li>
+<li>Check container runtime health (containerd/docker).</li>
+<li>Check disk pressure (<code>df -h</code>), memory pressure.</li>
+<li>Check network connectivity between node and API server (certs, security groups, clock skew for TLS).</li>
+</ol>
+
+<h3 class="relative group">8.3 How do you perform a zero-downtime rolling update, and what can still break it?
+    <div id="83-how-do-you-perform-a-zero-downtime-rolling-update-and-what-can-still-break-it" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#83-how-do-you-perform-a-zero-downtime-rolling-update-and-what-can-still-break-it" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Deployments default to <code>RollingUpdate</code> strategy with <code>maxSurge</code>/<code>maxUnavailable</code>. Zero downtime also requires:</p>
+<ul>
+<li>Properly configured <strong>readiness probes</strong> (so traffic isn&rsquo;t sent to a pod that isn&rsquo;t ready).</li>
+<li><strong>PodDisruptionBudgets</strong> to prevent voluntary disruptions (node drains) from taking down too many replicas at once.</li>
+<li>Graceful shutdown handling (<code>preStop</code> hook + <code>terminationGracePeriodSeconds</code>) so in-flight requests complete before SIGKILL.</li>
+<li>Connection draining at the load balancer/Service level.</li>
+</ul>
+
+<h3 class="relative group">8.4 How do you debug high memory/CPU usage across a cluster?
+    <div id="84-how-do-you-debug-high-memorycpu-usage-across-a-cluster" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#84-how-do-you-debug-high-memorycpu-usage-across-a-cluster" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><code>kubectl top pods/nodes</code> (requires metrics-server) for a quick snapshot.</li>
+<li>Prometheus + Grafana for historical trends and per-container breakdowns.</li>
+<li><code>kubectl exec</code> + <code>top</code>/<code>ps</code> inside containers, or ephemeral debug containers (<code>kubectl debug</code>) for distroless images without a shell.</li>
+<li>Check for memory leaks by correlating with deployment/release timelines.</li>
+</ul>
+
+<h3 class="relative group">8.5 How do you perform a Kubernetes version upgrade safely in production?
+    <div id="85-how-do-you-perform-a-kubernetes-version-upgrade-safely-in-production" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#85-how-do-you-perform-a-kubernetes-version-upgrade-safely-in-production" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>Read the version&rsquo;s release notes/deprecated API list; run <code>kubectl convert</code>/<code>pluto</code>/<code>kubent</code> to detect deprecated API usage.</li>
+<li>Upgrade control plane first (API server → controller-manager/scheduler → etcd if needed), then worker nodes.</li>
+<li>Upgrade in a staging cluster first, run smoke tests.</li>
+<li>Use surge node pools / blue-green node groups (common in managed services like EKS/GKE/AKS) to upgrade nodes without downtime.</li>
+<li>Drain nodes (<code>kubectl drain --ignore-daemonsets</code>) respecting PodDisruptionBudgets.</li>
+<li>Validate workloads, CRDs, and admission webhooks are compatible with the new API server version.</li>
+</ol>
+
+<h3 class="relative group">8.6 etcd is your source of truth — how do you back it up and restore it?
+    <div id="86-etcd-is-your-source-of-truth--how-do-you-back-it-up-and-restore-it" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#86-etcd-is-your-source-of-truth--how-do-you-back-it-up-and-restore-it" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Use <code>etcdctl snapshot save</code> regularly (automated via CronJob or managed service backup), store snapshots off-cluster (S3/GCS). Restore via <code>etcdctl snapshot restore</code> into a fresh data directory, then reconfigure/restart etcd members pointing to the restored state. Always test restores — an untested backup is not a backup.</p>
+<hr>
+
+<h2 class="relative group">9. CI/CD, GitOps &amp; Observability
+    <div id="9-cicd-gitops--observability" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-cicd-gitops--observability" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">9.1 How does GitOps (ArgoCD/Flux) differ from a traditional CI/CD push-based pipeline?
+    <div id="91-how-does-gitops-argocdflux-differ-from-a-traditional-cicd-push-based-pipeline" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#91-how-does-gitops-argocdflux-differ-from-a-traditional-cicd-push-based-pipeline" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>GitOps is <strong>pull-based</strong>: an in-cluster controller (ArgoCD/Flux) continuously reconciles the cluster state to match a Git repository, rather than a CI pipeline pushing <code>kubectl apply</code> from outside. Benefits: auditable history, drift detection/auto-correction, easier rollback (git revert), and no need to expose cluster credentials to external CI systems.</p>
+
+<h3 class="relative group">9.2 What&rsquo;s your strategy for managing secrets in a GitOps workflow?
+    <div id="92-whats-your-strategy-for-managing-secrets-in-a-gitops-workflow" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#92-whats-your-strategy-for-managing-secrets-in-a-gitops-workflow" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Never store plaintext secrets in Git. Use <strong>Sealed Secrets</strong> (encrypted, only the controller in-cluster can decrypt), <strong>External Secrets Operator</strong> pulling from Vault/AWS Secrets Manager at sync time, or SOPS-encrypted manifests decrypted at apply time.</p>
+
+<h3 class="relative group">9.3 What&rsquo;s the three pillars of observability and how do you implement them in Kubernetes?
+    <div id="93-whats-the-three-pillars-of-observability-and-how-do-you-implement-them-in-kubernetes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#93-whats-the-three-pillars-of-observability-and-how-do-you-implement-them-in-kubernetes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Metrics</strong> – Prometheus + kube-state-metrics + node-exporter, visualized in Grafana; alerting via Alertmanager.</li>
+<li><strong>Logs</strong> – Fluent Bit/Fluentd/Vector shipping to a central store (Loki, Elasticsearch, CloudWatch).</li>
+<li><strong>Traces</strong> – OpenTelemetry instrumentation, collected via OTel Collector, visualized in Jaeger/Tempo.</li>
+</ul>
+
+<h3 class="relative group">9.4 How do you design a CI/CD pipeline for Kubernetes deployments end-to-end?
+    <div id="94-how-do-you-design-a-cicd-pipeline-for-kubernetes-deployments-end-to-end" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#94-how-do-you-design-a-cicd-pipeline-for-kubernetes-deployments-end-to-end" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>CI: lint, unit test, build image, scan image (Trivy), push to registry with immutable tag (git SHA, not <code>latest</code>).</li>
+<li>Update manifest/Helm values (image tag) — either via CI committing to a GitOps repo or triggering an ArgoCD Image Updater.</li>
+<li>CD: GitOps controller syncs changes to cluster.</li>
+<li>Post-deploy: automated smoke tests / synthetic checks; progressive delivery (canary/blue-green) via Argo Rollouts or Flagger, gated by metrics (error rate, latency) before full rollout.</li>
+<li>Rollback: automatic on failed health checks, or manual via <code>git revert</code>.</li>
+</ol>
+<hr>
+
+<h2 class="relative group">10. Advanced / Architect-Level Scenario Questions
+    <div id="10-advanced--architect-level-scenario-questions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#10-advanced--architect-level-scenario-questions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">10.1 Design a multi-tenant Kubernetes platform for multiple internal teams. What do you consider?
+    <div id="101-design-a-multi-tenant-kubernetes-platform-for-multiple-internal-teams-what-do-you-consider" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#101-design-a-multi-tenant-kubernetes-platform-for-multiple-internal-teams-what-do-you-consider" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>Isolation</strong>: namespace-per-team at minimum; consider vcluster or separate clusters for teams needing hard isolation (compliance).</li>
+<li><strong>RBAC</strong>: scoped roles per namespace, avoid shared cluster-admin.</li>
+<li><strong>ResourceQuotas/LimitRanges</strong>: prevent noisy-neighbor resource exhaustion.</li>
+<li><strong>NetworkPolicies</strong>: default-deny between tenant namespaces.</li>
+<li><strong>Cost visibility</strong>: chargeback/showback via tools like Kubecost, labeling standards enforced via policy (OPA/Kyverno).</li>
+<li><strong>Shared platform services</strong>: centralized ingress controller, cert-manager, logging/monitoring stack, self-service via GitOps.</li>
+</ul>
+
+<h3 class="relative group">10.2 How would you design for multi-region / disaster recovery with Kubernetes?
+    <div id="102-how-would-you-design-for-multi-region--disaster-recovery-with-kubernetes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#102-how-would-you-design-for-multi-region--disaster-recovery-with-kubernetes" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>Active-passive or active-active clusters per region behind a global load balancer (Route53/Cloud DNS failover or Anycast).</li>
+<li>Stateless workloads replicate easily via GitOps to both clusters.</li>
+<li>Stateful data needs region-aware replication strategy independent of Kubernetes (managed DB replication, or tools like Velero for backup/restore of PVs and cluster objects).</li>
+<li>Regularly test failover with game days; automate DNS cutover and document RTO/RPO targets.</li>
+</ul>
+
+<h3 class="relative group">10.3 How do you handle noisy-neighbor problems on a shared cluster?
+    <div id="103-how-do-you-handle-noisy-neighbor-problems-on-a-shared-cluster" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#103-how-do-you-handle-noisy-neighbor-problems-on-a-shared-cluster" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Set appropriate requests/limits (Guaranteed QoS for critical workloads), use <code>PriorityClasses</code> to control eviction order, isolate heavy workloads via taints/node pools, apply <code>ResourceQuota</code> per namespace, and monitor for CPU throttling using metrics like <code>container_cpu_cfs_throttled_seconds_total</code>.</p>
+
+<h3 class="relative group">10.4 A production incident: API server latency spikes cluster-wide. How do you triage?
+    <div id="104-a-production-incident-api-server-latency-spikes-cluster-wide-how-do-you-triage" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#104-a-production-incident-api-server-latency-spikes-cluster-wide-how-do-you-triage" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>Check API server metrics (<code>apiserver_request_duration_seconds</code>) and etcd metrics (<code>etcd_disk_wal_fsync_duration_seconds</code>) — etcd disk latency is a very common root cause.</li>
+<li>Check for a controller/operator in a reconcile loop hammering the API (<code>apiserver_request_total</code> by client/user-agent).</li>
+<li>Check node count / object count growth — very large clusters or CRD/watch storms can overload the API server.</li>
+<li>Check control plane resource utilization (CPU/memory) if self-managed; check managed service status page if using EKS/GKE/AKS.</li>
+<li>Mitigate: rate-limit/throttle offending controllers, scale API server (if self-hosted), consider etcd defragmentation.</li>
+</ol>
+
+<h3 class="relative group">10.5 How would you migrate a stateful legacy application into Kubernetes with minimal downtime?
+    <div id="105-how-would-you-migrate-a-stateful-legacy-application-into-kubernetes-with-minimal-downtime" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#105-how-would-you-migrate-a-stateful-legacy-application-into-kubernetes-with-minimal-downtime" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>Containerize and validate behavior in a non-prod cluster first.</li>
+<li>Use a StatefulSet with proper <code>volumeClaimTemplates</code> mapped to existing storage (or migrate data via a one-time job/replication).</li>
+<li>Run old and new systems in parallel; use DNS/traffic weighting to gradually shift load (canary migration).</li>
+<li>Ensure backward-compatible data schema during the cutover window.</li>
+<li>Have a tested rollback plan (keep the legacy system warm until the new system is proven stable).</li>
+</ul>
+
+<h3 class="relative group">10.6 What are Operators, and when would you build a custom one?
+    <div id="106-what-are-operators-and-when-would-you-build-a-custom-one" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#106-what-are-operators-and-when-would-you-build-a-custom-one" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Operators extend Kubernetes with <strong>Custom Resource Definitions (CRDs)</strong> plus a controller that encodes operational knowledge (backup, scaling, failover) for a specific application — essentially automating what an SRE would do manually. Build a custom operator when you have repeatable, complex operational logic for a stateful or specialized system (e.g., managing database clusters, certificate lifecycle, or custom scaling logic) that off-the-shelf controllers don&rsquo;t cover.</p>
+
+<h3 class="relative group">10.7 How do admission webhooks (mutating/validating) fit into the request lifecycle, and what risks do they introduce?
+    <div id="107-how-do-admission-webhooks-mutatingvalidating-fit-into-the-request-lifecycle-and-what-risks-do-they-introduce" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#107-how-do-admission-webhooks-mutatingvalidating-fit-into-the-request-lifecycle-and-what-risks-do-they-introduce" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>They intercept requests after authentication/authorization but before persistence to etcd. <strong>Mutating webhooks</strong> run first (can modify the object), then <strong>validating webhooks</strong> (can only accept/reject). Risks: if a webhook&rsquo;s endpoint is unavailable and <code>failurePolicy: Fail</code> is set, it can block <strong>all</strong> matching API operations cluster-wide — including the ability to fix the webhook itself. Always scope webhooks tightly (<code>namespaceSelector</code>, <code>objectSelector</code>) and monitor their availability closely.</p>
+<hr>
+
+<h2 class="relative group">How to Use This List
+    <div id="how-to-use-this-list" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-to-use-this-list" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>If you&rsquo;re prepping for an interview, don&rsquo;t just memorize answers — be ready to whiteboard the architecture diagram and narrate a real incident you&rsquo;ve handled for each troubleshooting section.</li>
+<li>Tailor the &ldquo;Advanced/Architect&rdquo; section answers with specifics from your own environment (cloud provider, cluster size, tooling) — interviewers at the 7-year level want to hear real trade-offs you&rsquo;ve made, not textbook answers.</li>
+</ul>
+<p><em>Feel free to fork/extend this list on your Hugo site as you encounter new questions in interviews.</em></p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/eks/eks/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Amazon EKS: A Beginner-Friendly Hands-On Setup Guide
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-09-14T00:00:00&#43;00:00">14 September 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hemanth Kumar Motukuri
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Search"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          aria-label="Search"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+    
+    
+  </body>
+  
+</html>
