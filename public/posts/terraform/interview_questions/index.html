@@ -1,0 +1,2046 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Terraform Interview Questions & Answers &middot; Hemanth Kumar Motukuri</title>
+    <meta name="title" content="Terraform Interview Questions & Answers &middot; Hemanth Kumar Motukuri">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="A complete, tiered Terraform interview question bank with practical answers and code examples, for engineers with 7&#43; years of experience.">
+  
+  
+    <meta name="keywords" content="terraform,devops,interview,aws,iac,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/terraform/interview_questions/">
+  
+  
+  
+
+  
+  
+    <meta name="author" content="Hemanth Kumar Motukuri">
+  
+  
+    
+      
+        
+          <link href="https://github.com/hemanth7040" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://linkedin.com/in/hemanth-kumar-motukuri" rel="me">
+        
+      
+    
+      
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/terraform/interview_questions/">
+	<meta property="og:site_name" content="Hemanth Kumar Motukuri">
+	<meta property="og:title" content="Terraform Interview Questions & Answers">
+	<meta property="og:description" content="A complete, tiered Terraform interview question bank with practical answers and code examples, for engineers with 7&#43; years of experience.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-09-24T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-09-24T00:00:00+00:00">
+		<meta property="article:tag" content="Terraform">
+		<meta property="article:tag" content="Devops">
+		<meta property="article:tag" content="Interview">
+		<meta property="article:tag" content="Aws">
+		<meta property="article:tag" content="Iac">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Terraform Interview Questions & Answers">
+	<meta name="twitter:description" content="A complete, tiered Terraform interview question bank with practical answers and code examples, for engineers with 7&#43; years of experience.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.9e949c152877be2b943cf16ba64eb015b9010aa5f6744389321c5c988db35be9eefba0dcaf57fbf3f3648bb4ba45c21bab1e6c817b665379fb0363a1eb4ed919.css"
+    integrity="sha512-npScFSh3viuUPPFrpk6wFbkBCqX2dEOJMhxcmI2zW&#43;nu&#43;6Dcr1f78/Nki7S6RcIbqx5sgXtmU3n7A2Oh607ZGQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.764f412f07ea715415e9123a5eb5f355429502d0b760146b9bcab854bc50829dee14488594acd935dfcdc6a0fe7e6d14d7bee914ebb9272b251aa238cb52c4dd.js"
+    integrity="sha512-dk9BLwfqcVQV6RI6XrXzVUKVAtC3YBRrm8q4VLxQgp3uFEiFlKzZNd/NxqD&#43;fm0U177pFOu5JyslGqI4y1LE3Q=="></script>
+  
+
+
+  
+  
+  
+  
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.be4a11c293f9b8ab20ab872f73c6b0c584fcba4a0df2c8ef7f414a5805c0ddab955ac23bec4a6d92a06087498d445cb2bf26a6602a27981980efe2bda70104a4.js"
+      integrity="sha512-vkoRwpP5uKsgq4cvc8awxYT8ukoN8sjvf0FKWAXA3auVWsI77EptkqBgh0mNRFyyvyamYConmBmA7&#43;K9pwEEpA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "My Technical Blog",
+    "name": "Terraform Interview Questions \u0026 Answers",
+    "headline": "Terraform Interview Questions \u0026 Answers",
+    "description": "A complete, tiered Terraform interview question bank with practical answers and code examples, for engineers with 7\u002b years of experience.",
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/terraform/interview_questions/",
+    "author" : {
+      "@type": "Person",
+      "name": "Hemanth Kumar Motukuri",
+      "image": "http://localhost:1313/img/profile_pic.jpg",
+      "sameAs": ["https://github.com/hemanth7040", "https://linkedin.com/in/hemanth-kumar-motukuri"]
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-09-24T00:00:00\u002b00:00",
+    "datePublished": "2026-09-24T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-09-24T00:00:00\u002b00:00",
+    
+    "keywords": ["terraform","devops","interview","aws","iac"],
+    
+    "mainEntityOfPage": "http://localhost:1313/posts/terraform/interview_questions/",
+    "wordCount":  6982 
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    <header>
+      
+      
+        <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Hemanth Kumar Motukuri
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="Main menu" class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Technical Topics">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/projects/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Projects"
+      title="Projects">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Projects
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/resume/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Resume"
+      title="Resume">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Resume
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About Me"
+      title="About Me">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          About Me
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/contact/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Contact"
+      title="Contact">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Contact
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Switch to dark appearance"
+        type="button"
+        class="text-sm bf-icon-color-hover"
+        title="Switch to dark appearance">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd
+        id="search-shortcut-hint"
+        class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400"
+        aria-hidden="true">
+        ⌘K
+      </kbd>
+    </button>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row relative flex items-center h-14 gap-4">
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Switch to dark appearance"
+      title="Switch to dark appearance"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label
+      for="mobile-menu-toggle"
+      tabindex="0"
+      role="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu-dialog"
+      aria-label="Main menu"
+      class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      id="mobile-menu-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Main menu"
+      style="scrollbar-gutter: stable;"
+      class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100
+      
+        fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99
+      
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        tabindex="0"
+        role="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu-dialog"
+        class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only">Close menu</span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav
+        aria-label="Mobile menu"
+        class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/categories/"
+          aria-label="Blog"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Technical Topics" class="text-2xl font-bold tracking-tight">
+            Blog
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/projects/"
+          aria-label="Projects"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Projects" class="text-2xl font-bold tracking-tight">
+            Projects
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/resume/"
+          aria-label="Resume"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Resume" class="text-2xl font-bold tracking-tight">
+            Resume
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/about/"
+          aria-label="About Me"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="About Me" class="text-2xl font-bold tracking-tight">
+            About Me
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/contact/"
+          aria-label="Contact"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Contact" class="text-2xl font-bold tracking-tight">
+            Contact
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      
+    </header>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Terraform Interview Questions & Answers
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-09-24T00:00:00&#43;00:00">24 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>6982 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">33 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/terraform/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Terraform
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/terraform/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Terraform
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/devops/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Devops
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/interview/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Interview
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/aws/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Aws
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/iac/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Iac
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+      
+      
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Hemanth Kumar Motukuri"
+        src="/img/profile_pic_hu_f1f3554a1a022441.jpg"
+        data-zoom-src="/img/profile_pic_hu_1d06270a67dfafaf.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Hemanth Kumar Motukuri
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">DevOps &amp; MLOps | Kubernetes | AWS</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/hemanth7040"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 496 496" xml:space="preserve">
+<path id="SVGCleanerId_0" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+	c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+	c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+	c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+	c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+	c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+	c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+	c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+	c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+<g>
+	<path id="SVGCleanerId_0_1_" style="fill:#3E77BF;" d="M247.992,5.163C111.048,5.163,0,116.627,0,254.163
+		c0,109.992,71.048,203.32,169.632,236.24c12.392,2.296,16.912-5.392,16.912-12c0-5.904-0.216-21.56-0.336-42.344
+		c-69,15.064-83.552-33.376-83.552-33.376c-11.264-28.768-27.52-36.408-27.52-36.408c-22.528-15.456,1.696-15.16,1.696-15.16
+		c24.88,1.752,37.976,25.672,37.976,25.672c22.144,38.048,58.064,27.048,72.192,20.672c2.232-16.08,8.656-27.064,15.736-33.28
+		c-55.056-6.296-112.944-27.64-112.944-123.04c0-27.176,9.656-49.408,25.52-66.832c-2.568-6.296-11.072-31.6,2.416-65.872
+		c0,0,20.832-6.688,68.2,25.52c19.784-5.52,41-8.28,62.096-8.392c21.048,0.112,42.28,2.864,62.096,8.392
+		c47.328-32.208,68.128-25.52,68.128-25.52c13.52,34.272,5.016,59.576,2.456,65.872c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163C496,116.627,384.952,5.163,247.992,5.163z"/>
+</g>
+<g>
+	<path style="fill:#114C82;" d="M378.496,109.131c13.128,33.904,4.752,58.928,2.2,65.176c15.904,17.424,25.504,39.648,25.504,66.832
+		c0,95.64-57.984,116.68-113.232,122.856c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296
+		c0,6.672,4.472,14.424,17.048,11.968C425.016,457.387,496,364.123,496,254.163c0-29.56-5.152-57.896-14.568-84.2
+		C447.24,133.963,409.184,109.987,378.496,109.131z"/>
+	<path style="fill:#114C82;" d="M192.976,377.323c2.784-5.616,6.184-9.984,9.76-13.144c-30.176-3.456-61.168-11.512-83.048-33.744
+		C136.52,358.451,163.928,371.195,192.976,377.323z"/>
+</g>
+<path style="fill:#6CA9EA;" d="M12.912,270.947c0-137.536,111.048-249,247.992-249c76.04,0,144.056,34.392,189.536,88.488
+	C405.52,46.755,331.616,5.163,247.992,5.163C111.048,5.163,0,116.627,0,254.163c0,61.32,22.12,117.424,58.752,160.792
+	C29.944,374.291,12.912,324.643,12.912,270.947z"/>
+<path style="fill:#083E66;" d="M322.712,426.899c0-23.232-7.928-38.44-16.832-46.128c55.248-6.16,113.24-27.216,113.24-122.848
+	c0-27.184-9.6-49.4-25.52-66.824c2.576-6.296,11.096-31.608-2.456-65.872c0,0-2.576-0.792-7.896-0.488
+	c5.808,25.84-0.416,44.32-2.552,49.568c15.904,17.424,25.504,39.648,25.504,66.832c0,95.64-57.984,116.68-113.232,122.856
+	c8.904,7.688,16.832,22.872,16.832,46.112c0,33.296-0.296,60.128-0.296,68.296c0,5.872,3.496,12.568,12.92,12.408
+	C322.488,479.555,322.712,455.659,322.712,426.899z"/>
+<path style="fill:#114C82;" d="M117.464,423.995c5.208,10.72,22.712,36.4,68.888,30.992c-0.064-5.648-0.112-11.976-0.144-18.928
+	C150.584,443.835,129.552,434.667,117.464,423.995z"/>
+<path style="fill:#6CA9EA;" d="M126.368,391.387c-1.592-2.4-4.576-6.472-8.904-10.544
+	C120.272,385.011,123.256,388.507,126.368,391.387z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/hemanth-kumar-motukuri"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 382 382" xml:space="preserve">
+<path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+	L341.91,330.654L341.91,330.654z"/>
+</svg></span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:hemanthkumarmotukuri@gmail.com"
+          
+          target="_blank"
+          aria-label="Gmail"
+          title="Gmail"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><?xml version="1.0" encoding="utf-8"?>
+<!-- License: MIT. Made by Garuda Technology: https://github.com/garudatechnologydevelopers/sketch-icons -->
+<svg width="800px" height="800px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z" fill="white"/>
+<path d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z" fill="#EA4335"/>
+<path d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z" fill="#FBBC05"/>
+<path d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z" fill="#34A853"/>
+<path d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z" fill="#C5221F"/>
+<path d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z" fill="#C5221F"/>
+<path d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z" fill="#C5221F"/>
+<path d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z" fill="#4285F4"/>
+</svg></span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+    
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <blockquote><p>A structured Terraform interview prep guide, organized into three tiers: <strong>must-master</strong> fundamentals and senior scenarios, <strong>strong-understanding</strong> AWS/security/workflow topics, and <strong>basic-awareness</strong> ecosystem topics. Each answer is written to be spoken naturally in an interview, with code examples where they add real value.</p>
+</blockquote><hr>
+
+<h2 class="relative group">🔴 Tier 1 — Master These
+    <div id="-tier-1--master-these" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-tier-1--master-these" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1. State &amp; Backend
+    <div id="1-state--backend" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-state--backend" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>1. What is Terraform state?</strong></p>
+<p>A JSON file (<code>terraform.tfstate</code>) that maps the resources in your <code>.tf</code> config to the real-world objects Terraform created, storing their IDs and current attribute values.</p>
+<p><strong>2. Why does Terraform need a state file?</strong></p>
+<p>Without it, Terraform would have no way to know what it already created, so every <code>apply</code> would try to create everything from scratch. State lets it compute a diff between desired and actual infrastructure.</p>
+<p><strong>3. What information is stored in terraform.tfstate?</strong></p>
+<p>Resource metadata, all attributes (including sensitive ones, in plain text), dependency graph data, and output values.</p>
+<p><strong>4. Why shouldn&rsquo;t you commit terraform.tfstate to Git?</strong></p>
+<p>It often contains secrets in plaintext (passwords, keys), and concurrent commits offer no locking, so two people could silently overwrite each other&rsquo;s state.</p>
+<p><strong>5. What happens if you delete the state file?</strong></p>
+<p>Terraform loses all knowledge of existing resources. The next <code>plan</code> will propose creating everything again, potentially duplicating live infrastructure.</p>
+<p><strong>6. Local state vs remote state?</strong></p>
+<p>Local state lives on one person&rsquo;s disk (<code>terraform.tfstate</code> in the working directory) — no locking, no sharing. Remote state lives in a shared backend (S3, Terraform Cloud, etc.), supports locking, and is accessible to the whole team/CI.</p>
+<p><strong>7. What is a remote backend?</strong></p>
+<p>A configured location (e.g., S3, Azure Blob, GCS, Terraform Cloud) where Terraform stores and retrieves the state file instead of on local disk.</p>
+<p><strong>8. What is an S3 backend?</strong></p>
+<p>Using an AWS S3 bucket to store <code>terraform.tfstate</code> remotely.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">terraform</span> {
+</span></span><span class="line"><span class="cl">  <span class="k">backend</span> <span class="s2">&#34;s3&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">    bucket</span>         <span class="o">=</span> <span class="s2">&#34;my-tf-state-bucket&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">    key</span>            <span class="o">=</span> <span class="s2">&#34;prod/network/terraform.tfstate&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">    region</span>         <span class="o">=</span> <span class="s2">&#34;us-east-1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">    dynamodb_table</span> <span class="o">=</span> <span class="s2">&#34;tf-locks&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">    encrypt</span>        <span class="o">=</span> <span class="kt">true</span>
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>9. Why use S3 for Terraform state?</strong></p>
+<p>Durable, versionable (via S3 versioning, so you can roll back a bad state), supports encryption at rest, and integrates cleanly with DynamoDB for locking.</p>
+<p><strong>10. How do you configure an S3 backend?</strong></p>
+<p>As shown above — a <code>backend &quot;s3&quot;</code> block specifying bucket, key (path within the bucket), region, and optionally a <code>dynamodb_table</code> for locking and <code>encrypt = true</code>.</p>
+<p><strong>11. What is state locking?</strong></p>
+<p>A mechanism that prevents two <code>apply</code>/<code>plan</code> operations from running against the same state simultaneously, avoiding race conditions and corruption.</p>
+<p><strong>12. Why is state locking required?</strong></p>
+<p>Without it, two concurrent applies could both read the same state, make conflicting writes, and the second write could silently overwrite or corrupt the first person&rsquo;s changes.</p>
+<p><strong>13. How do you implement state locking with AWS?</strong></p>
+<p>Pair the S3 backend with a DynamoDB table (a simple table with a <code>LockID</code> primary key). Terraform writes a lock item to that table for the duration of the operation.</p>
+<p><strong>14. What happens if two engineers run terraform apply simultaneously?</strong></p>
+<p>With locking configured, the second <code>apply</code> fails immediately with a &ldquo;state is locked&rdquo; error rather than proceeding. Without locking, both could write to state and corrupt it.</p>
+<p><strong>15. What happens when Terraform state is locked?</strong></p>
+<p>Any other <code>plan</code>/<code>apply</code> attempting to use that state is blocked and returns an error identifying who/what holds the lock.</p>
+<p><strong>16. How do you troubleshoot a locked state?</strong></p>
+<p>Check who&rsquo;s actually running an operation (e.g., a colleague, or a stuck CI job) before doing anything. If the lock is confirmed stale (crashed process), only then force-unlock.</p>
+<p><strong>17. What is terraform force-unlock?</strong></p>
+<p>A command (<code>terraform force-unlock &lt;LOCK_ID&gt;</code>) that manually removes a lock from state, used when a process crashed and left a stale lock behind.</p>
+<p><strong>18. When would you use terraform force-unlock?</strong></p>
+<p>Only after confirming no other apply/plan is genuinely running — e.g., a CI job was killed mid-run and left the DynamoDB lock item behind.</p>
+<p><strong>19. What happens if Terraform state becomes corrupted?</strong></p>
+<p>Terraform can&rsquo;t reliably reconcile config vs. reality — plans may error out or show nonsensical diffs. You typically restore from a backup/versioned copy.</p>
+<p><strong>20. How do you recover Terraform state?</strong></p>
+<p>Restore the previous version from S3 versioning (if enabled) or a <code>terraform.tfstate.backup</code> file, or rebuild it resource-by-resource using <code>terraform import</code>.</p>
+<p><strong>21. How do you back up Terraform state?</strong></p>
+<p>Enable S3 bucket versioning on the backend bucket, so every state write is automatically versioned and recoverable.</p>
+<p><strong>22. How do you secure Terraform state?</strong></p>
+<p>Encrypt at rest (S3 SSE), encrypt in transit (TLS), restrict IAM access to the bucket/table to only the CI role and admins, and never commit state to Git.</p>
+<p><strong>23. Why is Terraform state considered sensitive?</strong></p>
+<p>Because it stores full resource attributes in plaintext, including things like database passwords or generated secrets, regardless of <code>sensitive = true</code> on the variable.</p>
+<p><strong>24. How do you encrypt Terraform state?</strong></p>
+<p>Enable server-side encryption on the S3 bucket (<code>encrypt = true</code> in the backend block, plus bucket-level SSE-KMS for stronger control).</p>
+<hr>
+
+<h3 class="relative group">2. Drift &amp; Import
+    <div id="2-drift--import" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-drift--import" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>25. What is Terraform drift?</strong></p>
+<p>When real-world infrastructure no longer matches what&rsquo;s defined in your Terraform config/state — usually caused by manual changes outside Terraform.</p>
+<p><strong>26. How does Terraform detect drift?</strong></p>
+<p><code>terraform plan</code> refreshes state against the actual cloud resources, then diffs that against your <code>.tf</code> config, surfacing any mismatch.</p>
+<p><strong>27. What happens if someone manually modifies an AWS resource?</strong></p>
+<p>The next <code>plan</code> shows a diff trying to revert that manual change back to what&rsquo;s declared in code (unless the attribute is under <code>ignore_changes</code>).</p>
+<p><strong>28. How do you identify infrastructure drift?</strong></p>
+<p>Run <code>terraform plan</code> regularly (or on a schedule in CI) and review any unexpected diffs — that&rsquo;s your drift signal.</p>
+<p><strong>29. How do you resolve drift?</strong></p>
+<p>Either accept the manual change by updating your <code>.tf</code> code to match it, or run <code>apply</code> to revert infrastructure back to the declared config — decide based on which is &ldquo;correct.&rdquo;</p>
+<p><strong>30. What happens during terraform plan when drift exists?</strong></p>
+<p>Plan shows a diff (e.g., &ldquo;~ update in-place&rdquo; or &ldquo;will be replaced&rdquo;) reflecting the difference between actual and desired state.</p>
+<p><strong>31. Can Terraform automatically fix drift?</strong></p>
+<p>Only if you run <code>apply</code> after detecting it — Terraform doesn&rsquo;t auto-remediate on its own; <code>plan</code> only reports drift, it doesn&rsquo;t fix it silently.</p>
+<p><strong>32. How would you handle a production resource that was manually modified?</strong></p>
+<p>Investigate why (was it an emergency fix?), then either codify the change into Terraform or coordinate reverting it via <code>apply</code>, communicating with the team first to avoid surprises.</p>
+<p><strong>33. How do you prevent manual infrastructure changes?</strong></p>
+<p>Restrict IAM console/CLI write permissions for engineers, funnel all changes through a CI/CD Terraform pipeline, and use SCPs (Service Control Policies) to block direct changes to critical resources.</p>
+<p><strong>34. What is terraform import?</strong></p>
+<p>A command that brings an already-existing real-world resource under Terraform&rsquo;s management by adding it to the state file, without recreating it.</p>
+<p><strong>35. Why do we use Terraform import?</strong></p>
+<p>To adopt manually-created resources into Terraform management without destroying and recreating them.</p>
+<p><strong>36. How do you import an existing AWS resource?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">terraform import aws_instance.web i-0123456789abcdef0</span></span></code></pre></div></div>
+<p>You must first write a matching <code>resource</code> block in your <code>.tf</code> file (even a placeholder), then import maps that real resource ID to it.</p>
+<p><strong>37. What happens after importing a resource?</strong></p>
+<p>The resource exists in state, but Terraform doesn&rsquo;t generate the matching <code>.tf</code> config for you (in versions before <code>terraform plan -generate-config-out</code>) — you must write the config to match, or <code>plan</code> will show a diff trying to &ldquo;correct&rdquo; attributes you haven&rsquo;t declared.</p>
+<p><strong>38. Does terraform import automatically generate Terraform configuration?</strong></p>
+<p>Classic <code>import</code> does not — you write the resource block yourself. Newer Terraform (1.5+) supports <code>import</code> blocks with <code>-generate-config-out</code> to scaffold config automatically.</p>
+<p><strong>39. How do you bring manually created infrastructure under Terraform management?</strong></p>
+<p>Write the resource block, run <code>terraform import</code>, then run <code>plan</code> and adjust your config until it shows no diff (meaning your code accurately reflects the resource).</p>
+<p><strong>40. What problems can occur during Terraform import?</strong></p>
+<p>Config drift right after import if your <code>.tf</code> block doesn&rsquo;t exactly match every attribute; import only handles one resource at a time, so it&rsquo;s slow for large environments; some resources have quirky/composite import IDs.</p>
+<p><strong>41. How would you import an existing VPC into Terraform?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">terraform import aws_vpc.main vpc-0abc12345</span></span></code></pre></div></div>
+<p>Then flesh out the <code>aws_vpc.main</code> resource block&rsquo;s arguments (CIDR, tags, DNS settings) until <code>plan</code> shows zero changes.</p>
+<hr>
+
+<h3 class="relative group">3. Modules
+    <div id="3-modules" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-modules" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>42. What is a Terraform module?</strong></p>
+<p>A reusable, self-contained package of <code>.tf</code> resource files that you can call with different inputs to create the same set of infrastructure repeatedly.</p>
+<p><strong>43. Why do we use modules?</strong></p>
+<p>To avoid duplicating the same resource blocks across environments/projects, enforce consistency, and encapsulate complexity behind a clean interface (inputs/outputs).</p>
+<p><strong>44. Root module vs child module?</strong></p>
+<p>The root module is the top-level directory where you run <code>terraform apply</code>. A child module is any module called from within it via a <code>module</code> block.</p>
+<p><strong>45. How do you create a reusable module?</strong></p>
+<p>Put resource blocks in their own directory with <code>variables.tf</code> (inputs), <code>main.tf</code> (resources), and <code>outputs.tf</code> (exposed values), then call it via <code>source</code>.</p>
+<p><strong>46. How do you pass variables to a module?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">module</span> <span class="s2">&#34;network&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  source</span>   <span class="o">=</span> <span class="s2">&#34;./modules/network&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">  vpc_cidr</span> <span class="o">=</span> <span class="s2">&#34;10.0.0.0/16&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">  az_count</span> <span class="o">=</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>47. How do you expose outputs from a module?</strong></p>
+<p>Define <code>output</code> blocks inside the module, then reference them from the caller as <code>module.network.vpc_id</code>.</p>
+<p><strong>48. How do modules communicate with each other?</strong></p>
+<p>Through outputs — one module&rsquo;s output is passed as another module&rsquo;s input variable in the root module.</p>
+<p><strong>49. How do you version Terraform modules?</strong></p>
+<p>Using Git tags (<code>source = &quot;git::https://example.com/module.git?ref=v1.2.0&quot;</code>) or a version constraint when pulling from the Terraform Registry (<code>version = &quot;~&gt; 3.0&quot;</code>).</p>
+<p><strong>50. How do you handle module dependencies?</strong></p>
+<p>Terraform infers them automatically when one module&rsquo;s output feeds another module&rsquo;s input; for anything implicit, use <code>depends_on</code> at the module block level.</p>
+<p><strong>51. How do you structure Terraform modules for an organization?</strong></p>
+<p>A common pattern: a <code>modules/</code> directory with generic building blocks (network, compute, database), and per-environment root directories (<code>envs/dev</code>, <code>envs/staging</code>, <code>envs/prod</code>) that call those modules with different variables.</p>
+<p><strong>52. How do you design reusable VPC modules?</strong></p>
+<p>Parameterize CIDR ranges, AZ count, and whether NAT gateways are needed; output the VPC ID and subnet IDs so other modules (compute, database) can consume them.</p>
+<p><strong>53. How do you design reusable EKS modules?</strong></p>
+<p>Parameterize cluster version, node group instance types/counts, and networking inputs (VPC/subnet IDs from the network module); output the cluster endpoint and OIDC provider ARN for IAM roles for service accounts.</p>
+<p><strong>54. How do you prevent breaking changes in modules?</strong></p>
+<p>Semantic versioning (major version bump for breaking changes), maintain a changelog, and avoid renaming/removing variables without a deprecation period.</p>
+<p><strong>55. How do you maintain multiple versions of a module?</strong></p>
+<p>Consumers pin exact or constrained versions (<code>version = &quot;2.3.0&quot;</code>); the module repo tags releases so old consumers keep working while new ones adopt newer tags.</p>
+<p><strong>56. Terraform Registry vs private module registry?</strong></p>
+<p>The public Registry hosts community/vendor modules anyone can use; a private registry (Terraform Cloud/Enterprise, or a Git-based private source) hosts internal, company-specific modules with access control.</p>
+<p><strong>57. How would you create a private Terraform module repository?</strong></p>
+<p>Host it in an internal Git repo and reference it with a Git source URL and <code>ref</code>, or publish it to a private registry (e.g., Terraform Cloud&rsquo;s private registry) for versioned, discoverable consumption.</p>
+<hr>
+
+<h3 class="relative group">4. count &amp; for_each
+    <div id="4-count--for_each" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-count--for_each" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>58. What is count?</strong></p>
+<p>A meta-argument that creates N copies of a resource, indexed numerically (<code>count.index</code>).</p>
+<p><strong>59. What is for_each?</strong></p>
+<p>A meta-argument that creates one resource per item in a map or set of strings, keyed by that value rather than a numeric index.</p>
+<p><strong>60. count vs for_each?</strong></p>
+<p><code>count</code> uses numeric indexes, so removing a middle item shifts indexes and can cause unrelated resources to be destroyed/recreated. <code>for_each</code> uses stable string keys, so removing one item only affects that one resource.</p>
+<p><strong>61. When would you use count?</strong></p>
+<p>For simple, identical resources where order/identity doesn&rsquo;t matter much (e.g., a fixed number of nearly-identical EC2 instances at the start of a small project).</p>
+<p><strong>62. When would you use for_each?</strong></p>
+<p>Whenever resources have distinct identities (subnets per AZ, IAM users by name) or the list might change over time — the stability of the key matters.</p>
+<p><strong>63. What happens when you remove an item from a count list?</strong></p>
+<p>All items after the removed index shift down by one, so Terraform destroys and recreates every resource after that index — not just the removed one.</p>
+<p><strong>64. What happens when you remove an item from a for_each map?</strong></p>
+<p>Only the resource matching that specific key is destroyed; every other resource is untouched.</p>
+<p><strong>65. Can you use both count and for_each on the same resource?</strong></p>
+<p>No — a resource block can use one or the other, not both simultaneously.</p>
+<p><strong>66. How do you reference a resource created using count?</strong></p>
+<p><code>aws_instance.web[0].id</code>, <code>aws_instance.web[count.index].id</code>, or <code>aws_instance.web[*].id</code> for all of them.</p>
+<p><strong>67. How do you reference a resource created using for_each?</strong></p>
+<p><code>aws_instance.web[&quot;app1&quot;].id</code>, or <code>aws_instance.web</code> as a whole is a map keyed by your <code>for_each</code> keys.</p>
+<p><strong>68. How would you create multiple AWS subnets using for_each?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">variable</span> <span class="s2">&#34;subnets&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  type</span> <span class="o">=</span> <span class="k">map</span><span class="p">(</span><span class="k">string</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">  default</span> <span class="o">=</span> {
+</span></span><span class="line"><span class="cl"><span class="n">    &#34;public-a&#34;</span>  <span class="o">=</span> <span class="s2">&#34;10.0.1.0/24&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">    &#34;public-b&#34;</span>  <span class="o">=</span> <span class="s2">&#34;10.0.2.0/24&#34;</span>
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_subnet&#34; &#34;this&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  for_each</span>          <span class="o">=</span> <span class="k">var</span><span class="p">.</span><span class="k">subnets</span>
+</span></span><span class="line"><span class="cl"><span class="n">  vpc_id</span>            <span class="o">=</span> <span class="k">aws_vpc</span><span class="p">.</span><span class="k">main</span><span class="p">.</span><span class="k">id</span>
+</span></span><span class="line"><span class="cl"><span class="n">  cidr_block</span>        <span class="o">=</span> <span class="k">each</span><span class="p">.</span><span class="k">value</span>
+</span></span><span class="line"><span class="cl"><span class="n">  availability_zone</span> <span class="o">=</span><span class="n"> each.key</span> <span class="o">==</span> <span class="s2">&#34;public-a&#34; ? &#34;us-east-1a&#34; : &#34;us-east-1b&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">  tags</span> <span class="o">=</span><span class="n"> { Name</span> <span class="o">=</span> <span class="k">each</span><span class="p">.</span><span class="k">key</span> }
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<hr>
+
+<h3 class="relative group">5. Lifecycle
+    <div id="5-lifecycle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-lifecycle" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>69. What is the Terraform lifecycle block?</strong></p>
+<p>A nested block inside a resource that customizes how Terraform manages that resource&rsquo;s create/update/destroy behavior.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_instance&#34; &#34;web&#34;</span> {<span class="c1">
+</span></span></span><span class="line"><span class="cl"><span class="c1">  # ...
+</span></span></span><span class="line"><span class="cl">  <span class="k">lifecycle</span> {
+</span></span><span class="line"><span class="cl"><span class="n">    create_before_destroy</span> <span class="o">=</span> <span class="kt">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">    prevent_destroy</span>        <span class="o">=</span> <span class="kt">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">    ignore_changes</span>          <span class="o">=</span> <span class="p">[</span><span class="k">tags</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>70. What is create_before_destroy?</strong></p>
+<p>Tells Terraform to provision the replacement resource first, then destroy the old one — avoiding downtime during a forced replacement.</p>
+<p><strong>71. What is prevent_destroy?</strong></p>
+<p>A safety flag that makes Terraform error out and refuse to destroy that resource, even if <code>apply</code> or <code>destroy</code> would otherwise remove it — commonly used on databases.</p>
+<p><strong>72. What is ignore_changes?</strong></p>
+<p>Tells Terraform to ignore diffs on specific attributes going forward, even if they drift from the declared config (e.g., ignore tags added by an auto-tagging Lambda).</p>
+<p><strong>73. When would you use ignore_changes?</strong></p>
+<p>When another process legitimately manages certain attributes outside Terraform — e.g., autoscaling changes <code>desired_capacity</code>, or a tagging automation adds tags you don&rsquo;t want reverted every apply.</p>
+<p><strong>74. What are the risks of ignore_changes?</strong></p>
+<p>It can mask real drift you actually care about, and if overused, your <code>.tf</code> code stops being a reliable source of truth for those attributes.</p>
+<p><strong>75. How would you prevent Terraform from accidentally destroying a production database?</strong></p>
+<p>Add <code>lifecycle { prevent_destroy = true }</code> to the RDS resource, and additionally require manual approval gates in the CI/CD pipeline before any apply touching production.</p>
+<p><strong>76. How would you achieve zero-downtime infrastructure changes using Terraform?</strong></p>
+<p>Use <code>create_before_destroy</code> on the resource lifecycle, combine with load balancer health checks so new instances are only added to rotation once healthy, and use <code>for_each</code>-based deployments so unrelated resources aren&rsquo;t disturbed.</p>
+<hr>
+
+<h3 class="relative group">6. Providers
+    <div id="6-providers" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-providers" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>77. What is a Terraform provider?</strong></p>
+<p>A plugin that translates Terraform&rsquo;s HCL configuration into API calls for a specific platform (AWS, Azure, GCP, Kubernetes, etc.).</p>
+<p><strong>78. How does Terraform communicate with AWS?</strong></p>
+<p>Through the <code>aws</code> provider plugin, which calls the AWS API using credentials you supply (env vars, shared credentials file, or an assumed IAM role).</p>
+<p><strong>79. What is provider versioning?</strong></p>
+<p>Pinning which version(s) of a provider plugin Terraform should use, to avoid unexpected breaking changes from provider updates.</p>
+<p><strong>80. What is required_providers?</strong></p>
+<p>A block inside <code>terraform { }</code> declaring which providers and version constraints the configuration needs.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">terraform</span> {
+</span></span><span class="line"><span class="cl">  <span class="k">required_providers</span> {
+</span></span><span class="line"><span class="cl"><span class="n">    aws</span> <span class="o">=</span> {
+</span></span><span class="line"><span class="cl"><span class="n">      source</span>  <span class="o">=</span> <span class="s2">&#34;hashicorp/aws&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">      version</span> <span class="o">=</span> <span class="s2">&#34;~&gt; 5.0&#34;</span>
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>81. What is a provider alias?</strong></p>
+<p>A named additional instance of a provider, letting you use the same provider type with different configurations (e.g., different regions or accounts) within one config.</p>
+<p><strong>82. Why would you use provider aliases?</strong></p>
+<p>To manage resources across multiple regions or accounts in a single Terraform run, e.g., replicating an S3 bucket to a second region.</p>
+<p><strong>83. How do you deploy resources to multiple AWS regions?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">provider</span> <span class="s2">&#34;aws&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  alias</span>  <span class="o">=</span> <span class="s2">&#34;us_west&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">  region</span> <span class="o">=</span> <span class="s2">&#34;us-west-2&#34;</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_instance&#34; &#34;west_app&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  provider</span> <span class="o">=</span> <span class="k">aws</span><span class="p">.</span><span class="k">us_west</span><span class="c1">
+</span></span></span><span class="line"><span class="cl"><span class="c1">  # ...
+</span></span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>84. How do you manage multiple AWS accounts?</strong></p>
+<p>Use separate provider blocks with different <code>assume_role</code> configurations (one per account), or separate state/backends entirely per account for stronger isolation.</p>
+<p><strong>85. How would you use different AWS providers for dev and production?</strong></p>
+<p>Typically via separate root modules/state per environment, each with its own provider block pointing at the respective account/role, rather than mixing both in one config.</p>
+<p><strong>86. How do you assume an IAM role from Terraform?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">provider</span> <span class="s2">&#34;aws&#34;</span> {
+</span></span><span class="line"><span class="cl">  <span class="k">assume_role</span> {
+</span></span><span class="line"><span class="cl"><span class="n">    role_arn</span> <span class="o">=</span> <span class="s2">&#34;arn:aws:iam::123456789012:role/terraform-exec&#34;</span>
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>87. How do you authenticate Terraform with AWS?</strong></p>
+<p>Preferably via IAM roles (assumed role, or an EC2/CI instance profile) rather than static keys; alternatively environment variables or the shared credentials file for local dev.</p>
+<p><strong>88. What is the difference between AWS access keys and IAM roles?</strong></p>
+<p>Access keys are long-lived static credentials that must be stored/rotated manually; IAM roles provide short-lived, automatically-rotated temporary credentials — much safer, especially in CI.</p>
+<p><strong>89. How do you avoid hardcoding AWS credentials?</strong></p>
+<p>Never put keys in <code>.tf</code> files; use IAM roles/instance profiles, environment variables, or a secrets manager, and rely on the provider&rsquo;s default credential chain.</p>
+<hr>
+
+<h3 class="relative group">7. Terraform + CI/CD
+    <div id="7-terraform--cicd" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-terraform--cicd" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>90. How do you integrate Terraform with Jenkins?</strong></p>
+<p>A pipeline with stages that run <code>terraform init</code>, <code>fmt</code>, <code>validate</code>, <code>plan</code> (posting the plan output for review), and a gated <code>apply</code> stage requiring manual approval for production.</p>
+<p><strong>91. How do you integrate Terraform with GitHub Actions?</strong></p>
+<p>Use the <code>hashicorp/setup-terraform</code> action, run <code>init</code>/<code>plan</code> on pull requests (commenting the plan output), and run <code>apply</code> on merge to main with environment protection rules for production.</p>
+<p><strong>92. What stages would you include in a Terraform pipeline?</strong></p>
+<p><code>fmt</code> (style check) → <code>validate</code> (syntax) → <code>plan</code> (preview) → manual approval (for prod) → <code>apply</code>.</p>
+<p><strong>93. Where should terraform fmt run?</strong></p>
+<p>Early — as a pre-commit hook or the first CI stage, to catch style issues before anything else runs.</p>
+<p><strong>94. Where should terraform validate run?</strong></p>
+<p>Right after <code>fmt</code>, before <code>plan</code>, to catch syntax/type errors cheaply and quickly.</p>
+<p><strong>95. Where should terraform plan run?</strong></p>
+<p>On every pull request, so reviewers can see the exact infrastructure diff before merging.</p>
+<p><strong>96. Where should terraform apply run?</strong></p>
+<p>Only after merge to the main branch, ideally gated behind a manual approval step for production environments.</p>
+<p><strong>97. How do you require approval before production apply?</strong></p>
+<p>Use environment protection rules (GitHub Actions environments, or a manual approval stage in Jenkins/GitLab) that pause the pipeline until an authorized approver clicks &ldquo;approve.&rdquo;</p>
+<p><strong>98. How do you prevent unauthorized Terraform changes?</strong></p>
+<p>Restrict who can merge to main / trigger the apply job, enforce PR reviews, and give only the CI service role actual apply permissions in the cloud account (not individual engineers).</p>
+<p><strong>99. How do you handle concurrent Terraform pipelines?</strong></p>
+<p>Use state locking (so a second run blocks/fails safely) and pipeline-level concurrency controls (e.g., GitHub Actions <code>concurrency</code> groups) to queue rather than run in parallel.</p>
+<p><strong>100. How do you handle a failed Terraform pipeline?</strong></p>
+<p>Inspect the error, don&rsquo;t blindly retry; run <code>plan</code> again once the underlying issue is fixed to confirm the intended changes before re-running <code>apply</code>.</p>
+<p><strong>101. How do you store Terraform secrets in CI/CD?</strong></p>
+<p>In the CI platform&rsquo;s encrypted secrets store (GitHub Secrets, Jenkins Credentials), injected as environment variables at runtime — never committed to the repo.</p>
+<p><strong>102. How do you securely authenticate AWS from GitHub Actions?</strong></p>
+<p>Use OIDC federation (GitHub&rsquo;s OIDC provider assuming an AWS IAM role) instead of long-lived access keys stored as secrets.</p>
+<p><strong>103. How do you implement Terraform plan on pull requests?</strong></p>
+<p>A workflow triggered on <code>pull_request</code> that runs <code>terraform plan</code> and posts the output as a PR comment for reviewers.</p>
+<p><strong>104. How do you prevent developers from directly running terraform apply?</strong></p>
+<p>Don&rsquo;t give individual engineers apply-level cloud credentials at all — only the CI pipeline&rsquo;s service role has them, so applying is only possible through the pipeline.</p>
+<p><strong>105. How do you implement separate pipelines for dev, stage, and production?</strong></p>
+<p>Separate workflow files or pipeline stages per environment, each pointing at its own backend/state and cloud credentials, often with progressively stricter approval gates.</p>
+<hr>
+
+<h3 class="relative group">8. Terraform Troubleshooting
+    <div id="8-terraform-troubleshooting" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-terraform-troubleshooting" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>106. terraform plan is showing unexpected changes. How do you troubleshoot?</strong></p>
+<p>Check if a provider version bump changed defaults, if someone made a manual change (drift), or if the config itself changed. Run <code>plan</code> with <code>-out</code> and inspect the diff attribute-by-attribute.</p>
+<p><strong>107. terraform apply fails. What do you check?</strong></p>
+<p>The actual error message first — IAM permissions, quota limits, invalid arguments, or a dependency ordering issue — then whether partial resources were created.</p>
+<p><strong>108. Terraform says the state is locked. What do you do?</strong></p>
+<p>Confirm no one else (or no CI job) is genuinely running an operation, then <code>force-unlock</code> only if the lock is confirmed stale.</p>
+<p><strong>109. Terraform cannot authenticate with AWS. How do you troubleshoot?</strong></p>
+<p>Verify credentials are set (env vars, profile, or assumed role), check IAM permissions for the action being performed, and confirm the region is correct.</p>
+<p><strong>110. Terraform cannot find a resource. What do you check?</strong></p>
+<p>Whether it exists in state (<code>terraform state list</code>), whether it&rsquo;s in the right region/account, and whether the resource was deleted outside Terraform (drift).</p>
+<p><strong>111. Terraform wants to destroy an existing resource. What do you investigate?</strong></p>
+<p>Whether a required argument change forces replacement, whether the resource was removed from <code>.tf</code> code by mistake, or whether it&rsquo;s genuinely no longer needed.</p>
+<p><strong>112. Terraform keeps recreating the same resource. Why?</strong></p>
+<p>Usually a diff caused by a computed value that changes every apply (e.g., a timestamp), or an attribute forcing replacement that&rsquo;s being set inconsistently (e.g., an unstable data source).</p>
+<p><strong>113. Terraform is showing perpetual diffs. How do you troubleshoot?</strong></p>
+<p>Look for attributes with default values set differently on the provider side than in your config, or a value the cloud API normalizes differently than what you wrote (common with JSON policy documents — use <code>jsonencode</code> consistently).</p>
+<p><strong>114. Terraform resource exists in AWS but not in state. What do you do?</strong></p>
+<p><code>terraform import</code> it into state so Terraform stops trying to recreate it and instead manages the existing one.</p>
+<p><strong>115. Resource exists in state but not in AWS. What do you do?</strong></p>
+<p>Run <code>terraform apply</code> — Terraform will try to recreate it since it thinks it should exist; or, if it was intentionally deleted, remove it from state instead using <code>terraform state rm</code>.</p>
+<p><strong>116. Terraform provider initialization fails. How do you troubleshoot?</strong></p>
+<p>Check network access to the provider registry, version constraints in <code>required_providers</code>, and whether <code>.terraform.lock.hcl</code> is stale (delete and re-<code>init</code> if needed).</p>
+<p><strong>117. Terraform module isn&rsquo;t downloading. What do you check?</strong></p>
+<p>Source URL correctness, Git/network access, authentication for private repos, and whether the version/ref tag actually exists.</p>
+<p><strong>118. Terraform backend initialization fails. How do you troubleshoot?</strong></p>
+<p>Verify the backend bucket/table exists and you have permission to access it, and that the backend config block has correct region/credentials.</p>
+<p><strong>119. Terraform apply fails halfway through. What do you do?</strong></p>
+<p>Run <code>plan</code> again — state reflects what was actually created — investigate and fix the root cause of the failure, then re-<code>apply</code>; Terraform will only touch what&rsquo;s still missing.</p>
+<p><strong>120. How do you safely troubleshoot Terraform in production?</strong></p>
+<p>Always run <code>plan</code> first and review the diff carefully, never blindly re-run <code>apply</code>, and make changes in a maintenance window with rollback steps ready for anything stateful.</p>
+<hr>
+
+<h3 class="relative group">9. Senior Real-World Scenarios
+    <div id="9-senior-real-world-scenarios" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-senior-real-world-scenarios" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>121. Terraform wants to destroy a production database. What will you do?</strong></p>
+<p>Stop and investigate why — likely a forced-replacement attribute change or someone removed it from code. Add <code>prevent_destroy</code> proactively, and if the destroy is truly intended, ensure a backup/snapshot exists first.</p>
+<p><strong>122. Two engineers run Terraform at the same time. How do you prevent conflicts?</strong></p>
+<p>Remote backend with state locking (S3 + DynamoDB) ensures the second run is blocked until the first completes.</p>
+<p><strong>123. Someone manually changes a production security group. What happens during the next Terraform plan?</strong></p>
+<p>Plan detects the drift and proposes reverting the security group back to what&rsquo;s declared in code (unless that attribute is in <code>ignore_changes</code>).</p>
+<p><strong>124. Terraform state is accidentally deleted. How do you recover?</strong></p>
+<p>Restore from S3 bucket versioning if enabled; otherwise, rebuild the state by re-importing every resource one by one — tedious but doable.</p>
+<p><strong>125. A Terraform apply fails halfway through. How do you recover?</strong></p>
+<p>Run <code>plan</code> to see what state now reflects, diagnose and fix the actual cause of failure, then <code>apply</code> again — idempotency means it only creates what&rsquo;s missing.</p>
+<p><strong>126. You have 50 AWS accounts. How would you design your Terraform architecture?</strong></p>
+<p>A shared &ldquo;landing zone&rdquo; or &ldquo;account factory&rdquo; module to provision each account consistently, separate state per account, centralized remote backend (e.g., one state bucket per account or a dedicated management account), and provider aliases/assumed roles per account.</p>
+<p><strong>127. You have dev, stage, and production. How would you structure your repository?</strong></p>
+<p>Either separate directories per environment (<code>envs/dev</code>, <code>envs/stage</code>, <code>envs/prod</code>) each with their own backend/state calling shared modules, or Terraform workspaces if the team is comfortable with the extra discipline required.</p>
+<p><strong>128. How would you design Terraform for multiple AWS regions?</strong></p>
+<p>Provider aliases per region within one config for cross-region resources (e.g., replication), or fully separate state per region for independent regional stacks.</p>
+<p><strong>129. How would you design a reusable VPC module?</strong></p>
+<p>— see Q52.</p>
+<p><strong>130. How would you design a reusable EKS module?</strong></p>
+<p>— see Q53.</p>
+<p><strong>131. How would you implement Terraform through GitHub Actions?</strong></p>
+<p>— see Q91.</p>
+<p><strong>132. How would you ensure production changes require approval?</strong></p>
+<p>— see Q97.</p>
+<p><strong>133. How would you prevent developers from modifying production infrastructure directly?</strong></p>
+<p>— see Q104.</p>
+<p><strong>134. How would you detect and remediate Terraform drift?</strong></p>
+<p>— see Q25–33.</p>
+<p><strong>135. How would you migrate existing manually created AWS infrastructure to Terraform?</strong></p>
+<p>Inventory the existing resources, write matching <code>.tf</code> blocks, <code>terraform import</code> each one, then iterate on the config until <code>plan</code> shows zero diff.</p>
+<p><strong>136. How would you migrate Terraform state from one backend to another?</strong></p>
+<p>Change the <code>backend</code> block to the new target, then run <code>terraform init -migrate-state</code>, which copies state over and prompts for confirmation.</p>
+<p><strong>137. How would you rename a Terraform resource without destroying the AWS resource?</strong></p>
+<p>Use a <code>moved</code> block (Terraform 1.1+) or <code>terraform state mv</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">moved</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  from</span> <span class="o">=</span> <span class="k">aws_instance</span><span class="p">.</span><span class="k">web</span>
+</span></span><span class="line"><span class="cl"><span class="n">  to</span>   <span class="o">=</span> <span class="k">aws_instance</span><span class="p">.</span><span class="k">app_server</span>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p>or</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">terraform state mv aws_instance.web aws_instance.app_server</span></span></code></pre></div></div>
+<p>Either tells Terraform &ldquo;this is the same resource, just renamed,&rdquo; avoiding destroy/recreate.</p>
+<p><strong>138. How would you move a resource from one module to another?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">terraform state mv module.old_module.aws_instance.web module.new_module.aws_instance.web</span></span></code></pre></div></div>
+<p>Or the <code>moved</code> block equivalent, pointing from the old module path to the new one.</p>
+<p><strong>139. How would you upgrade a Terraform module without breaking production?</strong></p>
+<p>Test the new version in dev/staging first, review the module&rsquo;s changelog for breaking changes, bump the version constraint, run <code>plan</code> to review the diff carefully, and roll out gradually (e.g., dev → stage → prod).</p>
+<p><strong>140. How would you perform a zero-downtime infrastructure change?</strong></p>
+<p>— see Q76.</p>
+<hr>
+
+<h2 class="relative group">🟠 Tier 2 — Strong Understanding
+    <div id="-tier-2--strong-understanding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-tier-2--strong-understanding" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">AWS Infrastructure
+    <div id="aws-infrastructure" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#aws-infrastructure" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>141. How would you create a VPC using Terraform?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_vpc&#34; &#34;main&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  cidr_block</span>           <span class="o">=</span> <span class="s2">&#34;10.0.0.0/16&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">  enable_dns_support</span>   <span class="o">=</span> <span class="kt">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">  enable_dns_hostnames</span> <span class="o">=</span> <span class="kt">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">  tags</span> <span class="o">=</span><span class="n"> { Name</span> <span class="o">=</span> <span class="s2">&#34;main-vpc&#34;</span> }
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>142. How would you design public and private subnets?</strong></p>
+<p>Public subnets route <code>0.0.0.0/0</code> to an Internet Gateway (for internet-facing resources like ALBs); private subnets route <code>0.0.0.0/0</code> to a NAT Gateway (for outbound-only resources like app servers and databases).</p>
+<p><strong>143. How would you create an Internet Gateway?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_internet_gateway&#34; &#34;igw&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  vpc_id</span> <span class="o">=</span> <span class="k">aws_vpc</span><span class="p">.</span><span class="k">main</span><span class="p">.</span><span class="k">id</span>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>144. How would you create a NAT Gateway?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="n">resource &#34;aws_eip&#34; &#34;nat&#34; { domain</span> <span class="o">=</span> <span class="s2">&#34;vpc&#34;</span> }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_nat_gateway&#34; &#34;nat&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  allocation_id</span> <span class="o">=</span> <span class="k">aws_eip</span><span class="p">.</span><span class="k">nat</span><span class="p">.</span><span class="k">id</span>
+</span></span><span class="line"><span class="cl"><span class="n">  subnet_id</span>     <span class="o">=</span> <span class="k">aws_subnet</span><span class="p">.</span><span class="k">public</span><span class="p">.</span><span class="k">id</span>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>145. How would you configure route tables?</strong></p>
+<p>One route table for public subnets pointing <code>0.0.0.0/0</code> to the Internet Gateway, another for private subnets pointing <code>0.0.0.0/0</code> to the NAT Gateway, each associated with their respective subnets.</p>
+<p><strong>146. How would you create security groups?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_security_group&#34; &#34;web&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  vpc_id</span> <span class="o">=</span> <span class="k">aws_vpc</span><span class="p">.</span><span class="k">main</span><span class="p">.</span><span class="k">id</span>
+</span></span><span class="line"><span class="cl">  <span class="k">ingress</span> {
+</span></span><span class="line"><span class="cl"><span class="n">    from_port</span>   <span class="o">=</span> <span class="m">443</span>
+</span></span><span class="line"><span class="cl"><span class="n">    to_port</span>     <span class="o">=</span> <span class="m">443</span>
+</span></span><span class="line"><span class="cl"><span class="n">    protocol</span>    <span class="o">=</span> <span class="s2">&#34;tcp&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">    cidr_blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;0.0.0.0/0&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">  <span class="k">egress</span> {
+</span></span><span class="line"><span class="cl"><span class="n">    from_port</span>   <span class="o">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">    to_port</span>     <span class="o">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">    protocol</span>    <span class="o">=</span> <span class="s2">&#34;-1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">    cidr_blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;0.0.0.0/0&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>147. How would you create an ALB?</strong></p>
+<p>Define <code>aws_lb</code>, <code>aws_lb_target_group</code>, and <code>aws_lb_listener</code> resources, attaching your EC2/ECS targets to the target group and the listener to the load balancer.</p>
+<p><strong>148. How would you create an EC2 instance?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_instance&#34; &#34;app&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  ami</span>           <span class="o">=</span> <span class="s2">&#34;ami-0abcd1234&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">  instance_type</span> <span class="o">=</span> <span class="s2">&#34;t3.micro&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">  subnet_id</span>     <span class="o">=</span> <span class="k">aws_subnet</span><span class="p">.</span><span class="k">private</span><span class="p">.</span><span class="k">id</span>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>149. How would you create an IAM role?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_iam_role&#34; &#34;app_role&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  name</span> <span class="o">=</span> <span class="s2">&#34;app-role&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">  assume_role_policy</span> <span class="o">=</span> <span class="k">jsonencode</span><span class="p">(</span>{
+</span></span><span class="line"><span class="cl"><span class="n">    Version</span> <span class="o">=</span> <span class="s2">&#34;2012-10-17&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">    Statement</span> <span class="o">=</span> <span class="p">[</span>{
+</span></span><span class="line"><span class="cl"><span class="n">      Action</span>    <span class="o">=</span> <span class="s2">&#34;sts:AssumeRole&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">      Effect</span>    <span class="o">=</span> <span class="s2">&#34;Allow&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">      Principal</span> <span class="o">=</span><span class="n"> { Service</span> <span class="o">=</span> <span class="s2">&#34;ec2.amazonaws.com&#34;</span> }
+</span></span><span class="line"><span class="cl">    }<span class="p">]</span>
+</span></span><span class="line"><span class="cl">  }<span class="p">)</span>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>150. How would you create an EKS cluster?</strong></p>
+<p>Use <code>aws_eks_cluster</code> with a VPC/subnet configuration and an IAM role granting EKS the necessary permissions, typically via the community <code>terraform-aws-modules/eks/aws</code> module rather than raw resources.</p>
+<p><strong>151. How would you create an EKS node group?</strong></p>
+<p><code>aws_eks_node_group</code>, referencing the cluster name, a node IAM role, subnet IDs, and scaling config (min/max/desired size).</p>
+<p><strong>152. How would you configure EBS CSI using Terraform?</strong></p>
+<p>Install the EBS CSI driver as an EKS add-on (<code>aws_eks_addon</code>) and attach an IAM role (via IRSA) granting it permission to create/attach EBS volumes.</p>
+<p><strong>153. How would you create an S3 bucket securely?</strong></p>
+<p>Enable default encryption, block public access, enable versioning, and attach a restrictive bucket policy.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_s3_bucket&#34; &#34;data&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  bucket</span> <span class="o">=</span> <span class="s2">&#34;my-secure-bucket&#34;</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_s3_bucket_public_access_block&#34; &#34;data&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  bucket</span>                  <span class="o">=</span> <span class="k">aws_s3_bucket</span><span class="p">.</span><span class="k">data</span><span class="p">.</span><span class="k">id</span>
+</span></span><span class="line"><span class="cl"><span class="n">  block_public_acls</span>       <span class="o">=</span> <span class="kt">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">  block_public_policy</span>     <span class="o">=</span> <span class="kt">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">  ignore_public_acls</span>      <span class="o">=</span> <span class="kt">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">  restrict_public_buckets</span> <span class="o">=</span> <span class="kt">true</span>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>154. How would you create an RDS database?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_db_instance&#34; &#34;main&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  engine</span>            <span class="o">=</span> <span class="s2">&#34;postgres&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">  instance_class</span>    <span class="o">=</span> <span class="s2">&#34;db.t3.medium&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">  allocated_storage</span> <span class="o">=</span> <span class="m">20</span>
+</span></span><span class="line"><span class="cl"><span class="n">  db_name</span>           <span class="o">=</span> <span class="s2">&#34;appdb&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">  username</span>          <span class="o">=</span> <span class="k">var</span><span class="p">.</span><span class="k">db_username</span>
+</span></span><span class="line"><span class="cl"><span class="n">  password</span>          <span class="o">=</span> <span class="k">var</span><span class="p">.</span><span class="k">db_password</span>
+</span></span><span class="line"><span class="cl"><span class="n">  skip_final_snapshot</span> <span class="o">=</span> <span class="kt">false</span>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>155. How do you manage AWS resources across multiple accounts?</strong></p>
+<p>Provider aliases with <code>assume_role</code> per account, or fully separate state/pipelines per account for stronger isolation — the latter is more common at scale.</p>
+
+<h3 class="relative group">Security
+    <div id="security" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#security" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>156. How do you manage secrets in Terraform?</strong></p>
+<p>Fetch them at runtime from a secrets manager (AWS Secrets Manager, Vault) via a data source rather than hardcoding, mark variables <code>sensitive = true</code>, and encrypt the state backend.</p>
+<p><strong>157. Should passwords be stored in .tfvars?</strong></p>
+<p>No — <code>.tfvars</code> files are often committed to Git and aren&rsquo;t inherently secret; passwords should come from a secrets manager or environment variables injected at runtime.</p>
+<p><strong>158. What does sensitive = true do?</strong></p>
+<p>Prevents Terraform from printing that value in CLI output (<code>plan</code>/<code>apply</code> logs); it does not encrypt or hide it from the state file.</p>
+<p><strong>159. Does sensitive = true encrypt the value?</strong></p>
+<p>No — it&rsquo;s purely a display/output redaction; the value is still stored in plaintext in the state file.</p>
+<p><strong>160. How do you prevent secrets from appearing in Terraform state?</strong></p>
+<p>You largely can&rsquo;t avoid it entirely if Terraform manages the resource — the real mitigation is encrypting the state backend and tightly restricting who can read it.</p>
+<p><strong>161. How do you use AWS Secrets Manager with Terraform?</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">data</span> <span class="s2">&#34;aws_secretsmanager_secret_version&#34; &#34;db&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  secret_id</span> <span class="o">=</span> <span class="s2">&#34;prod/db/password&#34;</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_db_instance&#34; &#34;main&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  password</span> <span class="o">=</span> <span class="k">data</span><span class="p">.</span><span class="k">aws_secretsmanager_secret_version</span><span class="p">.</span><span class="k">db</span><span class="p">.</span><span class="k">secret_string</span>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p><strong>162. How do you use SSM Parameter Store?</strong></p>
+<p>Similarly, via <code>data &quot;aws_ssm_parameter&quot;</code>, often used for less sensitive config values or where Secrets Manager&rsquo;s cost isn&rsquo;t justified.</p>
+<p><strong>163. How do you scan Terraform code for security issues?</strong></p>
+<p>Run static analysis tools like <code>tfsec</code> or <code>Checkov</code> in CI, failing the pipeline on high-severity findings (e.g., an S3 bucket without encryption).</p>
+<p><strong>164. What is Checkov?</strong></p>
+<p>An open-source static analysis tool that scans Terraform (and other IaC) for security and compliance misconfigurations.</p>
+<p><strong>165. What is tfsec?</strong></p>
+<p>A static analysis security scanner specifically for Terraform, checking for common misconfigurations (open security groups, unencrypted storage, etc.).</p>
+<p><strong>166. How do you enforce security policies in Terraform?</strong></p>
+<p>Policy-as-code tools like Sentinel (Terraform Cloud/Enterprise) or Open Policy Agent, which can block an <code>apply</code> if it violates a defined rule (e.g., &ldquo;no public S3 buckets&rdquo;).</p>
+<p><strong>167. How do you implement least privilege for Terraform?</strong></p>
+<p>Give the CI/CD execution role only the specific IAM permissions needed for the resources it manages, scoped by resource ARN where possible, rather than broad admin access.</p>
+
+<h3 class="relative group">Workspaces
+    <div id="workspaces" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#workspaces" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>168. What are Terraform workspaces?</strong></p>
+<p>A built-in feature letting you maintain multiple named state files from the same configuration directory (e.g., <code>dev</code>, <code>staging</code>, <code>prod</code> workspaces).</p>
+<p><strong>169. Why use Terraform workspaces?</strong></p>
+<p>Quick way to spin up parallel environments from identical code without duplicating directories.</p>
+<p><strong>170. Workspace vs separate directory?</strong></p>
+<p>Workspaces share the same <code>.tf</code> code and just swap state; separate directories can have genuinely different code/variables per environment and make the active environment explicit in the file path, reducing accidental cross-environment applies.</p>
+<p><strong>171. Workspace vs separate state file?</strong></p>
+<p>A workspace <em>is</em> a way of having separate state files, but tied to one shared codebase; a fully separate directory approach naturally gives separate state too, plus more isolation.</p>
+<p><strong>172. When should you avoid Terraform workspaces?</strong></p>
+<p>For environments with meaningfully different configurations (not just different variable values), or when the risk of an engineer forgetting which workspace is selected and applying to the wrong one is too high — common in production-sensitive setups.</p>
+<p><strong>173. How do you manage dev/stage/prod?</strong></p>
+<p>Either via workspaces with a shared config and per-workspace <code>.tfvars</code>, or (more common at senior/production level) separate directories per environment with separate backends.</p>
+<p><strong>174. Would you use workspaces for production environments? Why?</strong></p>
+<p>Many senior engineers avoid them for production specifically because the workspace context isn&rsquo;t visually obvious in the terminal/file path, raising the risk of an accidental production apply; separate directories make the target environment explicit.</p>
+
+<h3 class="relative group">Variables &amp; Functions
+    <div id="variables--functions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#variables--functions" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>175. What are Terraform variables?</strong></p>
+<p>Named inputs (<code>variable</code> blocks) that parameterize your configuration so the same code can be reused with different values.</p>
+<p><strong>176. What are local values?</strong></p>
+<p><code>locals</code> — named expressions computed once and reused within a module, useful for reducing repetition (not exposed as inputs).</p>
+<p><strong>177. Variables vs locals?</strong></p>
+<p>Variables are inputs supplied from outside the module; locals are internal computed values derived from variables/resources, not set externally.</p>
+<p><strong>178. What are Terraform outputs?</strong></p>
+<p><code>output</code> blocks that expose values from a module (or root config) for use by other modules, or for display after <code>apply</code>.</p>
+<p><strong>179. What are Terraform variable types?</strong></p>
+<p><code>string</code>, <code>number</code>, <code>bool</code>, <code>list</code>, <code>map</code>, <code>set</code>, <code>object</code>, <code>tuple</code>, and <code>any</code>.</p>
+<p><strong>180. What are complex variable types?</strong></p>
+<p>The structured types: <code>list</code>, <code>map</code>, <code>set</code>, <code>object</code>, and <code>tuple</code>, as opposed to simple scalars like <code>string</code>/<code>number</code>/<code>bool</code>.</p>
+<p><strong>181. What is a map?</strong></p>
+<p>A collection of key-value pairs, all values of the same type, e.g., <code>map(string)</code>.</p>
+<p><strong>182. What is a list?</strong></p>
+<p>An ordered collection of values of the same type, accessed by numeric index.</p>
+<p><strong>183. What is a set?</strong></p>
+<p>An unordered collection of unique values, useful when order doesn&rsquo;t matter and duplicates should be disallowed.</p>
+<p><strong>184. What is an object?</strong></p>
+<p>A structured type with named attributes of potentially different types, e.g., <code>object({ name = string, size = number })</code>.</p>
+<p><strong>185. What is a tuple?</strong></p>
+<p>An ordered sequence of elements where each position can have a different type, defined explicitly, e.g., <code>tuple([string, number, bool])</code>.</p>
+<p><strong>186. What are Terraform functions?</strong></p>
+<p>Built-in functions for transforming values inside expressions — e.g., <code>lookup()</code>, <code>merge()</code>, <code>join()</code>, <code>length()</code>, <code>jsonencode()</code>.</p>
+<p><strong>187. Which Terraform functions have you used?</strong></p>
+<p>Commonly: <code>lookup()</code> and <code>try()</code> for safe map access, <code>merge()</code> for combining tag maps, <code>jsonencode()</code> for IAM policies, <code>element()</code>/<code>length()</code> with <code>count</code>, <code>cidrsubnet()</code> for subnet math.</p>
+<p><strong>188. What are conditional expressions?</strong></p>
+<p>Ternary-style expressions: <code>condition ? true_val : false_val</code>, e.g., <code>var.env == &quot;prod&quot; ? &quot;t3.large&quot; : &quot;t3.micro&quot;</code>.</p>
+<p><strong>189. What are Terraform expressions?</strong></p>
+<p>Any value-producing construct in HCL — references, function calls, conditionals, and operators used to compute argument values.</p>
+<p><strong>190. What is a dynamic block?</strong></p>
+<p>A way to generate repeated nested blocks (like multiple <code>ingress</code> rules in a security group) from a list/map, instead of writing each one manually.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">dynamic</span> <span class="s2">&#34;ingress&#34;</span> {
+</span></span><span class="line"><span class="cl"><span class="n">  for_each</span> <span class="o">=</span> <span class="k">var</span><span class="p">.</span><span class="k">allowed_ports</span>
+</span></span><span class="line"><span class="cl">  <span class="k">content</span> {
+</span></span><span class="line"><span class="cl"><span class="n">    from_port</span>   <span class="o">=</span> <span class="k">ingress</span><span class="p">.</span><span class="k">value</span>
+</span></span><span class="line"><span class="cl"><span class="n">    to_port</span>     <span class="o">=</span> <span class="k">ingress</span><span class="p">.</span><span class="k">value</span>
+</span></span><span class="line"><span class="cl"><span class="n">    protocol</span>    <span class="o">=</span> <span class="s2">&#34;tcp&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">    cidr_blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;0.0.0.0/0&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+
+<h3 class="relative group">Repository Architecture
+    <div id="repository-architecture" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#repository-architecture" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>191. How would you structure a large Terraform repository?</strong></p>
+<p><code>modules/</code> for reusable building blocks, <code>envs/{dev,stage,prod}/</code> for environment-specific root configs that call those modules, each with its own backend and <code>.tfvars</code>.</p>
+<p><strong>192. Monorepo vs separate repositories for Terraform?</strong></p>
+<p>A monorepo keeps everything discoverable and easy to cross-reference but can get large and needs careful path-based CI triggers; separate repos give stronger team-level ownership/access control but complicate cross-referencing shared modules.</p>
+<p><strong>193. How do you separate environments?</strong></p>
+<p>Separate directories (preferred at senior level) or workspaces, each with isolated state/backend so a mistake in one environment can&rsquo;t touch another.</p>
+<p><strong>194. How do you separate infrastructure by application/team?</strong></p>
+<p>Separate state files per application/team (&ldquo;micro state&rdquo; approach), often with a shared network/foundation layer that individual app teams consume via remote state data sources.</p>
+<p><strong>195. How do you manage Terraform module versions?</strong></p>
+<p>Git tags/semantic versioning, with consumers pinning specific version constraints and upgrading deliberately after testing.</p>
+<p><strong>196. How do you manage Terraform provider versions?</strong></p>
+<p><code>required_providers</code> version constraints plus the <code>.terraform.lock.hcl</code> file, which pins exact provider versions/checksums for reproducible runs.</p>
+<p><strong>197. How do you manage Terraform upgrades?</strong></p>
+<p>Read the changelog/upgrade guide, test in a non-production environment first, and roll out gradually; use <code>tfenv</code> or similar to manage multiple installed CLI versions during migration.</p>
+<p><strong>198. How do you test Terraform code?</strong></p>
+<p><code>terraform validate</code> for syntax, <code>plan</code> review for logical correctness, static analysis (<code>tfsec</code>/<code>Checkov</code>) for security, and tools like Terratest for actual integration testing against real infrastructure.</p>
+<p><strong>199. How do you perform Terraform security scanning?</strong></p>
+<p>Integrate <code>tfsec</code> or <code>Checkov</code> into CI, failing builds on critical findings, run against every PR before merge.</p>
+<p><strong>200. How do you review Terraform changes?</strong></p>
+<p>Require <code>plan</code> output on every PR, have a reviewer read the diff carefully (especially anything showing &ldquo;destroy&rdquo; or &ldquo;force replacement&rdquo;), and require approval before merge/apply for production.</p>
+<hr>
+
+<h2 class="relative group">🟢 Tier 3 — Basic Awareness
+    <div id="-tier-3--basic-awareness" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-tier-3--basic-awareness" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Terraform Cloud / HCP Terraform
+    <div id="terraform-cloud--hcp-terraform" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#terraform-cloud--hcp-terraform" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>201. What is Terraform Cloud/HCP Terraform?</strong></p>
+<p>HashiCorp&rsquo;s managed service for running Terraform, providing remote state storage, remote plan/apply execution, a private module registry, and team/policy controls.</p>
+<p><strong>202. Terraform Cloud vs local Terraform?</strong></p>
+<p>Terraform Cloud runs plans/applies on HashiCorp&rsquo;s infrastructure (not your laptop/CI runner), manages state and locking automatically, and adds collaboration features like PR integration and Sentinel policies.</p>
+<p><strong>203. What are remote runs?</strong></p>
+<p>Plan/apply operations executed on Terraform Cloud&rsquo;s own runners rather than locally, giving consistent execution environment and centralized logs.</p>
+<p><strong>204. What is HCP Terraform workspace?</strong></p>
+<p>A Terraform Cloud concept distinct from CLI workspaces — a top-level container binding a specific config, variable set, and state together, roughly like a project.</p>
+<p><strong>205. How does HCP Terraform manage state?</strong></p>
+<p>It stores and versions state automatically, with built-in locking, so teams don&rsquo;t need to configure their own S3/DynamoDB backend.</p>
+<p><strong>206. How does HCP Terraform integrate with VCS?</strong></p>
+<p>It connects directly to GitHub/GitLab/Bitbucket, automatically triggering <code>plan</code> on PRs and <code>apply</code> on merge, without needing a separate CI pipeline.</p>
+<p><strong>207. What are Terraform Cloud run tasks?</strong></p>
+<p>Integration points that let external tools (security scanners, cost estimators) inject checks into the plan/apply workflow before it&rsquo;s allowed to proceed.</p>
+
+<h3 class="relative group">Policy-as-Code
+    <div id="policy-as-code" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#policy-as-code" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>208. What is policy-as-code?</strong></p>
+<p>Defining infrastructure governance rules (e.g., &ldquo;no public S3 buckets,&rdquo; &ldquo;must have cost-center tag&rdquo;) as code that&rsquo;s automatically enforced during the Terraform workflow.</p>
+<p><strong>209. Why is policy-as-code useful with Terraform?</strong></p>
+<p>It catches violations automatically before <code>apply</code>, rather than relying on manual review, and scales consistently across every team/project.</p>
+<p><strong>210. What is HashiCorp Sentinel?</strong></p>
+<p>HashiCorp&rsquo;s policy-as-code framework, integrated into Terraform Cloud/Enterprise, that can block runs violating defined policies.</p>
+<p><strong>211. What is Open Policy Agent (OPA)?</strong></p>
+<p>An open-source, general-purpose policy engine (using the Rego language) that can be used to enforce policies against Terraform plans, independent of HashiCorp&rsquo;s ecosystem.</p>
+<p><strong>212. How can you prevent insecure Terraform configurations?</strong></p>
+<p>Combine static analysis (<code>tfsec</code>/<code>Checkov</code>) with policy-as-code (Sentinel/OPA) gates in the pipeline, so insecure plans are blocked automatically.</p>
+
+<h3 class="relative group">Terraform Testing
+    <div id="terraform-testing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#terraform-testing" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>213. How do you test Terraform code?</strong></p>
+<p>— see Q198.</p>
+<p><strong>214. What is terraform validate?</strong></p>
+<p>A command that checks configuration syntax and internal consistency (e.g., referencing an undefined variable) without contacting any cloud provider.</p>
+<p><strong>215. What is Terraform testing?</strong></p>
+<p>The practice of verifying Terraform configurations behave as expected — ranging from static validation to full integration tests that actually provision and check real resources.</p>
+<p><strong>216. What is Terratest?</strong></p>
+<p>A Go testing library for writing integration tests that apply real Terraform configs, assert on the resulting infrastructure, then tear it down.</p>
+<p><strong>217. What is Checkov?</strong></p>
+<p>— see Q164.</p>
+<p><strong>218. What is TFLint?</strong></p>
+<p>A linter for Terraform that catches provider-specific errors and best-practice violations beyond what <code>terraform validate</code> checks.</p>
+<p><strong>219. What is tfsec?</strong></p>
+<p>— see Q165.</p>
+<p><strong>220. How would you integrate Terraform testing into CI/CD?</strong></p>
+<p>Run <code>fmt</code>/<code>validate</code>/<code>TFLint</code>/<code>tfsec</code> on every PR as fast checks, and run Terratest suites (which actually provision resources) on a schedule or before major releases due to their cost/time.</p>
+
+<h3 class="relative group">Terraform Ecosystem
+    <div id="terraform-ecosystem" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#terraform-ecosystem" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>221. What is the Terraform Registry?</strong></p>
+<p>HashiCorp&rsquo;s public catalog of community and vendor-published providers and modules.</p>
+<p><strong>222. What are private Terraform registries?</strong></p>
+<p>Internally-hosted or Terraform Cloud-hosted registries for publishing and versioning your organization&rsquo;s own modules/providers with access control.</p>
+<p><strong>223. What are Terraform providers?</strong></p>
+<p>— see Q77.</p>
+<p><strong>224. How do you find and evaluate a Terraform provider?</strong></p>
+<p>Check the Registry for official/verified badges, review download counts and maintenance activity (recent commits/releases), and check open issues for known problems.</p>
+<p><strong>225. How do you manage provider upgrades?</strong></p>
+<p>Bump the version constraint deliberately, review the provider&rsquo;s changelog for breaking changes, test in a non-production environment, and regenerate the lock file.</p>
+<p><strong>226. What are Terraform modules from the Registry?</strong></p>
+<p>Pre-built, versioned modules published publicly (e.g., <code>terraform-aws-modules/vpc/aws</code>) that you can call directly instead of writing common infrastructure patterns from scratch.</p>
+<p><strong>227. What is Infrastructure as Code security?</strong></p>
+<p>The practice of applying security scanning, least-privilege access, and policy enforcement to infrastructure code itself, catching misconfigurations before they&rsquo;re ever deployed.</p>
+<p><strong>228. What is policy enforcement in Terraform?</strong></p>
+<p>Automatically blocking non-compliant infrastructure changes using tools like Sentinel or OPA, integrated into the plan/apply pipeline, rather than relying on after-the-fact audits.</p>
+<hr>
+<p><em>Good luck with your interview! Practice explaining these out loud, not just reading them — interviewers are grading how clearly you reason through trade-offs, not whether you recite definitions.</em></p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/kubernetes/interview_questions/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Kubernetes Interview Questions & Answers (7+ Years DevOps Experience)
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-09-18T00:00:00&#43;00:00">18 September 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Hemanth Kumar Motukuri
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Search"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          aria-label="Search"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+    
+    
+  </body>
+  
+</html>
